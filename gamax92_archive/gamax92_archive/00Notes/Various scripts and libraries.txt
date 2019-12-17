@@ -1,0 +1,3 @@
+Various scripts recovered from:
+
+http://myhotkey.googlecode.com/svn/trunk/

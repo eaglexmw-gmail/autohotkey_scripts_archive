@@ -1,0 +1,31 @@
+#include <windows.h>
+#include <winres.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,3,29,7
+ PRODUCTVERSION 4,3,29,7
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Drugwash Hobby Programming"
+            VALUE "FileDescription", "GUI creation tool for AutoHotkey scripts\0"
+            VALUE "FileVersion", "4.3.29.7\0"
+            VALUE "InternalName", "SmartGuiXP mod\0"
+            VALUE "LegalCopyright", "©Rajat 2004-2006, ©Drugwash 2009-2014\0"
+            VALUE "OriginalFilename", "SmartGuiXP mod.ahk\0"
+            VALUE "ProductName", "SmartGui Creator\0"
+            VALUE "ProductVersion", "4.3.29.7\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

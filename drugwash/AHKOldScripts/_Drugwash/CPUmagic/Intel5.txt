@@ -1,0 +1,19 @@
+; Pentium II SECC2
+; 400 / 512 / 100 / 2.0V  S1
+
+[speed]
+350   350 MHz 
+400   400 MHz 
+450   450 MHz 
+
+[L2 cache]
+512   512 KB
+
+[bus]
+100   100 MHz
+
+[voltage]
+2.0V   2.0V
+
+[package]
+S1    Slot 1 cartridge

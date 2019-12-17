@@ -1,0 +1,7 @@
+1.9
+-----
+- Fixed mute splash position according to active window
+- Fixed hand cursor appearing on wrong controls
+- Added soundcard detection in Win98
+- Removed (temporarily) variant modifiers for hotkeys since XP fucks up
+- minor code clean-up

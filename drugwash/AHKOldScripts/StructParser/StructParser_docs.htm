@@ -1,0 +1,1540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+<link rel="prev" href="viewtopic.php?t=27644&amp;view=previous" title="View previous topic" />
+<link rel="next" href="viewtopic.php?t=27644&amp;view=next" title="View next topic" />
+<link rel="up" href="viewforum.php?f=2" title="Scripts & Functions" />
+<link rel="chapter forum" href="viewforum.php?f=1" title="Ask for Help" />
+<link rel="chapter forum" href="viewforum.php?f=2" title="Scripts & Functions" />
+<link rel="chapter forum" href="viewforum.php?f=3" title="Bug Reports" />
+<link rel="chapter forum" href="viewforum.php?f=4" title="Wish List" />
+<link rel="chapter forum" href="viewforum.php?f=6" title="Announcements" />
+<link rel="chapter forum" href="viewforum.php?f=7" title="Utilities & Resources" />
+<link rel="chapter forum" href="viewforum.php?f=5" title="General Chat" />
+
+<title>StructParser (for C/C++ structs)</title>
+<link rel="stylesheet" href="templates/subSilver/subSilver.css" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="AutoHotkey Forum RSS" href="rss.php">
+
+<script language="Javascript" type="text/javascript">
+<!--
+	if ( 0 )
+	{
+		window.open('privmsg.php?mode=newpm', '_phpbbprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');;
+	}
+//-->
+</script>
+</head>
+<body bgcolor="#E5E5E5" text="#000000" link="#006699" vlink="#5493B4">
+
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+	<tr>
+		<td class="bodyline"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td><a href="../"><img src="../docs/images/AutoHotkey_logo.gif" border="0" alt="AutoHotkey Homepage" vspace="1" /></a></td>
+				<td align="center" width="100%" valign="middle"><span class="maintitle">AutoHotkey Community</span><br /><span class="gen">Let's help each other out<br />&nbsp; </span>
+				<table cellspacing="0" cellpadding="2" border="0">
+					<tr>
+						<td align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="faq.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_faq.gif" width="12" height="13" border="0" alt="FAQ" hspace="3" />FAQ</a>&nbsp; &nbsp;<a href="search.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_search.gif" width="12" height="13" border="0" alt="Search" hspace="3" />Search</a>&nbsp; &nbsp;<a href="memberlist.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_members.gif" width="12" height="13" border="0" alt="Memberlist" hspace="3" />Memberlist</a>&nbsp;
+						</span></td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="profile.php?mode=editprofile" class="mainmenu"><img src="templates/subSilver/images/icon_mini_profile.gif" width="12" height="13" border="0" alt="Profile" hspace="3" />Profile</a>&nbsp; &nbsp;<a href="privmsg.php?folder=inbox" class="mainmenu"><img src="templates/subSilver/images/icon_mini_message.gif" width="12" height="13" border="0" alt="You have no new messages" hspace="3" />You have no new messages</a>&nbsp; &nbsp;<a href="login.php?logout=true&amp;sid=eab646ffb6e2d32da7ed36ee6f9e3bc0" class="mainmenu"><img src="templates/subSilver/images/icon_mini_login.gif" width="12" height="13" border="0" alt="Log out [ Drugwash ]" hspace="3" />Log out [ Drugwash ]</a>&nbsp;</span></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+
+		<br />
+
+<script type="text/javascript" src="code.js" defer="defer"></script>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+	<td align="left" valign="bottom" colspan="2"><a class="maintitle" href="viewtopic.php?t=27644&amp;start=0&amp;postdays=0&amp;postorder=asc&amp;highlight=">StructParser (for C/C++ structs)</a><br />
+	  <span class="gensmall"><b></b><br />
+	  &nbsp; </span></td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+	<td align="left" valign="bottom" nowrap="nowrap"><span class="nav"><a href="posting.php?mode=newtopic&amp;f=2"><img src="templates/subSilver/images/lang_english/post.gif" border="0" alt="Post new topic" align="middle" /></a>&nbsp;&nbsp;&nbsp;<a href="posting.php?mode=reply&amp;t=27644"><img src="templates/subSilver/images/lang_english/reply.gif" border="0" alt="Reply to topic" align="middle" /></a></span></td>
+	<td align="left" valign="middle" width="100%"><span class="nav">&nbsp;&nbsp;&nbsp;<a href="/forum/" class="nav">AutoHotkey Community Forum Index</a>
+	  -> <a href="viewforum.php?f=2" class="nav">Scripts & Functions</a></span></td>
+  </tr>
+</table>
+
+<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+	<tr align="right">
+		<td class="catHead" colspan="2" height="28"><span class="nav"><a href="viewtopic.php?t=27644&amp;view=previous" class="nav">View previous topic</a> :: <a href="viewtopic.php?t=27644&amp;view=next" class="nav">View next topic</a> &nbsp;</span></td>
+	</tr>
+
+	<tr>
+		<th class="thLeft" width="150" height="26" nowrap="nowrap">Author</th>
+		<th class="thRight" nowrap="nowrap">Message</th>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="172883"></a><b>Lexikos</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 17 Oct 2006<br /><a href="author-Lexikos.html" class="postdetails">Posts: 2579</a><br />Location: Australia, Qld</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=172883#172883"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu Jan 17, 2008 4:49 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: StructParser (for C/C++ structs)</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=172883"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Someone recently stated how amazing my understanding of structs is, so I'm posting this to prove them wrong. <img src="images/smiles/icon_lol.gif" alt="Laughing" border="0" />
+<br />
+
+<br />
+This script parses a C/C++ struct definition and outputs AutoHotkey code to set or get each field in the struct.
+<br />
+
+<br />
+<span style="font-weight: bold">Known Issues:</span>
+<br />
+<ul><li>Only types defined in ParseField() are supported.
+<br />
+<li>Nested structs are not supported, except for RECT and POINT.
+<br />
+<li>1-byte field alignment is assumed. This isn't an issue for most structures defined at MSDN, which have explicit padding where necessary.
+<br />
+<li>Bit fields such as <span style="color: darkblue">BOOL fFocused</span><span style="color: darkred">:1</span><span style="color: darkblue">;</span> are not supported.
+<br />
+<li>Array support is limited to offset calculation. No useful code is generated.
+<br />
+<li>Not really an issue; for convenience, any type beginning with &quot;LP&quot; is assumed to be a pointer type.
+<br />
+</ul>If the script encounters a field that it cannot parse, it will prompt the user for the name, size (in bytes) and (optional) NumGet-compatible type of the field.
+<br />
+
+<br />
+The generated code assumes the struct's data is stored in an AutoHotkey variable. To operate on a struct by address, the code must be adjusted.
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">; put value into struct var
+<br />
+NumPut&#40;value, struct, offset, type&#41;
+<br />
+; put value into struct by address &#40;+0 or similar required&#41;
+<br />
+NumPut&#40;value, pointer_to_struct+0, offset, type&#41;
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+<span style="font-weight: bold">Requires:</span> <a href="http://www.autohotkey.com/forum/viewtopic.php?t=4348" target="_blank" class="postlink">Anchor</a> (in your function library, or add an #include.)
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">#NoEnv
+<br />
+SendMode Input
+<br />
+SetWorkingDir %A_ScriptDir%
+<br />
+
+<br />
+Gui, +Resize +MinSize250x80
+<br />
+
+<br />
+Gui, Margin, 7, 7
+<br />
+Gui, Font,, Courier New
+<br />
+Gui, Add, Edit, R9 W300 vInputText
+<br />
+Gui, Font
+<br />
+Gui, Add, Button, vParseButton gParseStruct Y+2, &amp;Parse
+<br />
+Gui, Add, Button, vCopyButton gParseAndCopy X+0, &amp;&amp; &amp;Copy
+<br />
+Gui, Add, Checkbox, vGenGetters Checked X+5 YP+5, &amp;Get
+<br />
+Gui, Add, Checkbox, vGenSetters Checked X+0, &amp;Set
+<br />
+Gui, Add, Checkbox, vGenCtor&nbsp; &nbsp; Checked X+0, &amp;VarSetCapacity
+<br />
+Gui, Add, Edit, vStructName X+0 YP-4, struct
+<br />
+Gui, Font,, Courier New
+<br />
+Gui, Add, Edit, XM Y+4 R9 W300 vOutputText
+<br />
+
+<br />
+GuiControlGet, StructName, Pos
+<br />
+GuiControl, Move, StructName, % &quot;W&quot; 314-StructNameX-7
+<br />
+
+<br />
+Gui, Show, W314, Struct Parser
+<br />
+
+<br />
+DelimNameAndTypeWithNewline &#58;= false
+<br />
+
+<br />
+return
+<br />
+
+<br />
+ParseAndCopy&#58;
+<br />
+&nbsp; &nbsp; gosub ParseStruct
+<br />
+&nbsp; &nbsp; Clipboard &#58;= RegExReplace&#40;OutputText, &quot;&#40;?&lt;!`r&#41;`n&quot;, &quot;`r`n&quot;&#41;
+<br />
+return
+<br />
+
+<br />
+ParseStruct&#58;
+<br />
+&nbsp; &nbsp; Gui, Submit, NoHide
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; OutputText =
+<br />
+&nbsp; &nbsp; OutputGetters =
+<br />
+&nbsp; &nbsp; OutputSetters =
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; ; Remove comments and directives from consideration.
+<br />
+&nbsp; &nbsp; InputText &#58;= RegExReplace&#40;InputText, &quot;`a&#41;//.*|#.*|/\*.*?\*/&quot;&#41;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; pos &#58;= 1
+<br />
+&nbsp; &nbsp; namespace = ; short string to keep track of unions, etc.
+<br />
+&nbsp; &nbsp; indent =
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; indent_amount = 4
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; offset = 0
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; ; for union support
+<br />
+&nbsp; &nbsp; union_offsets = ; &#40;list&#41;
+<br />
+&nbsp; &nbsp; union_ends = ; &#40;list&#41;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; Loop
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; i &#58;= RegExMatch&#40;InputText, &quot;s&#41;.*?&#40;&#123;|;|&#125;&#41;&quot;, t, pos&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if ! i
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ; Move cursor to end of this bit.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pos &#58;= i+StrLen&#40;t&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ; Remove leading whitespace &#40;previous regex excludes trailing space.&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; t &#58;= RegExReplace&#40;t, &quot;&#40;?&#58;^\s+&#41;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;t1 = &quot;&#123;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Enter block.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Mark the beginning of the block.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if GenGetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputGetters .= indent . &quot;; &quot; . t . &quot;`n&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if GenSetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputSetters .= indent . &quot;; &quot; . t . &quot;`n&quot;
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Indent output.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Loop, %indent_amount%
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; indent .= &quot; &quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Add block info to namespace, if relevant.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;RegExMatch&#40;t, &quot;^union&#40;?&#58;\s+&#40;\w*&#41;&#41;s*&#123;$&quot;&#41;&#41; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; last_block = u
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StackPush&#40;union_offsets, offset&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StackPush&#40;union_ends, offset&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125; else
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; last_block = .
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; namespace .= last_block
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if &#40;t1 = &quot;&#125;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Exit block.
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Un-indent output.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; indent &#58;= SubStr&#40;indent, 1, -indent_amount&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Mark the end of the block.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if GenGetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputGetters .= indent . &quot;; &#125;`n&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if GenSetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputSetters .= indent . &quot;; &#125;`n&quot;
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;last_block = &quot;u&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; End union.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; offset &#58;= StackPop&#40;union_ends, offset&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StackPop&#40;union_offsets&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Remove block info char from namespace.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;StrLen&#40;namespace&#41;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StringTrimRight, namespace, namespace, 1
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Update current immediate block.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; last_block &#58;= SubStr&#40;namespace, 0&#41; ; 0=last char
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; last_block &#58;= &quot;&quot;
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Omit declarations following a block &#40;e.g. &quot;struct x &#123; int y &#125; declarations;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i &#58;= RegExMatch&#40;InputText, &quot;s&#41;.*?&#40;&#123;|;|&#125;&#41;&quot;, t, pos&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;t1 = &quot;;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pos &#58;= i+StrLen&#40;t&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if &#40;t != &quot;;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ! ParseField&#40;t&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;&nbsp; &nbsp;
+<br />
+
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;t != &quot;&#123;&quot; &amp;&amp; last_block = &quot;u&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Determine end of union by its largest item.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end &#58;= StackPop&#40;union_ends&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;end=&quot;&quot; or offset &gt; end&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end &#58;= offset
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StackPush&#40;union_ends, end&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; Reset offset to beginning of union.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; offset &#58;= StackPeek&#40;union_offsets, offset&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; if GenCtor
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; OutputText .= &quot;VarSetCapacity&#40;&quot; StructName &quot;, &quot; offset &quot;, 0&#41;`n`n&quot;
+<br />
+&nbsp; &nbsp; if GenGetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; OutputText .= OutputGetters &quot;`n&quot;
+<br />
+&nbsp; &nbsp; if GenSetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; OutputText .= OutputSetters &quot;`n&quot;
+<br />
+
+<br />
+;&nbsp; &nbsp; &nbsp;OutputText .= &quot;`nStdOut&#40; &quot;
+<br />
+;&nbsp; &nbsp; &nbsp;Loop, Parse, NameList, `,
+<br />
+;&nbsp; &nbsp; &nbsp;&#123;
+<br />
+;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if &#40;A_Index&gt;1&#41;
+<br />
+;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OutputText = %OutputText% &quot;, %A_LoopField%=&quot; %A_LoopField%
+<br />
+;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else
+<br />
+;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OutputText = %OutputText%&quot;%A_LoopField%=&quot; %A_LoopField%
+<br />
+;&nbsp; &nbsp; &nbsp;&#125;
+<br />
+;&nbsp; &nbsp; &nbsp;OutputText .= &quot; &#41;&quot;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; GuiControl,, OutputText, %OutputText%
+<br />
+&nbsp; &nbsp; return
+<br />
+&nbsp; &nbsp;
+<br />
+
+<br />
+AppendField&#40;name, size, type=&quot;&quot;, length=&quot;&quot;&#41; ; length=array length
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; local delim, pos, text
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; if &#40;name &amp;&amp; type &amp;&amp; length=&quot;&quot;&#41;
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; text &#58;= &#40;StructName!=&quot;struct&quot; ? StructName &quot;_&quot; &#58; &quot;&quot;&#41; . name
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if GenGetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputGetters .= indent text &quot; &#58;= NumGet&#40;&quot; StructName &quot;, &quot; offset &quot;, &quot;&quot;&quot; type &quot;&quot;&quot;&#41;`n&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if GenSetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputSetters .= indent &quot;NumPut&#40;&quot; text &quot;, &quot; StructName &quot;, &quot; offset &quot;, &quot;&quot;&quot; type &quot;&quot;&quot;&#41;`n&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; NameList .= &#40;NameList ? &quot;,&quot; &#58; &quot;&quot;&#41; . name
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; else
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; text &#58;= indent StructName &quot;_&quot; name &quot;_ptr &#58;= &amp;&quot; StructName &quot; + &quot; offset
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;type&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text .= &#40;DelimNameAndTypeWithNewline ? &quot;`n&nbsp; &quot; indent &#58; &quot;, &quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; . StructName &quot;_&quot; name &quot;_type &#58;= &quot;&quot;&quot; type &quot;&quot;&quot;&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;length&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text .= &#40;DelimNameAndTypeWithNewline ? &quot;`n&nbsp; &quot; indent &#58; &quot;, &quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; . StructName &quot;_&quot; name &quot;_length &#58;= &quot; length
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if GenGetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputGetters .= text &quot;`n&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if GenSetters
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OutputSetters .= text &quot;`n&quot;
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; offset += size
+<br />
+&#125;
+<br />
+
+<br />
+StackPush&#40;ByRef stack, item&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; if stack
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stack .= &quot;,&quot;
+<br />
+&nbsp; &nbsp; stack .= item
+<br />
+&#125;
+<br />
+
+<br />
+StackPop&#40;ByRef stack, defval=&quot;&quot;&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; if &#40;pos &#58;= InStr&#40;stack, &quot;,&quot;&#41;&#41;
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; item &#58;= SubStr&#40;stack, pos+1&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stack &#58;= SubStr&#40;stack, 1, pos-1&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return item
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; else if stack
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; item &#58;= stack
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stack &#58;= &quot;&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return item
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; return defval
+<br />
+&#125;
+<br />
+
+<br />
+StackPeek&#40;ByRef stack, defval=&quot;&quot;&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; if &#40;pos &#58;= InStr&#40;stack, &quot;,&quot;&#41;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return SubStr&#40;stack, pos+1&#41;
+<br />
+&nbsp; &nbsp; else if stack
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return stack
+<br />
+&nbsp; &nbsp; else
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return defval
+<br />
+&#125;
+<br />
+
+<br />
+; Parses a field string &quot;type identifier&#91;arraylength&#93;;&quot;
+<br />
+; Returns&#58;
+<br />
+;&nbsp; &nbsp;name
+<br />
+;&nbsp; &nbsp;size - size, in bytes, of the field.
+<br />
+;&nbsp; &nbsp;type - NumGet/DllCall-compatible type string.
+<br />
+ParseField&#40;t&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; local m, mtype, msep, mname, mlength, userlength
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; , typelist, name, size, type
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; static Types = &quot;Int,UInt,Short,UShort,Char,UChar,Int64,Float,Double&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, IntSize = 4&nbsp; &nbsp; &nbsp; , IntTypes = &quot;int,INT,LONG&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, UIntSize = 4&nbsp; &nbsp; &nbsp;, UIntTypes = &quot;UINT,ULONG,DWORD,COLORREF,HANDLE,HBITMAP,HBRUSH,HDC,HICON,HISTANCE,HMENU,HWND,ULONG_PTR,LPARAM,WPARAM&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, ShortSize = 2&nbsp; &nbsp; , ShortTypes = &quot;short&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, UShortSize = 2&nbsp; &nbsp;, UShortTypes = &quot;WORD,ATOM,USHORT&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, CharSize = 1&nbsp; &nbsp; &nbsp;, CharTypes = &quot;char&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, UCharSize = 1&nbsp; &nbsp; , UCharTypes = &quot;byte,BYTE,UCHAR&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, Int64Size = 8&nbsp; &nbsp; , Int64Types = &quot;int64,LONGLONG,ULONGLONG&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, FloatSize = 4&nbsp; &nbsp; , FloatTypes = &quot;FLOAT&quot;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;, DoubleSize = 8&nbsp; &nbsp;, DoubleTypes = &quot;DOUBLE&quot;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; if &#40;RegExMatch&#40;t, &quot;&#40;?&lt;type&gt;\w+&#41;&#40;?&lt;sep&gt;&#91;\s\*&#93;+&#41;&#40;?&lt;name&gt;\w+&#41;&#40;?&#58;\&#91;&#40;?&lt;length&gt;\w+&#41;\&#93;&#41;?\s*;&quot;, m&#41;&#41;
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; name &#58;= mname
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;mtype = &quot;bool&quot;&#41; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &#40;mtype==&quot;BOOL&quot;&#41; ; BOOL is an alias for int.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name, 4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else ; bool &#40;C++&#41; is 1 byte.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name, 1, &quot;UChar&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;InStr&#40;msep, &quot;*&quot;&#41; or SubStr&#40;mtype,1,2&#41;=&quot;LP&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Add 32-bit pointer to something.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name, 4, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;&#40;mtype = &quot;POINTL&quot; or mtype = &quot;POINT&quot;&#41; &amp;&amp; mlength=&quot;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Add individual X and Y fields.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_X&quot;, 4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_Y&quot;, 4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if &#40;mtype = &quot;RECT&quot; &amp;&amp; mlength=&quot;&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Add individual struct fields.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_left&quot;,&nbsp; &nbsp; &nbsp;4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_top&quot;,&nbsp; &nbsp; &nbsp; 4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_right&quot;,&nbsp; &nbsp; 4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppendField&#40;name . &quot;_bottom&quot;,&nbsp; &nbsp;4, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if StartsWith&#40;mtype, &quot;LP&quot;&#41; &amp;&amp; !EndsWith&#40;mtype, &quot;STR&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type &#58;= &quot;UInt&quot;, size &#58;= 4
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;&nbsp; &nbsp;; Get DllCall-compatible type if possible.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Loop, Parse, Types, `,
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; typelist &#58;= %A_LoopField%Types
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if mtype in %typelist%
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type &#58;= A_LoopField
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; size &#58;= %A_LoopField%Size
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if mlength
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if mlength is not integer
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ! RegExMatch&#40;mlength, &quot;\W&quot;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if DEF_%mlength%
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mlength &#58;= DEF_%mlength%
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if mlength is not integer
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#123;
+<br />
+mlength_TryAgain&#58;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; InputBox, userlength, Constant, Unknown value '%mlength%' used as array length. Please enter the value of '%mlength%'.,,, 150
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if userlength =
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if userlength is not integer
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; goto mlength_TryAgain
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DEF_%mlength% &#58;= mlength &#58;= userlength
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if mlength is integer
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; size *= mlength
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if mlength
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; size &#58;= mlength &#58;= &quot;&quot;
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; if ! size
+<br />
+&nbsp; &nbsp; &#123;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ; Ask the user to enter details for this field.
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if ! PromptForStuff&#40;t, name, size, type&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false
+<br />
+&nbsp; &nbsp; &#125;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; AppendField&#40;name, size, type, mlength&#41;
+<br />
+&nbsp; &nbsp; return true
+<br />
+&#125;
+<br />
+
+<br />
+PromptForStuff&#40;t, ByRef name, ByRef size, ByRef type, message=&quot;&quot;&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; static retval, tname, tsize, ttype
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; if ! message
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; message = Failed to parse field&#58;`n&nbsp; %t%`n`nPlease enter the necessary details.
+<br />
+
+<br />
+&nbsp; &nbsp; Gui, 2&#58;Default
+<br />
+&nbsp; &nbsp; Gui, +Owner1
+<br />
+&nbsp; &nbsp; Gui, +LabelPFS +LastFound
+<br />
+&nbsp; &nbsp; Gui, Add, Text, W300, %message%
+<br />
+&nbsp; &nbsp; Gui, Add, Text, , Name&#58;
+<br />
+&nbsp; &nbsp; Gui, Add, Edit, W300 vtname, %name%
+<br />
+&nbsp; &nbsp; Gui, Add, Text, , Size&#58;
+<br />
+&nbsp; &nbsp; Gui, Add, Edit, W300 vtsize, %size%
+<br />
+&nbsp; &nbsp; Gui, Add, Text, , NumGet-compatible Type&#58;
+<br />
+&nbsp; &nbsp; Gui, Add, Edit, W300 vttype, %type%
+<br />
+&nbsp; &nbsp; Gui, Add, Button, gPFSOK Default, OK
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; retval = 0
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; Gui, Show,, Parse Error
+<br />
+&nbsp; &nbsp; Gui, 1&#58;+Disabled
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; WinWaitClose, % &quot;ahk_id &quot; . WinExist&#40;&#41;
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; name &#58;= tname
+<br />
+&nbsp; &nbsp; size &#58;= tsize
+<br />
+&nbsp; &nbsp; type &#58;= ttype
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; Gui, 1&#58;Default
+<br />
+&nbsp; &nbsp; Gui, 1&#58;-Disabled
+<br />
+&nbsp; &nbsp; Gui, 1&#58;Show
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; Gui, 2&#58;Destroy
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; return retval
+<br />
+
+<br />
+PFSEscape&#58;
+<br />
+&nbsp; &nbsp; Gui, 2&#58;Cancel
+<br />
+&nbsp; &nbsp; return
+<br />
+PFSOK&#58;
+<br />
+&nbsp; &nbsp; Gui, 2&#58;Submit
+<br />
+&nbsp; &nbsp; retval = 1
+<br />
+&nbsp; &nbsp; return
+<br />
+&#125;
+<br />
+&nbsp; &nbsp;
+<br />
+
+<br />
+GuiEscape&#58;
+<br />
+GuiClose&#58;
+<br />
+&nbsp; &nbsp; ExitApp
+<br />
+
+<br />
+GuiSize&#58;
+<br />
+;&nbsp; &nbsp; &nbsp;Anchor&#40;&quot;InputText&quot; ,&nbsp; &quot;w h0.5&quot;&#41;
+<br />
+;&nbsp; &nbsp; &nbsp;, Anchor&#40;&quot;ParseButton&quot;, &quot;y0.5&quot;&#41;, Anchor&#40;&quot;GenGetters&quot;, &quot;y0.5&quot;&#41;
+<br />
+;&nbsp; &nbsp; &nbsp;, Anchor&#40;&quot;GenGetters&quot;, &quot;y0.5&quot;&#41;, Anchor&#40;&quot;GenSetters&quot;, &quot;y0.5&quot;&#41;
+<br />
+;&nbsp; &nbsp; &nbsp;, Anchor&#40;&quot;GenCtor&quot;, &quot;y0.5&quot;&#41;, Anchor&#40;&quot;StructName&quot;, &quot;y0.5 w1&quot;&#41;
+<br />
+;&nbsp; &nbsp; &nbsp;, Anchor&#40;&quot;OutputText&quot;,&nbsp; &quot;w h0.5 y0.5&quot;&#41;
+<br />
+&nbsp; &nbsp; ; InputText is rarely used for more than a paste target,
+<br />
+&nbsp; &nbsp; ; so resize only OutputText vertically.
+<br />
+&nbsp; &nbsp; Anchor&#40;&quot;InputText&quot;, &quot;w&quot;&#41;
+<br />
+&nbsp; &nbsp; , Anchor&#40;&quot;StructName&quot;, &quot;w&quot;&#41;
+<br />
+&nbsp; &nbsp; , Anchor&#40;&quot;OutputText&quot;, &quot;h w&quot;&#41;
+<br />
+&nbsp; &nbsp; return
+<br />
+
+<br />
+
+<br />
+; Case-sensitive by default because we're parsing C++ code.
+<br />
+EndsWith&#40;A, B, CaseSensitive=true&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; if &#40;StrLen&#40;A&#41; &lt; StrLen&#40;B&#41;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return false
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; return CaseSensitive
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ? &#40;SubStr&#40;A, -&#40;StrLen&#40;B&#41;-1&#41;&#41; == B&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#58; &#40;SubStr&#40;A, -&#40;StrLen&#40;B&#41;-1&#41;&#41; = B&#41;
+<br />
+&#125;
+<br />
+
+<br />
+StartsWith&#40;A, B, CaseSensitive=true&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; if &#40;StrLen&#40;A&#41; &lt; StrLen&#40;B&#41;&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return false
+<br />
+&nbsp; &nbsp;
+<br />
+&nbsp; &nbsp; return CaseSensitive
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ? &#40;SubStr&#40;A, 1, StrLen&#40;B&#41;&#41; == B&#41;
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &#58; &#40;SubStr&#40;A, 1, StrLen&#40;B&#41;&#41; = B&#41;
+<br />
+&#125;
+<br />
+
+<br />
+Spaces&#40;count&#41;
+<br />
+&#123;
+<br />
+&nbsp; &nbsp; Loop, %count%
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; str .= &quot; &quot;
+<br />
+&nbsp; &nbsp; return str
+<br />
+&#125;
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+<span style="font-weight: bold">Usage:</span>
+<br />
+Copy and paste a C/C++ structure definition into the top field, then click Parse. If a parsing error occurs, you will be prompted to enter the correct details. If all goes well, AutoHotkey code will appear in the bottom field. This code may or may not be directly usable in script.
+<br />
+
+<br />
+[&amp; <span style="text-decoration: underline">C</span>opy] does the same as [<span style="text-decoration: underline">P</span>arse], but also copies the result to the clipboard.
+<br />
+
+<br />
+The small edit field in the middle defines the name of the struct variable for the generated code. If not &quot;struct&quot;, it will be prepended to the name of each field (with &quot;_&quot; as a delimiter.) For the example output below, this field was set to &quot;wp&quot;.
+<br />
+
+<br />
+<span style="font-weight: bold">Example input:</span>
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">typedef struct _WINDOWPLACEMENT &#123;
+<br />
+&nbsp; &nbsp; UINT length;
+<br />
+&nbsp; &nbsp; UINT flags;
+<br />
+&nbsp; &nbsp; UINT showCmd;
+<br />
+&nbsp; &nbsp; POINT ptMinPosition;
+<br />
+&nbsp; &nbsp; POINT ptMaxPosition;
+<br />
+&nbsp; &nbsp; RECT rcNormalPosition;
+<br />
+&#125; WINDOWPLACEMENT;
+<br />
+</td>	</tr></table><span class="postbody"><span style="font-weight: bold">Example output:</span>
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">VarSetCapacity&#40;wp, 44, 0&#41;
+<br />
+
+<br />
+; typedef struct _WINDOWPLACEMENT &#123;
+<br />
+&nbsp; &nbsp; wp_length &#58;= NumGet&#40;wp, 0, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_flags &#58;= NumGet&#40;wp, 4, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_showCmd &#58;= NumGet&#40;wp, 8, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_ptMinPosition_X &#58;= NumGet&#40;wp, 12, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_ptMinPosition_Y &#58;= NumGet&#40;wp, 16, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_ptMaxPosition_X &#58;= NumGet&#40;wp, 20, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_ptMaxPosition_Y &#58;= NumGet&#40;wp, 24, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_rcNormalPosition_left &#58;= NumGet&#40;wp, 28, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_rcNormalPosition_top &#58;= NumGet&#40;wp, 32, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_rcNormalPosition_right &#58;= NumGet&#40;wp, 36, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; wp_rcNormalPosition_bottom &#58;= NumGet&#40;wp, 40, &quot;Int&quot;&#41;
+<br />
+; &#125;
+<br />
+
+<br />
+; typedef struct _WINDOWPLACEMENT &#123;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_length, wp, 0, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_flags, wp, 4, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_showCmd, wp, 8, &quot;UInt&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_ptMinPosition_X, wp, 12, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_ptMinPosition_Y, wp, 16, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_ptMaxPosition_X, wp, 20, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_ptMaxPosition_Y, wp, 24, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_rcNormalPosition_left, wp, 28, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_rcNormalPosition_top, wp, 32, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_rcNormalPosition_right, wp, 36, &quot;Int&quot;&#41;
+<br />
+&nbsp; &nbsp; NumPut&#40;wp_rcNormalPosition_bottom, wp, 40, &quot;Int&quot;&#41;
+<br />
+; &#125;
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+<span style="font-weight: bold">Final notes:</span>
+<br />
+For the curious, I wrote this script while trying to work with the <img src="images/smiles/icon_twisted.gif" alt="Twisted Evil" border="0" /> <a href="http://msdn2.microsoft.com/en-us/library/ms535771.aspx" target="_blank" class="postlink">DEVMODE</a> structure.
+<br />
+
+<br />
+I generally only use the code it generates as a reference.</span><span class="gensmall"><br /><br />Last edited by Lexikos on Tue Jan 22, 2008 8:53 am; edited 2 times in total</span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="172887"></a><b>majkinetor</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 24 May 2006<br /><a href="author-majkinetor.html" class="postdetails">Posts: 3626</a><br />Location: Belgrade</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=172887#172887"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu Jan 17, 2008 5:43 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=172887"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">ROFLMAO :D
+<br />
+
+<br />
+I will definitely use this. When I get high ocasionaly, there is no chance on the world to correctly calcuate struct offsets  <img src="images/smiles/icon_cool.gif" alt="Cool" border="0" /></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=2640"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=2640"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <a href="profile.php?mode=viewprofile&amp;u=2640"><img src="templates/subSilver/images/lang_english/icon_msnm.gif" alt="MSN Messenger" title="MSN Messenger" border="0" /></a><script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="172901"></a><b>Titan</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 11 Aug 2004<br /><a href="author-Titan.html" class="postdetails">Posts: 5094</a><br />Location: freenode #ahk</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=172901#172901"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu Jan 17, 2008 7:47 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=172901"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Structs beyond the complexity of a RECT is something I seldom use, but for when such occasions do arise this will definitely be a lot helpful.
+<br />
+I would suggest adding a copy to clipboard feature. If you can, support creating structs would also be an added bonus <img src="images/smiles/icon_smile.gif" alt="Smile" border="0" /><br />_________________<br /><img src="http://www.autohotkey.net/~Titan/ub.png" border="0" />
+<br />
+<span style="color: #cc3366"><span style="font-size: 9px; line-height: normal">RegExReplace(&quot;<span style="font-weight: bold">irc.freenode.net/ahk</span>&quot;, &quot;^(?=(.(?=[\0-r\[]*((?&lt;=\.).))))(?:[c-\x73]{2,8}(\S))+((2)|\b[^\2-]){2}\D++$&quot;, &quot;$u3$1$3$4$2&quot;)</span></span></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=142"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=142"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>  <a href="http://www.autohotkey.net/~Titan/" target="_userwww"><img src="templates/subSilver/images/lang_english/icon_www.gif" alt="Visit poster's website" title="Visit poster's website" border="0" /></a>   <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="173017"></a><b>Lexikos</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 17 Oct 2006<br /><a href="author-Lexikos.html" class="postdetails">Posts: 2579</a><br />Location: Australia, Qld</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=173017#173017"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Fri Jan 18, 2008 7:33 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=173017"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Update: StructParser now generates more useful code. <img src="images/smiles/icon_biggrin.gif" alt="Very Happy" border="0" />
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Titan wrote:</b></span></td>	</tr>	<tr>	  <td class="quote">I would suggest adding a copy to clipboard feature.</td>	</tr></table><span class="postbody">I've added a [&amp; <span style="text-decoration: underline">C</span>opy] button. <img src="images/smiles/icon_smile.gif" alt="Smile" border="0" />
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote">If you can, support creating structs would also be an added bonus <img src="images/smiles/icon_smile.gif" alt="Smile" border="0" /></td>	</tr></table><span class="postbody">I suppose it is most common to store the struct's data in a variable, so creating a struct is simply calling VarSetCapacity. StructParser now generates
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">VarSetCapacity&#40;struct, <span style="color: green">size</span>, 0&#41;
+<br />
+</td>	</tr></table><span class="postbody">instead of
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">SIZE &#58;= <span style="color: green">size</span>
+<br />
+</td>	</tr></table><span class="postbody"></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="173646"></a><b>Guest</b></span><br /><span class="postdetails"><br /><br /><br /><br /><br /></span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=173646#173646"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Mon Jan 21, 2008 7:12 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=173646"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>lexikos wrote:</b></span></td>	</tr>	<tr>	  <td class="quote">For the curious, I wrote this script while trying to work with the <img src="images/smiles/icon_twisted.gif" alt="Twisted Evil" border="0" /> <a href="http://msdn2.microsoft.com/en-us/library/ms535771.aspx" target="_blank" class="postlink">DEVMODE</a> structure.</td>	</tr></table><span class="postbody">
+<br />
+ <img src="images/smiles/icon_lol.gif" alt="Laughing" border="0" /> OTOH, what about <a href="http://msdn2.microsoft.com/en-us/library/ms647564.aspx" target="_blank" class="postlink">MENUBARINFO</a>?</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap">      <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="173771"></a><b>Lexikos</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 17 Oct 2006<br /><a href="author-Lexikos.html" class="postdetails">Posts: 2579</a><br />Location: Australia, Qld</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=173771#173771"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Tue Jan 22, 2008 5:07 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=173771"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Anonymous wrote:</b></span></td>	</tr>	<tr>	  <td class="quote"> <img src="images/smiles/icon_lol.gif" alt="Laughing" border="0" /> OTOH, what about <a href="http://msdn2.microsoft.com/en-us/library/ms647564.aspx" target="_blank" class="postlink">MENUBARINFO</a>?
+<br />
+</td>	</tr></table><span class="postbody">Ha! The only problem with MENUBARINFO is this mysterious syntax:
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">&nbsp; BOOL&nbsp; fBarFocused<span style="color: red">&#58;1</span>;
+<br />
+&nbsp; BOOL&nbsp; fFocused<span style="color: red">&#58;1</span>;
+<br />
+</td>	</tr></table><span class="postbody">fBarFocused and fFocused are <a href="http://msdn2.microsoft.com/en-us/library/yszfawxh%28VS.80%29.aspx" target="_blank" class="postlink">bit fields</a>. I'm not sure how I could generate code to access them, given that NumGet can get a minimum of one byte.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="173786"></a><b>Guest</b></span><br /><span class="postdetails"><br /><br /><br /><br /><br /></span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=173786#173786"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Tue Jan 22, 2008 6:29 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=173786"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>lexikos wrote:</b></span></td>	</tr>	<tr>	  <td class="quote">I'm not sure how I could generate code to access them, given that NumGet can get a minimum of one byte.</td>	</tr></table><span class="postbody">
+<br />
+Although it could be retrieved using BitWise operators, I don't think it's worth the effort since BitFields are rarely found as you said, like archaic structures in DDE. What I was more concerned about was that the script output an (incorrect) size nevertheless, e.g., 36 which should be 32 for MENUBARINFO. Maybe better leave them to the users when BitFileds are involved.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap">      <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="173793"></a><b>Lexikos</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 17 Oct 2006<br /><a href="author-Lexikos.html" class="postdetails">Posts: 2579</a><br />Location: Australia, Qld</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=173793#173793"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Tue Jan 22, 2008 8:26 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=173793"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Anonymous wrote:</b></span></td>	</tr>	<tr>	  <td class="quote">What I was more concerned about was that the script output an (incorrect) size nevertheless, e.g., 36 which should be 32 for MENUBARINFO.
+<br />
+</td>	</tr></table><span class="postbody">StructParser will not successfully parse a bitfield. Although the size field of the Parse Error dialog defaults to 4 (edit: since this may give a false impression, it now has no default value), the very presence of the dialog indicates that the results may be incorrect.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=3754"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="196652"></a><b>heresy</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 12 Mar 2008<br /><a href="author-heresy.html" class="postdetails">Posts: 291</a><br /></span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=196652#196652"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu May 15, 2008 3:07 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=196652"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">wow Lexikos
+<br />
+why you didn't mention it to me when i was asking you Dllcall thing
+<br />
+this is definitely huge! especially for non-programmers like me
+<br />
+this helper MUST be documented in DllCall page of help file in my opinion
+<br />
+many thanks Lexikos
+<br />
+gratefully<br />_________________<br /><a href="http://www.autohotkey.com/forum/viewtopic.php?t=33464" target="_blank" class="postlink">Easy WinAPI</a> - Dive into Windows API World
+<br />
+Benchmark your AutoHotkey skills at <a href="http://playahk.com" target="_blank" class="postlink">PlayAHK.com</a></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=8193"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=8193"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="196727"></a><b>Thrawn</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 12 May 2008<br /><a href="author-Thrawn.html" class="postdetails">Posts: 7</a><br />Location: Germany</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=196727#196727"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu May 15, 2008 5:05 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=196727"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Dude! Perfect!
+<br />
+Thx a lot.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=8862"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=8862"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' <a href="http://wwp.icq.com/scripts/search.dll?to=196225944"><img src="templates/subSilver/images/lang_english/icon_icq_add.gif" alt="ICQ Number" title="ICQ Number" border="0" /></a>');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"><a href="http://wwp.icq.com/scripts/search.dll?to=196225944"><img src="templates/subSilver/images/lang_english/icon_icq_add.gif" alt="ICQ Number" title="ICQ Number" border="0" /></a></div><div style="position:absolute;left:3px;top:-1px"><a href="http://wwp.icq.com/196225944#pager"><img src="http://web.icq.com/whitepages/online?icq=196225944&img=5" width="18" height="18" border="0" /></a></div></div>');
+
+				//--></script><noscript><a href="http://wwp.icq.com/scripts/search.dll?to=196225944"><img src="templates/subSilver/images/lang_english/icon_icq_add.gif" alt="ICQ Number" title="ICQ Number" border="0" /></a></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="211330"></a><b>Azerty</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Dec 2006<br /><a href="author-Azerty.html" class="postdetails">Posts: 72</a><br />Location: France</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=211330#211330"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Fri Aug 01, 2008 1:23 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=211330"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Thanks Lexicos
+<br />
+
+<br />
+I went past it until now, but never too late <img src="images/smiles/icon_smile.gif" alt="Smile" border="0" />
+<br />
+
+<br />
+Good work<br />_________________<br />Assembler-coded <a href="http://www.autohotkey.com/forum/viewtopic.php?p=180448#180448" target="_blank" class="postlink">MCode.ahk</a> <a href="http://www.autohotkey.com/forum/viewtopic.php?t=29770" target="_blank" class="postlink">ASCII85.ahk library</a></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=4210"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=4210"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr align="center">
+		<td class="catBottom" colspan="2" height="28"><table cellspacing="0" cellpadding="0" border="0">
+			<tr><form method="post" action="viewtopic.php?t=27644&amp;start=0">
+				<td align="center"><span class="gensmall">Display posts from previous: <select name="postdays"><option value="0" selected="selected">All Posts</option><option value="1">1 Day</option><option value="7">7 Days</option><option value="14">2 Weeks</option><option value="30">1 Month</option><option value="90">3 Months</option><option value="180">6 Months</option><option value="364">1 Year</option></select>&nbsp;<select name="postorder"><option value="asc" selected="selected">Oldest First</option><option value="desc">Newest First</option></select>&nbsp;<input type="submit" value="Go" class="liteoption" name="submit" /></span></td>
+			</form></tr>
+		</table></td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
+  <tr>
+	<td align="left" valign="middle" nowrap="nowrap"><span class="nav"><a href="posting.php?mode=newtopic&amp;f=2"><img src="templates/subSilver/images/lang_english/post.gif" border="0" alt="Post new topic" align="middle" /></a>&nbsp;&nbsp;&nbsp;<a href="posting.php?mode=reply&amp;t=27644"><img src="templates/subSilver/images/lang_english/reply.gif" border="0" alt="Reply to topic" align="middle" /></a></span></td>
+	<td align="left" valign="middle" width="100%"><span class="nav">&nbsp;&nbsp;&nbsp;<a href="/forum/" class="nav">AutoHotkey Community Forum Index</a>
+	  -> <a href="viewforum.php?f=2" class="nav">Scripts & Functions</a></span></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">All times are GMT + 3 Hours</span><br /><span class="nav"></span>
+	  </td>
+  </tr>
+  <tr>
+	<td align="left" colspan="3"><span class="nav">Page <b>1</b> of <b>1</b></span></td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="2" border="0" align="center">
+  <tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"><span class="gensmall"><a href="viewtopic.php?t=27644&amp;watch=topic&amp;start=0&amp;sid=eab646ffb6e2d32da7ed36ee6f9e3bc0">Watch this topic for replies</a></span><br />
+	  &nbsp;<br />
+	  </td>
+	<td align="right" valign="top" nowrap="nowrap">
+<form method="get" name="jumpbox" action="viewforum.php" onSubmit="if(document.jumpbox.f.value == -1){return false;}"><table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }"><option value="-1">Select a forum</option><option value="-1">&nbsp;</option><option value="-1">AutoHotkey</option><option value="-1">----------------</option><option value="1">Ask for Help</option><option value="2"selected="selected">Scripts & Functions</option><option value="3">Bug Reports</option><option value="4">Wish List</option><option value="6">Announcements</option><option value="-1">&nbsp;</option><option value="-1">General</option><option value="-1">----------------</option><option value="7">Utilities & Resources</option><option value="5">General Chat</option></select><input type="hidden" name="sid" value="eab646ffb6e2d32da7ed36ee6f9e3bc0" />&nbsp;<input type="submit" value="Go" class="liteoption" /></span></td>
+	</tr>
+</table></form>
+
+<span class="gensmall"></span></td>
+  </tr>
+</table>
+
+
+<div align="center"><span class="copyright"><br /><br />
+Powered by <a href="http://www.phpbb.com/" target="_phpbb" class="copyright">phpBB</a> &copy; 2001, 2005 phpBB Group<br /></span></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

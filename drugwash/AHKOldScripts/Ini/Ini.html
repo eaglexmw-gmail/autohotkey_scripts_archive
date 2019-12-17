@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<html><head><title>Ini</title><style>/*
+   IMPORTANT: If you're editing this file in the output directory of one of
+   your projects, your changes will be overwritten the next time you run
+   Natural Docs.  Instead, copy this file to your project directory, make your
+   changes, and you can use it with -s.  Even better would be to make a CSS
+   file in your project directory with only your changes, which you can then
+   use with -s [original style] [your changes].
+
+   On the other hand, if you're editing this file in the Natural Docs styles
+   directory, the changes will automatically be applied to all your projects
+   that use this style the next time Natural Docs is run on them.
+
+   This file is part of Natural Docs, which is Copyright (C) 2003-2005 Greg Valure
+   Natural Docs is licensed under the GPL
+*/
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    color: #000000;
+    margin: 0px; padding: 0px }
+
+body.UnframedPage {
+    background-color: #E8E8E8 }
+
+
+a:link,
+a:visited { color: #900000; text-decoration: none }
+a:hover { color: #900000; text-decoration: underline }
+a:active { color: #FF0000; text-decoration: underline }
+
+td {
+    vertical-align: top }
+
+/*
+    Comment out this line to use web-style paragraphs (blank line between
+    paragraphs, no indent) instead of print-style paragraphs (no blank line,
+    indented.)
+*/
+p {
+    text-indent: 5ex; margin: 0 }
+
+
+/*  Can't use something like display: none or it won't break.  */
+.HB {
+    font-size: 1px;
+    visibility: hidden;
+    }
+
+/*  Blockquotes are used as containers for things that may need to scroll.  */
+blockquote {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    }
+/*  This will be fixed in JavaScript.  We just need a default if it's turned off.  */
+.IE blockquote {
+    width: 400px;  }
+
+.Gecko blockquote {
+    padding-bottom: .5em;
+    }
+
+/*  Turn off scrolling when printing.  */
+@media print {
+    blockquote {
+        overflow: visible;
+        }
+    .IE blockquote {
+        width: auto;
+        }
+    }
+
+
+
+body.FramedMenuPage,
+.MenuSection {
+    font-size: 9pt;
+    background-color: #E8E8E8;
+    padding: 10px 0 0 0 }
+
+.MenuSection {
+    width: 27ex }
+
+
+    .MTitle {
+        font-size: 16pt; font-weight: bold; font-variant: small-caps;
+        text-align: center;
+        padding: 5px 10px 15px 10px;
+        border-bottom: 1px dotted #000000;
+        margin-bottom: 15px }
+
+    .MSubTitle {
+        font-size: 9pt; font-weight: normal; font-variant: normal;
+        margin-top: 1ex; margin-bottom: 5px }
+
+
+    .MEntry a:link,
+    .MEntry a:hover,
+    .MEntry a:visited { color: #606060; margin-right: 0 }
+    .MEntry a:active { color: #A00000; margin-right: 0 }
+
+
+    .MGroup {
+        font-variant: small-caps; font-weight: bold;
+        margin: 1em 0 1em 10px }
+
+    /*  Konqueror just can't do margins.  */
+    .KHTML .MGroup {
+        margin-bottom: 0; padding-bottom: 1em }
+
+    .MGroupContent {
+        font-variant: normal; font-weight: normal }
+
+    .MGroup a:link,
+    .MGroup a:hover,
+    .MGroup a:visited { color: #545454; margin-right: 10px }
+    .MGroup a:active { color: #A00000; margin-right: 10px }
+
+
+    .MFile,
+    .MText,
+    .MLink,
+    .MIndex {
+        padding: 1px 17px 2px 10px;
+        margin: .25em 0 .25em 0 }
+
+    .MText {
+        font-size: 8pt; font-style: italic }
+
+    .MLink {
+        font-style: italic }
+
+    #MSelected {
+        color: #000000; background-color: #FFFFFF;
+        /*  Replace padding with border.  */
+        padding: 0 10px 0 10px;
+        border-width: 1px 2px 2px 0; border-style: solid; border-color: #000000;
+        margin-right: 5px }
+
+    /*  Close off the left side when its in a group.  */
+    .MGroup #MSelected {
+        padding-left: 9px; border-left-width: 1px }
+
+    /*  A treat for Mozilla users.  Blatantly non-standard.  Will be replaced with CSS 3 attributes when finalized/supported.  */
+    .Gecko #MSelected {
+        -moz-border-radius-topright: 10px;
+        -moz-border-radius-bottomright: 10px }
+    .Gecko .MGroup #MSelected {
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-bottomleft: 10px }
+
+
+
+
+body.FramedContentPage,
+.ContentSection {
+    background-color: #FFFFFF;
+    padding-bottom: 15px }
+
+.ContentSection {
+    border-width: 0 0 1px 1px; border-style: solid; border-color: #000000 }
+
+
+    .CTopic {
+        font-size: 10pt;
+        /*  This should be a margin but Konq 3.1.1 sucks.  */
+        padding-bottom: 3em }
+
+
+    .CTitle {
+        font-size: 12pt; font-weight: bold;
+        border-width: 0 0 1px 0; border-style: solid; border-color: #A0A0A0;
+        margin: 0 15px .5em 15px }
+
+    .CGroup .CTitle {
+        font-size: 16pt; font-variant: small-caps;
+        padding-left: 15px; padding-right: 15px;
+        border-width: 0 0 2px 0; border-color: #000000;
+        margin-left: 0; margin-right: 0 }
+
+    .CClass .CTitle,
+    .CInterface .CTitle,
+    .CDatabase .CTitle,
+    .CDatabaseTable .CTitle,
+    .CSection .CTitle {
+        font-size: 18pt;
+        color: #FFFFFF; background-color: #A0A0A0;
+        padding: 10px 15px 10px 15px;
+        border-width: 2px 0; border-color: #000000;
+        margin-left: 0; margin-right: 0 }
+
+    #MainTopic .CTitle {
+        font-size: 20pt;
+        color: #FFFFFF; background-color: #7070C0;
+        padding: 10px 15px 10px 15px;
+        border-width: 0 0 3px 0; border-color: #000000;
+        margin-left: 0; margin-right: 0 }
+
+    .CBody {
+        margin-left: 15px; margin-right: 15px }
+
+
+    .CToolTip {
+        position: absolute; visibility: hidden;
+        left: 0; top: 0; max-width: 50%;
+        background-color: #FFFFE0;
+        padding: 5px;
+        border-width: 1px 2px 2px 1px; border-style: solid; border-color: #000000;
+        font-size: 8pt }
+
+    /*  Opera 6 gives it a huge height otherwise.  */
+    .Opera6 .CTooltip, .Opera5 .CTooltip {
+        max-width: 100% }
+
+    /*  Scrollbars would be useless.  */
+    .CToolTip blockquote {
+        overflow: hidden;
+        }
+
+    .CHeading {
+        font-weight: bold; font-size: 10pt;
+        margin-top: 1.5em; margin-bottom: .5em }
+
+    .CCode {
+        font: 10pt "Courier New", Courier, monospace;
+        }
+
+    .CBulletList {
+        /*  I don't know why CBody's margin doesn't apply, but it's consistent across browsers so whatever.
+             Reapply it here as padding.  */
+        padding-left: 15px; padding-right: 15px;
+        margin: .5em 5ex .5em 5ex;
+        }
+
+    .CDescriptionList {
+        margin: .5em 5ex 0 5ex }
+
+    /* IE 4 and Konqueror always makes it too long.  */
+    .IE4 .CDescriptionList,
+    .KHTML .CDescriptionList {
+        width: 85% }
+
+        .CDLEntry {
+            font: 10pt "Courier New", Courier, monospace; color: #808080;
+            padding-bottom: .25em;
+            white-space: nowrap }
+
+        .CDLDescription {
+            font-size: 10pt;  /*  For browsers that don't inherit correctly, like Opera 5.  */
+            padding-bottom: .5em; padding-left: 5ex }
+
+
+
+
+.Prototype {
+    font: 10pt "Courier New", Courier, monospace;
+    padding: 5px 3ex;
+    border-width: 1px; border-style: solid;
+    margin: 0 5ex 1.5em 5ex;
+    }
+
+    .Prototype td {
+        font-size: 10pt;
+        }
+
+    .PDefaultValue,
+    .PDefaultValuePrefix,
+    .PTypePrefix {
+        color: #8F8F8F;
+        }
+    .PTypePrefix {
+        text-align: right;
+        }
+    .PAfterParameters {
+        vertical-align: bottom;
+        }
+
+    .IE .Prototype table {
+        padding: 0;
+        }
+
+    .CFunction .Prototype {
+        background-color: #F4F4F4; border-color: #D0D0D0 }
+    .CProperty .Prototype {
+        background-color: #F4F4FF; border-color: #C0C0E8 }
+    .CVariable .Prototype {
+        background-color: #FFFFF0; border-color: #E0E0A0 }
+
+    .CDatabaseIndex .Prototype,
+    .CConstant .Prototype {
+        background-color: #D0D0D0; border-color: #000000 }
+    .CType .Prototype {
+        background-color: #FFF8F8; border-color: #E8C8C8 }
+    .CDatabaseTrigger .Prototype,
+    .CEvent .Prototype,
+    .CDelegate .Prototype {
+        background-color: #F0FCF0; border-color: #B8E4B8 }
+
+    .CToolTip .Prototype {
+        margin: 0 0 .5em 0;
+        white-space: nowrap;
+        }
+
+
+
+
+
+.Summary {
+    margin: 1.5em 5ex 0 5ex }
+
+    .STitle {
+        font-size: 12pt; font-weight: bold;
+        margin-bottom: .5em }
+
+
+    .SBorder {
+        background-color: #FFFFF0;
+        padding: 15px;
+        border: 1px solid #C0C060 }
+
+    /* Let's observe the evolution of IE's brokeness, shall we?
+        IE 4 always makes them too long, there's no way around it.  */
+    .IE4 .SBorder {
+        width: 85% }
+    /* IE 5 will make them too long unless you set the width to 100%.  Isn't this implied for a div?  */
+    .IE5 .SBorder {
+        width: 100% }
+    /* IE 6 behaves like 5 when it's in a frame, but without frames it will be correct without a width or slightly too long
+        (but not enough to scroll) with a width.  This arbitrary weirdness simply astounds me.  */
+    body.FramedContentPage .IE6 .SBorder {
+        width: 100% }
+
+    /*  A treat for Mozilla users.  Blatantly non-standard.  Will be replaced with CSS 3 attributes when finalized/supported.  */
+    .Gecko .SBorder {
+        -moz-border-radius: 20px }
+
+
+    .STable {
+        font-size: 9pt; width: 100% }
+
+    .SEntrySize {
+        width: 30% }
+    .SDescriptionSize {
+        width: 70% }
+
+
+    .SMarked {
+        background-color: #F8F8D8 }
+
+
+    .SEntry .SIndent1 {
+        margin-left: 1.5ex }
+    .SEntry .SIndent2 {
+        margin-left: 3ex }
+    .SEntry .SIndent3 {
+        margin-left: 4.5ex }
+    .SEntry .SIndent4 {
+        margin-left: 6ex }
+    .SEntry .SIndent5 {
+        margin-left: 7.5ex }
+
+    .SDescription {
+        padding-left: 3ex }
+
+    .SDescription a { color: #800000}
+    .SDescription a:active { color: #A00000 }
+
+
+    .SGroup {
+        margin-top: .5em; margin-bottom: .25em }
+
+    .SGroup .SEntry {
+        font-weight: bold; font-variant: small-caps }
+
+    .SGroup .SEntry a { color: #800000 }
+    .SGroup .SEntry a:active { color: #F00000 }
+
+
+    .SMain .SEntry,
+    .SClass .SEntry,
+    .SDatabase .SEntry,
+    .SDatabaseTable .SEntry,
+    .SSection .SEntry {
+        font-weight: bold; font-size: 10pt;
+        margin-bottom: .25em }
+
+    .SClass,
+    .SDatabase,
+    .SDatabaseTable,
+    .SSection {
+        margin-top: 1em }
+
+    .SMain .SEntry a,
+    .SClass .SEntry a,
+    .SDatabase .SEntry a,
+    .SDatabaseTable .SEntry a,
+    .SSection .SEntry a { color: #000000 }
+
+    .SMain .SEntry a:active,
+    .SClass .SEntry a:active,
+    .SDatabase .SEntry a:active,
+    .SDatabaseTable .SEntry a:active,
+    .SSection .SEntry a:active { color: #A00000 }
+
+
+
+
+
+.ClassHierarchy {
+    margin: 0 15px 1em 15px }
+
+    .CHEntry {
+        border-width: 1px 2px 2px 1px; border-style: solid; border-color: #A0A0A0;
+        margin-bottom: 3px;
+        padding: 2px 2ex;
+        font-size: 10pt;
+        background-color: #F4F4F4; color: #606060;
+        }
+
+    .Gecko .CHEntry {
+        -moz-border-radius: 4px;
+        }
+
+    .CHCurrent .CHEntry {
+        font-weight: bold;
+        border-color: #000000;
+        color: #000000;
+        }
+
+    .CHChildNote .CHEntry {
+        font-style: italic;
+        font-size: 8pt;
+        }
+
+    .CHIndent {
+        margin-left: 3ex;
+        }
+
+    .CHEntry a:link,
+    .CHEntry a:visited,
+    .CHEntry a:hover {
+        color: #606060;
+        }
+    .CHEntry a:active {
+        color: #800000;
+        }
+
+
+
+
+
+body.FramedIndexPage,
+.IndexSection {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    padding: 15px }
+
+.IndexSection {
+    border-width: 0 0 1px 1px; border-style: solid; border-color: #000000 }
+
+    .IPageTitle {
+        font-size: 20pt; font-weight: bold;
+        color: #FFFFFF; background-color: #7070C0;
+        padding: 10px 15px 10px 15px;
+        border-width: 0 0 3px 0; border-color: #000000; border-style: solid;
+        margin: -15px -15px 0 -15px }
+
+    .INavigationBar {
+        text-align: center;
+        background-color: #FFFFF0;
+        padding: 5px;
+        border-bottom: solid 1px black;
+        margin: 0 -15px 15px -15px }
+
+    .INavigationBar a {
+        font-weight: bold }
+
+    .IHeading {
+        font-size: 16pt; font-weight: bold;
+        padding: 2.5em 0 .5em 0;
+        text-align: center;
+        width: 3.5ex;
+        }
+    #IFirstHeading {
+        padding-top: 0;
+        }
+
+    .IEntry {
+        padding-left: 1ex;  }
+
+    .ISubIndex {
+        padding-left: 3ex; padding-bottom: .5em }
+
+    /*  While it may cause some entries to look like links when they aren't, I found it's much easier to read the
+         index if everything's the same color.  */
+    .ISymbol {
+        font-weight: bold; color: #900000  }
+
+    .ISymbolPrefix {
+        text-align: right;
+        color: #C47C7C;
+        background-color: #F8F8F8;
+        border-right: 3px solid #E0E0E0;
+        border-left: 1px solid #E0E0E0;
+        padding: 0 1px 0 2px;
+        }
+    #IFirstSymbolPrefix {
+        border-top: 1px solid #E0E0E0;
+        }
+    #ILastSymbolPrefix {
+        border-bottom: 1px solid #E0E0E0;
+        }
+    #IOnlySymbolPrefix {
+        border-top: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0;
+        }
+
+    a.IParent,
+    a.IFile {
+        display: block;
+        }
+
+
+
+
+.Footer {
+    font-size: 8pt; color: #909090 }
+
+body.UnframedPage .Footer {
+    text-align: right;
+    margin: 2px }
+
+body.FramedMenuPage .Footer {
+    text-align: center;
+    margin: 5em 10px 0 10px}
+
+    .Footer a:link,
+    .Footer a:hover,
+    .Footer a:visited { color: #909090 }
+    .Footer a:active { color: #A00000 }
+</style><script language=JavaScript src="../javascript/main.js"></script></head><body class=UnframedPage onLoad="NDOnLoad()"><script language=JavaScript><!--
+if (browserType) {document.write("<div class=" + browserType + ">");if (browserVer) {document.write("<div class=" + browserVer + ">"); }}// --></script>
+
+<!--  Generated by Natural Docs, version 1.35 -->
+<!--  http://www.naturaldocs.org  -->
+
+<!-- saved from url=(0026)http://www.naturaldocs.org -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+
+<td class=ContentSection valign=top><div class=CSection id=MainTopic><div class=CTopic><h1 class=CTitle><a name="Ini"></a>Ini</h1><div class=CBody><p class=CParagraph><b>Set of functions for ini-like handling of strings</b></p><p class=CParagraph> </p><p class=CParagraph>This set of functions allows you to handle strings that comply to the ini section format.&nbsp; It makes ini section abstract, allowing you to store query and change related information as a whole instead having to take care about big number of variables.&nbsp; You can create section string from real ini file or you can make it yourself.</p><p class=CParagraph>The functions are designed to work with &ldquo;worst possible&rdquo; ini definition in mind, that is, white space in section or key definition may be present as much as empty sections, comments, empty lines etc.</p><p class=CParagraph>There are 2 differences between this module and OS related functions.&nbsp; First is that key values are not returned trimmed, so you can have values starting with white space.&nbsp; The other one is that module generally doesn&rsquo;t consider position of key in the section string as important or position of section in the ini file, and will not retain to change the position for the sake of speed.</p><!--START_ND_SUMMARY--><div class=Summary><div class=STitle>Summary</div><div class=SBorder><table border=0 cellspacing=0 cellpadding=0 class=STable><tr><td class=SEntrySize><div class=SMain><div class=SEntry><a href="#Ini" >Ini</a></div></div></td><td class=SDescriptionSize><div class=SMain><div class=SDescription><b>Set of functions for ini-like handling of strings</b></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#LoadSection" id=link1 onMouseOver="ShowTip(event, 'tt1', 'link1')" onMouseOut="HideTip('tt1')">LoadSection</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Load one or all sections from the ini file.</div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#GetSectionNames" id=link2 onMouseOver="ShowTip(event, 'tt2', 'link2')" onMouseOut="HideTip('tt2')">GetSectionNames</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Gets the names of all sections in the ini file.</div></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#LoadKeys" id=link3 onMouseOver="ShowTip(event, 'tt3', 'link3')" onMouseOut="HideTip('tt3')">LoadKeys</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Loads one or all keys from one or all sections. </div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#MakeSection" id=link4 onMouseOver="ShowTip(event, 'tt4', 'link4')" onMouseOut="HideTip('tt4')">MakeSection</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Makes the section string using user global variables</div></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#ReplaceSection" id=link5 onMouseOver="ShowTip(event, 'tt5', 'link5')" onMouseOut="HideTip('tt5')">ReplaceSection</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Replace entire section in ini file.</div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#UpdateSection" id=link6 onMouseOver="ShowTip(event, 'tt6', 'link6')" onMouseOut="HideTip('tt6')">UpdateSection</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Update section with new key values.</div></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#GetVal" id=link7 onMouseOver="ShowTip(event, 'tt7', 'link7')" onMouseOut="HideTip('tt7')">GetVal</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Get key value</div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#SetVal" id=link8 onMouseOver="ShowTip(event, 'tt8', 'link8')" onMouseOut="HideTip('tt8')">SetVal</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Set the key value</div></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#GetKeyName" id=link9 onMouseOver="ShowTip(event, 'tt9', 'link9')" onMouseOut="HideTip('tt9')">GetKeyName</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Get name of the first key with given value</div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#DelKeys" id=link10 onMouseOver="ShowTip(event, 'tt10', 'link10')" onMouseOut="HideTip('tt10')">DelKeys</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Delete one or more keys from the section</div></div></div></td></tr><tr class=SMarked><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#DelKeysRe" id=link11 onMouseOver="ShowTip(event, 'tt11', 'link11')" onMouseOut="HideTip('tt11')">DelKeysRe</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Delete keys from the section using regular expression</div></div></div></td></tr><tr><td><div class=SFunction><div class=SEntry><div class=SIndent1><a href="#AddMRU" id=link12 onMouseOver="ShowTip(event, 'tt12', 'link12')" onMouseOut="HideTip('tt12')">AddMRU</a></div></div></div></td><td><div class=SFunction><div class=SDescription><div class=SIndent1>Add most recently used (MRU) item in the section string</div></div></div></td></tr><tr><td><div class=SGroup><div class=SEntry><div class=SIndent1><a href="#About" >About</a></div></div></div></td><td><div class=SGroup><div class=SDescription><div class=SIndent1></div></div></div></td></tr></table></div></div><!--END_ND_SUMMARY--></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="LoadSection"></a>LoadSection</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_LoadSection(</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PParameter nowrap>pSection</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>pPrefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;inis_&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Load one or all sections from the ini file.</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>iniFile</td><td class=CDLDescription>Ini file path</td></tr><tr><td class=CDLEntry>section</td><td class=CDLDescription>Section to be returned by the function.&nbsp; By default &ldquo;&rdquo;, which means all sections will be returned in array with the base name %prefix%.&nbsp; Variable names will be constructed as %prefix%%sectionName%.&nbsp; If section name contains characters illegal for AHK variable names, those will be removed.&nbsp; If after removal of illegal characters section name is empty string it will be skipped.</td></tr><tr><td class=CDLEntry>prefix</td><td class=CDLDescription>Base name of the array to be used for global variables, by default  &ldquo;inis_&rdquo;</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>If section = &ldquo;&rdquo; list of sections separated by new lines otherwise requested section</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="GetSectionNames"></a>GetSectionNames</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetSectionNames(</td><td class=PParameter nowrap>pIniFile</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Gets the names of all sections in the ini file.</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>iniFile</td><td class=CDLDescription>Ini file name</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>List of section names, each on new line</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="LoadKeys"></a>LoadKeys</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_LoadKeys(</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PParameter nowrap>section</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> &quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>pInfo</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>0,</td></tr><tr><td></td><td class=PParameter nowrap>prefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> &quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>filter</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>reverse</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> false</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Loads one or all keys from one or all sections.&nbsp; Each key will be loaded into the global array with base name equal to its section name.</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>pIniFile</td><td class=CDLDescription>Ini file path.&nbsp; If you set &ldquo;&rdquo; here, next parameter will be seen as section string.</td></tr><tr><td class=CDLEntry>section</td><td class=CDLDescription>By default &ldquo;&rdquo;, means to load keys for all sections.&nbsp; This will create array of global variables with the name %prefix%%section%_%key%.&nbsp; If section is not empty, the function load keys only for that section.&nbsp; If section is not empty and pIniFile is empty this parameter contains section string and since section name is not available, globals are created as %prefix%_%key%</td></tr><tr><td class=CDLEntry>prefix</td><td class=CDLDescription>Prefix for global variables created, or key/value delimiter when pInfo != 0</td></tr><tr><td class=CDLEntry>pInfo</td><td class=CDLDescription>Flag determining what to return.&nbsp; See return values of the function for details.</td></tr><tr><td class=CDLEntry>filter</td><td class=CDLDescription>Only key names starting with this word will be retrieved.&nbsp; For instance, if the section contain keys name1, def1, name2, def2, name3, def3.... you can set filter to &ldquo;name&rdquo; or to &ldquo;def&rdquo; for function to see only those keys.&nbsp; To use regular expression, specify new line as first char, for instance &ldquo;`ni)^abc&rdquo;</td></tr><tr><td class=CDLEntry>reverse</td><td class=CDLDescription>Reverse filter operation, get only key names NOT fitting the filter.</td></tr></table><h4 class=CHeading>Returns</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>pInfo=0 or pInfo=&rdquo;&rdquo;</td><td class=CDLDescription>number of variables created (default).</td></tr><tr><td class=CDLEntry>pInfo=1 or pInfo=&rdquo;keys&rdquo;</td><td class=CDLDescription>function returns key names separated by prefix string (by default `n)</td></tr><tr><td class=CDLEntry>pInfo&gt;1 or pInfo=&rdquo;vals&rdquo;</td><td class=CDLDescription>function returns key values separated by prefix string (by default `n)</td></tr></table><h4 class=CHeading>Examples</h4><blockquote><pre class=CCode>Ini_LoadKeys(&quot;settings.ini&quot;)                    ; load all keys from all sections, return number of vars<br>Ini_LoadKeys(&quot;application.ini&quot;, &quot;window&quot;)       ; load all keys under 'window' section, return number of vars<br>Ini_LoadKeys(&quot;test.ini&quot;, &quot;&quot;, &quot;&quot;, &quot;cfg_&quot;)        ; load all keys, use &quot;cfg_&quot; prefix<br>Ini_LoadKeys(&quot;test.ini, &quot;Config&quot;, 1)            ; return key names from &quot;Config&quot; section<br>Ini_LoadKeys(&quot;test.ini, &quot;Config&quot;, &quot;keys&quot;)       ; the same as above<br>Ini_LoadKeys(&quot;test.ini, &quot;Config&quot;, &quot;vals&quot;)       ; return key values from &quot;Config&quot; section<br>Ini_LoadKeys(&quot;&quot;, section, &quot;&quot;, &quot;cfg_&quot;)           ; load section from string, use &quot;cfg_&quot; as base name<br>Ini_LoadKeys(&quot;&quot;, Presets, 2, &quot;&quot;, &quot;name&quot;)        ; get only key values of keys that start with &quot;name&quot; word from Presets section string.<br>Ini_LoadKeys(&quot;&quot;, Presets, 2, &quot;&quot;, &quot;name&quot;, true)  ; the same as above, but reverse filter.<br>Ini_LoadKeys(&quot;&quot;, Presets, 2, &quot;&quot;, &quot;`ni)^k&quot;)      ; regular expression filter - get all keys starting with character &quot;k&quot; or &quot;K&quot;</pre></blockquote></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="MakeSection"></a>MakeSection</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_MakeSection(</td><td class=PParameter nowrap>prefix</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Makes the section string using user global variables</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>prefix</td><td class=CDLDescription>Common prefix that all global variables have in their name.</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>Section string</p><h4 class=CHeading>Remarks</h4><p class=CParagraph>If you defined more then around 16,350 variables (in entire script), this function may provide unreliable results.</p><h4 class=CHeading>Example</h4><blockquote><pre class=CCode>a_key1          = my key<br>a_SomeOtherKey  = 1<br>a_configuration = bla bla<br>somevar         = dumy<br><br>s := Ini_MakeSection(&quot;a_&quot;)<br>Ini_ReplaceSection(&quot;test.ini&quot;, &quot;config&quot;, s)</pre></blockquote></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="ReplaceSection"></a>ReplaceSection</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_ReplaceSection(</td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>section,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>data</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Replace entire section in ini file.</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>pIniFile</td><td class=CDLDescription>Ini file name</td></tr><tr><td class=CDLEntry>section</td><td class=CDLDescription>Section name</td></tr><tr><td class=CDLEntry>data</td><td class=CDLDescription>Reference to the section data</td></tr></table></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="UpdateSection"></a>UpdateSection</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_UpdateSection(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>data</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Update section with new key values.</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string</td></tr><tr><td class=CDLEntry>data</td><td class=CDLDescription>Reference to the new section data</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>Updated section string</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="GetVal"></a>GetVal</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetVal(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>name,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>def</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Get key value</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string.</td></tr><tr><td class=CDLEntry>name</td><td class=CDLDescription>name of the key</td></tr><tr><td class=CDLEntry>def</td><td class=CDLDescription>default value</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>Key value if key is found or def</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="SetVal"></a>SetVal</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_SetVal(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>name,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>val</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Set the key value</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string.</td></tr><tr><td class=CDLEntry>name</td><td class=CDLDescription>Name of the key</td></tr><tr><td class=CDLEntry>val</td><td class=CDLDescription>Value.&nbsp; New line char (&ldquo;`n&rdquo;) is not removed from the value.</td></tr></table></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="GetKeyName"></a>GetKeyName</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetKeyName(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>val</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Get name of the first key with given value</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string.</td></tr><tr><td class=CDLEntry>val</td><td class=CDLDescription>Key value</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>Key name if value is found or empty string</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="DelKeys"></a>DelKeys</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_DelKeys(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>keys,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>rev</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>false,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>sep</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;,&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Delete one or more keys from the section</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string</td></tr><tr><td class=CDLEntry>keys</td><td class=CDLDescription>List of keys to be deleted, separated by sep character</td></tr><tr><td class=CDLEntry>rev</td><td class=CDLDescription>Reverse mode - keys in the list stay, all other keys are deleted</td></tr><tr><td class=CDLEntry>sep</td><td class=CDLDescription>Key separator, by default &ldquo;,&rdquo;</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>New section string</p></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="DelKeysRe"></a>DelKeysRe</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_DelKeysRe(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>re</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Delete keys from the section using regular expression</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Reference to the section string</td></tr><tr><td class=CDLEntry>re</td><td class=CDLDescription>Regular expression specifying key names.&nbsp; You can use any valid AHK RE, including options and anchors.</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>New section string</p><h4 class=CHeading>Example</h4><blockquote><pre class=CCode>s=<br>(<br>Evocation=1<br>levitation=2<br>somekey=blah<br>)<br><br>Ini_DelKeysRe( s, &quot;i)^ev&quot;)      ;remove only &quot;Evocation&quot; key</pre></blockquote></div></div></div>
+
+<div class=CFunction><div class=CTopic><h3 class=CTitle><a name="AddMRU"></a>AddMRU</h3><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_AddMRU(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pLine,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pMax</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>10,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>prefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;m&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote><p class=CParagraph>Add most recently used (MRU) item in the section string</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>sSection</td><td class=CDLDescription>Section string</td></tr><tr><td class=CDLEntry>pLine</td><td class=CDLDescription>Line to be added</td></tr><tr><td class=CDLEntry>pMax</td><td class=CDLDescription>Maximum lines in the MRU list, by default 10</td></tr><tr><td class=CDLEntry>prefix</td><td class=CDLDescription>Prefix to use for key name generation.&nbsp; By default &ldquo;m&rdquo;</td></tr></table><h4 class=CHeading>Returns</h4><p class=CParagraph>If &ldquo;line&rdquo; was already in the MRU list, its previous MRU number, otherwise 1.</p><h4 class=CHeading>Remarks</h4><p class=CParagraph>This will create array of keys, by default m1, m2... mN.&nbsp; Each key represents one MRU line.&nbsp; &ldquo;Line&rdquo; will be added to the top of the MRU list.&nbsp; If it is already in the list, it will first be moved to top and its old position will be returned.</p></div></div></div>
+
+<div class=CGroup><div class=CTopic><h3 class=CTitle><a name="About"></a>About</h3><div class=CBody><ul class=CBulletList><li>Version 1.0 b2 by majkinetor.&nbsp; See: <a href="http://www.autohotkey.com/forum/topic22495.html" class=LURL>http://www.autohotkey.com/forum/topic22495.html</a></li><li>Creative Commons Attribution 3.0 Unported <a href="http://creativecommons.org/licenses/by/3.0/" class=LURL>http://creativecommons.org/licenses/by/3.0/</a></li></ul></div></div></div>
+
+</td>
+
+</tr></table><div class=Footer><!--START_ND_FOOTER-->Generated by <a href="http://www.naturaldocs.org">Natural Docs</a><!--END_ND_FOOTER--></div>
+<!--START_ND_TOOLTIPS-->
+<div class=CToolTip id="tt1"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_LoadSection(</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PParameter nowrap>pSection</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>pPrefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;inis_&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Load one or all sections from the ini file.</div></div><div class=CToolTip id="tt2"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetSectionNames(</td><td class=PParameter nowrap>pIniFile</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Gets the names of all sections in the ini file.</div></div><div class=CToolTip id="tt3"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_LoadKeys(</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PParameter nowrap>section</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> &quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>pInfo</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>0,</td></tr><tr><td></td><td class=PParameter nowrap>prefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> &quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>filter</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;,</td></tr><tr><td></td><td class=PParameter nowrap>reverse</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%> false</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Loads one or all keys from one or all sections. </div></div><div class=CToolTip id="tt4"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_MakeSection(</td><td class=PParameter nowrap>prefix</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Makes the section string using user global variables</div></div><div class=CToolTip id="tt5"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_ReplaceSection(</td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pIniFile,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>section,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>data</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Replace entire section in ini file.</div></div><div class=CToolTip id="tt6"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_UpdateSection(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>data</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Update section with new key values.</div></div><div class=CToolTip id="tt7"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetVal(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>name,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>def</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Get key value</div></div><div class=CToolTip id="tt8"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_SetVal(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>name,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>val</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Set the key value</div></div><div class=CToolTip id="tt9"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_GetKeyName(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>val</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Get name of the first key with given value</div></div><div class=CToolTip id="tt10"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_DelKeys(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>keys,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>rev</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>false,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>sep</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;,&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Delete one or more keys from the section</div></div><div class=CToolTip id="tt11"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_DelKeysRe(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>re</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Delete keys from the section using regular expression</div></div><div class=CToolTip id="tt12"><div class=CFunction><blockquote><table border=0 cellspacing=0 cellpadding=0 class=Prototype><tr><td><table border=0 cellspacing=0 cellpadding=0><tr><td class=PBeforeParameters nowrap>Ini_AddMRU(</td><td class=PType nowrap>ByRef&nbsp;</td><td class=PParameter nowrap>sSection,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pLine,</td><td class=PDefaultValuePrefix>&nbsp;&nbsp;</td><td class=PDefaultValue width=100%></td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>pMax</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>10,</td></tr><tr><td></td><td class=PType nowrap>&nbsp;</td><td class=PParameter nowrap>prefix</td><td class=PDefaultValuePrefix>&nbsp;=&nbsp;</td><td class=PDefaultValue width=100%>&quot;m&quot;</td><td class=PAfterParameters nowrap>)</td></tr></table></td></tr></table></blockquote>Add most recently used (MRU) item in the section string</div></div><!--END_ND_TOOLTIPS-->
+
+<script language=JavaScript><!--
+if (browserType) {if (browserVer) {document.write("</div>"); }document.write("</div>");}// --></script></body></html>

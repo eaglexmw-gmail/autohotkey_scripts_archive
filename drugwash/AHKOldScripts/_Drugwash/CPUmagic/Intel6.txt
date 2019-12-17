@@ -1,0 +1,32 @@
+; Mobile Pentium II & Celeron
+; PM D 300 05 001 AA
+
+[family-core]
+D   Pentium II mobile module (MMC-1) 
+E   Pentium II mobile module (MMC-2) 
+F   Pentium II with on-die cache mobile module (MMC-1) 
+G   Pentium II with on-die cache mobile module (MMC-2) 
+H   Celeron mobile module (MMC-1) 
+I   Celeron mobile Module (MMC-2) 
+
+[speed]
+233   233 MHz 
+266   266 MHz 
+300   300 MHz 
+333   333 MHz 
+366   366 MHz 
+400   400 MHz 
+433   433 MHZ 
+466   466 MHz 
+
+[L2 cache]
+01   128 KB 
+02   256 KB 
+05   512 KB 
+
+[design-rev]
+
+[processor-rev]
+ES    Engineering sample 
+QS   Qualification sample 
+Other letters   Production revision (starts from AA) 

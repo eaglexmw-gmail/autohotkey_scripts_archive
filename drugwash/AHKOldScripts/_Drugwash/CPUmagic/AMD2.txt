@@ -1,0 +1,31 @@
+; Athlon slot A (Thunderbird/Model 4)
+; AMD-A 1000 M P R 2 4 B  A
+
+[architecture]
+AMD-A   Atlon slot A (Model 4/Thunderbird) 
+
+[speed]
+
+[package]
+M   Card module 
+
+[voltage]
+M   1.75V 
+N   1.8V 
+P   1.7V 
+T   1.6V 
+
+[temperature]
+R   70°C 
+
+[L2 cache]
+2   256 KB 
+
+[cache divisor]
+4   1:1 
+
+[bus]
+B   200 MHz (effective), 100 MHz (actual) 
+
+[modification]
+A    Model 4 

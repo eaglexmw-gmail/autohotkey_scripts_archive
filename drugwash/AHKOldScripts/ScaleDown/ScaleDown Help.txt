@@ -1,0 +1,35 @@
+This is the help file for ScaleDown
+
+Button Transparency
+
+Defines how transparent the Windows 7 replacement button is. To be set between, 1 (transparent) and 255 (solid).
+
+Button Color
+
+Defines the color of the button in the taskbar with which the script can be triggered.
+FFFFFF (White) is standard, but if you don't use styles in the taskbar (the old Win2000 taskbar), use a different color, such as 0000FF (Blue) or C0C0C0 (Silver) and vary the transparency.
+A list with all color values can be found here: http://www.autohotkey.com/docs/commands/Progress.htm#colors
+
+Button Width
+
+Defines the width of the button. For Windows 7 normally 15, XP 10, or, if used with classical Theme, 21.
+
+Show Button
+
+defines whether the button is shown in the taskbar or not. Even if the button is not show, clicking with the mouse there where it would be still activates ScaleDown.
+If you don't want the button to work, put the button size to 0.
+
+Offset from taskbar
+
+Defines how much over the taskbar the windows are arranged.
+
+A complete list of all hotkeys can be found here:
+http://www.autohotkey.com/docs/KeyList.htm
+
+
+Startup of the program with parameters
+
+The script can be launched with the following parameters:
+Down: Scales down the windows
+Up: Does the contrary.
+Example: Create a shortcut with the following command line: "C:\Programs\ScaleDown\ScaleDown.exe up" and the windows will scale up with this shortcut.

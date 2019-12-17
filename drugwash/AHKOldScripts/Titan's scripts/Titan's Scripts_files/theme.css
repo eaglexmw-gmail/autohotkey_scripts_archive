@@ -1,0 +1,38 @@
+BODY {
+	FONT: 0.9em sans-serif
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H1#title {
+	BORDER-BOTTOM-STYLE: solid
+}
+.date {
+	FONT-WEIGHT: lighter; FONT-SIZE: x-small
+}
+UL#list LI {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+UL#list LI P {
+	MARGIN: 0.3em 0px 0px 1em
+}
+UL#list LI:unknown {
+	BORDER-RIGHT: #c00 0.2em dashed; BORDER-TOP: #c00 0.2em dashed; BORDER-LEFT: #c00 0.2em dashed; BORDER-BOTTOM: #c00 0.2em dashed; moz-border-radius: .3em; webkit-border-radius: .3em
+}
+#end {
+	FONT-SIZE: x-small; FLOAT: right; MARGIN: 3em 0px 2em; TEXT-ALIGN: center
+}
+#end A {
+	COLOR: #222
+}
+
+@media Print    
+{
+.entry {
+	BORDER-BOTTOM-STYLE: none
+}
+.p {
+	DISPLAY: none
+}
+
+}

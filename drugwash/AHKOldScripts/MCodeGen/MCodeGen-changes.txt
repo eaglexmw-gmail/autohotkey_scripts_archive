@@ -1,0 +1,7 @@
+; by Lexikos. No need for VS when Windows SDK installed
+
+RunWait %ComSpec% /c "
+(Join&
+F:\SDK\Windows\v7.1\Bin\SetEnv.Cmd /Release /x86
+cl.exe /TC code.c /c /FAc /Fa"code.cod" /O2 /W 0 /nologo
+)"

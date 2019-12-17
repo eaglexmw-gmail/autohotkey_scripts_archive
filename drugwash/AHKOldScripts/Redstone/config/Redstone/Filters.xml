@@ -1,0 +1,400 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <filter>
+    <type>filter</type>
+    <name>Bookmarks</name>
+    <description>List of imported bookmarks</description>
+    <list>Search</list>
+    <typeFilter>type=bookmark</typeFilter>
+    <headers>name</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>Shell32.dll&#44;13</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Commands</name>
+    <description>List of internal commands</description>
+    <list>Search</list>
+    <typeFilter>type=command</typeFilter>
+    <headers>name,command,category</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>res\command.ico</icon>
+    <movable>No</movable>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Control Panel</name>
+    <description>View and manipulate system settings</description>
+    <list>Default</list>
+    <typeFilter>type=applet</typeFilter>
+    <headers>name</headers>
+    <category>System</category>
+    <sort>name</sort>
+    <icon>Shell32.dll,21</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Active Tasks</name>
+    <description>Active applications</description>
+    <list>Windows</list>
+    <headers>name</headers>
+    <mode>Large</mode>
+    <category>Categories</category>
+    <icon>Shell32.dll,15</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Favorites</name>
+    <description>Favorite applications websites etc</description>
+    <list>History</list>
+    <headers>name&#44;type</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>shell32.dll,43</icon>
+    <typeFilter>category=Favorites</typeFilter>
+    <addable>Yes</addable>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Website History</name>
+    <description>Recently viewed websites</description>
+    <list>History</list>
+    <typeFilter>type=website</typeFilter>
+    <maxResults>100</maxResults>
+    <headers>name</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>res\web.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Folder History</name>
+    <description>Recently used folders</description>
+    <list>History</list>
+    <typeFilter>type=folder</typeFilter>
+    <maxResults>50</maxResults>
+    <headers>name&#44;command</headers>
+    <category>Categories</category>
+    <icon>res\Ico15AC.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Start Menu</name>
+    <description>Windows start menu</description>
+    <list>StartMenu</list>
+    <maxResults>1000</maxResults>
+    <headers>name&#44;weight</headers>
+    <listProcessor>StartMenu ProcessList</listProcessor>
+    <category>Categories</category>
+    <sort>weight</sort>
+    <icon>res\windows.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Buttons</name>
+    <description>User defined buttons</description>
+    <list>Buttons</list>
+    <headers>name&#44;filter&#44;icon</headers>
+    <sort>name</sort>
+    <icon>res\Ico28CE.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Skype</name>
+    <description>Skype contacts</description>
+    <list>Search</list>
+    <typeFilter>type=skype</typeFilter>
+    <headers>name</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>res\dlg_skype_about.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Files</name>
+    <list>Files</list>
+    <textProcessor>Files ProcessText</textProcessor>
+    <listProcessor>Files ProcessList</listProcessor>
+    <maxResults>999</maxResults>
+    <headers>name&#44;type&#44;size&#44;date</headers>
+    <icon>res\ico215e.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Complete History</name>
+    <list>History</list>
+    <maxResults>700</maxResults>
+    <headers>name&#44;type&#44;*</headers>
+    <sort>name</sort>
+    <icon>Shell32.dll,20</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Categories</name>
+    <list>Search</list>
+    <typeFilter>category=Categories</typeFilter>
+    <headers>name</headers>
+    <sort>name</sort>
+    <icon>res\ico281c.ico</icon>
+    <listName>Filters</listName>
+    <addable>Yes</addable>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Toolbars</name>
+    <list>Toolbars</list>
+    <headers>name&#44;filter</headers>
+    <sort>name</sort>
+    <icon>res\toolbar.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Errors</name>
+    <list>Errors</list>
+    <headers>error</headers>
+    <icon>res\error.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Lists</name>
+    <list>Lists</list>
+    <sort>name</sort>
+    <icon>res\list.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Types</name>
+    <list>Types</list>
+    <sort>typeType</sort>
+    <icon>res\type.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Items to Scan</name>
+    <list>Scan</list>
+    <category>Configuration</category>
+    <sort>name</sort>
+    <icon>Shell32.dll&#44;55</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Hotkeys</name>
+    <list>Hotkeys</list>
+    <sort>name</sort>
+    <category>Configuration</category>
+    <icon>shell32.dll,104</icon>
+    <headers>name&#44;hotkey</headers>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Handlers</name>
+    <list>Handler</list>
+    <sort>handleType</sort>
+    <icon>shell32.dll,28</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Filter History</name>
+    <list>FilterHistory</list>
+    <maxResults>50</maxResults>
+    <headers>name&#44;typeFilter&#44;directory&#44;searchPhrase</headers>
+    <icon>res\ico281c.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Skins</name>
+    <list>Default</list>
+    <headers>name</headers>
+    <typeFilter>category=Skins</typeFilter>
+    <category>Configuration</category>
+    <sort>name</sort>
+    <icon>shell32.dll,141</icon>
+    <description>Change the appearance</description>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Configuration</name>
+    <list>Search</list>
+    <headers>name</headers>
+    <mode>Large</mode>
+    <category>Categories</category>
+    <sort>name</sort>
+    <typeFilter>category=Configuration</typeFilter>
+    <icon>Shell32.dll&#44;165</icon>
+    <listName>Filters</listName>
+    <addable>Yes</addable>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Quick Searches</name>
+    <list>Search</list>
+    <headers>name&#44;description</headers>
+    <category>Configuration</category>
+    <typeFilter>type=slash</typeFilter>
+    <textProcessor>Slash ProcessText</textProcessor>
+    <listProcessor>Slash ProcessList</listProcessor>
+    <undupe>Yes</undupe>
+    <icon>Shell32.dll,24</icon>
+    <listName>Filters</listName>
+    <sort>name</sort>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Filters</name>
+    <list>Filters</list>
+    <sort>name</sort>
+    <icon>res\ico281c.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Event Handlers</name>
+    <list>EventHandlers</list>
+    <sort>name</sort>
+    <icon>res\ico281c.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Matches</name>
+    <list>Search</list>
+    <refilter>Yes</refilter>
+    <minChars>2</minChars>
+    <maxResults>25</maxResults>
+    <textProcessor>Search ProcessText</textProcessor>
+    <listProcessor>Search ProcessList</listProcessor>
+    <headers>name&#44;weight</headers>
+    <sort>weight</sort>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Scanned Items</name>
+    <list>Default</list>
+    <maxResults>9999</maxResults>
+    <headers>name&#44;type&#44;*</headers>
+    <icon>Shell32.dll&#44;55</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>System</name>
+    <list>Search</list>
+    <headers>name</headers>
+    <mode>Large</mode>
+    <category>Categories</category>
+    <typeFilter>category=System</typeFilter>
+    <sort>name</sort>
+    <icon>Shell32.dll,15</icon>
+    <listName>Filters</listName>
+    <addable>Yes</addable>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>File History</name>
+    <list>History</list>
+    <typeFilter>type=file</typeFilter>
+    <maxResults>100</maxResults>
+    <headers>name,executed</headers>
+    <category>Categories</category>
+    <sort>name</sort>
+    <icon>res\fileHistory.ico</icon>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Most Executed</name>
+    <list>History</list>
+    <typeFilter>executedCount>0</typeFilter>
+    <maxResults>20</maxResults>
+    <headers>name,executed,executedCount</headers>
+    <category>Categories</category>
+    <sort>executedCount</sort>
+    <sortDir>Desc</sortDir>
+    <icon>res\executed.ico</icon>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Internal Commands</name>
+    <list>Redstone</list>
+    <sort>command</sort>
+    <icon>Shell32.dll&#44;94</icon>
+    <headers>command,name</headers>
+    <typeFilterX>name!=null</typeFilterX>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>History</name>
+    <list>History</list>
+    <maxResults>50</maxResults>
+    <headers>name,executed</headers>
+    <typeFilter>executed!=null</typeFilter>
+    <category>Categories</category>
+    <icon>Shell32.dll,20</icon>
+    <sort>executed</sort>
+    <sortDir>Desc</sortDir>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Processes</name>
+	<description>Displays information about running processes</description>
+    <list>Process</list>
+    <listProcessor>Process ProcessList</listProcessor>
+    <headers>name&#44;cpu&#44;pid&#44;commandLine</headers>
+    <category>Categories</category>
+    <icon>res\Ico32D8.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Google Desktop</name>
+    <list>Google</list>
+    <headers>name&#44;category&#44;from&#44;date</headers>
+    <icon>res\googleDesktop.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Hidden Windows</name>
+    <list>HiddenWindows</list>
+    <headers>name</headers>
+    <icon>res\Ico32D8.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+  <filter>
+    <type>filter</type>
+    <name>Plugins</name>
+    <list>Plugins</list>
+    <category>Configuration</category>
+    <typeFilter>system=null</typeFilter>
+    <headers>name&#44;enabled&#44;description&#44;author</headers>
+    <sort>name</sort>
+    <icon>res\plugin.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+</Redstone>

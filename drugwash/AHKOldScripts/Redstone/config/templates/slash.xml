@@ -1,0 +1,36 @@
+<Redstone>
+  <Field>
+    <name>type</name>
+    <value>slash</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>name</name>
+    <prompt>Name</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+    <name>description</name>
+    <prompt>Description</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+  	<type>Node</type>
+  	<value>command</value>
+  	<command>
+      <Field>
+        <name>type</name>
+        <value>webSearch</value>
+	    <display>No</display>
+      </Field>
+      <Field>
+        <name>url</name>
+        <prompt>URL</prompt>
+	    <required>Yes</required>
+	    <type>String</type>
+      </Field>
+  	</command>
+  </Field>
+</Redstone>

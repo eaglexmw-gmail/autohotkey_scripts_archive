@@ -1,0 +1,14 @@
+Model numbers for AMD Opteron processors are different from model numbers for Athlon 64 FX and Athlon XP/MP, Sempron and Athlon 64 processors. Opteron model number consists of three or four digits and optional two-character modifier. The first digit in Opteron model number designates processor scalability: 
+
+1xx and 1xxx processors can be used in uniprocessor servers and workstations. 
+Processors with 2xx and 2xxx model numbers can be used in 1 or 2-processor servers and workstations. 
+Processors with 8xx and 8xxx model numbers can be used in 8-processor or less than 8-processor servers. 
+Second digit in 4-digit model number indicates generation of Opteron processors. For example, Opteron 8350 belongs to Third Generation Opteron family. 
+
+The remaining digits make up the number that indicates relative processor performance. The higher this number is the greater processor's performance (this doesn't apply when CPUs with 3-digit models numbers are compared to CPUs with 4-digit model numbers). 
+
+Optional two characters after the model number indicate processor's power features: 
+
+EE - 30 Watt maximum power. 
+HE - 55 Watt maximum power for socket 939 and socket 940 processors, 65 Watt for socket AM2 CPUs, 68 Watt for dual-core socket F processors, 79 Watt for quad-core socket F processors. 
+SE - High power consumption 

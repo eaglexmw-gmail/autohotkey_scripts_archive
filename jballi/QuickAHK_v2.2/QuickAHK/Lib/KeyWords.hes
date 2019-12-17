@@ -1,0 +1,131 @@
+;-------------------------------------------------------------------------------
+;
+;   Quick reference (from HiEdit.ahk and the Syntax Highlight Quick Guide):
+;
+;   Section header
+;   --------------
+;   [[,]ext1,ext2,...,extN] - Each keyword definiton block starts with list of
+;   extensions in angular brackets. If started with comma (ex: [,abc]), this
+;   section will be used for coloring new files.
+;
+;
+;   Items
+;   -----
+;   0xSSRRGGBB=word1 .. wordN - Color keywords on this line with RRGGBB color.
+;   SS specifies the type of keywords (00=normal, 01=separators (aka
+;   delimiters).  Delimiters are added from ALL sections for a file extension.
+;
+;   ^  - A ^ in front of keyword means that the keyword is case sensitive.
+;
+;   ~  - A ~ in front of keyword forces the specified case (display only).
+;
+;   +  - A + at the end of keyword specifies a comment char/keyword. For ex. //+
+;   means that everything that follows is a comment. Multiline comments are not
+;   supported yet. 
+;
+;   -  - A - at the end of keyword specifies that ALL text up to the end of line
+;   will be painted using the color specified UNLESS a comment indicator is
+;   found.
+;
+;   &  - A & at the end of keyword specifies a string char. For ex. "& means
+;   that everything enclosed in two " is a string.
+;
+;   !  - A ! at the end of any delimiter indicates that any word starting with
+;   this delimiter will be colored. For example $! marks php variables.
+;
+;   ; - Line comment in hes file.
+;
+;-------------------------------------------------------------------------------
+[,ahk]
+
+;-- Separators
+;;;;;0x018000FF=
+0x01000000= ( ) < > { } , % " = : + - * / ^ ! # ~ ;
+    ;-- Note: A ";" (semicolon) is needed as a separator or not all comments
+    ;   that begin with a ";" will not be recognized as comments.  No, I don't
+    ;   know why.
+
+
+;-- Operators, logical connectives, etc.
+;;;;;0x008000FF=
+0x00000000= := += -= *= /= //= .= |= &= ^= >>= <<= ` = == != <> && || ?: < <= > >= ** & // << >> & |
+    ;-- Note: Since "and", "or", and "not" must be preceded and succeeded by a
+    ;   space character, and since they are used as key words in other
+    ;   statements, they have been moved to the "Reserved/Key words" group.
+
+
+;-- Directives
+0x00606000=#AllowSameLineComments #ClipboardTimeout #CommentFlag #ErrorStdOut #EscapeChar #HotkeyInterval #HotkeyModifierTimeout #Hotstring #IfWinActive #IfWinExist #Include #InstallKeybdHook #InstallMouseHook #KeyHistory #MaxHotkeysPerInterval #MaxMem #MaxThreads #MaxThreadsBuffer #MaxThreadsPerHotkey #NoEnv #NoTrayIcon #Persistent #SingleInstance #UseHook #WinActivateForce
+
+
+;-- Commands
+0x00F00000=AutoTrim BlockInput Break Click ClipWait Continue Control ControlClick ControlFocus ControlGet ControlGetFocus ControlGetPos ControlGetText ControlMove ControlSend ControlSendRaw ControlSetText CoordMode Critical DetectHiddenText DetectHiddenWindows Drive DriveGet DriveSpaceFree Edit Else EndRepeat EnvAdd EnvDiv EnvGet EnvMult EnvSet EnvSub EnvUpdate Exit ExitApp FileAppend FileCopy FileCopyDir FileCreateDir FileCreateShortcut FileDelete FileGetAttrib FileGetShortcut FileGetSize FileGetTime FileGetVersion FileInstall FileMove FileMoveDir FileRead FileReadLine FileRecycle FileRecycleEmpty FileRemoveDir FileSelectFile FileSelectFolder FileSetAttrib FileSetTime FormatTime GetKeyState Gosub Goto GroupActivate GroupAdd GroupClose GroupDeactivate Gui GuiControl GuiControlGet HideAutoItWin Hotkey If IfEqual IfExist IfGreater IfGreaterOrEqual IfInString IfLess IfLessOrEqual IfMsgBox IfNotEqual IfNotExist IfNotInString IfWinActive IfWinExist IfWinNotActive IfWinNotExist ImageSearch IniDelete IniRead IniWrite Input InputBox KeyHistory KeyWait ListHotkeys ListLines ListVars Loop Menu MouseClick MouseClickDrag MouseGetPos MouseMove MsgBox OnExit OutputDebug Pause PixelGetColor Pixelsearch PostMessage Process Progress Random RegDelete RegExMatch RegExReplace RegRead RegWrite Reload Repeat Return Run RunAs RunWait Send SendInput SendMessage SendRaw SetBatchLines SetCapsLockState SetControlDelay SetDefaultMouseSpeed SetEnv SetFormat SetKeyDelay SetMouseDelay SetNumLockState SetScrollLockState SetStoreCapslockMode SetTimer SetTitleMatchMode SetWinDelay SetWorkingDir Shutdown Sleep Sort SoundBeep SoundGet SoundGetWaveVolume SoundPlay SoundSet SoundSetWaveVolume SplashImage SplashTextOff SplashTextOn SplitPath StatusBarGetText StatusBarWait StringCaseSense StringGetPos StringLeft StringLen StringLower StringMid StringReplace StringRight StringSplit StringTrimLeft StringTrimRight StringUpper Suspend SysGet Thread ToolTip Transform TrayTip TV_Add TV_Delete TV_Get TV_GetChild TV_GetCount TV_GetNext TV_GetParent TV_GetPrev TV_GetSelection TV_GetText TV_Modify URLDownloadToFile While WinActivate WinActivateBottom WinClose WinGet WinGetActiveStats WinGetActiveTitle WinGetClass WinGetPos WinGetText WinGetTitle WinHide WinKill WinMaximize WinMenuSelectItem WinMinimize WinMinimizeAll WinMinimizeAllUndo WinMove WinRestore WinSet WinSetTitle WinShow WinWait WinWaitActive WinWaitClose WinWaitNotActive
+
+
+;-- System functions
+0x00F00000=Abs ACos Asc ASin ATan Ceil Chr Cos DllCall Exp FileExist Floor GetKeyState IL_Add IL_Create IL_Destroy InStr IsFunc IsLabel Log LV_Add LV_Delete LV_DeleteCol LV_GetCount LV_GetNext LV_GetText LV_Insert LV_InsertCol LV_Modify LV_ModifyCol LV_SetImageList Mod NumGet NumPut OnMessage RegExMatch RegExReplace RegisterCallback Round SB_SetIcon SB_SetParts SB_SetText Sin Sqrt StrLen SubStr Tan TV_Add TV_Delete TV_Get TV_GetChild TV_GetCount TV_GetNext TV_GetParent TV_GetPrev TV_GetSelection TV_GetText TV_Modify VarSetCapacity WinActive WinExist
+
+
+;-- System variables
+0x00000080=A_AhkVersion A_AppData A_AppDataCommon A_AutoTrim A_BatchLines A_CaretX A_CaretY A_ComputerName A_ControlDelay A_Cursor A_DD A_DDD A_DDDD A_DefaultMouseSpeed A_Desktop A_DesktopCommon A_DetectHiddenText A_DetectHiddenWindows A_EndChar A_EventInfo A_ExitReason A_FormatFloat A_FormatInteger A_Gui A_GuiControl A_GuiControlEvent A_GuiEvent A_GuiHeight A_GuiWidth A_GuiX A_GuiY A_Hour A_IconFile A_IconHidden A_IconNumber A_IconTip A_Index A_IPAddress1 A_IPAddress2 A_IPAddress3 A_IPAddress4 A_ISAdmin A_IsCompiled A_IsCritical A_IsPaused A_IsSuspended A_KeyDelay A_Language A_LastError A_LineFile A_LineNumber A_LoopField A_LoopFileAttrib A_LoopFileDir A_LoopFileExt A_LoopFileFullPath A_LoopFileLongPath A_LoopFileName A_LoopFileShortName A_LoopFileShortPath A_LoopFileSize A_LoopFileSizeKB A_LoopFileSizeMB A_LoopFileTimeAccessed A_LoopFileTimeCreated A_LoopFileTimeModified A_LoopReadLine A_LoopRegKey A_LoopRegName A_LoopRegSubkey A_LoopRegTimeModified A_LoopRegType A_MDAY A_Min A_MM A_MMM A_MMMM A_Mon A_MouseDelay A_MSec A_MyDocuments A_Now A_NowUTC A_NumBatchLines A_OSType A_OSVersion A_PriorHotkey A_ProgramFiles A_Programs A_ProgramsCommon A_ScreenHeight A_ScreenWidth A_ScriptDir A_ScriptFullPath A_ScriptName A_Sec A_Space A_StartMenu A_StartMenuCommon A_Startup A_StartupCommon A_StringCaseSense A_Tab A_Temp A_ThisFunc A_ThisHotkey A_ThisLabel A_ThisMenu A_ThisMenuItem A_ThisMenuItemPos A_TickCount A_TimeIdle A_TimeIdlePhysical A_TimeSincePriorHotkey A_TimeSinceThisHotkey A_TitleMatchMode A_TitleMatchModeSpeed A_UserName A_WDay A_WinDelay A_WinDir A_WorkingDir A_YDay A_Year A_YWeek A_YYYY Clipboard ClipboardAll ComSpec ErrorLevel False ProgramFiles True
+
+
+;-- Keys
+0x00800000={^} {+} {!} {#} {~} {$} {`} Shift LShift RShift Alt LAlt RAlt LControl RControl Ctrl LCtrl RCtrl LWin RWin AppsKey AltDown AltUp ShiftDown ShiftUp CtrlDown CtrlUp LWinDown RWinDown LButton RButton MButton WheelLeft WheelRight WheelUp WheelDown XButton1 XButton2 Joy1 Joy2 Joy3 Joy4 Joy5 Joy6 Joy7 Joy8 Joy9 Joy10 Joy11 Joy12 Joy13 Joy14 Joy15 Joy16 Joy17 Joy18 Joy19 Joy20 Joy21 Joy22 Joy23 Joy24 Joy25 Joy26 Joy27 Joy28 Joy29 Joy30 Joy31 Joy32 JoyX JoyY JoyZ JoyR JoyU JoyV JoyPOV JoyName JoyButtons JoyAxes JoyInfo Space Tab Enter Escape Esc BackSpace BS Delete Del Insert Ins PGUP PGDN Home End Up Down Left Right PrintScreen CtrlBreak ScrollLock CapsLock NumLock Numpad0 Numpad1 Numpad2 Numpad3 Numpad4 Numpad5 Numpad6 Numpad7 Numpad8 Numpad9 NumpadMult NumpadAdd NumpadSub NumpadDiv NumpadDot NumpadDel NumpadIns NumpadClear NumpadUp NumpadDown NumpadLeft NumpadRight NumpadHome NumpadEnd NumpadPgup NumpadPgdn NumpadEnter F1 F2 F3 F4 F5 F6 F7 F8 F9 } F10 F11 F12 F13 F14 F15 F16 F17 F18 F19 F20 F21 F22 F23 F24 Browser_Back Browser_Forward Browser_Refresh Browser_Stop Browser_Search Browser_Favorites Browser_Home Volume_Mute Volume_Down Volume_Up Media_Next Media_Prev Media_Stop Media_Play_Pause Launch_Mail Launch_Media Launch_App1 Launch_App2
+    ;-- Note: A few keys are not listed here because they are more often used as
+    ;   commands.  They include:
+    ;
+    ;       Control
+    ;       Pause
+    ;       Return
+    ;
+    ;
+    ;   Most (not all) keys surrounded by brackets, Ex: {Alt}, are not included
+    ;   in this list because the bracket characters "{" and "}" are already
+    ;   defined as separators.
+
+
+;-- Reserved/Key words
+0x000000F0=Abort Add ahk_class ahk_group ahk_id ahk_pid All Alnum Alpha AltSubmit AltTab AltTabAndMenu AltTabMenu AltTabMenuDismiss AlwaysOnTop And Background BackgroundTrans Between BitAnd BitNot BitOr BitShiftLeft BitShiftRight BitXOr Border Bottom Button Buttons ByRef Cancel Capacity Caption Center Char CharP Check Check3 Checkbox Checked CheckedGray Choose ChooseString Close Color ComboBox Contains ControlList Count Date DateTime Days DDL Default Delete DeleteAll Delimiter Deref Destroy Digit Disable Disabled Double DoubleP DropDownList Edit Eject Enable Enabled Error ExStyle FileSystem Flash Float FloatFast FloatP Focus Font Global Group GroupBox Hdr Hex Hidden Hide HKCC HKCR HKCU HKEY_CLASSES_ROOT HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE HKEY_USERS HKLM HKU Hours hp HScroll Icon ID IDLast Ignore In Int Int64 Int64P Integer IntegerFast Interrupt IntP Is Join Label LastFound Left Limit List ListBox ListView Ln local Lock Logoff Lower Lowercase LTrim MainWindow Margin Maximize MaximizeBox Minimize MinimizeBox MinMax MinSize Minutes MonthCal Mouse Move Multi NA No NoActivate NoDefault NoHide NoIcon NoMainWindow NoStandard Not NoTab NoTimers Number Off Ok On Or OwnDialogs Owner Parse Password Pic Picture Pixel Pos Pow Priority ProcessName Radio Read ReadOnly Redraw REG_BINARY REG_DWORD REG_DWORD_BIG_ENDIAN REG_EXPAND_SZ REG_FULL_RESOURCE_DESCRIPTOR REG_LINK REG_MULTI_SZ REG_QWORD REG_RESOURCE_LIST REG_RESOURCE_REQUIREMENTS_LIST REG_SZ Region Relative Rename Resize Restore Retry RGB Right Screen Seconds Section Serial SetLabel ShiftAltTab Short ShortP Show Single Slider Space Standard Static Status StatusBar StatusCD Str StrP Style Submit SysMenu Tab Tab2 TabStop Text Theme Time Tip ToggleCheck ToggleEnable ToolWindow Top Topmost TransColor Transparent Tray TreeView Type UChar UCharP UInt UInt64 UInt64P UIntP UnCheck Unicode Unlock UpDown Upper Uppercase UseErrorLevel UShort UShortP UStr UStrP Visible VScroll WaitClose WantReturn wp Wrap Xdigit xm xp xs Yes ym yp ys {BLIND}
+    ;-- Note: A few key words are excluded from this list because they are also
+    ;   command names and these command names are used more fequently than the
+    ;   key words.  These key words include (complete list pending):
+    ;
+    ;       xxxxxx       
+    ;
+    ;
+    ;   A few key words are duplicates of command names or keys.  They are
+    ;   included in this group because they are used more frequently as key
+    ;   words.  These key words include:
+    ;
+    ;       Edit
+    ;       Delete
+    ;       Left
+    ;       Right
+    ;       Space
+    ;       Tab
+    ;
+    ;
+    ;   A few key words have been excluded from this list because the key
+    ;   word (when used) is usually not separated by a space or other identified
+    ;   delimiter.  These key words include:
+    ;
+    ;       hWnd
+
+
+;-- Comments
+0x00008000=//+ /*+ ;+
+
+
+;;;;;;-- Strings
+;;;;;;;;;;0x000080FF=
+;;;;;0x00000000="&
+    ;-- Note: Syntax highlighting for string literals (characters enclosed in
+    ;   double quotes) is not enabled because many DllCall key words are
+    ;   contained in string literals.  Example: "Int", "UShort", etc.
+
+
+;;;;;;-- Value of variables and/or expressions
+;;;;;;;;;;0x0015AAAA=
+;;;;;0x004080FF= %&
+    ;-- Not my cup of tea.  Enable if desired.

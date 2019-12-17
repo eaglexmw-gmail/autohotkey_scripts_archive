@@ -1,0 +1,41 @@
+; Athlon MP
+; AMP 2100 D M S 3 C
+
+[architecture]
+AMSN   Athlon MP (0.13 micron) 
+AMP   Athlon MP (0.18 micron) 
+AHX   Athlon MP (0.18 micron) 
+
+[speed]
+1000   1000 MHz (actual) 
+1200   1200 MHz (actual) 
+1500   1500 MHz (rated), 1333 MHz (actual) 
+1600   1600 MHz (rated), 1400 MHz (actual) 
+1800   1800 MHz (rated), 1533 MHz (actual) 
+1900   1900 MHz (rated), 1600 MHz (actual) 
+2000   2000 MHz (rated), 1667 MHz (actual) 
+2100   2100 MHz (rated), 1733 MHz (actual) 
+2200   2200 MHz (rated), 1800 MHz (actual) 
+2400   2400 MHz (rated), 2000 MHz (actual) 
+2600   2600 MHz (rated), 2133 MHz (actual, 256 KB L2 cache) 
+2800   2800 MHz (rated), 2133 MHz (actual, 512 KB L2 cache) 
+
+[package]
+A   453-pin ceramic PGA (socket A/socket 462) 
+D   453-pin organic PGA (socket A/socket 462) 
+
+[voltage]
+K   1.65V 
+M   1.75V 
+U   1.6V 
+
+[temperature]
+S   95°C 
+T   90°C 
+
+[L2 cache]
+3   256 KB 
+4   512 KB 
+
+[bus]
+C    266 MHz (effective), 133 MHz (actual) 

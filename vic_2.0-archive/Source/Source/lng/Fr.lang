@@ -1,0 +1,339 @@
+;###########################
+;# MENUS ###################
+;###########################
+	; Fichier (18) acdefhimnoqrstvwxz
+FA=&Fichier
+FB=&Nouvel onglet`tCtrl+N
+FC=&Ouvrir un fichier...`tCtrl+O
+FD=Ou&vrir une session...`tAlt+Ctrl+O
+FE=&Fermer l'onglet`tCtrl+F4
+FF=Fer&mer tous les onglets`tCtrl+Maj+F4
+FG=&Enregistrer`tCtrl+S
+FH=Enregistrer &sous...`tCtrl+F12
+FI=Enregistrer &tous les onglets`tCtrl+Maj+S
+FJ=En&registrer la session en cours...`tAlt+Ctrl+S
+FM=&Imprimer`tCtrl+P
+FN=&Quitter`tAlt+F4
+FO=Convertir les fins de lignes au format M&ac (CR)`tVerr.Maj+M
+FP=Convertir les fins de lignes au format Uni&x (LF)`tVerr.Maj+X
+FQ=Convertir les fins de lignes au format &Windows (CR+LF)`tVerr.Maj+W
+FR=Rec&harger le fichier courant`tAlt+Ctrl+W
+FS=Afficher la liste des fichiers ouverts`tAlt+Ctrl+&Z
+	; Édition (16) abcdehijnoprstuv
+EA=&Edition
+EB=A&nnuler`tCtrl+Z
+EC=&Rétablir`tCtrl+Y
+ED=&Couper`tCtrl+X
+EE=Co&pier`tCtrl+C
+EF=C&oller`tCtrl+V
+EG=&Supprimer`tSuppr
+EH=&Atteindre...`tCtrl+G
+EI=Rec&hercher...`tCtrl+F
+EJ=R&emplacer...`tCtrl+H
+EK=Rechercher l'occurrence précé&dente`tF2
+EL=Rechercher l'occurrence sui&vante`tF3
+EM=Su&bstituer par le texte de remplacement`tF4
+EN=Sélectionner &tout`tCtrl+A
+EO=A&jouter au presse-papiers`tCtrl+Ins
+EP=V&ider le presse-papiers`tCtrl+Maj+Ins
+EQ=Tro&uver l'autre membre de la paire`tCtrl+J
+	; Affichage (18) 2abcdeghilmnoprstu
+AA=Affic&hage
+AB=&Couleurs...`tCtrl+E
+AC=Lan&gue...`tCtrl+L
+AD=&Marge de sélection...`tCtrl+M
+AE=&Police...`tCtrl+D
+AF=&Tabulation...`tCtrl+T
+AG=&2e jeu de couleurs
+AH=C&hemin et nom de fichier
+AI=Coloration &syntaxique
+AJ=&Indentation automatique
+AK=Multi-&onglets
+AL=Numérotation des &lignes
+AM=&Augmenter la taille de police`tCtrl++
+AN=&Diminuer la taille de police`tCtrl+-
+AO=Taille de police &normale`tCtrl+0
+AP=&Barre d'état
+AQ=Long&ueur de ligne...`tCtrl+W
+AR=Augmente&r la transparence`tAlt+Win+Haut
+AS=Diminu&er la transparence`tAlt+Win+Bas
+AT=Agrandir/restaurer`t&Win+Haut
+AU=Réduire/restaurer`t&Win+Bas
+AV=Agrandir sur le côté gauche`t&Win+Gauche
+AW=Agrandir sur le côté droit`t&Win+Droit
+	; Insertion (22) 123456cdefghilnopqstux
+JA=&Insertion
+JB=Attribut &class`tIns+C
+JC=Attribut &id`tIns+I
+JD=Attribut &lang`tIns+L
+JE=Attribut &name`tIns+N
+JF=Attribut &style`tIns+S
+JG=Attribut &title`tIns+T
+JH=Caractère s&pécial...`tIns+P
+JI=Commentaire conditionnel`tIns+&E
+JJ=Commentaire CSS`tIns+&F
+JK=Commentaire HTML`tIns+&G
+JL=Doctype HTML 4.01 Strict`tIns+&1
+JM=Doctype HTML 4.01 Transitional`tIns+&2
+JN=Doctype HTML 4.01 Frameset`tIns+&3
+JO=Doctype XHTML 1.0 Strict`tIns+&4
+JP=Doctype XHTML 1.0 Transitional`tIns+&5
+JQ=Doctype XHTML 1.0 Frameset`tIns+&6
+JR=Saut de ligne de type Uni&x`tIns+Entrée
+JS=S&quelette HTML 4.01`tIns+F4
+JT=Sq&uelette XHTML 1.0`tIns+F1
+JU=&Date`tIns+D
+JV=&Heure`tIns+H
+JW=C&ommenter/décommenter le bloc`tIns+;
+	; Outils (22) 4abcdeéfhijklmorstuvxy
+TA=&Outils
+TB=&Augmenter le retrait`tTab
+TC=Di&minuer le retrait`tMaj+Tab
+TD=Mettre en &bas de casse`tCtrl+Maj+B
+TE=Mettre en &haut de casse`tCtrl+Maj+H
+TF=Mettre l'&initiale de chaque mot en majuscule`tCtrl+Maj+I
+TG=Déplacer &vers le bas`tCtrl+Maj+Bas
+TH=Déplacer ver&s le haut`tCtrl+Maj+Haut
+TI=&Dupliquer la sélection`tCtrl+Maj+L
+TJ=Rempla&cements automatiques...`tCtrl+Maj+R
+TK=Remplacer les &espaces initiales par des tabulations`tCtrl+Maj+A
+TL=Remplacer les &tabulations initiales par des espaces`tCtrl+Maj+E
+TM=Supprimer les blancs de &fin de ligne`tCtrl+Maj+F
+TN=Supprimer les lignes vides`tCtrl+Maj+&K
+TO=Supprimer le HTM&L`tCtrl+Maj+M
+TT=Restituer les entités et le faux-&UTF-8 en ANSI`tAlt+Ctrl+U
+TU=Trier...`tCtrl+Ma&j+T
+TV=Pr&élever une couleur...`tCtrl+Maj+P
+TW=Formater/Réécrire le code CSS...`tAlt+Ctrl+&Y
+TX=Affiche&r le calendrier`tCtrl+Maj+C
+TY=Compresser le code HTML/&XHTML`tAlt+Ctrl+C
+TZ=Convertir le XHTML 1.0 en HTML &4.01`tAlt+Ctrl+X
+  ; HTML (26) 123456abcdefghikmnopqrstuv
+HA=H&TML
+HB=h&1`tVerr.Maj+1
+HC=h&2`tVerr.Maj+2
+HD=h&3`tVerr.Maj+3
+HE=h&4`tVerr.Maj+4
+HF=h&5`tVerr.Maj+5
+HG=h&6`tVerr.Maj+6
+HH=&p`tVerr.Maj+P
+HI=b&r`tVerr.Maj+Entrée
+HJ=&hr`tVerr.Maj+Espace
+HK=&ol`tVerr.Maj+O
+HL=&ul`tVerr.Maj+U
+HM=bloc&kquote`tVerr.Maj+K
+HN=&cite`tVerr.Maj+C
+HO=&q`tVerr.Maj+Q
+HP=&b`tVerr.Maj+B
+HQ=&i`tVerr.Maj+I
+HR=&strong`tVerr.Maj+S
+HS=&em`tVerr.Maj+E
+HT=&del`tVerr.Maj+Del
+HU=i&ns`tVerr.Maj+Ins
+HV=sup`t&Verr.Maj+Haut
+HW=sub`tVerr.&Maj+Bas
+HX=&table...`tVerr.Maj+T
+HY=&a`tVerr.Maj+A
+HZ=im&g`tVerr.Maj+G
+H0=&form...`tVerr.Maj+F
+  ; Signets (5) cipst
+KA=&Signets
+KB=Placer un s&ignet`tAlt+Ctrl+M
+KC=Aller au signet &suivant`tAlt+Ctrl+J
+KD=Aller au signet &précédent`tAlt+Ctrl+Maj+J
+KE=Supprimer le signet &courant`tAlt+Maj+M
+KF=Supprimer &tous les signets...`tAlt+Ctrl+Maj+M
+  ; Extensions
+PA=E&xtensions
+	; ? (5) dgptv
+VA=&?
+VB=&Documentation`tF1
+VC=&Guide - Expression rationnelle`tF11
+VD=&Table des caractères Windows-1252`tF12
+VE=&Vérifier l'existence d'une mise à jour
+VF=À &propos...
+;###########################
+;# BARRE D'ÉTAT ############
+;###########################
+SA=Ligne : 
+SB=/
+SC=       Colonne : 
+SD=Sélection : 
+SE=Nº de caractère ANSI : 
+SF=Nombre de fichiers ouverts : 
+;###########################
+;# FENÊTRES ################
+;###########################
+	; Ouvrir...
+WA=Ouvrir
+WB=Tous les fichiers (*.*)
+WC=Ouvrir une session
+	; Enregistrer
+WD=Enregistrer
+WE=Enregistrer sous...
+WF=Enregistrer la session
+	; Atteindre...
+WH=Atteindre
+WI=&Ligne `:
+WJ=&Colonne `:
+	; Rechercher...
+WK=Rechercher
+WL=Rec&hercher :
+WM=Respecter la &casse
+WN=E&xpression rationnelle
+WO=&Dans tous les onglets
+WP=&Précédent
+WQ=&Suivant
+	; Remplacer... ert
+WR=Remplacer
+WS=R&emplacer par :
+WT=&Remplacer
+WU=Remplacer &tout
+	; Couleurs...
+WV=Couleurs
+WW=1er jeu de couleurs
+WX=2e jeu de couleurs
+WY=Texte normal :
+WZ=Arrière-plan du texte normal :
+YA=Texte sélectionné :
+YB=Arrière-plan du texte sélectionné :
+YC=Arrière-plan d'une sélection inactive :
+YD=Chiffres des numéros de lignes :
+YE=Arrière-plan des numéros de lignes :
+YF=Arrière-plan des signes ASCII 1 à 31 :
+YG=* Chiffres du texte normal :
+YH=* Ne prend effet qu'au moment où la coloration syntaxique entre en jeu.
+	; Langue...
+YI=&English
+YJ=&Français
+YK=Langue
+	; Marge...
+YL=Marge de sélection
+YM=Largeur de la marge :
+	; Tabulation...
+YN=Tabulation
+YO=Largeur de tabulation :
+ 	; Transformer en tableau HTML...
+YP=Taille
+YQ=Nombre de &colonnes :
+YR=Nombre de &lignes :
+YS=&Accessibilité
+YT=&En-têtes de colonnes :
+YU=En-&têtes de lignes :
+YV=&Identifiant unique :
+YW=Transformer en tableau HTML
+	; Trier...
+YX=Trier
+YY=Classement
+YZ=&Alphabétique
+ZA=&Numérique
+ZB=Ordre
+ZC=&Croissant
+ZD=&Décroissant
+ZE=&Utiliser le séparateur suivant :
+ZF=&Supprimer les doublons
+ZG=À propos...
+	; Longueur de ligne...
+ZH=Nombre de caractères :
+ZI=Longueur de ligne
+	; Formater le code CSS...
+ZJ=Formater le code CSS
+ZK=Permettez-vous que le code soit réécrit pour être plus bref?`n(Par exemple, en remplaçant margin:0px auto 0px auto par margin:0 auto.)
+ZL=Voulez-vous que le code soit disposé de manière compacte?`n(Par exemple, en supprimant les espaces et les changements de ligne inutiles.)
+	; Remplacements automatiques...
+ZM=A&fficher la colonne des options
+ZN=Options|Abréviation|Texte de remplacement
+ZO=&Ajouter
+ZP=&Modifier
+ZQ=&Supprimer
+ZR=A&nnuler
+ZS=Remplacements automatiques
+ZT=&Abréviation`:
+ZU=&Texte de remplacement :
+ZV=Options
+ZW=&Déclencher l'action aussitôt l'abréviation tapée
+ZX=&Permettre une lettre ou un chiffre devant l'abréviation
+ZY=A&jouter le texte de remplacement à l'abréviation
+ZZ=&Respecter la casse partout
+Z0=&Ne jamais changer la casse du texte de remplacement
+Z1=&Effacer le caractère de fin utilisé comme déclencheur
+Z2=&Insérer le texte de remplacement tel quel
+Z3=&Limiter les remplacements automatiques à la fenêtre Vic
+Z4=Ajouter un remplacement
+Z5=Modifier un remplacement
+Z6=Standard|Options
+	; Table des caractères ASCII/ANSI
+Z7=Table des caractères Windows-1252
+	; Compresser le HTML
+Z8=Compresser le HTML/XHTML
+Z9=Voulez-vous compresser le code HTML/XHTML dans tous les onglets?
+	; Convertir en HTML
+B0=Convertir en HTML 4.01
+B1=Voules-vous convertir le XHTML 1.0 en HTML 4.01 dans tous les onglets?
+  ; Formulaire (14) bcdfghlnoprstx
+G0=----------------------------------------
+G1=Formulaire
+GA=&Formulaire
+GB=&Groupement et Légende
+GC=&Label
+GD=Champ &texte
+GE=Bouton &Radio
+GF=&Case à cocher
+GG=Liste &déroulante
+GH=Champ te&xte multiligne
+GI=&Bouton
+GJ=Bouton réi&nitialiser
+GK=Bouton &soumettre
+GL=Mot de &passe
+GM=Champ cac&hé
+GN=Ch&oisir un fichier
+;###########################
+;# MESSAGES ################
+;###########################
+KN=Supprimer tous signets
+KO=Voulez-vous étendre la suppression à tous les onglets?
+KP=Opération impossible
+KQ=Enregistrez votre fichier avant.
+KR=Mise à jour
+KS=Vic
+KT=est disponible.`nVoulez-vous le télécharger maintenant?
+KU=Vous utilisez la version la plus récente de Vic.
+MA=Erreur
+MB=Ce fichier est en lecture seule et ne peut donc pas être modifié.`nVoulez-vous l'enregistrer sous un autre nom?
+MC=Ce caractère n'a pas de vis-à-vis avec lequel former une paire.
+MD=Sélectionnez le fichier
+ME=Images Web (*.bmp; *.gif; *.ico; *.jpeg; *.jpg; *.png)
+MF=La connexion avec le serveur n'a pu être établie.`nRéssayez plus tard.
+MG=Impossible d'ouvrir le fichier demandé.
+MH=Quitter
+MI=Le contenu du fichier a changé.`nEnregistrer les modifications?
+MJ=Le contenu de certains onglets peut avoir changé.`nEnregistrer tout?
+MK=Résultat :
+ML=remplacement(s).
+MM=Le changement prendra effet au prochain démarrage de Vic.
+MN=Sélectionnez d'abord quelque chose.
+MO=Désolé, impossible de créer
+MP=Votre session a été enregistrée.
+MQ=Language
+MR=The change will take effet at next Vic's launch.
+MS=Indiquez un nombre de colonnes et un nombre de lignes.
+MT=Transformer en ANSI
+MU=Voulez-vous transformer le faux UTF-8 en ANSI dans tous les onglets?
+MV=Convertir les fins de lignes
+MW=Étendre la conversion des fins de lignes à tous les onglets?
+MX=Vous avez laissé un champ vide.`nAucun ajout n'a été fait.
+MY=Les lignes sélectionnées seront supprimées.`nEst-ce ce que vous voulez?
+MZ=Les changements prendront effet au prochain démarrage de Vic.`nRedémarrer Vic maintenant?
+M0=`n`n`nUn moment, SVP`n`n`n`n
+M1=Traitement en cours...
+M2=Vic 1.5.1`n© Normand Lamoureux, 2011`nLicence Creative Commons BY-NC-SA`n`nHiEdit 4.0.0.4`n© Antonis Kaprianou, 2005-2009`nLicence (*) <http://www.winasm.net>`n`nAttach v. 1.0 et Wrapper 4.0.0.4-3`n© 2009, Majkinetor`nLicence BSD <http://creativecommons.org/licenses/BSD/>`n`nDlg Module v. 5.02`n© 2009, Majkinetor`nLicence GNU GPL v. 2 <http://creativecommons.org/licenses/GPL/2.0/>   `n`n------------`n(*) Vente ou utilisation commerciale interdites sans permission écrite.
+;###########################
+;# AUTRES ##################
+;###########################
+CA=-MaximizeBox -MinimizeBox
+
+;;;;;;;;;;;;;;;
+; FK= FL=
+; KK= KL= KM=
+; TP= TQ= TR= TS=
+; WG=

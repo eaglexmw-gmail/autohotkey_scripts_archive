@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <plugin>
+    <type>plugin</type>
+    <name>AHK</name>
+    <enabled>Yes</enabled>
+    <description>Reload and exit routines</description>
+    <author>joebodo</author>
+    <initialize>ahk_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Development</name>
+    <enabled>Yes</enabled>
+    <description>Development</description>
+    <author>joebodo</author>
+    <initialize>debug_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+</Redstone>

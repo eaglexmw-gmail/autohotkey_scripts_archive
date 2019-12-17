@@ -1,0 +1,25 @@
+<Redstone>
+  <Field>
+    <name>type</name>
+    <value>webSearch</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>name</name>
+    <prompt>Name</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+    <name>term</name>
+    <prompt>Search Term</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+    <name>url</name>
+    <prompt>Search URL</prompt>
+	<required>No</required>
+	<type>String</type>
+  </Field>
+</Redstone>

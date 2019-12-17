@@ -1,0 +1,41 @@
+; Athlon 64 FX
+; ADA FX60 D A A 6 CD
+
+[model-speed]
+FX51   Model FX-51 (2200 MHz) 
+FX53   Model FX-53 (2400 MHz) 
+FX55   Model FX-55 (2600 MHz) 
+FX57   Model FX-57 (2800 MHz) 
+FX60   Model FX-60 (2600 MHz, dual-core processor) 
+FX62   Model FX-62 (2800 MHz, dual-core processor) 
+FX70   Model FX-70 (2600 MHz, dual-core processor) 
+FX72   Model FX-72 (2800 MHz, dual-core processor) 
+FX74   Model FX-74 (3000 MHz, dual-core processor) 
+
+[package]
+C   940-pin lidded CmPGA (socket 940) 
+D   939-pin lidded OmPGA (socket 939) 
+G   1207-land LGA (Socket F) 
+I   940-pin organic microPGA (socket AM2) 
+
+[voltage]
+A   Variable 
+E   1.5V 
+
+[temperature]
+A   Variable 
+I   63°C 
+P   70°C 
+
+[L2 cache]
+5   1 MB (512 KB x 2 for dual-core processors) 
+6   2 MB (1 MB x 2 for dual-core processors) 
+
+[definition]
+AK    Stepping C0, CPUID 5, single core, 0.13 micron, socket 940 
+AS   Stepping CG, CPUID 7, single core, 0.13 micron, socket 939 
+AT   Stepping CG, CPUID 5, single core, 0.13 micron, socket 940 
+BN   Stepping E4, CPUID 27, single core, 0.09 micron, socket 939 
+CD   Stepping E6, dual core, 0.09 micron, socket 939 
+CS   Stepping F2, dual core, 0.09 micron, socket AM2 
+DI   Stepping F3, dual core, 0.09 micron, socket F 

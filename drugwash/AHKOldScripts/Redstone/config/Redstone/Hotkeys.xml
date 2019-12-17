@@ -1,0 +1,228 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Hotkey>
+    <name>Restart Redstone</name>
+    <type>hotkey</type>
+    <command>
+      <command>AHK Reload</command>
+      <type>command</type>
+    </command>
+    <hotkey>!^r</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>AltTab</name>
+    <type>hotkey</type>
+    <command>
+      <command>AltTab Tab</command>
+      <type>command</type>
+    </command>
+    <hotkey>!tab</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>AltTab</name>
+    <type>hotkey</type>
+    <command>
+      <command>AltTab Tab</command>
+      <type>command</type>
+    </command>
+    <hotkey>+!tab</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Hide UI via mouse</name>
+    <type>hotkey</type>
+    <command>
+      <command>UI Hide</command>
+      <type>command</type>
+    </command>
+    <hotkey>MButton</hotkey>
+    <onlyWhenActive>Active</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Escape</name>
+    <type>hotkey</type>
+    <command>
+      <command>UI Hide</command>
+      <type>command</type>
+    </command>
+    <hotkey>Escape</hotkey>
+    <onlyWhenActive>Active</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Hide UI</name>
+    <type>hotkey</type>
+    <command>
+      <command>UI Hide</command>
+      <type>command</type>
+    </command>
+    <hotkey>!Space</hotkey>
+    <onlyWhenActive>Active</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Show UI via mouse</name>
+    <type>hotkey</type>
+    <command>
+      <command>UI Activate</command>
+      <type>command</type>
+    </command>
+    <hotkey>MButton</hotkey>
+    <onlyWhenActive>Inactive</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>List Variables</name>
+    <type>hotkey</type>
+    <command>
+      <command>Debug ListVars</command>
+      <type>command</type>
+    </command>
+    <hotkey>!^L</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Toggle Mute</name>
+    <type>hotkey</type>
+    <command>
+      <command>Volume ToggleMute</command>
+      <type>command</type>
+    </command>
+    <hotkey>CapsLock</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Increase Volume</name>
+    <type>hotkey</type>
+    <command>
+      <command>Volume Up</command>
+      <type>command</type>
+    </command>
+    <hotkey>*#Up</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Decrease Volume</name>
+    <type>hotkey</type>
+    <command>
+      <command>Volume Down</command>
+      <type>command</type>
+    </command>
+    <hotkey>*#Down</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Show UI</name>
+    <type>hotkey</type>
+    <command>
+      <command>UI ActivateCentered</command>
+      <type>command</type>
+    </command>
+    <hotkey>!Space</hotkey>
+    <onlyWhenActive>Inactive</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Start Menu</name>
+    <type>hotkey</type>
+    <command>
+      <type>commandList</type>
+      <commands>
+        <command>
+          <command>Filter Apply</command>
+          <type>command</type>
+          <Args>
+            <name>Start Menu</name>
+          </Args>
+        </command>
+        <command>
+          <command>UI Show</command>
+          <type>command</type>
+        </command>
+      </commands>
+    </command>
+    <hotkey>!^s</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Previous Filter</name>
+    <type>hotkey</type>
+    <command>
+      <command>Lister PreviousFilter</command>
+      <type>command</type>
+    </command>
+    <hotkey>XButton1</hotkey>
+    <onlyWhenActive>Active</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Previous Filter</name>
+    <type>hotkey</type>
+    <command>
+      <command>Lister PreviousFilter</command>
+      <type>command</type>
+    </command>
+    <hotkey>!Left</hotkey>
+    <onlyWhenActive>Active</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Favorites</name>
+    <type>hotkey</type>
+    <command>
+      <type>commandList</type>
+      <commands>
+        <command>
+          <command>Filter Apply</command>
+          <type>command</type>
+          <Args>
+            <name>Favorites</name>
+          </Args>
+        </command>
+        <command>
+          <command>UI Show</command>
+          <type>command</type>
+        </command>
+      </commands>
+    </command>
+    <hotkey>!^f</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <name>Testing Methods</name>
+    <type>hotkey</type>
+    <command>
+      <command>XML Test</command>
+      <type>command</type>
+    </command>
+    <hotkey>!^e</hotkey>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+  <Hotkey>
+    <type>hotkey</type>
+    <name>Task Manager</name>
+    <hotkey>^!X</hotkey>
+    <command>
+      <type>file</type>
+      <name>Task Manager</name>
+      <command>C:\WINDOWS\system32\taskmgr.exe</command>
+      <listName>Favorites</listName>
+    </command>
+    <onlyWhenActive>Both</onlyWhenActive>
+    <listName>Hotkeys</listName>
+  </Hotkey>
+</Redstone>

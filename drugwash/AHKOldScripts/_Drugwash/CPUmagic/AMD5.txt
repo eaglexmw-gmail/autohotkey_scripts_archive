@@ -1,0 +1,53 @@
+; Athlon XP
+; AX 1500 D M T 3 C
+
+[architecture]
+AX   Athlon XP (Model 6/Palomino) 
+AXDA   Athlon XP (Model 8/Thoroughbred and Model 10/Barton) 
+AXDL   Low-power Athlon XP (Model 10/Barton only?) 
+AXDC   Athlon XP (Model 10/Thorton) 
+AXLD   Low-power Athlon XP SFF (Model 8/Thoroughbred) 
+AMDA   Possibly Athlon XP (Model 10/Barton) 
+
+[speed]
+1500   1500 MHz (rated), 1333 MHz (actual) 
+1600   1600 MHz (rated), 1400 MHz (actual) 
+1700   1700 MHz (rated), 1467 MHz (actual) 
+1800   1800 MHz (rated), 1533 MHz (actual) 
+1900   1900 MHz (rated), 1600 MHz (actual) 
+2000   2000 MHz (rated), 1667 MHz (actual) 
+2100   2100 MHz (rated), 1733 MHz (actual) 
+2200   2200 MHz (rated), 1800 MHz (actual) 
+2400   2400 MHz (rated), 2000 MHz (actual) 
+2500   2500 MHz (rated), 1833 MHz (actual, 333 MHz FSB and 512 KB L2 cache), 1867 MHz (actual, 266 MHz FSB and 512 KB L2 cache) 
+2600   2600 MHz (rated), 2083 MHz (actual, 333 MHz FSB and 256 KB L2 cache), 1917 MHz (actual, 333 MHz FSB and 512 KB L2 cache) or 2133 (actual, 266 MHz FSB and 256 KB L2 cache) 
+2700   2700 MHz (rated), 1733 MHz (actual) 
+2800   2800 MHz (rated), 2083 MHz (actual, 400 MHz FSB and 512 KB L2 cache) 
+2900   2900 MHz (rated), 2000? MHz (actual) 
+3000   3000 MHz (rated), 2100 MHz (actual, 400 MHz FSB and 512 KB L2 cache) or 2167 MHz (actual, 333 MHz FSB and 512 KB L2 cache) 
+3100   3100 MHz (rated), 2200 MHz (actual, 400 MHz FSB and 256 KB L2 cache) 
+3200   3200 MHz (rated), 2200 MHz (actual, 400 MHz FSB and 512 KB L2 cache) 
+
+[package]
+D   453-pin organic PGA (socket A/socket 462) 
+
+[voltage]
+K   1.65V 
+L   1.5V 
+M   1.75V 
+Q   1.45V 
+U   1.6V 
+V   1.4V 
+
+[temperature]
+T   90°C 
+V   85°C 
+
+[L2 cache]
+3   256 KB 
+4   512 KB 
+
+[bus]
+C    266 MHz (effective), 133 MHz (actual) 
+D   333 MHz (effective), 166 MHz (actual) 
+E   400 MHz (effective), 200 MHz (actual) 

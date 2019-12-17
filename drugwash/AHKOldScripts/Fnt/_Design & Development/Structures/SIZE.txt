@@ -1,0 +1,12 @@
+SIZE structure (Windows)
+
+Syntax
+C++
+                                            Type            Size    OffSet  Comment
+                                            ----            ----    -----   -------
+typedef struct tagSIZE {
+  LONG cx;                                  Long (Int)      4       0
+  LONG cy;                                  Long (Int)      4       4
+} SIZE, *PSIZE;
+                                                            ----
+                                                            8

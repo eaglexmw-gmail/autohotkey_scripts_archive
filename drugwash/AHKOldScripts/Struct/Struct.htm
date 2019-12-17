@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Struct</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="commands.css" rel="stylesheet" type="text/css">
+<link href="print.css" rel="stylesheet" type="text/css" media="print">
+</head>
+<body>
+
+<h1>Struct</h1>
+<hr size="2">
+<p>Struct is based on AHK_L Objects and supports both, ANSI and UNICODE version, so to use it you will require <a href=http://www.autohotkey.com/forum/viewtopic.php?t=43049>Lexikos AutoHotkey_L.exe</a> or other versions based on it that supports objects.<br><br>Struct is used to create new structure. You can create predefined structures that are saved as static variables inside the function or pass you own structure definition.<br>Struct.ahk supportes structure in structure as well as Arrays of structures and Vectors.<br>Visit <a href=http://www.autohotkey.com/forum/viewtopic.php?t=43049>Struct.ahk at AutoHotkey</a> forum, any feedback is welcome.</p>
+
+<p class="CommandSyntax">Struct(Structure_Definition,Address)</p>
+<h4>Parameters</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="3" bordercolor="#C0C0C0">
+<tr>
+<td width="15%">General Design</td>
+<td width="85%"><p>Struct function will create Object(s) that will manage fields of structure(s), for example RC := Struct("RECT") creates a RECT structure with fields left,top,right,bottom. To pass structure its pointer to a function or DllCall or SendMessage you will need to use RC&#91;""&#93; or RC&#91;&#93;.<br><br>To access fields you can use usual Object syntax: RC.left, RC.right ...<br>To set a field of the structure use RC.top := 100.</p></td>
+</tr>
+<tr>
+<td width="15%">Field types</td>
+<td width="85%"><p>All AutoHotkey and Windows Data Types are supported<br>AutoHotkey Data Types<br> Int, Uint, Int64, UInt64, Char, UChar, Short, UShort, Fload and Double.<br>Windows Data Types<br> - note, TCHAR and CHAR return actual character rather than the value, where UCHAR will return the value of character: Asc(char)<br>ATOM,BOOL,BOOLEAN,BYTE,CHAR,COLORREF,DWORD,DWORDLONG,DWORD_PTR,<br>DWORD32,DWORD64,FLOAT,HACCEL,HALF_PTR,HANDLE,HBITMAP,HBRUSH,HCOLORSPACE,HCONV,HCONVLIST,HCURSOR,HDC,<br>HDDEDATA,HDESK,HDROP,HDWP,HENHMETAFILE,HFILE,HFONT,HGDIOBJ,HGLOBAL,HHOOK,HICON,HINSTANCE,HKEY,HKL,<br>HLOCAL,HMENU,HMETAFILE,HMODULE,HMONITOR,HPALETTE,HPEN,HRESULT,HRGN,HRSRC,HSZ,HWINSTA,HWND,INT,<br>INT_PTR,INT32,INT64,LANGID,LCID,LCTYPE,LGRPID,LONG,LONGLONG,LONG_PTR,LONG32,LONG64,LPARAM,LPBOOL,<br>LPBYTE,LPCOLORREF,LPCSTR,LPCTSTR,LPCVOID,LPCWSTR,LPDWORD,LPHANDLE,LPINT,LPLONG,LPSTR,LPTSTR,LPVOID,<br>LPWORD,LPWSTR,LRESULT,PBOOL,PBOOLEAN,PBYTE,PCHAR,PCSTR,PCTSTR,PCWSTR,PDWORD,PDWORDLONG,PDWORD_PTR,<br>PDWORD32,PDWORD64,PFLOAT,PHALF_PTR,PHANDLE,PHKEY,PINT,PINT_PTR,PINT32,PINT64,PLCID,PLONG,PLONGLONG,<br>PLONG_PTR,PLONG32,PLONG64,POINTER_32,POINTER_64,POINTER_SIGNED,POINTER_UNSIGNED,PSHORT,PSIZE_T,<br>PSSIZE_T,PSTR,PTBYTE,PTCHAR,PTSTR,PUCHAR,PUHALF_PTR,PUINT,PUINT_PTR,PUINT32,PUINT64,PULONG,PULONGLONG,<br>PULONG_PTR,PULONG32,PULONG64,PUSHORT,PVOID,PWCHAR,PWORD,PWSTR,SC_HANDLE,SC_LOCK,SERVICE_STATUS_HANDLE,<br>SHORT,SIZE_T,SSIZE_T,TBYTE,TCHAR,UCHAR,UHALF_PTR,UINT,UINT_PTR,UINT32,UINT64,ULONG,ULONGLONG,<br>ULONG_PTR,ULONG32,ULONG64,USHORT,USN,WCHAR,WORD,WPARAM</p></td>
+</tr>
+<tr>
+<td width="15%"><b>Mode</b></td>
+<td width="85%"><p><b>Description</b></p></td>
+</tr>
+<tr>
+<td width="15%">User defined</td>
+<td width="85%"><p>To create a user defined structure you will need to pass a string of predefined types and field names.<br>Default type is UInt, so for example for a RECT structure type can be omited: <b>"left,top,right,left"</b>, which is the same as <b>"Uint left,Uint top,Uint right,Uint bottom"</b><br><br>You can also use Structure contstructor that can be obtained by calling Struct("")<br>Using constructor you can define structures very similar to C#/C++ syntax, see example how to use.</p></td>
+</tr>
+<tr>
+<td width="15%">Global</td>
+<td width="85%"><p>Global variables can be used to save structures, easily pass name of that variable as first parameter, e.g. Struct("MyStruct") where MyStruct must be a global variable with structure definition.</p></td>
+</tr>
+<tr>
+<td width="15%">Static</td>
+<td width="85%"><p>Struct() function holds some example structure definitions like RECT or POINT, to create such a structure you will need to pass a string containing the name of desired structure, same as for Global mode, for example p:=Struct("POINT").<br>You can also define static structures dynamically, therefore enter Name of structure followed by : before structure definition, e.g. Struct("MyStruct:length,width").</p></td>
+</tr>
+<tr>
+<td width="15%">Array</td>
+<td width="85%"><p>To create an array of structures include a digit in the end of your string enclosed in squared brackets.<br>For example "RECT&#91;2&#93;" would create an array of 2 structures.<br>This feature can also be used for user defined arrays, for example "Int age,TCHAR name&#91;10&#93;".</p></td>
+</tr>
+<tr>
+<td width="15%">Union</td>
+<td width="85%"><p>Using {} you can create union, for example: <br>AHKVar:="{Int64 ContentsInt64,Double ContentsDouble,object},...</p></td>
+</tr>
+<tr>
+<td width="15%">Pointer</td>
+<td width="85%"><p>To create a pointer you can use *, for example: CHR:="char *str" will hold a pointer to a character. Same way you can have a structure in structure so you can call for example Label.NextLabel.NextLabel.JumpToLine</p></td>
+</tr>
+<tr>
+<td width="15%"><b>Other</b></td>
+<td width="85%"><p><b>Special call modes</b></p></td>
+</tr>
+<tr>
+<td width="15%">Struct:=Struct(StructObject,<b>pointer</b>)</td>
+<td width="85%"><p>Pass a pointer as second parameter to occupy existing strucure.</p></td>
+</tr>
+<tr>
+<td width="15%"><b>size</b>:=Struct(StructObject)</td>
+<td width="85%"><p>Pass a structure prevoiusly create with Struct() to receive the size of your sructure.</p></td>
+</tr>
+<tr>
+<td width="15%"><b>ConstructorObj</b><br>:=Struct("")</td>
+<td width="85%"><p>get contstructor object that can be used to define and create structures</p></td>
+</tr>
+</table>
+<h4>Return Value</h4>
+In create mode Structure Object is returned, else you can receive the size of your structure
+<h4>Remarks</h4>
+<p>Sctruct_Count() and Struct_getVar() are used internally by Struct. , Struct_Get() and Struct_Put() are meta functions used to set and get fields of structure, these do not need to be called by the user.<br><br><b>NOTE!!! accessing a field that does not exist will crash your application, these errors are not catched for performance reasons.</b></p>
+<h4>Related</h4>
+<p>None.</p>
+<h4>Example</h4>
+<pre class="NoIndent"><span class="CodeCom">;Simple user defined structure (Use number for characters, so StrGet/StrSet will be used)</span>
+<span class="CodeCom">;typedef struct {</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;  TCHAR    char[2];</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;  int      code[2];</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;} ASCIICharacter;</span>
+&#32;&#32;&#32;&#32;MyChar := Struct(&quot;TCHAR char[2],int code[2]&quot;) <span class="CodeCom">;create structure, type for code could be omited</span>
+&#32;&#32;&#32;&#32;MyChar.char.1:=&quot;A&quot;
+&#32;&#32;&#32;&#32;MyChar.char.2:=&quot;a&quot;
+&#32;&#32;&#32;&#32;MyChar.code.1 :=Asc(MyChar.char.1)
+&#32;&#32;&#32;&#32;MyChar.code.2 :=Asc(MyChar.char.2)
+&#32;&#32;&#32;&#32;MsgBox % MyChar.char.1 &quot; = &quot; MyChar.code.1 &quot;`n&quot; MyChar.char.2 &quot; = &quot; MyChar.code.2
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Simple array of 26 characters</span>
+&#32;&#32;&#32;&#32;String:=Struct(&quot;TCHAR char[26]&quot;)
+&#32;&#32;&#32;&#32;Loop 26
+&#32;&#32;&#32;&#32;string.char[A_Index]:=Chr(A_Index+64)
+&#32;&#32;&#32;&#32;Loop 3
+&#32;&#32;&#32;&#32;MsgBox % String.char[A_Index*2] <span class="CodeCom">;show some characters</span>
+&#32;&#32;&#32;&#32;MsgBox % StrGet(string[]) <span class="CodeCom">;get complete string</span>
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Vector example</span>
+&#32;&#32;&#32;&#32;Vector:=&quot;a,b,c,d&quot;
+&#32;&#32;&#32;&#32;v:=Struct(&quot;Vector[2]&quot;) <span class="CodeCom">;create an array of Vertors</span>
+&#32;&#32;&#32;&#32;v.1.a:=1 <span class="CodeCom">;set some keys</span>
+&#32;&#32;&#32;&#32;v.2.c:=10 <span class="CodeCom">;set some keys</span>
+&#32;&#32;&#32;&#32;MsgBox % v.1.a &quot;`n&quot; v.2.c <span class="CodeCom">;show values</span>
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;VarSetCapacity(newmem,Struct(v)) <span class="CodeCom">;resevere some memory for new structure</span>
+&#32;&#32;&#32;&#32;v[]:=&amp;newmem <span class="CodeCom">;set new memory address</span>
+&#32;&#32;&#32;&#32;MsgBox % v.1.a &quot;`n&quot; v.2.c <span class="CodeCom">;show new structure</span>
+&#32;&#32;&#32;&#32;v.1.a:=1
+&#32;&#32;&#32;&#32;v.2.c:=10
+&#32;&#32;&#32;&#32;MsgBox % v.1.a &quot;`n&quot; v.2.c <span class="CodeCom">;now values are filled</span>
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;RECT example</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Example using RECT structure to move a window</span>
+&#32;&#32;&#32;&#32;Gui,+LastFound
+&#32;&#32;&#32;&#32;hwnd:=WinExist()                         <span class="CodeCom">;get window handle</span>
+&#32;&#32;&#32;&#32;RC:=Struct(&quot;RECT&quot;)                      <span class="CodeCom">;create structure</span>
+&#32;&#32;&#32;&#32;Gui,Show,w100 h100                      <span class="CodeCom">;show window</span>
+&#32;&#32;&#32;&#32;DllCall(&quot;GetWindowRect&quot;,&quot;Uint&quot;,hwnd,&quot;Uint&quot;,rc[]) <span class="CodeCom">;get window position</span>
+&#32;&#32;&#32;&#32;rc.right  := rc.right - rc.left         <span class="CodeCom">;Set rc.right to be the width</span>
+&#32;&#32;&#32;&#32;rc.bottom := rc.bottom - rc.top         <span class="CodeCom">;Set rc.bottom to be the height</span>
+&#32;&#32;&#32;&#32;While DllCall(&quot;GetCursorPos&quot;,&quot;Uint&quot;,rc[])
+&#32;&#32;&#32;&#32;&amp;&amp; DllCall(&quot;MoveWindow&quot;,&quot;Uint&quot;,hwnd
+&#32;&#32;&#32;&#32;,&quot;int&quot;,rc.left,&quot;int&quot;,rc.top,&quot;int&quot;,rc.right,&quot;int&quot;,rc.bottom,&quot;Int&quot;,1)
+&#32;&#32;&#32;&#32;Sleep, 10
+&#32;&#32;&#32;&#32;GuiClose:
+&#32;&#32;&#32;&#32;Escape::
+&#32;&#32;&#32;&#32;ExitApp
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;FindFirstFile &amp;&amp; FindNextFile &amp;&amp; FileTimeToSystemTime</span>
+&#32;&#32;&#32;&#32;file:=Struct(&quot;WIN32_FIND_DATA[2]&quot;)
+&#32;&#32;&#32;&#32;time:=Struct(&quot;SYSTEMTIME&quot;)
+&#32;&#32;&#32;&#32;DllCall(&quot;FindFirstFile&quot;,&quot;Str&quot;,A_ScriptFullPath,&quot;Uint&quot;,file.1[])
+&#32;&#32;&#32;&#32;DllCall(&quot;FindFirstFile&quot;,&quot;Str&quot;,A_AhkPath,&quot;UInt&quot;,file.2[])
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;MsgBox % &quot;A_ScriptFullPath:`t&quot; StrGet(file.1.cFileName[])
+&#32;&#32;&#32;&#32;. &quot;`t&quot; StrGet(file.1.cAlternateFileName[])
+&#32;&#32;&#32;&#32;. &quot;`nA_AhkPath:`t&quot; StrGet(file.2.cFileName[])
+&#32;&#32;&#32;&#32;. &quot;`t&quot; StrGet(file.2.cAlternateFileName[])
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;handle:=DllCall(&quot;FindFirstFile&quot;,&quot;Str&quot;,&quot;C:\*&quot;,&quot;Uint&quot;,file.2[])
+&#32;&#32;&#32;&#32;Loop {
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;If !DllCall(&quot;FindNextFile&quot;,&quot;Uint&quot;,handle,&quot;Uint&quot;,file.2[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;break
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DllCall(&quot;FileTimeToSystemTime&quot;,&quot;Uint&quot;,file.2.ftLastWriteTime[],&quot;Uint&quot;,time[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MsgBox % StrGet(file.2.cFileName[]) &quot;`n&quot; StrGet(file.2.cAlternateFileName[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; StrGet(file.2.nFileSizeHigh[]) &quot; - &quot; StrGet(file.2.nFileSizeLow[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; time.wYear . &quot;-&quot; time.wMonth . &quot;-&quot; time.wDay
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; time.wDayOfWeek
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; time.wHour . &quot;:&quot; time.wMinute   . &quot;:&quot; time.wSecond . &quot;:&quot; time.Milliseconds
+&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;DllCall(&quot;CloseHandle&quot;,&quot;Uint&quot;,handle)
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Predefinition of structures</span>
+&#32;&#32;&#32;&#32;MyStruct:=Struct(&quot;NewStruct:a,b,c,d&quot;)
+&#32;&#32;&#32;&#32;MyStruct:=Struct(&quot;NewStruct&quot;) <span class="CodeCom">;redefine, MYSTRUCT is already saved locally as static</span>
+&#32;&#32;&#32;&#32;MyStruct.a:=1
+&#32;&#32;&#32;&#32;MsgBox % MyStruct.a
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;another way is to use struct constructor</span>
+&#32;&#32;&#32;&#32;struct:=Struct(&quot;&quot;)
+&#32;&#32;&#32;&#32;struct.NewStruct:=&quot;
+&#32;&#32;&#32;&#32;(
+&#32;&#32;&#32;&#32;TCHAR char[11];   // Array of 11 characters
+&#32;&#32;&#32;&#32;TCHAR char2[11];   // Another array of 11 characters
+&#32;&#32;&#32;&#32;LPTSTR string;    // String pointer
+&#32;&#32;&#32;&#32;Int integer;      // Integer
+&#32;&#32;&#32;&#32;PTR pointer;      // Pointer
+&#32;&#32;&#32;&#32;)&quot;
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;MyStruct:=struct.NewStruct
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;MyStruct.char.1:=&quot;A&quot; <span class="CodeCom">;set first char</span>
+&#32;&#32;&#32;&#32;MyStruct.char2.1:=&quot;ABC&quot; <span class="CodeCom">;here all 3 characters will be writter to the array char2</span>
+&#32;&#32;&#32;&#32;MyStruct.string := &quot;New String&quot;
+&#32;&#32;&#32;&#32;MyStruct.integer := 100
+&#32;&#32;&#32;&#32;MyStruct.pointer := &amp;MyStruct
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;MsgBox % MyStruct.char.1 &quot;`n&quot;
+&#32;&#32;&#32;&#32;. StrGet(MyStruct.char2[]) &quot;`n&quot;
+&#32;&#32;&#32;&#32;. StrGet(MyStruct.String) &quot;`n&quot;
+&#32;&#32;&#32;&#32;. MyStruct.integer &quot;`n&quot;
+&#32;&#32;&#32;&#32;. MyStruct.pointer &quot;`n&quot;
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Pointer example</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Create a variable containing a string</span>
+&#32;&#32;&#32;&#32;var:=&quot;AutoHotKey&quot;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Create a pointer that will point to the variable/string</span>
+&#32;&#32;&#32;&#32;VarSetCapacity(v,4),NumPut(&amp;var,v)
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;s:=Struct(&quot;*Uint p&quot;,&amp;v)
+&#32;&#32;&#32;&#32;MsgBox % StrGet(s.p[])
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;assign another pointer</span>
+&#32;&#32;&#32;&#32;anothervar:=&quot;AutoHotkey_L&quot;
+&#32;&#32;&#32;&#32;s.p:=&amp;anothervar
+&#32;&#32;&#32;&#32;MsgBox % StrGet(s.p[])
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Using LPTSTR will enable string storage so you can assign a string directly</span>
+&#32;&#32;&#32;&#32;s:=Struct(&quot;LPTSTR p&quot;)
+&#32;&#32;&#32;&#32;s.p:=&quot;String&quot;
+&#32;&#32;&#32;&#32;MsgBox % StrGet(s.p)
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;AHK Structures Example, requires LowLevel or AutoHotkey_H</span>
+&#32;&#32;&#32;&#32;LowLevel_Init() <span class="CodeCom">;initialize LowLevel functions</span>
+&#32;&#32;&#32;&#32;variable:=&quot;1&quot;
+&#32;&#32;&#32;&#32;var:=Struct(&quot;AHKVAR&quot;,__getVar(variable))
+&#32;&#32;&#32;&#32;MsgBox % &quot;Name:`t&quot; StrGet(var.name)
+&#32;&#32;&#32;&#32;. &quot;`nContent:`t&quot; StrGet(var.contents)
+&#32;&#32;&#32;&#32;. &quot;`nType:`t&quot; var.type
+&#32;&#32;&#32;&#32;func:=Struct(&quot;AHKFunc&quot;,__FindFunc(&quot;func&quot;))
+&#32;&#32;&#32;&#32;MsgBox % &quot;Is &quot; StrGet(func.name) &quot; BuildIn? &quot; Asc(func.IsBuiltIn)
+&#32;&#32;&#32;&#32;. &quot;`nMinParams: &quot; func.MinParams
+&#32;&#32;&#32;&#32;. &quot;`nParamCount: &quot; func.ParamCount
+&#32;&#32;&#32;&#32;label:=Struct(&quot;AHKLabel&quot;,__FindLabel(&quot;ALabel&quot;))
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;MsgBox % &quot;Name of Label: &quot; StrGet(label.Name)
+&#32;&#32;&#32;&#32;. &quot;`nJumpToLine: &quot; label.JumpToLine[]
+&#32;&#32;&#32;&#32;. &quot;`nAction type of line: &quot; label.JumpToLine.ActionType
+&#32;&#32;&#32;&#32;. &quot;`nAction type of next labels line: &quot; label.NextLabel.JumpToLine.ActionType
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Change BLabel to jump to ALabel</span>
+&#32;&#32;&#32;&#32;label.NextLabel.JumpToLine:=label.JumpToLine[]
+&#32;&#32;&#32;&#32;Gosub, Blabel
+&#32;&#32;&#32;&#32;ExitApp
+&#32;&#32;&#32;&#32;func(a,b=&quot;&quot;){
+&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;ALabel:
+&#32;&#32;&#32;&#32;MsgBox ALabel
+&#32;&#32;&#32;&#32;Return
+&#32;&#32;&#32;&#32;BLabel:
+&#32;&#32;&#32;&#32;Sleep, 100 <span class="CodeCom">; just to see different ActionType</span>
+&#32;&#32;&#32;&#32;MsgBox BLabel
+&#32;&#32;&#32;&#32;Return
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;Show original name of variables in a function, requires LowLevel or AutoHotkey_H</span>
+&#32;&#32;&#32;&#32;If !InStr(A_AhkVersion,&quot;H&quot;)
+&#32;&#32;&#32;&#32;LowLevel_Init()
+&#32;&#32;&#32;&#32;a:=1
+&#32;&#32;&#32;&#32;b:=2
+&#32;&#32;&#32;&#32;c:=3
+&#32;&#32;&#32;&#32;MsgBox % ShowVars(a,b,c)
+&#32;&#32;&#32;&#32;ShowVars(ByRef _1=&quot;&quot;,ByRef _2=&quot;&quot;,ByRef _3=&quot;&quot;,ByRef _4=&quot;&quot;
+&#32;&#32;&#32;&#32;,ByRef _5=&quot;&quot;,ByRef _6=&quot;&quot;,ByRef _7=&quot;&quot;,ByRef _8=&quot;&quot;
+&#32;&#32;&#32;&#32;,ByRef _9=&quot;&quot;,ByRef _10=&quot;&quot;){
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;static FindFunc:=&quot;FindFunc&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;func:=Struct(&quot;AHKFunc&quot;,InStr(A_AhkVersion,&quot;H&quot;) ? %FindFunc%(A_ThisFunc) : __%FindFunc%(A_ThisFunc))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;param:=Struct(&quot;AHKFuncparam[10]&quot;,func.param[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Loop 10
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if param[A_Index].var.type=0 &amp;&amp; var:=Struct(&quot;AHKVar&quot;,param[A_Index].var.AliasFor) <span class="CodeCom">;alias</span>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;str .= &quot;`n&quot; StrGet(var.name) &quot;=&quot; _%A_Index%
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Return SubStr(str, 2)
+&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<span class="CodeCom">;_______________________________________________</span>
+&#32;&#32;&#32;&#32;<span class="CodeCom">;PROCESSENTRY32 using WinDlls()</span>
+&#32;&#32;&#32;&#32;_:=WinDlls(&quot;Process32Next Process32First CreateToolhelp32Snapshot&quot;)
+&#32;&#32;&#32;&#32;MAX_PATH:=260
+&#32;&#32;&#32;&#32;struct:=Struct(&quot;&quot;)
+&#32;&#32;&#32;&#32;struct.PROCESSENTRY32:=&quot;
+&#32;&#32;&#32;&#32;(
+&#32;&#32;&#32;&#32;DWORD     dwSize;
+&#32;&#32;&#32;&#32;DWORD     cntUsage;
+&#32;&#32;&#32;&#32;DWORD     th32ProcessID;
+&#32;&#32;&#32;&#32;ULONG_PTR th32DefaultHeapID;
+&#32;&#32;&#32;&#32;DWORD     th32ModuleID;
+&#32;&#32;&#32;&#32;DWORD     cntThreads;
+&#32;&#32;&#32;&#32;DWORD     th32ParentProcessID;
+&#32;&#32;&#32;&#32;LONG      pcPriClassBase;
+&#32;&#32;&#32;&#32;DWORD     dwFlags;
+&#32;&#32;&#32;&#32;TCHAR     szExeFile[&quot; MAX_PATH &quot;];
+&#32;&#32;&#32;&#32;)&quot;
+&#32;&#32;&#32;&#32;pEntry:=Struct.PROCESSENTRY32
+&#32;&#32;&#32;&#32;VarSetCapacity(string,260)
+&#32;&#32;&#32;&#32;pEntry:=Struct(&quot;PROCESSENTRY32&quot;)
+&#32;&#32;&#32;&#32;pEntry.dwSize := Struct(pEntry)
+&#32;&#32;&#32;&#32;hSnapshot:=_.CreateToolhelp32Snapshot(TH32CS_SNAPALL:=0x0000001F)
+&#32;&#32;&#32;&#32;_.Process32First(hSnapshot,pEntry[])
+&#32;&#32;&#32;&#32;While % (A_Index=1 || _.Process32Next(hSnapshot,pEntry[])) {
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ToolTip % pEntry.cntUsage &quot;`n&quot; pEntry.th32ProcessID
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; pEntry.th32DefaultHeapID &quot;`n&quot; pEntry.th32ModuleID
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; pEntry.cntThreads &quot;`n&quot; pEntry.th32ParentProcessID
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;. &quot;`n&quot; pEntry.pcPriClassBase &quot;`n&quot; pEntry.dwFlags &quot;`n&quot; StrGet(pEntry.szExeFile[])
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sleep, 200
+&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;</pre>
+
+</body>
+</html>

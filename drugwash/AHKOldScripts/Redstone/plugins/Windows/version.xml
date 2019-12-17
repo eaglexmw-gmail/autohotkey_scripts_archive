@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<item>
+	<name>SweptAway</name>
+	<type>Plugin</type>
+	<link>http://xkcd.com/c237.html</link>
+	<version>0.3</version>
+	<date>2007-03-19</date>
+	<author>Adam Pash</author>
+	<description>Automatically minimizes applications that you aren't using</description>
+	<webpage>http://lifehacker.com/software/downloads/lifehacker-code-swept-away-windows-255055.php</webpage>
+</item>

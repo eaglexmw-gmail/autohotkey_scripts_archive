@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <list>
+    <type>list</type>
+    <name>Miro</name>
+    <list>Miro</list>
+    <search>Yes</search>
+    <defaultType>command</defaultType>
+    <searchOrder>500</searchOrder>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+  </list>
+</Redstone>

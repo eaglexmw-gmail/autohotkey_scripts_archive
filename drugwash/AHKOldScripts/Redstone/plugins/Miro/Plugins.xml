@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>  <plugin>
+    <type>plugin</type>
+    <name>Miro</name>
+    <description>Miro media player</description>
+    <author>joebodo</author>
+    <zsource>Autohotkey.exe plugins/Miro/CRI_Miro.ahk</zsource>
+    <initialize>miro_Initialize</initialize>
+    <enabled>Yes</enabled>
+  </plugin>
+</Redstone>

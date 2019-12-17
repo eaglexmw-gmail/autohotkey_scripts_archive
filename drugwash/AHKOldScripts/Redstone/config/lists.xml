@@ -1,0 +1,66 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <list>
+    <type>list</type>
+    <list>Scan</list>
+    <name>Items to Scan</name>
+    <defaultType>scan</defaultType>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+    <addable>Yes</addable>
+  </list>
+  <list>
+    <type>list</type>
+    <list>Lists</list>
+    <name>Lists</name>
+    <defaultType>list</defaultType>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+  </list>
+  <list>
+    <type>list</type>
+    <name>Types</name>
+    <list>Types</list>
+    <defaultType>type</defaultType>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+  </list>
+  <list>
+    <type>list</type>
+    <name>Handlers</name>
+    <list>Handler</list>
+    <defaultType>handler</defaultType>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+  </list>
+  <list>
+    <type>list</type>
+    <name>Plugins</name>
+    <list>Plugins</list>
+    <defaultType>plugin</defaultType>
+    <persistent>Yes</persistent>
+    <unique>Yes</unique>
+    <scope>Application</scope>
+  </list>
+  <list>
+    <type>list</type>
+    <name>Scanned Items</name>
+    <list>Default</list>
+    <search>Yes</search>
+    <searchOrder>999</searchOrder>
+  </list>
+  <list>
+    <type>list</type>
+    <name>Errors</name>
+    <list>Errors</list>
+    <defaultType>error</defaultType>
+    <depth>50</depth>
+    <addMode>Insert</addMode>
+  </list>
+  <list>
+    <type>list</type>
+    <name>User Commands</name>
+    <list>RedStone</list>
+  </list>
+</Redstone>

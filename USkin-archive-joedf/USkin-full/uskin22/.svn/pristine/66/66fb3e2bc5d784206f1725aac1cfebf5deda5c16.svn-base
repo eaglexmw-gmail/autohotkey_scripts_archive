@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MDI", "MDI.vcproj", "{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USkin_DLL", "..\..\USkin_DLL\USkin_DLL.vcproj", "{76E9EB68-46E6-49D7-9041-CD4EFF870D24}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToolBar", "..\ToolBarComboDemo\ToolBar.vcproj", "{98D8C95E-855E-4E33-89C9-3C428BECF67F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		UnicodeDebug = UnicodeDebug
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.Debug.ActiveCfg = Debug|Win32
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.Debug.Build.0 = Debug|Win32
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.Release.ActiveCfg = Release|Win32
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.Release.Build.0 = Release|Win32
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.UnicodeDebug.ActiveCfg = Debug|Win32
+		{CE6ABC42-0BDB-49C9-900C-EFBD22D2E8E0}.UnicodeDebug.Build.0 = Debug|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.Debug.ActiveCfg = Debug|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.Debug.Build.0 = Debug|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.Release.ActiveCfg = Release|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.Release.Build.0 = Release|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.UnicodeDebug.ActiveCfg = UnicodeDebug|Win32
+		{76E9EB68-46E6-49D7-9041-CD4EFF870D24}.UnicodeDebug.Build.0 = UnicodeDebug|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.Debug.ActiveCfg = Debug|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.Debug.Build.0 = Debug|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.Release.ActiveCfg = Release|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.Release.Build.0 = Release|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.UnicodeDebug.ActiveCfg = Debug|Win32
+		{98D8C95E-855E-4E33-89C9-3C428BECF67F}.UnicodeDebug.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

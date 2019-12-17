@@ -1,0 +1,18 @@
+; Celeron PPGA
+; FV 524 RX 333  128
+
+[package]
+FV   OEM/Tray processor in staggered plastic PGA package 
+B   Boxed processor in staggered plastic PGA package 
+
+[family-core]
+524   Mendocino core (Celeron, 0.25 micron)
+
+[bus]
+RX   66 MHz 
+P   66 MHz (for boxed Celeron PPGA processors) 
+
+[speed]
+
+[L2 cache]
+128    128 KB

@@ -1,0 +1,1236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Documentation - Vic</title>
+<meta http-equiv="content-style-type" content="text/css">
+<style type="text/css" media="screen">@import url(css/normal.css);</style><body lang=en>
+<div id=page>
+<p id=langue><a href="Vic.html">Français</a>
+
+<h1><img id=logo src="img/Vic.ico" width="32" height="32" alt="Logo."> Vic</h1>
+<p id=copy>© 2010-2011, Normand Lamoureux.
+<dl>
+	<dt>System:
+	<dd>Windows 2000/XP/Vista/7
+	<dt>Language:
+	<dd>English, <i lang=fr>Français</i>
+	<dt>License:
+	<dd>Creative Commons <abbr title="Attribution">BY</abbr>-<abbr title="Non Commercial">NC</abbr>-<abbr title="Share Alike">SA</abbr>
+	<dt>Version:
+	<dd>1.5.1
+	<dt>Size:
+	<dd>206 kb (.ZIP)
+	<dt>Last update:
+	<dd>July 16th, 2011
+</dl>
+<p><a id="telecharger" href="http://normandlamoureux.com/vic/Vic_Installer.exe">Download    <small>(657 kb)</small></a>
+
+<div id=sommaire>
+<p>Summary:
+<ul>
+	<li><a href="#overview">Overview</a>.
+	<li><a href="#license">License</a>.
+	<li><a href="#features">Features</a>.
+	<li><a href="#smart-keys">Vic's smart keys</a>.
+	<li><a href="#appendix-1">Appendix 1: ANSI charsets</a>.
+	<li><a href="#appendix-2">Appendix 2: Keyboard shortcuts</a>.
+	<li><a href="#appendix-3">Appendix 3: Automatic replacements</a>.
+	<li><a href="#appendix-4">Appendix 4: Known limitations</a>.
+</ul>
+</div>
+
+<h2 id=overview>Overview</h2>
+<p><dfn>Vic</dfn> is a lightweight text editor, customizable, multi-tabs and super-fast, which consumes very little memory. It can highlight the syntax of any programming language, it is capable of editing very large files and can display unprintable characters in a readable format.
+<p>The <i>Find</i> and <i>Replace</i> feature supports multi-lines requests and those based on Pearl Compatible Regular Expression (PCRE). Each query can be done in forward or backward, be limited to the selection, or the current tab, or extend to all tabs.
+<p>With Vic, just type a word and press <kbd>Tab</kbd> to generate a pair of tags, and one click to get the complete skeleton of an HTML file or turn a selection into a list, a sequence of paragraphs or a perfectly marked and indented HTML table.
+<p>Sorting data is a breeze: you select the data to be processed, select the options you want and that's it. You can classify text as well as numbers, according to the ascending or descending order, using the separator that you want and even demand the elimination of duplication.
+<p>Vic can recognize and automatically mark up an electronic address, indent your lines of text and generate your bullets or numbering your paragraphs when you take notes, etc. Browse the rest of this file for more details.
+
+<h2 id=license>License</h2>
+<p>Vic is a free software released under Creative Commons Attribution-NonCommercial-ShareAlike. Its sale or commercial use is prohibited.
+<p>You can run, copy, modify and redistribute Vic, provided that redistributions indicate that I am the author of the original source code and they send the same freedoms.
+<p>For more details, see <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en">outline explanations under the license</a>. For all details, read <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">integral text of the license</a> under Creative Commons website.
+<p>I offer no guarantee whatsoever and I release myself from any liability, direct or indirect which might be related to the use of Vic.
+<p>The HiEdit control and the Dlg module used by Vic are subject to their own licenses. To access the original license of HiEdit, open the <tt>HiEdit.inc</tt> file located in the <tt>hie</tt> folder. To access the original license of the Dlg module, open the <tt>Dlg.ahk</tt> file located in the <tt>inc</tt> folder.
+
+<h2 id=features>Features</h2>
+<p>This section is the longest. She toured the following menus and offers an explanation for each item inside: <a href="#file">File</a>, <a href="#edit">Edit</a>, <a href="#view">View</a>, <a href="#insert"> Insert</a>, <a href="#tools">Tools</a>, <a href="#markers">Markers</a>, <a href="#html">HTML</a>, <a href="#extensions">Plugins</a>, <a href="#help">Help</a>.
+
+<h3 id=file>File</h3>
+<p class=menu>
+<a href="#f1">New tab</a> | 
+<a href="#f2">Open a file…</a> | 
+<a href="#f3">Open a saved session…</a> | 
+<a href="#f4">Close</a> | 
+<a href="#f5">Close all tabs</a> | 
+<a href="#f6">Save</a> | 
+<a href="#f7">Save as…</a> | 
+<a href="#f8">Save all tabs</a> | 
+<a href="#f9">Save the current session…</a> | 
+<a href="#fa">Print</a> | 
+<a href="#fd">Convert into Mac's line format (CR)</a> | 
+<a href="#fe">Convert into Unix's line format (LF)</a> | 
+<a href="#ff">Convert into Windows' line format (CR+LF)</a> | 
+<a href="#fg">Reload the current file</a> | 
+<a href="#fh">Show the list of opened files</a> | 
+<a href="#fi">Quit</a>
+
+<h4 id=f1>New tab (<kbd>Ctrl</kbd>+<kbd>N</kbd>)</h4>
+<p>Opens a new tab and puts it in the foreground. The new tab is empty and has a temporary name preceded by an asterisk (<tt>*</tt>).
+
+<h4 id=f2>Open a file… (<kbd>Ctrl</kbd>+<kbd>O</kbd>)</h4>
+<p>Calls the <i>Open</i> dialog box from which you can navigate the computer's tree, then select and open a file.
+<p>When multiple files are selected, the command has the effect of opening them in separate tabs. If one tries to open a file already open, the command is limited to focus on the proper tab.
+<p>Other actions usually possible since the <i>Open</i> dialog box are allowed. For example, create a new folder, rename or delete a file or folder, etc.
+<p>The history of the last 6 files open automatically updated. This history appears at the bottom of the <i>File</i> menu.
+
+<h4 id=f3>Open a saved session… (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>O</kbd>)</h4>
+<p>Calls the <i>Open</i> dialog box. If the selected file contains a list of files, each will open in a separate tab. Otherwise, the command will simply open the file in a new tab.
+<p>If the list tries to open multiple instances of the same file, the latter will be opened only once.
+<p>The history of last opened files are not updated when a session file is open.
+
+<h4 id=f4>Close (<kbd>Ctrl</kbd>+<kbd>F4</kbd>)</h4>
+<p>Closes the current tab and put the focus on the following, if any. A confirmation of closure will be required if the contents of the tab has changed since its last recording.
+
+<h4 id=f5>Close all tabs (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F4</kbd>)</h4>
+<p>Closes the files one by one. If the contents of a file has changed since its last recording, a warning is issued.
+
+<h4 id=f6>Save (<kbd>Ctrl</kbd>+<kbd>S</kbd>)</h4>
+<p>Saves the current file. If the file exists, the new content replaces the old. Otherwise, the dialog box <i>Save as</i> appears.
+
+<h4 id=f7>Save as… (<kbd>Ctrl</kbd>+<kbd>F12</kbd>)</h4>
+<p>Calls the dialog box <i>Save as</i>, from which it is possible to create a new file with the contents of the current file.
+<p>If the file that tries to create already exists, a confirmation will be required before the crush.
+
+<h4 id=f8>Save all tabs (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>)</h4>
+<p>Saves all open files. The dialog box <i>Save as</i> appears when a file has no name.
+
+<h4 id=f9>Save the current session… (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>S</kbd>)</h4>
+<p>Creates a file containing a list of open files. This file can then be used to open all the same files at once via the command <i>Open a session</i>.
+<p>A confirmation message is returned when the recording of the session is successful.
+<p>Vic does not have specific extension to recognize a session file.
+
+<h4 id=fa>Print (<kbd>Ctrl</kbd>+<kbd>P</kbd>)</h4>
+<p>???
+
+<h4 id=fd>Convert into Mac's line format (<kbd>CapsLock</kbd>+<kbd>M</kbd>)</h4>
+<p>Replaces Unix end of lines (<tt>LF</tt>) and Windows end of lines (<tt>CR</tt>+<tt>LF</tt>) by Mac end of lines (<tt>CR</tt>).
+<p>The order covers the entire tab. When several tabs open, a dialog box offering to extend the change at all.
+
+<h4 id=fe>Convert into Unix's line format (<kbd>CapsLock</kbd>+<kbd>X</kbd>)</h4>
+<p>Replaces Mac end of lines (<tt>CR</tt>) and Windows end of lines (<tt>CR</tt>+<tt>LF</tt>) by Unix end of lines (<tt>LF</tt>).
+<p>The order covers the entire tab. When several tabs open, a dialog box offering to extend the change at all.
+<p>To insert a Unix linebreak, position the cursor where you want and press <kbd>Ins</kbd>+<kbd>Enter</kbd>.
+
+<h4 id=ff>Convert into Windows' line format (<kbd>CapsLock</kbd>+<kbd>W</kbd>)</h4>
+<p>Replaces Mac end of lines (<tt>CR</tt>) and Unix end of lines (<tt>LF</tt>) by Windows end of lines (<tt>CR</tt>+<tt>LF</tt>).
+<p>The order covers the entire tab. When several tabs open, a dialog box offering to extend the change at all.
+
+<h4 id=fg>Reload the current file (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>W</kbd>)</h4>
+<p>Charges in memory the current file.
+
+<h4 id=fh>Show the list of opend files (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Z</kbd>)</h4>
+<p>Displays the list of files opened in the upper left corner of the screen. This may facilitate the identification of the file search when several tabs open.
+
+<h4 id=fi>Quit (<kbd>Alt</kbd>+<kbd>F4</kbd>)</h4>
+<p>Closes the Vic's window and all tabs in it.
+<p>The closing process is interrupted and a warning message is sent when the contents of the current tab has changed or when there are more than one tab to close.
+
+<h3 id=edit>Edit</h3>
+<p class=menu>
+<a href="#e1">Undo</a> | 
+<a href="#e2">Redo</a> | 
+<a href="#ee">Add to clipboard</a> | 
+<a href="#ef">Clear the clipbaord</a> | 
+<a href="#e3">Cut</a> | 
+<a href="#e4">Copy</a> | 
+<a href="#e5">Paste</a> | 
+<a href="#e6">Delete</a> | 
+<a href="#eg">Find the other member of the pair</a> | 
+<a href="#e7">Go to…</a> | 
+<a href="#e8">Find…</a> | 
+<a href="#e9">Replace…</a> | 
+<a href="#ea">Find previous</a> | 
+<a href="#eb">Find next</a> | 
+<a href="#ec">Subsitute</a> | 
+<a href="#ed">Select all</a>
+
+<h4 id=e1>Undo (<kbd>Ctrl</kbd>+<kbd>Z</kbd>)</h4>
+<p>Resets the contents into the state it was before the last action. This command can be repeated indefinitely, but has no effect when there is nothing to cancel.
+
+<h4 id=e2>Redo (<kbd>Ctrl</kbd>+<kbd>Y</kbd>)</h4>
+<p>Resets the contents into the state it was before the latest cancellation. This command can be repeated indefinitely, but has no effect when there is nothing to restore.
+
+<h4 id=ee>Add to clipboard (<kbd>Ctrl</kbd>+<kbd>Ins</kbd>)</h4>
+<p>Make a copy of the selection result of what was already in the clipboard. The command has no effect when nothing is selected.
+
+<h4 id=ef>Clear the clipboard (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Ins</kbd>)</h4>
+<p>Deletes the contents of the clipboard. The command has no effect if the clipboard is already empty.
+
+<h4 id=e3>Cut (<kbd>Ctrl</kbd>+<kbd>X</kbd>)</h4>
+<p>Puts a copy of the selection to the clipboard, then deletes the selection. The command has no effect if nothing is selected.
+
+<h4 id=e4>Copy (<kbd>Ctrl</kbd>+<kbd>C</kbd>)</h4>
+<p>Puts a copy of the selection to the clipboard. When nothing is selected, the command puts the current file path in the clipboard.
+
+<h4 id=e5>Paste (<kbd>Ctrl</kbd>+<kbd>V</kbd>)</h4>
+<p>Inserts the contents of the clipboard at the location of the cursor. The command has no effect when the clipboard is empty.
+
+<h4 id=e6>Delete (<kbd>Del</kbd>)</h4>
+<p>Deletes the selected text. Through the menu, the command has no effect if nothing is selected. With the keyboard, the command removes the selection or the current character.
+
+<h4 id=eg>Find the other member of the pair (<kbd>Ctrl</kbd>+<kbd>J</kbd>)</h4>
+<p>When the cursor is left of a character likely to form a pair, the command will select the corresponding opposite character, if any.
+<p>For example, if the cursor is initially to the left of the penultimate bracket expression <tt>(((2+3)*(8-4)<tt class="c">)</tt>/5)</tt>, the command will effectively select the second bracket <tt>(<tt class="c">(</tt>(2+3)*(8-4))/5)</tt>, and vice versa.
+<p>If a character is no match, a warning dialog box. This is the case for example with <tt><tt class="c">{</tt>{{[Foo]}}</tt>, where the first bracket has no counterpart with whom to form a pair.
+<p>The command has no effect when the cursor is left of a character other than one of the following: <tt>(){}[]</tt>.
+
+<h4 id=e7>Go to… (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</h4>
+<p>Calls the <i>Go to</i> dialog box, from which you can position the cursor at a specific location in the text. When displayed, the dialog box shows the numbers of current row and column.
+<p>As soon as we entered a line number, the total number of columns adjusts accordingly.
+<p>Striking <kbd>Escape</kbd> dismisses the dialog box. Striking <kbd>Enter</kbd> activates the <i>OK</i> button.
+<p>When opening a new tab, the cursor is in row 1, column 1. The command has no effect when specifying a line number or column equal to zero (<tt>0</tt>), or a non-existent line number.
+<p>If you specify a column number greater than the number of columns in the target line, the account continues on the next line. Note that two columns are consumed to take a change of standard line, since it consists of a character carriage return (<tt>CR</tt>) followed by a newline (<tt>LF</tt>).
+
+<h4 id=e8>Find… (<kbd>Ctrl</kbd>+<kbd>F</kbd>)</h4>
+<p>Calls the <i>Find</i> dialog box, from which we can do a standard search, a multi-line search or a search based on a regular expression.
+<p>Striking <kbd>Tab</kbd> moves the cursor to the next control. To insert a tab character in the edit field, press <kbd>Ctrl</kbd>+<kbd>Tab</kbd>. Striking <kbd>Enter</kbd> activates the <i>Next</i> button. To have a new line in the edit field, press <kbd>Ctrl</kbd>+<kbd>Enter</kbd>. To select all the contents in edit field, press <kbd>Ctrl</kbd>+<kbd>A</kbd>.
+<p>Vic supports PCRE regular expressions, which stand for "Pearl Compatible Regular Expression". You'll find a good tutorial on the subject at: <a href="http://www.regular-expressions.info/tutorial.html">www.regular-expressions.info/tutorial.html</a>.
+<p>We can not check <i>Case sensitive</i> and <i>Regular expression</i> at the same time. If one of the two options is selected, you must uncheck the box before choosing the other.
+<p>By default, standard search and multi-lines search are case insensitive. To specify otherwise, check the <i>Case sensitive</i> option. By default, a search based on a regular expression is case sensitive. To specify otherwise, put the option <code>i)</code> at the very beginning of your regular expression.
+<p>The option <i>In all tabs</i> can expand your search to all open files. It can be used for any type of research.
+<p>When research is done in the sense of reading and no matches are found in the current tab, the search continues to the next tab, which is then traversed from the beginning. We can not search for next instance when the end of last tab is reached.
+<p>When research is done in the opposite direction of reading and no matches are found in the current tab, the search continues at the previous tab, which is then traversed from the end. We can not search for previous occurrence when the top of the first tab is reached.
+<p>The dialog box remains on the forefront once the research done. This is standard behavior that aims to facilitate the repetition of the same research, but has the disadvantage of obstructing the view when the current match is found just below the dialog. To avoid this, we can close the dialog box with <kbd>Escape</kbd>, and use respectively <kbd>F2</kbd> and <kbd>F3</kbd> keys instead of <i>Previous</i> and <i>Next</i> buttons.
+<p>When you call the dialog again, is found in the same state in which it was left at its last use.
+<p>The search always starts from the cursor position. No warning message is sent when the search is unsuccessful. The lack of movement of the cursor should be enough to realize it.
+
+<h4 id=e9>Replace… (<kbd>Ctrl</kbd>+<kbd>H</kbd>)</h4>
+<p>Calls the <i>Replace</i> dialog box. The <i>Previous</i> and the <i>Next</i> buttons selects the match if there is one, but do not replace it. To replace the match, use the <i>Replace</i> button.
+<p>Once the <i>Replace</i> dialog box is closed, you can use the keys <kbd>F2</kbd> and <kbd>F3</kbd> to find previous occurrences and the following, and press <kbd>F4</kbd> to replace the selected text with the replacement text.
+<p>When using the <i>Replace all</i> button, the dialog closes and a message listing the number of replacements. No message appears when no replacement has occurred.
+<p>If text is selected, the replacements are within the limits of the selection only. If nothing is selected, the replacements to extend the size of the current tab. If the option <i>In all tabs</i> is checked, the replacements are in all tabs, starting from the first.
+<p>For more details, read the documentation on the <a href="#e8">Find</a> dialog box.
+
+<h4 id=ea>Find previous (<kbd>F2</kbd>)</h4>
+<p>Searches for a previous occurrence and selects it if found. The command has no effect if no previous occurrence is found, or when there is no more tab above to go when a multi-tabs searching occur.
+<p>Searching text corresponds to that which was specified when the last use of the <i>Find</i> or the <i>Replace</i> dialog box. As always, research starts from the cursor position.
+
+<h4 id=eb>Find next (<kbd>F3</kbd>)</h4>
+<p>Search for a next occurrence and select it if found. The command has no effect if no next occurrence is found, or when there is no more tab to go when a multi-tabs searching occur.
+<p>Search text corresponds to that which was specified when the last use of the <i>Find</i> or the <i>Replace</i> dialog box. As always, research starts from the cursor position.
+
+<h4 id=ec>Substitute (<kbd>F4</kbd>)</h4>
+<p>Replaces the selection by the replacement text that was specified when the last use of the <i>Replace</i> dialog box. The command has no effect if nothing is selected.
+
+<h4 id=ed>Select all (<kbd>Ctrl</kbd>+<kbd>A</kbd>)</h4>
+<p>Selects the contents of the current tab or the current editing area, as appropriate. The command has no effect when there is nothing to select.
+
+<h3 id=view>View</h3>
+<p class=menu>
+<a href="#v1">Colors…</a> | 
+<a href="#v2">Language…</a> | 
+<a href="#v3">Selection margin…</a> | 
+<a href="#v4">Font…</a> | 
+<a href="#v5">Tabulation…</a> | 
+<a href="#v6">2nd colors set</a> | 
+<a href="#v7">Status bar</a> | 
+<a href="#v8">Path and filename</a> | 
+<a href="#v9">Syntax highlighting</a> | 
+<a href="#va">Auto indentation</a> | 
+<a href="#vb">Multi-tabs</a> | 
+<a href="#vc">Numbering lines</a> | 
+<a href="#vd">Increase font size</a> | 
+<a href="#ve">Decrease font size</a> | 
+<a href="#vf">Back to normal font size</a> | 
+<a href="#vh">Maximize/restore</a> | 
+<a href="#vi">Minimize/restore</a> | 
+<a href="#vj">Maximize to the left side</a> | 
+<a href="#vk">Maximize to the right side</a> | 
+<a href="#vl">Increase transparency</a> | 
+<a href="#vm">Decrease transparency</a> | 
+<a href="#vg">Line length…</a>
+<p>Adjustments made to the <i>View</i> menu are saved in the <tt>Vic.ini</tt> file. They remain the same until you change them again.
+
+<h4 id=v1>Colors… (<kbd>Ctrl</kbd>+<kbd>E</kbd>)</h4>
+<p>Invokes a dialog box that allows you to redefine <b>the colors of the interface</b>. When displayed, the dialog indicates the current color for each of two sets of colors used. To change the current color scheme, go to the <i>View</i> menu and check or uncheck 2<sup>nd</sup> color scheme, as appropriate.
+<p>The color schemes have <b>no effect on the syntax highlighting</b> feature. To set or modify the syntax highlighting for a type of file, edit the <tt>ColorationX.hes</tt> files and follow the instructions given therein to the top.
+<p>The dialog box contains a list that shows the 16 basic colors and remembers the code of each. You can use other colors. Note that the format to use is <code>0xBBVVRR</code>, not <code>0xRRGGBB</code>. This means we must express, in sequence, the hexadecimal values of Blue, Green and Red, and that each of these values can range from <tt> 00</tt> to <tt>FF</tt>.
+
+<h4 id=v2>Language… (<kbd>Ctrl</kbd>+<kbd>L</kbd>)</h4>
+<p>Calls the <i>Language</i> dialog box, from which one can go from French to English or vice versa. Upon activation of the <i>OK</i> button, a warning message said that the change will take effect at next Vic's launch.
+
+<h4 id=v3>Selection margin… (<kbd>Ctrl</kbd>+<kbd>M</kbd>)</h4>
+<p>Invokes a dialog box that allows you to redefine the width of the selection margin. This margin is at the right of the numbering column. The maximum width allowed is 99 pixels. To eliminate this margin, enter zero (<tt>0</tt>).
+<p>The change extends to all tab and becomes effective upon activation of the <i>OK</i> button.
+
+<h4 id=v4>Font… (<kbd>Ctrl</kbd>+<kbd>D</kbd>)</h4>
+<p>Invokes a dialog box that allows you to redefine the font type, the font size and the font style to use. Effects <i>Underline</i> and <i>Strikethrough</i> are also supported.
+<p>The change extends to all tabs and becomes effective upon activation of the <i>OK</i> button.
+
+<h4 id=v5>Tabulation… (<kbd>Ctrl</kbd>+<kbd>T</kbd>)</h4>
+<p>Invokes a dialog box to reset the tab width. The number entered corresponds to the number of times the width of a character. The maximum width allowed is 99. If you entered zero (<tt>0</tt>), the effect is the same as if it had been one (<tt>1</tt>).
+<p>The change extends to all tabs and becomes effective upon activation of the <i>OK</i> button.
+
+<h4 id=v6>2<sup>nd</sup> colors set</h4>
+<p>Allows you to switch between two color schemes. Each of these can adjust the color of the following nine (<tt>9</tt>) elements:
+<ul>
+	<li>normal text;
+	<li>background of normal text;
+	<li>selected text;
+	<li>background of selected text;
+	<li>background of an inactive selection;
+	<li>numbers in the line numbering column;
+	<li>background of the line numbering column;
+	<li>background of non-printable characters ASCII 0 to 31;
+	<li>numbers. Note that this last color appears only when the syntax highlighting comes in use.
+</ul>
+<p>To redefine the colors of the interface, go through the dialog <i>Colors</i>. To define or modify the syntax highlighting for a type of file, edit the <tt>ColorationX.hes</tt> files and follow instructions in the file's header.
+<p>The 1<sup>st</sup> colors set is bound to syntactic coloration file named <tt>Coloration1.hes</tt>, and the 2<tt>nd</tt>, to <tt>Coloration2.hes</tt>. This independence allows a syntactic coloration when we are in black on white, and a different syntactic coloration when we switch to white on black.
+
+<h4 id=v7>Status bar</h4>
+<p>Allows to show or hide the status bar. This bar has <b>4 parts</b> which respectively provide the following information:
+<p><b>1)</b> the current line on the total number of rows, folowed by the number of the current column on the total number of columns in the row; <b>2)</b> the number of characters selected from the total number of characters; <b>3)</b> the number of the current character in the <a href="#appendix-1">ANSI charsets</a>; <b>4)</b> the number of opened files.
+
+<h4 id=v8>Path and filename</h4>
+<p>Toggles between two display formats of the file name in the title bar. The <b>short format</b> displays the name and extension of the current file. The <b>long format</b> displays, also, the full path to the folder where the file is. The requested change extends to all tabs and takes effect immediately.
+
+<h4 id=v9>Syntax highlighting</h4>
+<p>Allows you to enable or disable syntax highlighting. The change extends to all tabs and takes effect immediately.
+<p>The activation or deactivation of the highlighting has <b>no effect</b> on color background and other colors of the interface. To change these, go through the <a href="#v1">Colors</a> dialog box.
+
+<h4 id=va>Auto indentation</h4>
+<p>Allows you to enable or disable automatic indentation. The change extends to all tabs and takes effect immediately.
+<p>Note that this change has no impact on the behavior of the smart key <kbd>Enter</kbd>, explained in <a href="#smart-keys">Section 5</a>. 
+
+<h4 id=vb>Multi-tabs</h4>
+<p>Allows you to enable or disable multi-tabs. A warning message is sent to say that the change will become effective at the next Vic's launch.
+
+<h4 id=vc>Line numbering</h4>
+<p>Allows to show or hide the line numbering column. The change extends to all tabs and takes effect immediately. It has no impact on the <a href="#v3">margin selection</a>.
+
+<h4 id=vd>Increase font size (<kbd>Ctrl</kbd>+<kbd>+</kbd>)</h4>
+<p>Increase the font size. The change extends to all tabs and takes effect immediately. It extends to the dialog boxes to a maximum size of 14 pixels, but it did not affect the size of text menus and other components of the interface.
+<p>Instead of <kbd>Ctrl</kbd>+<kbd>+</kbd>, one can do <kbd>Ctrl</kbd>+<kbd>Mouse wheel up</kbd>. On an evolved touchpad, gestures consisting of two fingers away from each other is also supported.
+
+<h4 id=ve>Decrease font size (<kbd>Ctrl</kbd>+<kbd>-</kbd>)</h4>
+<p>Decrease the font size. The change extends to all tabs and takes effect immediately. It has no impact on the size of menus' texts and other components of the interface.
+<p>Instead of <kbd>Ctrl</kbd>+<kbd>-</kbd>, one can do <kbd>Ctrl</kbd>+<kbd>Mouse wheel down</kbd>. On an evolved touchpad, gestures consisting of matching two fingers from each other is also supported.
+
+<h4 id=vf>Back to normal font size (<kbd>Ctrl</kbd>+<kbd>0</kbd>)</h4>
+<p>Reset the size font to normal, which is 11 pixels. The change extends to all tabs and takes effect immediately. It has no impact on the size of menus' texts and other components of the interface.
+
+<h4 id=vh>Maximize/restore (<kbd>Win</kbd>+<kbd>Up</kbd>)</h4>
+<p>Maximizes the Vic's window when it is restored, and restores when minimized.
+
+<h4 id=vi>Minimize/restore (<kbd>Win</kbd>+<kbd>Down</kbd>)</h4>
+<p>Reduces the Vic's window when it is restored, and restores when maximized.
+
+<h4 id=vj>Maximize to the left side (<kbd>Win</kbd>+<kbd>Left</kbd>)</h4>
+<p>Maximizes the Vic's window so it fills the left half of the screen.
+
+<h4 id=vk>Maximize to the right side (<kbd>Win</kbd>+<kbd>Right</kbd>)</h4>
+<p>Maximizes the Vic's window so it fills the right half of the screen.
+
+<h4 id=vl>Increase transparency (<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Up</kbd>)</h4>
+<p>Increases by 25% the coefficient of transparency of the Vic's window. Beyond 100%, the account again to 25%. The values are 25, 50, 75 and 100%.
+
+<h4 id=vm>Decrease transparency (<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Down</kbd>)</h4>
+<p>Decreases by 25% the coefficient of transparency of the Vic's window. Below 100%, the account again to 100%. The values are 100, 75, 50 and 25%.
+
+<h4 id=vg>Line length… (<kbd>Ctrl</kbd>+<kbd>W</kbd>)</h4>
+<p>Invokes a dialog box that lets you adjust the text to the desired length of line. The cuts are made at the indicated position or any position closest to that there is a space or one of the following characters: <tt>!$%),./:;>?]}…»</tt>.
+<p>The cuts are made with a single linefeed (<tt>LF</tt>) instead of a standard newline (<tt>CR</tt>+<tt>LF</tt>). What distinguishes them from one another and can easily go back later.
+<p>To change the length of the line, call again the command and use another value. To return to the original line length, repeat the command and enter zero (<tt>0</tt>). At each use, the simple line breaks (<tt>LF</tt>) are removed, and then, when it is relevant, inserted at another location.
+<p>The change affects only the text of the current tab.
+<p>To manually insert a simple line feed (<tt>LF</tt>), press <kbd>Ins</kbd>+<kbd>Enter</kbd>.
+
+<h3 id=insert>Insert</h3>
+<p class=menu>
+<a href="#i1">Conditional comment</a> | 
+<a href="#i2">CSS comment</a> | 
+<a href="#i3">HTML comment</a> | 
+<a href="#im">Comment/uncomment the block</a> | 
+<a href="#i4">Doctype HTML 4.01 Strict</a> | 
+<a href="#i5">Doctype HTML 4.01 Transitional</a> | 
+<a href="#i6">Doctype HTML 4.01 Frameset</a> | 
+<a href="#i7">Doctype XHTML 1.0 Strict</a> | 
+<a href="#i8">Doctype XHTML 1.0 Transitional</a> | 
+<a href="#i9">Doctype XHTML 1.0 Frameset</a> | 
+<a href="#ia">Date</a> | 
+<a href="#ib">Hour</a> | 
+<a href="#ic">HTML class attribute</a> | 
+<a href="#id">HTML id attribute</a> | 
+<a href="#ie">HTML lang attribute</a> | 
+<a href="#if">HTML name attribute</a> | 
+<a href="#ig">HTML style attribute</a> | 
+<a href="#ih">HTML title attribute</a> | 
+<a href="#ii">Special character…</a> | 
+<a href="#ij">Unix newline</a> | 
+<a href="#ik">Predefined HTML 4.01 template</a> | 
+<a href="#il">Predefined XHTML 1.0 template</a>
+
+<h4 id=i1>Conditional comment (<kbd>Ins</kbd>+<kbd>E</kbd>)</h4>
+<p>Inserts exactly <samp>&lt;!--[if IE 6]><tt class=c>|</tt>&lt;![endif]--></samp>, and positions the cursor at the location indicated by the sign <tt class=c>|</tt>. The content of this comment will be taken into consideration by Internet Explorer 6 and ignored by all other browsers.
+<p>To target a different version, simply change the number. You can also use the following prefixes to target multiple versions of Internet Explorer simultaneously:
+<ul>
+	<li>GT (which stands for Greater Than);
+	<li>GTE (which stands for Greater Than or Equal);
+	<li>LT (which stands for Less Than);
+	<li>LTE (which stands for Less Than or Equal).
+</ul>
+<p>When using a prefix, it should be placed before <code>IE</code>. For example, <code>[if LTE IE 7]</code> can target all versions of Internet Explorer lower or equal to version 7.
+
+<h4 id=i2>CSS comment (<kbd>Ins</kbd>+<kbd>F</kbd>)</h4>
+<p>When nothing is selected, the command inserts exactly <samp>/* <tt class=c>|</tt> */</samp>, and positions the cursor at the location indicated by the sign <tt class=c>|</tt>.
+<p>When a portion of text is selected in advance, it will be nested within the comment. After the command, the cursor is placed at the end of the comment.
+
+<h4 id=i3>HTML comment (<kbd>Ins</kbd>+<kbd>G</kbd>)</h4>
+<p>When nothing is selected, the command inserts exactly <samp>&lt;!- <tt class=c>|</tt> -></samp>, and positions the cursor at the location indicated by the sign <tt class=c>|</tt>.
+<p>When a portion of text is selected in advance, it will be nested within the comment. After the command, the cursor is placed at the end of the comment.
+
+<h4 id=im>Comment/uncomment the block (<kbd>Ins</kbd>+<kbd>;</kbd>)</h4>
+<p>Checks if the first visible character of the block selected is a semicolon <tt>;</tt>.
+<p>If so, the command has the effect of deleting the initial semicolon of each line of the selected block of text, as well as any spaces or tab characters surrounding this semi-colon.
+<p>If not, the order has the effect of adding just a semicolon followed by a space at the beginning of each line of the selected block of text.
+<p>When nothing is selected, the command will comment or uncomment the current line only.
+
+<h4 id=i4>Doctype HTML 4.01 Strict (<kbd>Ins</kbd>+<kbd>1</kbd>)</h4>
+<p>Inserts the official HTML 4.01 Strict Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd"></code></pre>
+
+<h4 id=i5>Doctype HTML 4.01 Transitional (<kbd>Ins</kbd>+<kbd>2</kbd>)</h4>
+<p>Inserts the official HTML 4.01 Transitional Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional// EN"
+ "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
+
+<h4 id=i6>Doctype HTML 4.01 Frameset (<kbd>Ins</kbd>+<kbd>3</kbd>)</h4>
+<p>Inserts the official HTML 4.01 Frameset Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+ "http://www.w3.org/TR/html4/frameset.dtd"></code></pre>
+
+<h4 id=i7>Doctype XHTML 1.0 Strict (<kbd>Ins</kbd>+<kbd>4</kbd>)</h4>
+<p>Inserts the official XHTML 1.0 Strict Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"></code></pre>
+
+<h4 id=i8>Doctype XHTML 1.0 Transitional (<kbd>Ins</kbd>+<kbd>5</kbd>)</h4>
+<p>Inserts the official XHTML 1.0 Transitional Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional// EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></code></pre>
+
+<h4 id=i9>Doctype XHTML 1.0 Frameset (<kbd>Ins</kbd>+<kbd>6</kbd>)</h4>
+<p>Inserts the official XHTML 1.0 Frameset Doctype. Namely:
+<pre><code>DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"></code></pre>
+
+<h4 id=ia>Date (<kbd>Ins</kbd>+<kbd>D</kbd>)</h4>
+<p>Inserts the current date in international format <samp>1999-12-31</samp>.
+
+<h4 id=ib>Hour (<kbd>Ins</kbd>+<kbd>H</kbd>)</h4>
+<p>Inserts the current time in 24 hours format <samp>24:00</samp>.
+
+<h4 id=ic>HTML class attribute (<kbd>Ins</kbd>+<kbd>C</kbd>)</h4>
+<p>Inserts exactly <samp>class="<tt class=c>|</tt>"</samp> preceded by a space, and positions the cursor between the two quotation marks.
+
+<h4 id=id>HTML id attribute (<kbd>Ins</kbd>+<kbd>I</kbd>)</h4>
+<p>Inserts exactly <samp>id="<tt class=c>|</tt>"</samp> preceded by a space, and positions the cursor between the two quotation marks.
+
+<h4 id=ie>HTML lang attribute (<kbd>Ins</kbd>+<kbd>L</kbd>)</h4>
+<p>Inserts exactly <samp>lang="<tt class=c>|</tt>" xml:lang=""</samp> preceded by a space, and positions the cursor between the first two quotes. This duplication of information is required to ensure backwards compatibility of XHTML 1.0 to HTML. If you develop in HTML, subtract <tt>xml:lang=""</tt>.
+
+<h4 id=if>HTML name attribute (<kbd>Ins</kbd>+<kbd>N</kbd>)</h4>
+<p>Inserts exactly <samp>name="<tt class=c>|</tt>"</samp> preceded by a space, and positions the cursor between the two quotation marks.
+
+<h4 id=ig>HTML style attribute (<kbd>Ins</kbd>+<kbd>S</kbd>)</h4>
+<p>Inserts exactly <samp>style="<tt class=c>|</tt>"</samp> preceded by a space, and positions the cursor between the two quotation marks.
+
+<h4 id=ih>HTML title attribute (<kbd>Ins</kbd>+<kbd>T</kbd>)</h4>
+<p>Inserts exactly <samp>title="<tt class=c>|</tt>"</samp> preceded by a space, and positions the cursor between the two quotation marks.
+
+<h4 id=ii>Special character… (<kbd>Ins</kbd>+<kbd>P</kbd>)</h4>
+<p>Calls the <i>Special characters</i> dialog box, from which you can select one or more characters to copy into the clipboard. The characters are those of the ANSI charsets (known as Windows Western), and the display font is Courier New.
+
+<h4 id=ij>Unix newline (<kbd>Ins</kbd>+<kbd>Enter</kbd>)</h4>
+<p>Inserts a simple line feed (<tt>LF</tt>) at the location cursor. This can be useful for manually segmenting a line while you can easily restore it later via the command <a href="#vg">Line length</a>.
+
+<h4 id=ik>Predefined HTML 4.01 template (<kbd>Ins</kbd>+<kbd>F4</kbd>)</h4>
+<p>Inserts the complete skeleton of an HTML 4.01 Strict file and places the cursor between the opening and closing tags of the title element. The encoding declared in the <code>meta</code> tag is <code>windows-1252</code>. If you use another, please correct.
+
+<h4 id=il>Predefined XHTML 1.0 template (<kbd>Ins</kbd>+<kbd>F1</kbd>)</h4>
+<p>Inserts the complete skeleton of an XHTML 1.0 Strict file and places the cursor between the quotes of the attribute <code>xml:lang</code> in the <code>html</code> tag. The encoding declared in the <code>meta</code> tag is <code>windows-1252</code>. If you use another, please correct.
+
+<h3 id=tools>Tools</h3>
+<p class=menu>
+<a href="#t1">Increase indent</a> | 
+<a href="#t2">Decrease indent</a> | 
+<a href="#t3">Move block down</a> | 
+<a href="#t4">Move block up</a> | 
+<a href="#t5">Duplicate the selection</a> | 
+<a href="#t6">Transform into lowercase</a> | 
+<a href="#t7">Transform into uppercase</a> | 
+<a href="#t8">Capitalize each word</a> | 
+<a href="#tn">Show the calendar</a> | 
+<a href="#t9">Take a color…</a> | 
+<a href="#ta">Automatic replacements…</a> | 
+<a href="#tb">Sort…</a> | 
+<a href="#tc">Replace leading spaces with tabs</a> | 
+<a href="#td">Replace leading tabs with spaces</a> | 
+<a href="#te">Delete trailing white spaces</a> | 
+<a href="#tf">Delete blank lines</a> | 
+<a href="#tg">Delete HTML tags</a> | 
+<a href="#th">Compact the HTML/XHTML code</a> | 
+<a href="#ti">Convert XHTML 1.0 to HTML 4.01</a> | 
+<a href="#tl">Return entity and false UTF-8 to ANSI</a> | 
+<a href="#tm">Format/Rewrite the CSS code…</a>
+
+<h4 id=t1>Increase indent (<kbd>Tab</kbd>)</h4>
+<p>When there is no visible character on the left of the cursor, <kbd>Tab</kbd> inserts a tab. When a block of text is selected, <kbd>Tab</kbd> adds a tab at the beginning of each row in the block. When there is a visible character to the left of the cursor, <kbd>Tab</kbd> has other effects described in <a href="#smart-keys">Section 5</a>.
+
+<h4 id=t2>Decrease indent (<kbd>Shift</kbd>+<kbd>Tab</kbd>)</h4>
+<p>When a block of text is selected, <kbd>Shift</kbd>+<kbd>Tab</kbd> subtracts a space or a tab at the beginning of each row in the block. When there is nothing selected, <kbd>Shift</kbd>+<kbd>Tab</kbd> subtracted space or tab to the left of the cursor. And when there is no space or tab, the command has no effect.
+
+<h4 id=t3>Move block down (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Down</kbd>)</h4>
+<p>Moves the selected block of text one line down, or the current line if nothing is selected. The cursor follows retaining the same position in the line.
+<p>The command has no effect when trying to go below the last line.
+
+<h4 id=t4>Move block up (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Down</kbd>)</h4>
+<p>Moves the selected block of text one line up, or the current line if nothing is selected. The cursor follows retaining the same position in the line.
+<p>The command has no effect when trying to go higher than the first line.
+
+<h4 id=t5>Duplicate the selection (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>)</h4>
+<p>Inserts below the selected block of text a block of text that is identical.
+<p>When nothing is selected, the command has the effect of duplicating the current line.
+
+<h4 id=t6>Transform into lowercase (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>)</h4>
+<p>Turns the selected text in lowercase letters. When nothing is selected or that everything is in lowercase letters, the command has no effect.
+
+<h4 id=t7>Transform into uppercase (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd>)</h4>
+<p>Turns the selected text in capital letters. When nothing is selected or that everything is in capital letters, the command has no effect.
+
+<h4 id=t8>Capitalize each word (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>)</h4>
+<p>Puts the first letter of each word in selected text to uppercase, and subsequent letters in lowercase. When nothing is selected or the initials of words already in uppercase, the command has no effect.
+
+<h4 id=tn>Show the calendar (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>)</h4>
+<p>Opens the window of a perpetual calendar that displays the 12 months this year with the current date highlighted. To close the calendar, press <kbd>Escape</kbd> or do <kbd>Alt</kbd>+<kbd>F4</kbd>.
+
+<h4 id=t9>Take a color… (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) </h4>
+<p>Displays coordinates and color of pixel flew in a balloon tip located near the pointer. Data are updated as and as the pointer moves. The values <var>X</var> and <var>Y</var> are expressed in pixels, while the color is in <code>#RRGGBB</code> format.
+<p>A blow on the <kbd>Enter</kbd> key puts the color value in the clipboard and removes the balloon tip. A blow on the <kbd>Escape</kbd> key only removes the balloon tip.
+
+<h4 id=ta>Automatic replacements… (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>)</h4>
+<p>Invokes a dialog box from which you can add, edit or delete a row in the list of automatic replacements. When finished, you can simply close the box dialog, but before the changes take effect, you must activate the <b>OK</b> button and answer that you want to restart Vic.
+<p>The list of predefined automatic replacements is set out in <a href="#appendix-3">Appendix 3</a>. We also refer to this Appendix for further details.
+
+<h4 id=tb>Sort… (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>)</h4>
+<p>Calls the <i>Sort</i> dialog box, from which you can order the elements within a selection. By default, we ordered elements arranged on separate lines following an ascending alphabetical order, and without removing duplicates. A warning message appears when nothing is selected.
+<p>Specify the separator to use if the elements are separated by something other than a new line. For example, if they are separated from each other by a comma, a space or a tab.
+<p>To process text, let <i>Alphabetical</i> checked. To deal with numbers, check <i>Digital</i>. The ascending order is the normal order (0 to 9 and A to Z). The descending order corresponds to the normal inverse (9 to 0, and Z to A). If we treat together words and numbers, numbers are sorted first, then words.
+<p>Removing duplicates can be applied to any type of sorting.
+
+<h4 id=tc>Replace leading spaces with tabs (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>)</h4>
+<p>Replaces spaces start line by tabs within the selected portion of text. The command has no effect if nothing is selected or if the selection does not contain spaces.
+
+<h4 id=td>Replace leading tabs with spaces (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>)</h4>
+<p>Replaces tabs start line with spaces within the portion of text selected. The command has no effect if nothing is selected or if the selection does not contain tabs.
+
+<h4 id=te>Delete trailing whites spaces (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>)</h4>
+<p>Removes spaces and tabs located at the end of each line of the selected text block. The command has no effect if nothing is selected or if the ends of lines selected block does not contain spaces or tabs.
+
+<h4 id=tf>Delete blank lines (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd>)</h4>
+<p>Removes all blank lines located within the block of selected text. The command has no effect if nothing is selected or if selection does not contain a blank line.
+
+<h4 id=tg>Delete HTML tags (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>)</h4>
+<p>Removes from the selected block of text all HTML tags and HTML comments, as well as the content of all <code>script</code>, <code>noscript</code> and <code> style</code> sections.
+<p>The command has no effect if nothing is selected or if the selection contains no elements just enumerated.
+
+<h4 id=th>Compact the HTML/XHTML code (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>C</kbd>)</h4>
+<p>Removes HTML comments, blank lines, start and end of file, as well as carriage returns, tabs and spaces used to indent the code, except within a <code>&lt;pre></code> element.
+<p>Optional quotes around attribute values are cut off when the file is in HTML 4.01.
+
+<h4 id=ti>Convert XHTML 1.0 to HTML 4.01 (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>X</kbd>)</h4>
+<p>Checks if the file has a Doctype XHTML 1.0, and if so, put the Doctype HTML 4.01 instead.
+
+<h4 id=tl>Return entity and false UTF-8 to ANSI (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>U</kbd>)</h4>
+<p>Returns HTML entities and false UTF-8 characters in ANSI standard, and changes the expression <code>charset=utf-8</code> to <code>charset=windows-1252</code> if found. For example, <samp>&amp;eacute;</samp> will be replaced by <samp>é</samp>.
+<p>The false UTF-8 is distinguished by the presence of strange signs instead of accented letters. For example, <samp>Ã©</samp> instead of <samp>é</samp>.
+<p>When using this command, a question is asked to limit conversion to the current tab or extend to all open tabs. All the characters of the ANSI table are supported. The command has no effect when there is no entity nor false UTF-8.
+
+<h4 id=tm>Format/Rewrite CSS code… (<kbd>CapsLock</kbd>+<kbd>Y</kbd>)</h4>
+<p>Formats the CSS code selected and provides some rewriting code options while being processed. A warning is issued when nothing is selected.
+
+<h5>1) Use shorthand properties or not</h5>
+<p>Once the command is run, it asks if you want to write compact rules are applied. If you answered no, the alterations made to the code will be limited to its visual layout. If you answered yes, the code will be processed and rewritten so as to obtain a code lighter and shorter as permitted <a href="http://www.w3.org/TR/2009/CR-CSS2-20090908/">Recommendation W3C CSS 2.1</a>. This can then affect the selectors, values and properties as follows:
+<p>At <b>selectors</b>, compact writing rules:
+<ul>
+	<li>merges the selectors who have exactly the same values and properties in their respective blocks of statements (eg, <code>a {color:#00f}</code> followed by <code>a:link {color:#00f}</code> becomes <samp>a, a:link {color:#00f}</samp>).
+</ul>
+<p>In terms of <b>values</b>, compact writing rules:
+<ul>
+	<li>removes any surrounding quotation mark a URL (eg, <code>background: url{"fond.png"}</code> becomes <samp>background:url{fond.png}</samp>); 
+	<li>remove any comment next to a statement (eg, <code>margin:0; /* 2009-02-18 */</code> becomes <samp>margin:0;</samp>);
+	<li>removes all non-significant 0 (eg, <code>margin:010.0px</code> becomes <samp>margin:10px</samp>);
+	<li>removes any unit of measurement that follows a single 0 (eg, <code>margin:0px</code> becomes <samp>margin:0</samp>);
+	<li>converts the values <code>#RRGGBB</code> in lowercase (eg, <code> #DE00FC</code> becomes <samp>#de00fc</samp>);
+	<li>reduced <code>#RRGGBB</code> values to its <code>#rgb</code> format, if possible (eg, <code>#3388cc</code> becomes <samp>#38c</samp> );
+	<li>reduces the sequence of 4 values to 3, 2 or 1, if possible (eg, <code>margin:2px auto 2px auto</code> becomes <samp>margin:2px auto</samp>).
+</ul>
+<p>At the <b>property</b> level, compact writing rules:
+<ul>
+	<li>inserts any missing semicolon (<tt>;</tt>) between two statements (eg, <code>{color:#333 margin:0;}</code> becomes <samp>{color:#333; margin:0;}</samp>)
+	<li>deletes the first occurrence of any duplicate (eg, <code>margin: 1px</code> followed by <code>margin:2px</code> becomes <samp>margin: 2px</samp>);
+	<li>sorts statements in alphabetical order (eg, <code>color:#000</code> followed by <code>background:#fff</code> becomes <samp>background: #fff</samp> followed by <samp>color:#000</samp>);
+	<li>merges the properties of the same family, if possible (eg, <code> font-size:1em</code> and <code>font-weight:bold</code> and <code> font-family:arial</code> become <samp>font:bold 1em arial</samp>).
+</ul>
+
+<h6>Example No. 1</h6>
+<p><b>Before</b> applying compact writing rules:
+<pre><code class=css>ul#nav {
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 20px;
+   margin-right: 20px;
+   list-style-type: disc;
+   list-style-image: url("../img/puce.png");
+   list-style-position: outside;
+}</code></pre>
+<p><b>After</b> applying compact writing rules:
+<pre><code class=css>ul#nav {
+   list-style: url(../img/puce.png) outside disc;
+   margin: 0 20px;
+}</code></pre>
+
+<h6>Example No. 2</h6>
+<p><b>Before</b> applying compact writing rules:
+<pre><code class=css>body {
+   font-size: 0.95em;
+   font-weight: bold;
+   font-family: arial,helvetica,sans-serif;
+   line-height: 1.5;
+}</code></pre>
+<p><b>After</b> applying compact writing rules:
+<pre><code class=css>body {
+   font: bold .95em/1.5 arial,helvetica,sans-serif;
+}</code></pre>
+<p><strong>Notes:</strong>
+<ol>
+	<li>According to the CSS 2.1 specification, properties are not be merged in the absence of <code>font-size</code> and <code>font-family</code>, and if there is a value for <code>line-height</code>, it will be included in the final result.
+	<li>The properties that lend themselves to writing shorthand are: <code>background</code>, <code>border</code>, <code>border-bottom</code>, <code>border-left</code>, <code>border-right</code>, <code>border-top</code>, <code>cue</code>, <code>font</code>, <code>list-style</code>, <code>margin</code>, <code>padding</code>, <code>pause</code> and <code>outline</code>.
+</ol>
+
+<h5>2) Final presentation</h5>
+<p>What CSS code has been compacted or not, the user must choose between two kinds of final presentation: wide-spaced layout and compact layout.
+<p>1) The <b>compact</b> layout:
+<ul>
+	<li>removes comments;
+	<li>provides the code because of a rule per line;
+	<li>removes any semicolon (<tt>;</tt>) followed by a closing brace (<tt>}</tt>);
+	<li>removes all unnecessary whites spaces before and after a comma (<tt>,</tt>), a semicolon (<tt>;</tt>), a colon (<tt>:</tt>), an opening brace (<tt>{</tt>) or a closing brace (<tt>}</tt>).
+</ul>
+<p>2) The <b>wide-spaced</b> layout:
+<ul>
+	<li>preserves the comments;
+	<li>indents and has the code because of a statement per line;
+	<li>inserts a space after a comma (<tt>,</tt>) or a colon (<tt>:</tt>) [except in a URL, and before a pseudo-class or a pseudo-element]
+	<li>inserts a new row after an opening brace (<tt>{</tt>);
+	<li>inserts a new line before a closing brace (<tt>}</tt>), and two after.
+</ul>
+
+<h5>Example</h5>
+<p>Here is an example to illustrate the various outcomes that can result from the original code as follows:
+<pre><code class=css>/* Structure */
+  body { margin:0px auto 0px auto;
+  font-size:0.9em;
+  font-family:arial,sans-serif;
+  color:#112233;
+  background:#FFFFFF; }</code></pre>
+<p><b>1.</b> Rewrite shorter = No; Arrange compactly = No
+<pre><code class=css>/* Structure */
+body {
+   margin: 0px auto 0px auto;
+   font-size: 0.9em;
+   font-family: arial, sans-serif;
+   color: #112233;
+   background: #FFFFFF;
+}</code></pre>
+<p><b>2.</b> Rewrite shorter = Yes; Arrange compactly = No
+<pre><code class=css>/* Structure */
+body {
+   background: #fff;
+   color: #123;
+   font: .9em arial, sans-serif;
+   margin: 0 auto;
+}</code></pre>
+<p><b>3.</b> Rewrite shorter = Yes; Arrange compactly = Yes
+<pre><code class=css>body {background:#fff;color:#333;font:.9em arial,sans-serif;margin:0 auto}</code></pre>
+<p>Note that there would be no great interest to refuse the application of scoring rules brief, and then ask that the code be arranged compactly. That is why we have not seen fit to illustrate this possibility.
+
+<h3 id=html>HTML</h3>
+<p class=menu>
+<a href=#ha>General principles</a> | 
+<a href=#hb>Special notes</a>
+
+<h4 id=ha>General principles</h4>
+<p>Controls are provided for commonly used HTML tags. They are all based on the <kbd>CapsLock</kbd> key.
+<p>You can choose between two methods for marking up text.
+<p><b>Method 1:</b> select the text and mark it then. For example, select the lines to create a bulleted list, then make <kbd>CapsLock</kbd>+<kbd>U</kbd> to generate the appropriate markup.
+<p><b>Method 2:</b> Generate the tags first and then add your text. For example, do <kbd>CapsLock</kbd>+<kbd>K</kbd> to generate the tags of a block quotation, and then type or paste it if it is in the clipboard.
+<p>To generate the desired set of tags you can use a specific command or type the tag name followed by a hit the Tab key. For example, tags for a hyperlink you can make <kbd>CapsLock</kbd>+<kbd>A</kbd> or type the letter <tt>A</tt> and press <kbd>Tab</kbd>. In both cases you get this: <code>&lt;a href="<span class=c>|</span>">&lt;/a></code>.
+
+<h4 id=hb>Special notes</h4>
+<p>Tagging an <a href="#image">image</a>, a <a href="#link">link</a>, a <a href="#form">form control</a> or a <a href="#table">table</a> obey their respective internal logic.
+
+<h5 id="image">Image (<kbd>CapsLock</kbd>+<kbd>G</kbd>)</h5>
+<p>Inserting an image automatically registers the path between the image of the current file and the dimensions of the image width and height. For example, <code>&lt;img src="img/Vic.ico" width="128" height="128" alt="<span class=c>|</span>"></code>. At the end, you just have to write a proper alternative text.
+
+<h5 id="link">Link (<kbd>CapsLock</kbd>+<kbd>A</kbd>)</h5>
+<p>When generating a link, Vic automatically detects whether the selected text is an email address, web address or a link label. For example, the command <kbd>CapsLock</kbd>+<kbd>A</kbd> will turn the following texts in different ways:
+
+<h6>Example 1</h6>
+<p><b>Before:</b><br><tt>normandlamoureux.com</tt><br><b>After:</b><pre><code>&lt;a href="http://normandlamoureux.com"><span class=c>|</span>&lt;/a></code></pre>
+
+<h6>Example 2</h6>
+<p><b>Before:</b><br><tt>normand.lamoureux@gmail.com</tt><br><b>After:</b><pre><code>&lt;a href="mailto:normand.lamoureux@gmail.com"><span class=c>|</span>&lt;/a></code></pre>
+
+<h6>Example 3</h6>
+<p><b>Before:</b><br><tt>Download the last version of Vic</tt><br><b>After:</b><pre><code>&lt;a href="<span class=c>|</span>">Download the last version of Vic&lt;/a></code></pre>
+<p>Note that the prefix <code>http://</code> and <code>mailto:</code> are added only when they are absent from the original text. Also note that the signs <code>&amp;</code> who might be in the starting URL would automatically be transformed into <code>&amp;amp;</code> to ensure code validity.
+
+<h5 id="form">Form... (<kbd>CapsLock</kbd>+<kbd>F</kbd>)</h5>
+<p>The command invokes a dialog box from which it will be possible to insert the HTML form controls you want.
+<p>Vic's window is automatically activated as soon as you insert the code. The keyboard command <kbd>Shift</kbd>+<kbd>Escape</kbd> get the focus back to the dialog box. When finished, a strike on <kbd>Escape</kbd> can then close this dialog.
+
+<h5 id="table">Table... (<kbd>CapsLock</kbd>+<kbd>T</kbd>)</h5>
+<p>The command invokes a dialog box that has two parts, which can either convert the selected text in a table or create a table if nothing is selected.
+<p>The first part of the dialog box is used to determine the size of the table. The information we request is needed there. If content was selected when making the order, Vic automatically calculates and indicates the number of rows and columns that the table should have a total. If nothing is selected, you will need to register the numbers of rows and columns you want.
+<p>The second part of the dialog is about the accessibility of the table. This part is optional and has to be informed if your table has several levels of headers of columns or more levels of header lines. The values you enter in this part allow Vic to explicitly associate data cells with header cells that correspond. This association will be using the <code>id</code> and <code>headers</code> attributes. If you leave blank, the table will be generated without these attributes.
+<p>The values of the <code>id</code> and <code>headers</code> attributes will come in the form <samp>t0l0c0</samp>, where <tt>t</tt> is for table, <tt>l</tt> to the line, <tt>c</tt> for column, and <tt>0</tt> for a number between 0 and 99. The number attached to the letter <tt>t</tt> corresponds to the one you have entered in the field labeled unique identifier. You can leave this field blank if you have only one table in your page. However, make sure that each table has a unique identification number if you have several.
+<p>The selected text should be organized as follows to be interpreted correctly: the data must be separated from each other by a tab character, and the rows by a single line feed (<tt>LF</tt>) or standard (<tt>CR</tt>+<tt>LF</tt>). In most cases, the copied and pasted a table from a spreadsheet or a word processor should automatically match the requirements.
+<p>Can be left empty cells. No need to remove blank lines and unnecessary spaces or mark the location of empty cells before, Vic finds all this and cares. However, you will need to edit the code if your table includes merged cells.
+
+<h3 id=markers>Markers</h3>
+<p class=menu>
+<a href="#m1">Place a marker</a> | 
+<a href="#m2">Jump to the next marker</a> | 
+<a href="#m3">Jump to the previous marker</a> | 
+<a href="#m4">Delete de current marker</a> | 
+<a href="#m5">Delete all markers</a> | 
+
+<h4 id=m1>Place a marker (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>M</kbd>)</h4>
+<p>Saves the current cursor position to be able to quickly return later.
+<p>The markers are sorted in ascending order and stored in separate files with extension <tt>mrk.</tt>.
+<p>You can place as many markers of position you want in a single file. When multiple tabs are open, Vic is often markers of each.
+<p>The command has no effect if a position marker is already placed at the location of the cursor.
+
+<h4 id=m2>Jump to the next marker (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>J</kbd>)</h4>
+<p>Place the cursor at the position marker following, if any. If there are none, or the cursor moves first marker of the page, if any, or the command has no effect. An error message is issued when no marker exists in the current page.
+
+<h4 id=m3>Jump to the previous marker (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd>)</h4>
+<p>Place the cursor at the previous marker, if any. If there are none, or the cursor moves to the last marker on the page, if any, or the command has no effect. An error message is issued when no marker exists in the current page.
+
+<h4 id=m4>Delete the current marker (<kbd>Alt</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd>)</h4>
+<p>Removes the current marker from the list of markers, if any. An error message is issued if no markers coincides with the position of the cursor, or if no marker has been placed on the current page.
+
+<h4 id=m5>Delete all markers... (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd>)</h4>
+<p>Triggers the opening of a dialog box that asks if you want to extend the removal of markers in all tabs.
+<p>If you answer "Yes", all markers of all the tabs will be removed. If you answered "No", only markers of the current tab will be removed.
+<p>The command has no effect if you activate the "Cancel" button or if you close the dialog with <kbd>Escape</kbd> or <kbd>Alt</kbd> + <kbd>F4</kbd>.
+
+<h3 id=extensions>Plugins</h3>
+<p>To work, your plugin must be an <tt>.ahk</tt> script placed in the <tt>plugins</tt> folder. The list of <tt>plugins</tt> is automatically created at Vic's launch.
+<p>Also, all scripts must have the two following lines of code in its beginning:<pre><code><tt style="color:blue">SetTitleMatchMode</tt><tt class=c>,</tt> 2
+<tt style="color:blue">WinActivate</tt><tt class=c>,</tt> - Vic
+</code></pre>
+
+<h3 id=help>Help</h3>
+<p class=menu>
+<a href="#h1">Documentation</a> | 
+<a href="#h2">RegEx Guide</a> | 
+<a href="#h3">ASCII/ANSI Character Map</a> | 
+<a href="#check">Check for the existence of an update</a> | 
+<a href="#h4">About…</a>
+
+<h4 id=h1>Documentation (<kbd>F1</kbd>)</h4>
+<p>Opens the <tt>Vic_En.html</tt> file in the default Web browser. This is the documentation file that you are reading.
+
+<h4 id=h2>RegEx Guide (<kbd>F11</kbd>)</h4>
+<p>Opens the <tt>XR.doc</tt> file in the default Web browser. It is a complete (French) documentation on RegEx flavor usable with Vic, which is PCRE (Perl Compatible Regular Expression).
+
+<h4 id=h3>ASCII/ANSI Character Map (<kbd>F12</kbd>)</h4>
+<p>Opens a dialog box to show characters 32 to 127 from the Windows-1252 page code. These characters can be selected.
+<p>Press <kbd>Escape</kbd> or <kbd>Alt</kbd>+<kbd>F4</kbd> to close this dialog box.
+
+<h4 id=check>Check for the existence of an update</h4>
+<p>Returns an alert box to confirm that you have the latest version of Vic, or to offer to download it on the contrary.
+
+<h4 id=h4>About…</h4>
+<p>Inquires about licensing and copyrights related to Vic and its integrated components.
+<p>To access the original HiEdit control's license, open the <tt>HiEdit.inc</tt> file located in the <tt>hie</tt> folder. To access the original Dlg module's license, open the <tt>Dlg.ahk</tt> file located in the <tt>inc</tt> folder.
+
+<h2 id=smart-keys>Vic's smart keys</h2>
+<p>The keys <a href="#home">Home</a>, <a href="#enter">Enter</a>, <a href="#tab">Tab</a> and <a href="#backspace">Backspace</a> have special behaviors, depending on the manner or context in which they are used. This section aims to explain these behaviors.
+
+<h3 id=home>Home</h3>
+<p>A hit on the <kbd>Home</kbd> key moves the cursor at the beginning of the current line. A second hit will reach the spot after the whites characters located in front of the line.
+<p>Here is an example, where the sign <tt class=c>|</tt> is the cursor. Suppose that initially the cursor is at the end of the line.
+<p>After a <b>first</b> hit on the <kbd>Home</kbd> key, then:
+<pre><code><tt class=c>|</tt>    &lt;table cellspacing="1"></code></pre>
+<p>After a <b>second</b> hit on the <kbd>Home</kbd> key, then:
+<pre><code>    <tt class=c>|</tt>&lt;table cellspacing="1"></code></pre>
+<p>Note that a third hit on the same key would bring the cursor at the start line, a fourth early in the text, and so on.
+
+<h3 id=enter>Enter</h3>
+
+<h4>— New line</h4>
+<p>Used alone, the <kbd>Enter</kbd> key inserts a standard newline. You should know that Windows environment, a new line consists of a carriage return (<tt>CR</tt>) followed by a (<tt>LF</tt>).
+<p>The command <kbd>Ins</kbd>+<kbd>Enter</kbd> inserts a single line feed (<tt>LF</tt>). This can be used to manually break up a line that will divide differently then, via the function called <a href="#vg">Line length</a>.
+
+<h4>— Indented new line</h4>
+<p>When the current line is indented, a hit the <kbd>Enter</kbd> key will result in generating a new line indented the same way. To prevent this behavior, go to the View menu and uncheck Auto indentation.
+
+<h4>— Vertical indentation</h4>
+<p>When the cursor is between two tags, one hit the <kbd>Enter</kbd> key will have the effect to put the tags on separate lines and to insert a line indented one level more. For example:
+<p><b>Before:</b>
+<pre><code>  &lt;div><tt class=c>|</tt>&lt;/div></code></pre>
+<p><b>After:</b>
+<pre>  <code>&lt;div>
+    <tt class=c>|</tt>
+  &lt;/div></code></pre>
+<p>This behavior does not occur when the cursor is between two start tags. For example, if the cursor is between tags <code>&lt;li></code> and <code>&lt;span></code>, a strike on the <kbd>Enter</kbd> key would simply refer the tag <code>&lt;span></code> to the next line.
+
+<h4>— Bullet generation</h4>
+<p>When the first non-blank character of current line acts as a bullet, the command <kbd>Shift</kbd>+<kbd>Enter</kbd> will result in generating a new line beginning with an identical bullet. For example:
+<p><b>Before:</b>
+<pre><code>    - Raspberry<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>    - Raspberry
+    - <tt class=c>|</tt></code></pre>
+<p>If the starting line is indented, the new line will be. A sign <tt>-</tt>, <tt>+</tt>, <tt>*</tt> or <tt>•</tt> followed by a space or a tab is automatically regarded as playing the role of a bullet. The em dash <tt>—</tt> and en dash <tt>–</tt> also. These signs can be used alone or combined. For example, the chains <tt>-+</tt>, <tt>++</tt> or <tt>***</tt> followed by a space or a tab are considered as bullets.
+<p>To prevent the generation of a bullet in the top line, make your newline with <kbd>Enter</kbd>.
+
+<h4>— Automatic numbering</h4>
+<p>When the first non-blank character of the current line is a number followed by a space, a tab, a dot "<tt>.</tt>", a hyphen "<tt>-</tt>", a closing parenthesis "<tt>)</tt>" or a combination of these signs, the command <kbd>Shift</kbd>+<kbd>Enter</kbd> will generate a new numbered line in the same way but incremented by one (1). For example:
+<p><b>Before:</b>
+<pre><code>    7) Spread hazelnuts<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>    7) Spread hazelnuts
+    8) <tt class=c>|</tt></code></pre>
+<p>If the starting line is indented, the new line will be. When two or more groups of numbers are separated by dots (<tt>.</tt>), only the last group of digits will be incremented. For example:
+<p><b>Before:</b>
+<pre><code>5.6  Date of next meeting<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>5.6  Date of next meeting
+5.7  <tt class=c>|</tt></code></pre>
+<p>To prevent the generation numbering beginning of the line, make your newline with a standard <kbd>Enter</kbd>.
+
+<h3 id=tab>Tab</h3>
+
+<h4>— In a selection</h4>
+<p>When a block of text is selected, <kbd>Tab</kbd> indents each line of the block, while <kbd>Tab</kbd> decreases withdrawal.
+<p>Here is an example of increased withdrawal:
+<p><b>Before:</b>
+<pre><code style="background:#fff">&lt;ul> 
+  &lt;li>Strawberry&lt;/li> 
+  &lt;li>Banana&lt;/li> 
+&lt;/ul><tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code style="background:#fff">  &lt;ul> 
+    &lt;li>Strawberry&lt;/li> 
+    &lt;li>Banana&lt;/li> 
+  &lt;/ul><tt class=c>|</tt></code></pre>
+<p>The increase of the withdrawal is done by adding a tab character at the beginning of each line. The decrease of the withdrawal is done by removing a tab character or a space when there is not.
+
+<h4>— Tag generator</h4>
+<p>When the cursor is on the right of a word, <kbd>Tab</kbd> creates a pair of tags with the word as element name. Here is an example where <tt class=c>|</tt> indicates the cursor position:
+<p><b>Before:</b>
+<pre><code>strong<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;strong><tt class=c>|</tt>&lt;/strong></code></pre>
+<p>Appropriate forms are provided for all official tags of HTML 4.01 and XHTML 1.0. For example, the letter <code>a</code> followed by <kbd>Tab</kbd> key will produce <code>&lt;a href="<tt class=c>|</tt>">&lt;/a></code> instead of <code>&lt;a><tt class=c>|</tt>&lt;/a></code>.
+<p>To prevent the automatic generation of a tag and add a tab character when the cursor is located just to the right of a text, do <kbd>RAlt</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Link generator</h4>
+<p>When the cursor is on the right of an electronic address, <kbd>Tab</kbd> will create a hyperlink with the address in the <code>href</code> attribute. The address type is automatically detected. Here is an example with an email address:
+<p><b>Before:</b>
+<pre><code>quidam@eldorado.com<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;a href="mailto:quidam@eldorado.com"><tt class=c>|</tt>&lt;/a></code></pre>
+<p>The email addresses are automatically preceded by the prefix <code>mailto:</code>. Web addresses, in turn, are automatically prefixed <code>http://</code>. For example:
+<p><b>Before:</b>
+<pre><code>www.eldorado.com<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;a href="http://www.eldorado.com"><tt class=c>|</tt>&lt;/a></code></pre>
+<p>Note that the <code>http://</code> prefix is not added when it is in the starting address. Moreover, if ampersands (<tt>&amp;</tt>) are present in the URL, they will automatically turn into their valid form (<tt>&amp;amp;</tt>).
+<p>To prevent the automatic generation of a link and add a tab character when the cursor is on the right of an electronic address, do <kbd>RAlt</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Intelligent positioning</h4>
+<p>When the cursor is before the signs <tt>"</tt> or <tt>&lt;</tt>, <kbd>Tab</kbd> moves the cursor within the next couple of quotation marks, in the middle of the next pair of tags or after the next sign <tt>></tt>. Here is an example:
+<p><b>Initially:</b>
+<pre><code>&lt;a href="<tt class=c>|</tt>">&lt;/a></code></pre>
+<p><b>After a 1<sup>st</sup> <kbd>Tab</kbd>:</b>
+<pre><code>&lt;a href=""><tt class=c>|</tt>&lt;/a></code></pre>
+<p><b>After a 2<sup>nd</sup> <kbd>Tab</kbd>:</b>
+<pre><code>&lt;a href="">&lt;/a><tt class=c>|</tt></code></pre>
+<p>So, <kbd>Tab</kbd> moves the cursor to the next significant stop in HTML. What can work more efficiently and save time.
+<p>To prevent the intelligent positioning and add a tab character when the cursor is on the right of a <tt>"</tt> or a <tt>&lt;</tt>, do <kbd>RAlt</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Custom tag building</h4>
+<p>A simple syntax can be used to generate tags that meet specific requirements. It provides 3 types of the following possibilities:
+<ol>
+	<li>add an attribute in the opening tag of the element;
+	<li>predetermine the number of list items to generate;
+	<li>insert an attribute in the tag of each list item.
+</ol>
+<p>The following examples show the situation before and after a strike on <kbd>Tab</kbd>.
+
+<h5>1<sup>st</sup> type of use</h5>
+<p>The syntax <var>Element</var>+<var>Attribute</var> can be used to create a pair of tags with the desired attribute in the opening tag. For example:
+<p><b>Before:</b>
+<pre><code>p+class<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;p class="<tt class=c>|</tt>">&lt;/p></code></pre>
+<p>When an item is already naturally endowed with one or more HTML attributes, the attribute will be asked before the others. For example:
+<p><b>Before:</b>
+<pre><code>img+id<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;img id="<tt class=c>|</tt>" src="" width="" height="" alt="" /></code></pre>
+<p>Note that by default, is XHTML syntax will be used. If you develop in HTML, consider excluding the slash (<tt>/</tt>) and the space that precedes it.
+
+<h5>2<sup>nd</sup> type of use</h5>
+<p>The syntax <var>Element</var>+<var>Attribute</var>+<var>Number</var> can be used to generate an HTML list structure with the number of list items wanted. For example:
+<p><b>Before:</b>
+<pre><code>ul+id+3<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;ul id="<tt class=c>|</tt>">
+  &lt;li>&lt;/li>
+  &lt;li>&lt;/li>
+  &lt;li>&lt;/li>
+&lt;/ul></code></pre>
+<p>This syntax can be used for all types of HTML list. In the case of a definition list, the number produces pairs of elements <code>dt</code> and <code>dd</code>. Moreover, it can mean that one need not attribute by leaving a vacuum.
+<p><b>Before:</b>
+<pre><code>dl++2<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;dl>
+  &lt;dt><tt class=c>|</tt>&lt;/dt>
+  &lt;dd>&lt;/dd>
+  &lt;dt>&lt;/dt>
+  &lt;dd>&lt;/dd>
+&lt;/ul></code></pre>
+<p>The bulleted and numbered lists are automatically generated with at least one list item. It is therefore unnecessary, for example, to write <code>ol++1</code> as <code>ol</code> is enough.
+
+<h5>3<sup>rd</sup> type of use</h5>
+<p>The syntax <var>Element</var>+<var>Attribute</var>+<var>Number</var>+<var>Attribute</var> can be used to generate a list with an attribute in the tag of the container, and an attribute in each subsequent list items. For example:
+<p><b>Before:</b>
+<pre><code>ol+id+3+class<tt class=c>|</tt></code></pre>
+<p><b>After:</b>
+<pre><code>&lt;ol id="<tt class=c>|</tt>">
+  &lt;li class="">&lt;/li>
+  &lt;li class="">&lt;/li>
+  &lt;li class="">&lt;/li>
+&lt;/ol></code></pre>
+<p>As before, we can write <code>ol++3+class</code> if one does not need an attribute in the opening part of the block container. However, it should write <code>ol++1+class</code> if you want a single list item with attribute, for the syntax <code>ol+++class</code> will not work.
+
+<h3 id=backspace>Backspace</h3>
+<p>When you just turn a selection into a list, a group of paragraphs or in an HTML table, the command <kbd>Alt</kbd>+<kbd>Backspace</kbd> can move the cursor to the beginning of the block of code, exactly where it should be find to add a class, a title or a unique identifier. 
+<p>Here is a complete example developed in four (4) steps.
+<p><b>1.</b> Initially, we have two selected words:
+<pre><code class=b>Strawberry 
+Banana<tt class=c>|</tt></code></pre>
+<p><b>2.</b> We press <kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>P</kbd> and get a bulleted list:
+<pre><code>&lt;ul> 
+  &lt;li>Strawberry
+  &lt;li>Banana
+&lt;/ul><tt class=c>|</tt></code></pre>
+<p><b>3.</b> Then, <kbd>Alt</kbd>+<kbd>Backspace</kbd> positions the cursor and removes the selection:
+<pre><code>&lt;ul<tt class=c>|</tt>>
+  &lt;li>Strawberry
+  &lt;li>Banana
+&lt;/ul></code></pre>
+<p><b>4.</b> Finally, it remains only to press <kbd>Ins</kbd>+<kbd>C</kbd> to add the desired attribute:
+<pre><code>&lt;ul class="<tt class=c>|</tt>">
+  &lt;li>Strawberry
+  &lt;li>Banana
+&lt;/ul></code></pre>
+<p>Note that immediately after step #2 you could indent the code with one or more hits on <kbd>Tab</kbd> and then use the <kbd>Alt</kbd>+<kbd>Backspace</kbd> command with the same result.
+
+<h2 id=appendix-1>Appendix 1: ANSI charsets</h2>
+<p>Here is the so-called "ANSI" charsets, which it would probably be more accurate to call Western Windows, Windows-1252 or CP-1252.
+<p>We included letters instead of characters that would otherwise go unnoticed. These are tabulation (<tt>TAB</tt>), linefeed (<tt>LF</tt>), space (<tt>SP</tt>) and non-breaking space (<tt>NBS</tt>).
+<table class=mono cellspacing="1">
+<tr><th><th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr><th>000<td>NUL<td>SOH<td>STX<td>ETX<td>EOT<td>ENQ<td>ACK<td>BEL<td>BS<td>TAB
+<tr class=p><th>010<td>LF<td>VT<td>FF<td>CR<td>SO<td>SI<td>DLE<td>DC1<td>DC2<td>DC3
+<tr><th>020<td>DC4<td>NAK<td>SYN<td>ETB<td>CAN<td>EM<td>SUB<td>ESC<td>FS<td>GS
+<tr class=p><th>030<td>RS<td>US<td>SP<td>!<td>"<td>#<td>$<td>%<td>&amp;<td>'
+<tr><th>040<td>(<td>)<td>*<td>+<td>,<td>-<td>.<td>/<td>0<td>1
+<tr class=p><th>050<td>2<td>3<td>4<td>5<td>6<td>7<td>8<td>9<td>:<td>;
+<tr><th>060<td>&lt;<td>=<td>><td>?<td>@<td>A<td>B<td>C<td>D<td>E
+<tr class=p><th>070<td>F<td>G<td>H<td>I<td>J<td>K<td>L<td>M<td>N<td>O
+<tr><th>080<td>P<td>Q<td>R<td>S<td>T<td>U<td>V<td>W<td>X<td>Y
+<tr class=p><th>090<td>Z<td>[<td>\<td>]<td>^<td>_<td>`<td>a<td>b<td>c
+<tr><th>100<td>d<td>e<td>f<td>g<td>h<td>i<td>j<td>k<td>l<td>m
+<tr class=p><th>110<td>n<td>o<td>p<td>q<td>r<td>s<td>t<td>u<td>v<td>w
+<tr><th>120<td>x<td>y<td>z<td>{<td>|<td>}<td>~<td><tt class=e>[]</tt><td>€<td><tt class=e>[]</tt>
+<tr class=p><th>130<td>‚<td>ƒ<td>„<td>…<td>†<td>‡<td>ˆ<td>‰<td>Š<td>‹
+<tr><th>140<td>Œ<td><tt class=e>[]</tt><td>Ž<td><tt class=e>[]</tt><td><tt class=e>[]</tt><td>‘<td>’<td>“<td>”<td>•
+<tr class=p><th>150<td>–<td>—<td>˜<td>™<td>š<td>›<td>œ<td><tt class=e>[]</tt><td>ž<td>Ÿ
+<tr><th>160<td>NBS<td>¡<td>¢<td>£<td>¤<td>¥<td>¦<td>§<td>¨<td>©
+<tr class=p><th>170<td>ª<td>«<td>¬<td>­<td>®<td>¯<td>°<td>±<td>²<td>³
+<tr><th>180<td>´<td>µ<td>¶<td>·<td>¸<td>¹<td>º<td>»<td>¼<td>½
+<tr class=p><th>190<td>¾<td>¿<td>À<td>Á<td>Â<td>Ã<td>Ä<td>Å<td>Æ<td>Ç
+<tr><th>200<td>È<td>É<td>Ê<td>Ë<td>Ì<td>Í<td>Î<td>Ï<td>Ð<td>Ñ
+<tr class=p><th>210<td>Ò<td>Ó<td>Ô<td>Õ<td>Ö<td>×<td>Ø<td>Ù<td>Ú<td>Û
+<tr><th>220<td>Ü<td>Ý<td>Þ<td>ß<td>à<td>á<td>â<td>ã<td>ä<td>å
+<tr class=p><th>230<td>æ<td>ç<td>è<td>é<td>ê<td>ë<td>ì<td>í<td>î<td>ï
+<tr><th>240<td>ð<td>ñ<td>ò<td>ó<td>ô<td>õ<td>ö<td>÷<td>ø<td>ù
+<tr class=p><th>250<td>ú<td>û<td>ü<td>ý<td>þ<td>ÿ<td> <td> <td> <td> 
+</table>
+<p>The signs <tt class=e>[]</tt> mark the location of characters who have no particular shape and displayed using a question mark or a square, depending on the font used.
+<p>Apart Tab (<tt>9</tt>) and linefeed (<tt>10</tt>), Vic displays the characters 0 through 31 with the same letters as we have indicated.
+
+<h2 id=appendix-2>Appendix 2: Keyboard shortcuts</h2>
+<p>Here is an alphabetical list of keyboard shortcuts usable with Vic. The usual moving and selecting commands are supported, but they were omitted in order not to overload the list.
+<p>The behavior of buttons marked with an asterisk (<tt class=c>*</tt>) is described in <a href="#smart-keys">Section 5</a>. The commands marked with an obel (<tt class=c>†</tt>) are not included in the menus.
+<table cellspacing="1">
+<tr><th>Shortcut<th>Action
+<tr><td><kbd>Alt</kbd>+<kbd>Backspace</kbd><tt class=c>*†</tt><td>Reach the top of the selection
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>C</kbd><td>Compact the HTML/XHTML code
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>J</kbd><td>Jump to the next marker
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>M</kbd><td>Place a marker
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd><td>Jump to the previous marker
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd><td>Delete all markers...
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>O</kbd><td>Open a saved session
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>S</kbd><td>Save the current session
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>U</kbd><td>Return false UTF-8 into ANSI
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>W</kbd><td>Reload the current file
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>X</kbd><td>Convert XHTML 1.0 to HTML 4.01
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Y</kbd><td>Format/Rewrite the selected CSS code
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Z</kbd><td>Show the list of opened files
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Down</kbd><tt class=c>†</tt><td>Scroll one line down (cursor don't move)
+<tr><td><kbd>Alt</kbd>+<kbd>F4</kbd><td>Close Vic's window and all openned tabs
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Left</kbd><tt class=c>†</tt><td>Scroll one character to the left (cursor don't move)
+<tr><td><kbd>Alt</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd><td>Delete the current marker
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Right</kbd><tt class=c>†</tt><td>Scroll one character to the right (cursor don't move)
+<tr><td><kbd>Alt</kbd>+<kbd>Up</kbd><tt class=c>†</tt><td>Scroll one line up (cursor don't move)
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Down</kbd><td>Decrease Vic's window transparency by 25%
+<tr><td><kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Up</kbd><td>Increase Vic's window transparency by 25%
+<tr class=p><td><kbd>Application</kbd><tt class=c>†</tt><td>Open the context menu
+<tr><td><kbd>CapsLock</kbd>+<kbd>1</kbd><td>Heading 1 HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>2</kbd><td>Heading 2 HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>3</kbd><td>Heading 3 HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>4</kbd><td>Heading 4 HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>5</kbd><td>Heading 5 HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>6</kbd><td>Heading 6 HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>A</kbd><td>Anchor/Hyperlink HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>B</kbd><td>Bold HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>C</kbd><td>Cited text HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>Del</kbd><td>Deleted text HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>E</kbd><td>Emphasis HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>Enter</kbd><td>Breaking row HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>F</kbd><td>HTML Form controls dialog box
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>G</kbd><td>Image reference HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>I</kbd><td>Italic HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>Ins</kbd><td>Inserted text HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>K</kbd><td>Blockquote HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>M</kbd><td>Convert into Mac file format
+<tr><td><kbd>CapsLock</kbd>+<kbd>O</kbd><td>Ordered List HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>P</kbd><td>Paragraph HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>Q</kbd><td>Quote HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>Space</kbd><td>Horizontal row HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>S</kbd><td>Strong HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>Sub</kbd><td>Subscript HTML tag
+<tr><td><kbd>CapsLock</kbd>+<kbd>Sup</kbd><td>Superscript HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>T</kbd><td>HTML Table dialog box
+<tr><td><kbd>CapsLock</kbd>+<kbd>U</kbd><td>Unordered List HTML tag
+<tr class=p><td><kbd>CapsLock</kbd>+<kbd>W</kbd><td>Convert into Windows file format
+<tr><td><kbd>CapsLock</kbd>+<kbd>X</kbd><td>Convert into Unix file format
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>+</kbd><td>Increase the font size
+<tr><td><kbd>Ctrl</kbd>+<kbd>-</kbd><td>Decrease the font size
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>0</kbd><td>Back to the normal font size
+<tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd><td>Select all
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>C</kbd><td>Copy into the clipboard
+<tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd><td>Change the current font
+<tr class=p><td><kbd>Crtl</kbd>+<kbd>E</kbd><td>Change the interface colors
+<tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd><td>Find a string
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>F12</kbd><td>Save the current file with another name
+<tr><td><kbd>Ctrl</kbd>+<kbd>F4</kbd><td>Close the current tab
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>G</kbd><td>Go to a line or a column
+<tr><td><kbd>Ctrl</kbd>+<kbd>H</kbd><td>Replace a string by another one
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>J</kbd><td>Find the other member of the pair
+<tr><td><kbd>Ctrl</kbd>+<kbd>L</kbd><td>Switch the natural language
+<tr class=p><td><kbd>Crtl</kbd>+<kbd>M</kbd><td>Set the margin selection's width
+<tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd><td>Open a new empty tab
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>O</kbd><td>Open a saved file in a new tab
+<tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd><td>Print the current file
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>S</kbd><td>Save the current file
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd><td>Replace leading spaces with tabs
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd><td>Transform the selection into lowercase
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Down</kbd><td>Move one line down the selected block or the current line
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd><td>Replace leading tabs with spaces
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd><td>Delete trailing whites spaces
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F4</kbd><td>Close all tabs
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd><td>Transform the selection into uppercase
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd><td>Transform the initials of each word into uppercase
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd><td>Delete blank lines
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd><td>Duplicate the selected block or the current line
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd><td>Delete HTML tags
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd><td>Take the color of a pixel
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd><td>Open the automatic replacements manager
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd><td>Save all openned files
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd><td>Make a sort
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Up</kbd><td>Move one line up the selected block or the current line
+<tr><td><kbd>Crtl</kbd>+<kbd>T</kbd><td>Set the tab width
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>V</kbd><td>Paste from the clipboard
+<tr><td><kbd>Ctrl</kbd>+<kbd>W</kbd><td>Set the line length
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>X</kbd><td>Cut the current selection
+<tr><td><kbd>Ctrl</kbd>+<kbd>Y</kbd><td>Redo the last cancelled action
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Z</kbd><td>Undo the last valid action
+<tr><td><kbd>Ctrl</kbd>+<kbd>Mouse wheel down</kbd><tt class=c>†</tt><td>Increase the font size
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Mouse wheel up</kbd><tt class=c>†</tt><td>Decrease the font size
+<tr><td><kbd>Del</kbd><td>Delete the current selection
+<tr class=p><td><kbd>F1</kbd><td>Open Vic's documentation file in a browser
+<tr><td><kbd>F2</kbd><td>Find the previous occurrence
+<tr class=p><td><kbd>F3</kbd><td>Find the next occurrence
+<tr><td><kbd>F4</kbd><td>Substitute the current selection by the replacement text
+<tr class=p><td><kbd>Ins</kbd>+<kbd>1</kbd><td>Insert the HTML 4.01 Strict Doctype
+<tr><td><kbd>Ins</kbd>+<kbd>2</kbd><td>Insert the HTML 4.01 Transitional Doctype
+<tr class=p><td><kbd>Ins</kbd>+<kbd>3</kbd><td>Insert the HTML 4.01 Frameset Doctype
+<tr><td><kbd>Ins</kbd>+<kbd>4</kbd><td>Insert the XHTML 1.0 Strict Doctype
+<tr class=p><td><kbd>Ins</kbd>+<kbd>5</kbd><td>Insert the XHTML 1.0 Transitional Doctype
+<tr><td><kbd>Ins</kbd>+<kbd>6</kbd><td>Insert the XHTML 1.0 Frameset Doctype
+<tr class=p><td><kbd>Ins</kbd>+<kbd>;</kbd><td>Comment/Uncomment the block
+<tr><td><kbd>Ins</kbd>+<kbd>C</kbd><td>Insert an HTML class attribute
+<tr class=p><td><kbd>Ins</kbd>+<kbd>D</kbd><td>Insert the current date
+<tr><td><kbd>Ins</kbd>+<kbd>E</kbd><td>Insert a conditional comment
+<tr class=p><td><kbd>Ins</kbd>+<kbd>Enter</kbd><td>Insert a Unix newline (<tt>LF</tt>)
+<tr><td><kbd>Ins</kbd>+<kbd>F</kbd><td>Insert a CSS comment
+<tr class=p><td><kbd>Ins</kbd>+<kbd>F1</kbd><td>Insert a predefined XHTML 1.0 template
+<tr><td><kbd>Ins</kbd>+<kbd>F4</kbd><td>Insert a predefined HTML 4.01 template
+<tr class=p><td><kbd>Ins</kbd>+<kbd>G</kbd><td>Insert an HTML comment
+<tr><td><kbd>Ins</kbd>+<kbd>H</kbd><td>Insert the current hour
+<tr class=p><td><kbd>Ins</kbd>+<kbd>I</kbd><td>Insert an HTML id attribute
+<tr><td><kbd>Ins</kbd>+<kbd>L</kbd><td>Insert an HTML lang attribute
+<tr class=p><td><kbd>Ins</kbd>+<kbd>N</kbd><td>Insert an HTML name attribute
+<tr><td><kbd>Ins</kbd>+<kbd>P</kbd><td>Insert a special character
+<tr class=p><td><kbd>Ins</kbd>+<kbd>S</kbd><td>Insert an HTML style attribute
+<tr><td><kbd>Ins</kbd>+<kbd>T</kbd><td>Insert an HTML title attribute
+<tr class=p><td><kbd>Shift</kbd>+<kbd>Escape</kbd><tt class=c>†</tt><td>Get the focus back to Form dialog
+<tr><td><kbd>Shift</kbd>+<kbd>F10</kbd><tt class=c>†</tt><td>Open the context menu
+<tr class=p><td><kbd>Shift</kbd>+<kbd>Tab</kbd><td>Decrease indent
+<tr><td><kbd>Tab</kbd><tt class=c>*</tt><td>Increase indent
+<tr class=p><td><kbd>Win</kbd>+<kbd>Down</kbd><td>Minimize/Restore Vic
+<tr><td><kbd>Win</kbd>+<kbd>Left</kbd><td>Maximize Vic to the left half of the screen
+<tr class=p><td><kbd>Win</kbd>+<kbd>Right</kbd><td>Maximize Vic to the right half of the screen
+<tr><td><kbd>Win</kbd>+<kbd>Up</kbd><td>Maximize/Restore Vic
+</table>
+
+<h2 id=appendix-3>Appendix 3: Automatic replacements</h2>
+<p class=menu>
+<a href="#ar1">Predefined replacements</a> | 
+<a href="#ar2">Add, modify or delete a replacement</a> | 
+<a href="#ar3">Default behavior</a> | 
+<a href="#ar4">Options explained</a>
+
+<h3 id=ar1>Predefined replacements</h3>
+<p>Here is the list of Vic's predefined automatic replacements. The symbol <tt class=c>|</tt> indicates the cursor location where relevant. The sign <tt>[]</tt> is a space.
+<table class=mono cellspacing="1">
+<tr><th>Type<th>Get
+<tr><td>""<td>"<tt class=c>|</tt>"
+<tr class=p><td>((<td>(<tt class=c>|</tt>)
+<tr><td>{{<td>{<tt class=c>|</tt>}
+<tr class=p><td>[[<td>[<tt class=c>|</tt>]
+<tr><td>%%<td>%<tt class=c>|</tt>%
+<tr class=p><td>&lt;&lt;<td>« <tt class=c>|</tt> »
+<tr><td>+-<td>±
+<tr class=p><td>-[]-<td>–
+<tr><td>_[]_<td>—
+<tr class=p><td>\[]<td>  (Non-breakable space)
+<tr><td>\.[]<td>·
+<tr class=p><td>\%<td>‰
+<tr><td>\|<td>¦
+<tr class=p><td>\?<td>¿
+<tr><td>\*<td>•
+<tr class=p><td>\#<td>‡
+<tr><td>\+<td>†
+<tr class=p><td>\-<td>¬
+<tr><td>\:-<td>÷
+<tr class=p><td>\...<td>…
+<tr><td>\ae<td>æ
+<tr class=p><td>\AE<td>Æ
+<tr><td>\B<td>ß
+<tr class=p><td>\c<td>¢
+<tr><td>\C<td>©
+<tr class=p><td>\D<td>Ð
+<tr><td>\E<td>€
+<tr class=p><td>\f<td>ƒ
+<tr><td>\L<td>£
+<tr class=p><td>\n<td>ñ
+<tr><td>\N<td>Ñ
+<tr class=p><td>\oe<td>œ
+<tr><td>\OE<td>Œ
+<tr class=p><td>\0<td>°
+<tr><td>\o/<td>ø
+<tr class=p><td>\O/<td>Ø
+<tr><td>\P<td>¶
+<tr class=p><td>\R<td>®
+<tr><td>\s<td>~
+<tr class=p><td>\S<td>§
+<tr><td>\u<td>µ
+<tr class=p><td>\x<td>×
+<tr><td>\Y<td>¥
+<tr class=p><td>\z<td>ž
+<tr><td>\Z<td>Ž
+<tr class=p><td>lorem<td>Lorem ipsum dolor sit amet, (…)
+</table>
+
+<h3 id=ar2>Add, modify or delete a replacement</h3>
+<p>To add, modify or delete one or more automatic replacements, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.
+<p>A checkbox <b>prevents</b> or, conversely, <b>allows</b> that automatic replacements will trigger in a window other than the window of Vic.
+<p>To add an automatic replacement, select the <b>Add</b> button, type the abbreviation and the replacement text you want, and press OK. The abbreviation is the text that will trigger the action. The replacement text is the one that will replace the abbreviation.
+<p>An <b>abbreviation</b> can have up to 40 characters and contain any sign directly accessible from the keyboard except a line break. Press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> to insert a tab.
+<p>A <b>replacement text</b> can have up to 5000 characters and contain any sign directly accessible from the keyboard including the newline. Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to insert a line break, and <kbd>Ctrl</kbd>+<kbd>Tab</kbd> to insert a tab.
+
+<h3 id=ar3>Default behavior</h3>
+<p>By default, an automatic replacement can occurs only when you press <b>Space</b>, <b>Tab</b>, <b>Enter</b> or any of the following characters: <tt>-()[]{}':;"/ \,.?!</tt> The abbreviation is then erased and the replacement text inserted, followed by the character used to trigger the action.
+<p>The replacement text <b>adopts the case</b> of the abbreviation. This means that if you type the abbreviation in capital letters, the replacement text will pop also capitalized. If only the first letter of the abbreviation is capitalized, then the first letter of replacement text will be turned into capital. In all other case, the replacement text will appear as it was originally defined.
+
+<h3 id=ar4>Options explained</h3>
+<p>The following options allow you to <b>change the default behavior</b> of automatic replacement. There are 7 options and you can select several at once.
+
+<h4>— Trigger the hotstring instantly</h4>
+<p>Forces the replacement to happen as soon as the last letter of the abbreviation is typed, and not after a space or a punctuation sign as is normally the case.
+<p>For example, to transform <tt>btw</tt> into <samp>by the way</samp> as soon as you press <tt>w</tt>.
+
+<h4>— Allow a letter or a digit before the abbreviation</h4>
+<p>Normally, a replacement is done when the abbreviation is preceded by a space or a punctuation sign, but not a letter or a digit. This option allows the abbreviation to follow any character.
+<p>For example, to transform <tt>\0</tt> in <samp>°</samp> in front of any number.
+
+<h4>— Add replacement text without deleting the abbreviation</h4>
+<p>Generates a behavior similar to that which occurs in the case of a semi automatic seizure. The replacement text does not replace abbreviation, it is added.
+<p>For example, adding his name as soon as one types <tt>Sincerely,</tt> followed by a space.
+
+<h4>— Respect case sensitivity</h4>
+<p>Triggers the replacement only if the case of the abbreviation typed is the same as the defined abbreviation. Consequently, the replacement text can never adopt the case of the abbreviation as is normally the case.
+<p>For example, replace <tt>\CC</tt> by <samp>Celine Casgrain</samp>, but <tt>\cc</tt> by <samp>carbon copy</samp>.
+
+<h4>— Never change the case of the replacement text</h4>
+<p>Tolerates an abbreviation in capital letters as well as in lowercase, but does not allow that the replacement text adopts the case of the abbreviation as is normally the case.
+<p>For example, always replace <tt>]jw</tt> or <tt>]JW</tt> by <samp>John H. Wayne</samp>.
+
+<h4>— Delete the ending character used as trigger</h4>
+<p>Prevents the ending character that was typed to trigger the action to be added following the replacement text as is normally the case.
+<p>For example, to replace <tt>)phil</tt> by <samp>philosopher</samp> and be able to immediately add an <tt>s</tt> if necessary.
+
+<h4>— Send the replacement text as is, without any translating</h4>
+<p>Forces bits of code that could be part of the replacement text to be inserted as they were written. Otherwise, they will be construed during the course of the action.
+<p>For example, writing literally <samp>{Enter}</samp> when encountered rather than inserting a line break.
+
+<h2 id=appendix-4>Appendix 4: Known limitations</h2>
+<p>This section lists the known issues and ways to bypass that can be used to address them.
+
+<h3>Invisible characters</h3>
+<p>When syntax highlighting comes into play, the following characters are displayed in black, no matter the color of text: <tt>`~€‚„†‡ˆ‰‹‘’“”•–—˜™›¡¢£¤¥¦§¨©«¬®¯°±´¶·¸»¼½¾¿×÷</tt>. This will make them invisible on a black background.
+<p>An exception occurs when those characters are part of a comment.
+<p>To circumvent this problem, select the portion of text to make visible, unable syntax highlighting, or choose a colored background that contrasts with the dark.
+<address>© 2010-2011, <a href="http://normandlamoureux.com/">Normand Lamoureux</a>.<br>Last update: July 16<sup>th</sup>, 2011.<br><a href="mailto:normand.lamoureux@gmail.com">Email</a>.</address>
+</div>

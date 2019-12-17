@@ -1,0 +1,34 @@
+<Redstone>
+  <eventHandler>
+    <name>Show Active Tasks on Hot Corner</name>
+    <type>eventhandler</type>
+    <listName>Notifications</listName>
+    <event>HotCorner Activated</event>
+    <command>
+      <type>commandList</type>
+      <commands>
+        <command>
+          <command>Filter Apply</command>
+          <type>command</type>
+          <Args>
+            <name>Active Tasks</name>
+          </Args>
+        </command>
+        <command>
+          <command>UI Show</command>
+          <type>command</type>
+        </command>
+      </commands>
+    </command>
+  </eventHandler>
+  <eventHandler>
+    <name>Show UI On Taskbar Icon click</name>
+    <type>eventhandler</type>
+    <listName>Notifications</listName>
+    <event>AHK IconClicked</event>
+    <command>
+      <command>UI ActivateCentered</command>
+      <type>command</type>
+    </command>
+  </eventHandler>
+</Redstone>

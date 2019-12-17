@@ -1,0 +1,6 @@
+1.怎样使用免费版动态库
+  将USkinFree.dll文件名改为USkin.dll替换USkin.dll即可.
+2.怎样使用免费版.net库
+  将工程里所有USKINCOMLib替换为USKINCOMFREELib,重新编译即可.
+
+3.vb引用Uskincom.dll

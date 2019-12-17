@@ -1,0 +1,110 @@
+<html><head><title>MovieData - _TITLE (_YEAR) [_ID]</title>
+<HTA:APPLICATION 
+     ID="objHTA"
+     APPLICATIONNAME="_ID"
+     SCROLL="yes"
+     ICON="MovieData.ico"
+     SINGLEINSTANCE="yes"
+     BORDER="thin"
+     BORDERSTYLE="static"
+>
+<SCRIPT Language="VBScript">
+    Sub Window_Onload
+        strComputer = "."
+        Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+        Set colItems = objWMIService.ExecQuery("Select * From Win32_DesktopMonitor")
+        For Each objItem in colItems
+            intHorizontal = objItem.ScreenWidth
+            intVertical = objItem.ScreenHeight
+        Next
+        intLeft = (intHorizontal - 888) / 2
+        intTop = (intVertical - 666) / 2
+        window.resizeTo 888,666
+        window.moveTo intLeft, intTop
+    End Sub
+</SCRIPT>
+<style type="text/css">
+<!--
+body {overflow-x:hidden; }
+body,td,th {
+	font-family: Verdana;
+	font-size: 10pt;
+	color: #FBFCFE;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FBFCFE;
+}
+a:link {
+	color: #900;
+}
+a:visited {
+	color: #900;
+}
+a:hover {
+	color: #F63;
+}
+.sel1 {
+	color: #202020;
+}
+.sel1 {
+	color: #101010;
+}
+.sel2 {
+}
+-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body>
+<table width="725" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="362" height="500" align="center" valign="top"><img src="_POSTER" align="absmiddle" /></td>
+    <td width="363" height="500" align="center" valign="top"><table width="350" border="0" cellspacing="5" cellpadding="5">
+      <tr>
+        <td><a href="http://www.imdb.com/title/_ID/"><strong>_TITLE (_YEAR)</strong></a></td>
+        </tr>
+      <tr>
+        <td><table width="350" border="0" align="center" cellpadding="4" cellspacing="1">
+          <tr>
+            <td width="101" align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">RATED</span></td>
+            <td width="280" align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_RATED</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">RELEASED</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_RELEASED</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">GENRE</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_GENRE</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">DIRECTOR</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_DIRECTOR</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">WRITER</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_WRITER</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">ACTORS</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_ACTORS</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">RUNTIME</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">_RUNTIME</span></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1">IMDB RATING</span></td>
+            <td align="left" valign="middle" bgcolor="#CCCCCC"><span class="sel1"><strong>_RATING</strong> ( Votes: _VOTES )</span></td>
+          </tr>
+        </table></td>
+        </tr>
+      <tr>
+        <td><span class="sel1">_PLOT</span></td>
+        </tr>
+    </table></td>
+  </tr>
+</table></body></html>

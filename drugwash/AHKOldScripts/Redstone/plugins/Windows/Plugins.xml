@@ -1,0 +1,25 @@
+  <plugin>
+    <type>plugin</type>
+    <name>Roller</name>
+    <description>Rollup windows</description>
+    <source>Autohotkey.exe plugins/Windows/CRI_Roller.ahk</source>
+    <initialize>roller_Initialize</initialize>
+    <enabled>No</enabled>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>SweptAway</name>
+    <description>Automatically minimizes applications that you aren't using</description>
+    <author>Adam Pash</author>
+    <source>Autohotkey.exe plugins/Windows/SweptAway.ahk</source>
+    <initialize>sweptaway_Initialize</initialize>
+    <enabled>No</enabled>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Poofer</name>
+    <description>Hide and show windows</description>
+    <source>Autohotkey.exe plugins/poofer/CRI_Poofer.ahk</source>
+    <initialize>poofer_Initialize</initialize>
+    <enabled>No</enabled>
+  </plugin>

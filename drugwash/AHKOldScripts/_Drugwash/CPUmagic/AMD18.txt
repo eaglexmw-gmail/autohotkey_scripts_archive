@@ -1,0 +1,22 @@
+; Athlon 64 FX boxed
+; ADA FX53 AS BOX
+
+[model-speed]
+FX51   Model FX-51 (2200 MHz) 
+FX53   Model FX-53 (2400 MHz) 
+FX55   Model FX-55 (2600 MHz) 
+FX57   Model FX-57 (2800 MHz) 
+FX60   Model FX-60 (2600 MHz, dual-core processor) 
+FX62   Model FX-62 (2800 MHz, dual-core processor) 
+FX70   Model FX-70 (2600 MHz, dual-core processor) 
+FX72   Model FX-72 (2800 MHz, dual-core processor) 
+FX74   Model FX-74 (3000 MHz, dual-core processor) 
+
+[definition]
+AK    CPUID 5 (C0), single core, 0.13 micron, socket 940 
+AS   CPUID 7 (CG), single core, 0.13 micron, socket 939 
+AT   CPUID 5 (CG), single core, 0.13 micron, socket 940 
+BN   CPUID 27 (E4), single core, 0.09 micron, socket 939 
+CD   Stepping E6, dual core, 0.09 micron, socket 939 
+CS   Stepping F2, dual core, 0.09 micron, socket AM2 
+DI   Stepping F3, dual core, 0.09 micron, socket F 

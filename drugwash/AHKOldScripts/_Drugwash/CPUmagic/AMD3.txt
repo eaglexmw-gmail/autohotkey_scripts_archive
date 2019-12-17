@@ -1,0 +1,27 @@
+; AMD Athlon socket A
+; A 1000 A M S 3 B
+
+[architecture]
+A   Athlon socket A (Model 4/Thunderbird) 
+AHL   Low-power Athlon SFF (Model 6/Palomino) 
+AXL   Low-power Athlon SFF (Model 6/Palomino) 
+
+[package]
+A   453-pin ceramic PGA (socket A/socket 462) 
+D   453-pin organic PGA (socket A/socket 462) 
+
+[voltage]
+H   1.55V 
+L   1.5V 
+M   1.75V 
+P   1.7V 
+Q   1.45V 
+U   1.6V 
+
+[temperature]
+S   95°C 
+T   90°C 
+
+[bus]
+B    200 MHz (effective), 100 MHz (actual) 
+C   266 MHz (effective), 133 MHz (actual) 

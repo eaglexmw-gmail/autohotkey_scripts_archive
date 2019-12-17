@@ -1,0 +1,27 @@
+; Pentium III
+; 600 E B / 256 / 100 / 2.0V  S1
+
+[speed]
+
+[cache-type]
+Blank   Standard Pentium III Level 2 cache 
+E   Advanced transfer cache 
+
+[busID]
+Blank   Processor may have 100 or 133 MHz bus speed. See "Bus Frequency" parameter for exact value. 
+B   133 MHz bus speed. 
+
+[L2 cache]
+256   256 KB 
+512   512 KB 
+
+[bus]
+100   100 MHz 
+133   133 MHz 
+
+[voltage]
+
+[package]
+Blank    FC-PGA or FC-PGA2 
+S1   Slot 1 cartridge 
+

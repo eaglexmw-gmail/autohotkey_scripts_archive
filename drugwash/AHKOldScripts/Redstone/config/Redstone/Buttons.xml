@@ -1,0 +1,82 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Button>
+    <type>button</type>
+    <name>Button1</name>
+    <command>
+      <command>Filter Apply</command>
+      <type>command</type>
+      <Args>
+        <name>Start Menu</name>
+      </Args>
+    </command>
+    <icon>res\windows.ico</icon>
+    <listName>Buttons</listName>
+  </Button>
+  <Button>
+    <type>button</type>
+    <name>Button4</name>
+    <icon>res\Ico32D8.ico</icon>
+    <command>
+      <type>command</type>
+      <command>Filter Apply</command>
+      <Args>
+        <name>Processes</name>
+      </Args>
+    </command>
+    <listName>Buttons</listName>
+  </Button>
+  <Button>
+    <type>button</type>
+    <name>Button6</name>
+    <icon>Shell32.dll&#44;20</icon>
+    <command>
+      <type>command</type>
+      <command>Filter Apply</command>
+      <Args>
+        <name>History</name>
+      </Args>
+    </command>
+    <listName>Buttons</listName>
+  </Button>
+  <Button>
+    <type>button</type>
+    <name>Button3</name>
+    <icon>res\Ico15AC.ico</icon>
+    <command>
+      <type>command</type>
+      <command>Filter Apply</command>
+      <Args>
+        <name>Folder History</name>
+      </Args>
+    </command>
+    <listName>Buttons</listName>
+  </Button>
+  <Button>
+    <type>button</type>
+    <name>Button2</name>
+    <icon>res\executed.ico</icon>
+    <command>
+      <type>command</type>
+      <command>Filter Apply</command>
+      <Args>
+        <name>Most Executed</name>
+      </Args>
+    </command>
+    <listName>Buttons</listName>
+  </Button>
+  <Button>
+    <type>button</type>
+    <name>Button5</name>
+    <icon>shell32.dll&#44;43</icon>
+    <command>
+      <type>command</type>
+      <command>Filter Apply</command>
+      <Args>
+        <name>Favorites</name>
+      </Args>
+    </command>
+    <listName>Buttons</listName>
+  </Button>
+</Redstone>

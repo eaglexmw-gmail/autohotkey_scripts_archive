@@ -1,0 +1,33 @@
+Arial
+Arial Black
+Book Antiqua
+Calisto MT
+Century Gothic
+Comic Sans MS
+Copperplate Gothic Bold
+Copperplate Gothic Light
+Courier
+Courier New
+Franklin Gothic Medium
+Georgia
+Impact
+Lucida Console
+Lucida Handwriting
+Lucida Sans
+Lucida Sans Unicode
+Modern
+MS Sans Serif
+MS Serif
+OCR A Extended
+Palatino Linotype
+Roman
+Script
+Small Fonts
+Symbol
+Tahoma
+Tempus Sans ITC
+Times New Roman
+Trebuchet MS
+Verdana
+Webdings
+Wingdings

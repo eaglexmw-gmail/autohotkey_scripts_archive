@@ -1,0 +1,166 @@
+; Athlon XP/MP, Sempron & Athlon64 model numbers
+
+Model number | CPU Type | Socket Type | Frequency (GHz) | Bus Speed (MHz) | L2 cache size (KB) | Number of cores 
+1200+ Athlon XP-M   1 200 256 1 
+1300+ Athlon XP-M   1.1 200 256 1 
+1400+ Athlon XP-M   1.2 200 256 1 
+1400+ Athlon XP-M   1.2 266 256 1 
+1400+ Athlon XP-M socket A 1.2 200 256 1 
+1400+ Athlon XP-M socket A 1.2 266 256 1 
+1500+ Athlon MP/XP/XP-M socket A 1.333 266 256 1 
+1500+ Athlon XP-M   1.3 200 256 1 
+1500+ Athlon XP-M   1.333 266 256 1 
+1500+ Athlon XP-M socket A 1.3 200 256 1 
+1600+ Athlon MP/XP/XP-M socket A 1.4 266 256 1 
+1600+ Athlon XP-M   1.4 200 256 1 
+1600+ Athlon XP-M   1.4 266 256 1 
+1600+ Athlon XP-M socket A 1.4 200 256 1 
+1700+ Athlon XP-M   1.3 200 512 1 
+1700+ Athlon XP-M   1.467 266 256 1 
+1700+ Athlon XP/XP-M socket A 1.467 266 256 1 
+1800+ Athlon MP/XP/XP-M socket A 1.533 266 256 1 
+1800+ Athlon XP-M   1.4 200 512 1 
+1800+ Athlon XP-M   1.4 266 512 1 
+1800+ Athlon XP-M   1.533 266 256 1 
+1800+ Athlon XP-M socket A 1.5 200 256 1 
+1900+ Athlon MP/XP/XP-M socket A 1.6 266 256 1 
+1900+ Athlon XP-M   1.467 266 512 1 
+1900+ Athlon XP-M   1.6 266 256 1 
+1900+ Athlon XP-M socket A 1.6 200 256 1 
+2000+ Athlon MP/XP/XP-M socket A 1.667 266 256 1 
+2000+ Athlon XP-M   1.533 266 512 1 
+2000+ Athlon XP-M   1.667 266 256 1 
+2100+ Athlon MP/XP socket A 1.733 266 256 1 
+2100+ Athlon XP-M   1.6 200 512 1 
+2100+ Athlon XP-M   1.6 266 512 1 
+2100+ Sempron socket S1 1   256 1 
+2200+ Athlon MP/XP/XP-M socket A 1.8 266 256 1 
+2200+ Athlon XP-M   1.667 266 512 1 
+2200+ Athlon XP-M socket A 1.667 266 512 1 
+2200+ Sempron socket A 1.5 333 256 1 
+2300+ Sempron socket A 1.583 333 256 1 
+2400+ Athlon MP/XP/XP-M socket A 2.0 266 256 1 
+2400+ Athlon XP-M   1.8 266 512 1 
+2400+ Athlon XP-M socket A 1.8 266 512 1 
+2400+ Sempron socket A 1.667 333 256 1 
+2500+ Athlon XP-M socket A 1.867 266 512 1 
+2500+ Athlon XP socket A 1.833 333 512 1 
+2500+ Sempron socket 754 1.4   256 1 
+2500+ Sempron socket A 1.75 333 256 1 
+2600+ Athlon MP/XP-M socket A 2.0 266 512 1 
+2600+ Athlon MP/XP/XP-M socket A 2.133 266 256 1 
+2600+ Athlon XP socket A 1.917 333 512 1 
+2600+ Athlon XP socket A 2.083 333 256 1 
+2600+ Mobile Sempron/Sempron socket 754 1.6   128 1 
+2600+ Sempron socket A 1.833 333 256 1 
+2700+ Athlon 64 socket 754 1.6   512 1 
+2700+ Athlon XP socket A 2.167 333 256 1 
+2800+ Athlon 64 socket 754 1.8   512 1 
+2800+ Athlon MP/XP-M socket A 2.133 266 512 1 
+2800+ Athlon XP socket A 2.083 333 512 1 
+2800+ Mobile Sempron/Sempron socket 754 1.6   256 1 
+2800+ Sempron socket A 2.0 333 256 1 
+2800+ Sempron socket AM2 1.6   128 1 
+3000+ Athlon 64 socket 754 2.0   512 1 
+3000+ Athlon 64 socket 939 1.8   512 1 
+3000+ Athlon 64 socket AM2 1.8   512 1 
+3000+ Athlon XP-M socket A 2.2 266 512 1 
+3000+ Athlon XP socket A 2.1 400 512 1 
+3000+ Athlon XP socket A 2.167 333 512 1 
+3000+ Mobile Sempron/Sempron socket 754 1.8   128 1 
+3000+ Sempron socket 939 1.8   128 1 
+3000+ Sempron socket A 2.0 333 512 1 
+3000+ Sempron socket AM2 1.6   256 1 
+3100+ Athlon 64 socket 754 1.8   1024 1 
+3100+ Mobile Sempron/Sempron socket 754 1.8   256 1 
+3200+ Athlon 64 socket 754 2.0   1024 1 
+3200+ Athlon 64 socket 754 2.2   512 1 
+3200+ Athlon 64 socket 939 2.0   512 1 
+3200+ Athlon 64 socket AM2 2.0   512 1 
+3200+ Athlon XP socket A 2.2 400 512 1 
+3200+ Mobile Sempron socket S1 1.6   512 1 
+3200+ Sempron socket 939 1.8   256 1 
+3200+ Sempron socket AM2 1.8   128 1 
+3300+ Mobile Sempron/Sempron socket 754 2.0   128 1 
+3400+ Athlon 64 socket 754 2.2   1024 1 
+3400+ Athlon 64 socket 754 2.4   512 1 
+3400+ Athlon 64 X2 socket AM2 1.8   1024 2 
+3400+ Mobile Sempron/Sempron socket 754 2.0   256 1 
+3400+ Mobile Sempron socket S1 1.8   256 1 
+3400+ Sempron socket 939 2.0   128 1 
+3400+ Sempron socket AM2 1.8   256 1 
+3500+ Athlon 64 socket 939 2.2   512 1 
+3500+ Athlon 64 socket AM2 2.2   512 1 
+3500+ Mobile Sempron socket S1 1.8   512 1 
+3500+ Sempron socket 939 2.0   256 1 
+3500+ Sempron socket AM2 2.0   128 1 
+3600+ Athlon 64 X2 socket AM2 1.9   1024 2 
+3600+ Athlon 64 X2 socket AM2 2.0   512 2 
+3600+ Mobile Sempron socket 754 2.2?   128 1 
+3600+ Mobile Sempron socket S1 2.0   256 1 
+3600+ Sempron socket AM2 2.0   256 1 
+3700+ Athlon 64 socket 754 2.4   1024 1 
+3700+ Athlon 64 socket 939 2.2   1024 1 
+3800+ Athlon 64 socket 939 2.4   512 1 
+3800+ Athlon 64 socket AM2 2.4   512 1 
+3800+ Athlon 64 X2 socket 939 2.0   1024 2 
+3800+ Athlon 64 X2 socket AM2 2.0   1024 2 
+3800+ Mobile Sempron socket S1 2.2   256 1 
+3800+ Sempron socket AM2 2.2   256 1 
+4000+ Athlon 64 socket 939 2.4   1024 1 
+4000+ Athlon 64 X2 socket AM2 2.0   2048 2 
+4000+ Athlon 64 X2 socket AM2 2.1   1024 2 
+4000+ Mobile Sempron socket S1 2.2   512 1 
+4200+ Athlon 64 X2 socket 939 2.2   1024 2 
+4200+ Athlon 64 X2 socket AM2 2.2   1024 2 
+4400+ Athlon 64 X2 socket 939 2.2   2048 2 
+4400+ Athlon 64 X2 socket AM2 2.2   2048 2 
+4400+ Athlon 64 X2 socket AM2 2.3   1024 2 
+4600+ Athlon 64 X2 socket 939 2.4   1024 2 
+4600+ Athlon 64 X2 socket AM2 2.4   1024 2 
+4800+ Athlon 64 X2 socket 939 2.4   2048 2 
+4800+ Athlon 64 X2 socket AM2 2.4   2048 2 
+4800+ Athlon 64 X2 socket AM2 2.5   1024 2 
+5000+ Athlon 64 X2 socket AM2 2.6   1024 2 
+5200+ Athlon 64 X2 socket AM2 2.6   2048 2 
+5200+ Athlon 64 X2 socket AM2 2.7   1024 2 
+5400+ Athlon 64 X2 socket AM2 2.8   1024 2 
+5600+ Athlon 64 X2 socket AM2 2.8   2048 2 
+6000+ Athlon 64 X2 socket AM2 3.0   2048 2 
+6400+ Athlon 64 X2 socket AM2 3.2   2048 2 
+BE-2300 Athlon X2 socket AM2 1.9   1024 2 
+BE-2350 Athlon X2 socket AM2 2.1   1024 2 
+BE-2400 Athlon X2 socket AM2 2.3   1024 2 
+LE-1100 Sempron socket AM2 1.9   256 1 
+LE-1150 Sempron socket AM2 2.0   256 1 
+LE-1200 Sempron socket AM2 2.1   512 1 
+LE-1250 Sempron socket AM2 2.2   512 1 
+LE-1300 Sempron socket AM2 2.3   512 1 
+LE-1600 Athlon 64 socket AM2 2.2   1024 1 
+LE-1620 Athlon 64 socket AM2 2.4   1024 1 
+LE-1640 Athlon 64 socket AM2 2.6   1024 1 
+MK-36 Turion 64 socket S1 2.0   512 1 
+MK-38 Turion 64 socket S1 2.2   512 1 
+ML-28 Turion 64 socket 754 1.6   512 1 
+ML-30 Turion 64 socket 754 1.6   1024 1 
+ML-32 Turion 64 socket 754 1.8   512 1 
+ML-34 Turion 64 socket 754 1.8   1024 1 
+ML-37 Turion 64 socket 754 2.0   1024 1 
+ML-40 Turion 64 socket 754 2.2   1024 1 
+ML-42 Turion 64 socket 754 2.4   512 1 
+ML-44 Turion 64 socket 754 2.4   1024 1 
+MT-28 Turion 64 socket 754 1.6   512 1 
+MT-30 Turion 64 socket 754 1.6   1024 1 
+MT-32 Turion 64 socket 754 1.8   512 1 
+MT-34 Turion 64 socket 754 1.8   1024 1 
+MT-37 Turion 64 socket 754 2.0   1024 1 
+MT-40 Turion 64 socket 754 2.2   1024 1 
+TK-53 Athlon 64 X2 socket S1 1.7   512 2 
+TL-50 Turion 64 X2 socket S1 1.6   512 2 
+TL-52 Turion 64 X2 socket S1 1.6   1024 2 
+TL-56 Turion 64 X2 socket S1 1.8   1024 2 
+TL-58 Turion 64 X2 socket S1 1.9   1024 2 
+TL-60 Turion 64 X2 socket S1 2.0   1024 2 
+TL-62 Turion 64 X2 socket S1 2.1   1024 2 
+TL-64 Turion 64 X2 socket S1 2.2   1024 2 
+TL-66 Turion 64 X2 socket S1 2.3   1024 2 

@@ -1,0 +1,66 @@
+; Mobile Athlon XP-M
+; AXM L 1400 G Y S 3 C
+
+[architecture]
+AXM="Mobile Athlon XP-M"
+
+[power]
+A   Desktop replacement 
+D   35 W 
+F   No information 
+G   47 W (Desktop replacement) 
+H   45 W (Desktop replacement) 
+J   No information 
+L   16 W 
+S   25 W 
+T   27 W 
+
+[speed]
+1200   1200 MHz (rated), 1000 MHz (actual) 
+1300   1300 MHz (rated), 1100 MHz (actual) 
+1400   1400 MHz (rated), 1200 MHz (actual) 
+1500   1500 MHz (rated), 1300 MHz (actual, 200 MHz FSB) or 1333 MHz (266 MHz FSB) 
+1600   1600 MHz (rated), 1400 MHz (actual) 
+1700   1700 MHz (rated), 1467 MHz (actual, 256 KB L2 cache) or 1300 MHz (actual, 512 KB L2 cache) 
+1800   1800 MHz (rated), 1500 MHz (actual, 200 MHz FSB 256 KB L2 cache) or 1533 MHz (actual, 266 MHz FSB 256 KB L2 cache) or 1400 MHz (actual, 512 KB L2 cache) 
+1900   1900 MHz (rated), 1600 MHz (actual, 256 KB L2 cache) or 1467 MHz (actual, 512 KB L2 cache) 
+2000   2000 MHz (rated), 1667 MHz (actual, 256 KB L2 cache) or 1533 MHz (actual, 512 KB L2 cache) 
+2100   2100 MHz (rated), 1600 MHz (actual, 512 KB L2 cache) 
+2200   2200 MHz (rated), 1800 MHz (actual, 256 KB L2 cache) or 1667 MHz (actual, 512 KB L2 cache) 
+2400   2400 MHz (rated), 2000 MHz (actual, 256 KB L2 cache) or 1800 MHz (actual, 512 KB L2 cache) 
+2500   2500 MHz (rated), 1867 MHz (actual, 512 KB L2 cache) 
+2600   2600 MHz (rated), 2133 MHz (actual, 256 KB L2 cache) or 2000 MHz (actual, 512 KB L2 cache) 
+2800   2800 MHz (rated), 2133 MHz (actual, 512 KB L2 cache) 
+3000   3000 MHz (rated), 2200 MHz (actual, 512 KB L2 cache) 
+
+[package]
+F   453-pin organic PGA 
+G   micro-PGA 
+
+[voltage]
+C   1.15V 
+H   1.55V 
+J   1.35V 
+K   1.65V 
+L   1.5V 
+Q   1.45V 
+V   1.4V 
+T   1.2V 
+W   1.3V 
+U   1.6V 
+X   1.25V 
+Y   1.1V 
+
+[temperature]
+Q   100°C 
+S   95°C 
+T   90°C 
+
+[L2 cache]
+3   256 KB 
+4   512 KB 
+
+[bus]
+B    200 MHz (effective), 100 MHz (actual) 
+C   266 MHz (effective), 133 MHz (actual) 
+D   333 MHz (effective), 166 MHz (actual) 

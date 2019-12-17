@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Field>
+    <name>type</name>
+    <value>scan</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>command</name>
+    <value>Scan Directory</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>name</name>
+	<required>Yes</required>
+	<type>String</type>
+    <prompt>Name</prompt>
+  </Field>
+   <Field>
+    <name>directory</name>
+	<required>Yes</required>
+	<type>String</type>
+    <prompt>Directory</prompt>
+  </Field>
+  <Field>
+    <name>includeTypes</name>
+	<required>Yes</required>
+	<type>String</type>
+    <prompt>File Extensions</prompt>
+  </Field>
+  <Field>
+    <name>recurse</name>
+	<type>DropDown</type>
+    <prompt>Include Subdirectories</prompt>
+	<DropDownList>
+		<Entry>Yes</Entry>
+		<Entry>No</Entry>
+	</DropDownList>
+  </Field>
+  <Field>
+    <name>includeDirs</name>
+    <prompt>Include Directory Names</prompt>
+	<type>DropDown</type>
+	<DropDownList>
+		<Entry>Yes</Entry>
+		<Entry>No</Entry>
+	</DropDownList>
+  </Field>
+</Redstone>

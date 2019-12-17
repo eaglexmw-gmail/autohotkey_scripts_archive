@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <filter>
+    <type>filter</type>
+    <name>Miro</name>
+    <list>Miro</list>
+    <headers>name</headers>
+    <user>No</user>
+    <sort>name</sort>
+    <icon>plugins\Miro\res\miro.ico</icon>
+    <listName>Filters</listName>
+  </filter>
+</Redstone>

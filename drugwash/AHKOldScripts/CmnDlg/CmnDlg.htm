@@ -1,0 +1,1208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0056)http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html -->
+<HTML><HEAD><TITLE>CmnDlg</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1250">
+<STYLE>BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 10pt Verdana, Arial, sans-serif; COLOR: #000000; PADDING-TOP: 0px
+}
+.ContentPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.IndexPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.FramedMenuPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.FramedContentPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.FramedIndexPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.FramedSearchResultsPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.PopupSearchResultsPage {
+	BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #900000; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+P {
+	MARGIN: 0px; TEXT-INDENT: 5ex
+}
+.Opera WBR:unknown {
+	content: "&#8203;"
+}
+BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.Firefox1 BLOCKQUOTE {
+	PADDING-BOTTOM: 0.5em
+}
+
+@media Print    
+{
+BLOCKQUOTE {
+	OVERFLOW: visible
+}
+.IE BLOCKQUOTE {
+	WIDTH: auto
+}
+    }
+#Menu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9pt; PADDING-BOTTOM: 0px; PADDING-TOP: 10px
+}
+.ContentPage #Menu {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 31ex; POSITION: absolute; TOP: 0px
+}
+.IndexPage #Menu {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 31ex; POSITION: absolute; TOP: 0px
+}
+.ContentPage .Firefox #Menu {
+	WIDTH: 27ex
+}
+.IndexPage .Firefox #Menu {
+	WIDTH: 27ex
+}
+.MTitle {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 1px dotted; TEXT-ALIGN: center; FONT-VARIANT: small-caps
+}
+.MSubTitle {
+	MARGIN-TOP: 1ex; FONT-WEIGHT: normal; FONT-SIZE: 9pt; MARGIN-BOTTOM: 5px; FONT-VARIANT: normal
+}
+.MEntry A:link {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:hover {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:visited {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 0px
+}
+.MGroup {
+	FONT-WEIGHT: bold; MARGIN: 1em 0px 1em 10px; FONT-VARIANT: small-caps
+}
+.MGroupContent {
+	FONT-WEIGHT: normal; FONT-VARIANT: normal
+}
+.MGroup A:link {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:hover {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:visited {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 10px
+}
+.MFile {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MLink {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MIndex {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.MLink {
+	FONT-STYLE: italic
+}
+#MSelected {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; BORDER-LEFT: #000000 0px solid; COLOR: #000000; MARGIN-RIGHT: 5px; PADDING-TOP: 0px; BORDER-BOTTOM: #000000 2px solid; BACKGROUND-COLOR: #ffffff
+}
+.MGroup #MSelected {
+	PADDING-LEFT: 9px; BORDER-LEFT-WIDTH: 1px
+}
+.Firefox #MSelected {
+	moz-border-radius-topright: 10px; moz-border-radius-bottomright: 10px
+}
+.Firefox .MGroup #MSelected {
+	moz-border-radius-topleft: 10px; moz-border-radius-bottomleft: 10px
+}
+#MSearchPanel {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px; PADDING-TOP: 0px
+}
+#MSearchField {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 2px; FONT: italic 9pt Verdana, sans-serif; WIDTH: 100%; COLOR: #606060; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: #e8e8e8; BORDER-BOTTOM-STYLE: none
+}
+.Firefox #MSearchField {
+	WIDTH: 94%
+}
+.IE #MSearchField {
+	WIDTH: 94%
+}
+.Safari #MSearchField {
+	WIDTH: 94%
+}
+.Opera9 #MSearchField {
+	WIDTH: 97%
+}
+.Konqueror #MSearchField {
+	WIDTH: 97%
+}
+.FramedMenuPage .Firefox #MSearchField {
+	WIDTH: 98%
+}
+.FramedMenuPage .Safari #MSearchField {
+	WIDTH: 98%
+}
+.FramedMenuPage .Konqueror #MSearchField {
+	WIDTH: 98%
+}
+.MSearchPanelInactive#MSearchPanel:hover #MSearchField {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 1px; BORDER-LEFT: #c0c0c0 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #c0c0c0 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.MSearchPanelActive #MSearchField {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 1px; BORDER-LEFT: #c0c0c0 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-STYLE: normal; BACKGROUND-COLOR: #ffffff
+}
+#MSearchType {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 0px; FONT: 8pt Verdana, sans-serif; BORDER-LEFT: #c0c0c0 1px solid; WIDTH: 98%; PADDING-TOP: 0px; BORDER-BOTTOM: #c0c0c0 1px solid
+}
+.MSearchPanelActive #MSearchType {
+	VISIBILITY: visible; COLOR: #606060
+}
+.MSearchPanelInactive#MSearchPanel:hover #MSearchType {
+	VISIBILITY: visible; COLOR: #606060
+}
+#MSearchType:unknown {
+	VISIBILITY: visible; COLOR: #606060
+}
+#MSearchType OPTION#MSearchEverything {
+	FONT-WEIGHT: bold
+}
+.Opera8 .MSearchPanelInactive:hover {
+	MARGIN-LEFT: -1px
+}
+.Opera8 .MSearchPanelActive {
+	MARGIN-LEFT: -1px
+}
+IFRAME#MSearchResults {
+	WIDTH: 60ex; HEIGHT: 15em
+}
+#MSearchResultsWindow {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; DISPLAY: none; LEFT: 0px; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #e8e8e8
+}
+#MSearchResultsWindowClose {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+#MSearchResultsWindowClose:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:active {
+	COLOR: #800000; BACKGROUND-COLOR: #f4f4f4; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:hover {
+	COLOR: #800000; BACKGROUND-COLOR: #f4f4f4; TEXT-DECORATION: none
+}
+#Content {
+	PADDING-BOTTOM: 15px
+}
+.ContentPage #Content {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; FONT-SIZE: 9pt; MARGIN-LEFT: 31ex; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.ContentPage .Firefox #Content {
+	MARGIN-LEFT: 27ex
+}
+.CTopic {
+	FONT-SIZE: 10pt; MARGIN-BOTTOM: 3em
+}
+.CTitle {
+	BORDER-RIGHT: #a0a0a0 0px solid; BORDER-TOP: #a0a0a0 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0px 15px 0.5em; BORDER-LEFT: #a0a0a0 0px solid; BORDER-BOTTOM: #a0a0a0 1px solid
+}
+.CGroup .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; MARGIN-LEFT: 0px; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; BORDER-RIGHT-WIDTH: 0px; FONT-VARIANT: small-caps; BORDER-RIGHT-COLOR: #000000
+}
+.CClass .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CInterface .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabase .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabaseTable .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CSection .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+#MainTopic .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 20pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 3px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #7070c0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CBody {
+	MARGIN-LEFT: 15px; MARGIN-RIGHT: 15px
+}
+.CToolTip {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 5px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 8pt; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 5px; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 2px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #ffffe0
+}
+.Opera .CToolTip {
+	max-width: 98%
+}
+.CToolTip BLOCKQUOTE {
+	OVERFLOW: hidden
+}
+.IE6 .CToolTip BLOCKQUOTE {
+	OVERFLOW: visible
+}
+.CHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN: 1.5em 0px 0.5em
+}
+.CBody PRE {
+	MARGIN: 1em 0px; FONT: 10pt "Courier New", Courier, monospace
+}
+.CBody UL {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; MARGIN: 0.5em 5ex
+}
+.CDescriptionList {
+	MARGIN: 0.5em 5ex 0px
+}
+.CDLEntry {
+	PADDING-BOTTOM: 0.25em; FONT: 10pt "Courier New", Courier, monospace; COLOR: #808080; WHITE-SPACE: nowrap
+}
+.CDLDescription {
+	PADDING-LEFT: 5ex; FONT-SIZE: 10pt; PADDING-BOTTOM: 0.5em
+}
+.CTopic IMG {
+	DISPLAY: block; MARGIN: 1em auto; TEXT-ALIGN: center
+}
+.CImageCaption {
+	FONT-SIZE: 8pt; COLOR: #808080; POSITION: relative; TOP: 1em; TEXT-ALIGN: center; FONT-VARIANT: small-caps
+}
+.CImageLink {
+	COLOR: #808080; FONT-STYLE: italic
+}
+A.CImageLink:link {
+	COLOR: #808080
+}
+A.CImageLink:visited {
+	COLOR: #808080
+}
+A.CImageLink:hover {
+	COLOR: #808080
+}
+.Prototype {
+	BORDER-RIGHT: 1px solid; PADDING-RIGHT: 3ex; BORDER-TOP: 1px solid; PADDING-LEFT: 3ex; PADDING-BOTTOM: 5px; MARGIN: 0px 5ex 1.5em; FONT: 10pt "Courier New", Courier, monospace; BORDER-LEFT: 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: 1px solid
+}
+.Prototype TD {
+	FONT-SIZE: 10pt
+}
+.PDefaultValue {
+	COLOR: #8f8f8f
+}
+.PDefaultValuePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	TEXT-ALIGN: right
+}
+.PAfterParameters {
+	VERTICAL-ALIGN: bottom
+}
+.IE .Prototype TABLE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.CFunction .Prototype {
+	BORDER-LEFT-COLOR: #d0d0d0; BORDER-BOTTOM-COLOR: #d0d0d0; BORDER-TOP-COLOR: #d0d0d0; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-COLOR: #d0d0d0
+}
+.CProperty .Prototype {
+	BORDER-LEFT-COLOR: #c0c0e8; BORDER-BOTTOM-COLOR: #c0c0e8; BORDER-TOP-COLOR: #c0c0e8; BACKGROUND-COLOR: #f4f4ff; BORDER-RIGHT-COLOR: #c0c0e8
+}
+.CVariable .Prototype {
+	BORDER-LEFT-COLOR: #e0e0a0; BORDER-BOTTOM-COLOR: #e0e0a0; BORDER-TOP-COLOR: #e0e0a0; BACKGROUND-COLOR: #fffff0; BORDER-RIGHT-COLOR: #e0e0a0
+}
+.CClass .Prototype {
+	BORDER-RIGHT: #a0a0a0 2px solid; BORDER-TOP: #a0a0a0 1px solid; BORDER-LEFT: #a0a0a0 1px solid; BORDER-BOTTOM: #a0a0a0 2px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.CInterface .Prototype {
+	BORDER-RIGHT: #a0a0d0 2px solid; BORDER-TOP: #a0a0d0 1px solid; BORDER-LEFT: #a0a0d0 1px solid; BORDER-BOTTOM: #a0a0d0 2px solid; BACKGROUND-COLOR: #f4f4ff
+}
+.CDatabaseIndex .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CConstant .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CType .Prototype {
+	BORDER-LEFT-COLOR: #e0b0b0; BORDER-BOTTOM-COLOR: #e0b0b0; BORDER-TOP-COLOR: #e0b0b0; BACKGROUND-COLOR: #faf0f0; BORDER-RIGHT-COLOR: #e0b0b0
+}
+.CEnumeration .Prototype {
+	BORDER-LEFT-COLOR: #e0b0b0; BORDER-BOTTOM-COLOR: #e0b0b0; BORDER-TOP-COLOR: #e0b0b0; BACKGROUND-COLOR: #faf0f0; BORDER-RIGHT-COLOR: #e0b0b0
+}
+.CDatabaseTrigger .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CEvent .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CDelegate .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CToolTip .Prototype {
+	MARGIN: 0px 0px 0.5em; WHITE-SPACE: nowrap
+}
+.Summary {
+	MARGIN: 1.5em 5ex 0px
+}
+.STitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0.5em
+}
+.SBorder {
+	BORDER-RIGHT: #c0c060 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #c0c060 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; BORDER-LEFT: #c0c060 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #c0c060 1px solid; BACKGROUND-COLOR: #fffff0
+}
+.FramedContentPage .IE .SBorder {
+	WIDTH: 100%
+}
+.Firefox .SBorder {
+	moz-border-radius: 20px
+}
+.STable {
+	FONT-SIZE: 9pt; WIDTH: 100%
+}
+.SEntry {
+	WIDTH: 30%
+}
+.SDescription {
+	WIDTH: 70%
+}
+.SMarked {
+	BACKGROUND-COLOR: #f8f8d8
+}
+.SDescription {
+	PADDING-LEFT: 2ex
+}
+.SIndent1 .SEntry {
+	PADDING-LEFT: 1.5ex
+}
+.SIndent1 .SDescription {
+	PADDING-LEFT: 3.5ex
+}
+.SIndent2 .SEntry {
+	PADDING-LEFT: 3ex
+}
+.SIndent2 .SDescription {
+	PADDING-LEFT: 5ex
+}
+.SIndent3 .SEntry {
+	PADDING-LEFT: 4.5ex
+}
+.SIndent3 .SDescription {
+	PADDING-LEFT: 6.5ex
+}
+.SIndent4 .SEntry {
+	PADDING-LEFT: 6ex
+}
+.SIndent4 .SDescription {
+	PADDING-LEFT: 8ex
+}
+.SIndent5 .SEntry {
+	PADDING-LEFT: 7.5ex
+}
+.SIndent5 .SDescription {
+	PADDING-LEFT: 9.5ex
+}
+.SDescription A {
+	COLOR: #800000
+}
+.SDescription A:active {
+	COLOR: #a00000
+}
+.SGroup TD {
+	PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.5em
+}
+.SGroup .SEntry {
+	FONT-WEIGHT: bold; FONT-VARIANT: small-caps
+}
+.SGroup .SEntry A {
+	COLOR: #800000
+}
+.SGroup .SEntry A:active {
+	COLOR: #f00000
+}
+.SMain TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SClass TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SDatabase TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SDatabaseTable TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SSection TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SClass TD {
+	PADDING-TOP: 1em
+}
+.SDatabase TD {
+	PADDING-TOP: 1em
+}
+.SDatabaseTable TD {
+	PADDING-TOP: 1em
+}
+.SSection TD {
+	PADDING-TOP: 1em
+}
+.SMain .SEntry {
+	FONT-WEIGHT: bold
+}
+.SClass .SEntry {
+	FONT-WEIGHT: bold
+}
+.SDatabase .SEntry {
+	FONT-WEIGHT: bold
+}
+.SDatabaseTable .SEntry {
+	FONT-WEIGHT: bold
+}
+.SSection .SEntry {
+	FONT-WEIGHT: bold
+}
+.SMain .SEntry A {
+	COLOR: #000000
+}
+.SClass .SEntry A {
+	COLOR: #000000
+}
+.SDatabase .SEntry A {
+	COLOR: #000000
+}
+.SDatabaseTable .SEntry A {
+	COLOR: #000000
+}
+.SSection .SEntry A {
+	COLOR: #000000
+}
+.SMain .SEntry A:active {
+	COLOR: #a00000
+}
+.SClass .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabase .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabaseTable .SEntry A:active {
+	COLOR: #a00000
+}
+.SSection .SEntry A:active {
+	COLOR: #a00000
+}
+.ClassHierarchy {
+	MARGIN: 0px 15px 1em
+}
+.CHEntry {
+	BORDER-RIGHT: #a0a0a0 2px solid; PADDING-RIGHT: 2ex; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 2ex; FONT-SIZE: 10pt; MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; COLOR: #606060; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 2px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.Firefox .CHEntry {
+	moz-border-radius: 4px
+}
+.CHCurrent .CHEntry {
+	FONT-WEIGHT: bold; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000
+}
+.CHChildNote .CHEntry {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.CHIndent {
+	MARGIN-LEFT: 3ex
+}
+.CHEntry A:link {
+	COLOR: #606060
+}
+.CHEntry A:visited {
+	COLOR: #606060
+}
+.CHEntry A:hover {
+	COLOR: #606060
+}
+.CHEntry A:active {
+	COLOR: #800000
+}
+#Index {
+	BACKGROUND-COLOR: #ffffff
+}
+.IndexPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.FramedIndexPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.FramedSearchResultsPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.IndexPage #Index {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; FONT-SIZE: 9pt; MARGIN-LEFT: 27ex; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.IPageTitle {
+	BORDER-RIGHT: #000000 0px solid; PADDING-RIGHT: 15px; BORDER-TOP: #000000 0px solid; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: 20pt; PADDING-BOTTOM: 10px; MARGIN: -15px -15px 0px; BORDER-LEFT: #000000 0px solid; COLOR: #ffffff; PADDING-TOP: 10px; BORDER-BOTTOM: #000000 3px solid; BACKGROUND-COLOR: #7070c0
+}
+.FramedSearchResultsPage .IPageTitle {
+	MARGIN-BOTTOM: 15px
+}
+.INavigationBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; MARGIN: 0px -15px 15px; PADDING-TOP: 5px; BORDER-BOTTOM: black 1px solid; BACKGROUND-COLOR: #fffff0; TEXT-ALIGN: center
+}
+.INavigationBar A {
+	FONT-WEIGHT: bold
+}
+.IHeading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; PADDING-BOTTOM: 0.5em; WIDTH: 3.5ex; PADDING-TOP: 2.5em; TEXT-ALIGN: center
+}
+#IFirstHeading {
+	PADDING-TOP: 0px
+}
+.IEntry {
+	PADDING-LEFT: 1ex; FONT-SIZE: 10pt
+}
+.PopupSearchResultsPage .IEntry {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 8pt; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.PopupSearchResultsPage .Opera9 .IEntry {
+	TEXT-ALIGN: left
+}
+.FramedSearchResultsPage .Opera9 .IEntry {
+	TEXT-ALIGN: left
+}
+.FramedSearchResultsPage .IEntry {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.ISubIndex {
+	PADDING-LEFT: 3ex; PADDING-BOTTOM: 0.5em
+}
+.PopupSearchResultsPage .ISubIndex {
+	DISPLAY: none
+}
+.ISymbol {
+	FONT-WEIGHT: bold; COLOR: #900000
+}
+.IndexPage .ISymbolPrefix {
+	BORDER-RIGHT: #e0e0e0 3px solid; PADDING-RIGHT: 1px; PADDING-LEFT: 2px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #c47c7c; PADDING-TOP: 0px; BACKGROUND-COLOR: #f8f8f8; TEXT-ALIGN: right
+}
+.FramedIndexPage .ISymbolPrefix {
+	BORDER-RIGHT: #e0e0e0 3px solid; PADDING-RIGHT: 1px; PADDING-LEFT: 2px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #c47c7c; PADDING-TOP: 0px; BACKGROUND-COLOR: #f8f8f8; TEXT-ALIGN: right
+}
+.PopupSearchResultsPage .ISymbolPrefix {
+	COLOR: #900000
+}
+.FramedSearchResultsPage .ISymbolPrefix {
+	COLOR: #900000
+}
+.PopupSearchResultsPage .ISymbolPrefix {
+	FONT-SIZE: 8pt
+}
+.IndexPage #IFirstSymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid
+}
+.FramedIndexPage #IFirstSymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid
+}
+.IndexPage #ILastSymbolPrefix {
+	BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.FramedIndexPage #ILastSymbolPrefix {
+	BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.IndexPage #IOnlySymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid; BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.FramedIndexPage #IOnlySymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid; BORDER-BOTTOM: #e0e0e0 1px solid
+}
+A.IParent {
+	DISPLAY: block
+}
+A.IFile {
+	DISPLAY: block
+}
+.PopupSearchResultsPage .SRStatus {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; FONT-STYLE: italic
+}
+.FramedSearchResultsPage .SRStatus {
+	FONT-SIZE: 10pt; FONT-STYLE: italic
+}
+.SRResult {
+	DISPLAY: none
+}
+#Footer {
+	FONT-SIZE: 8pt; COLOR: #989898; TEXT-ALIGN: right
+}
+#Footer P {
+	MARGIN-BOTTOM: 0.5em; TEXT-INDENT: 0px
+}
+.ContentPage #Footer {
+	MARGIN: 2px; TEXT-ALIGN: right
+}
+.IndexPage #Footer {
+	MARGIN: 2px; TEXT-ALIGN: right
+}
+.FramedMenuPage #Footer {
+	BORDER-TOP: #c8c8c8 1px solid; MARGIN: 5em 10px 10px; PADDING-TOP: 1em; TEXT-ALIGN: center
+}
+#Footer A:link {
+	COLOR: #989898
+}
+#Footer A:hover {
+	COLOR: #989898
+}
+#Footer A:visited {
+	COLOR: #989898
+}
+#Footer A:active {
+	COLOR: #a00000
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<META content="MSHTML 6.00.2800.1607" name=GENERATOR></HEAD>
+<BODY class=ContentPage onload=NDOnLoad()>
+<SCRIPT language=JavaScript><!--
+if (browserType) {document.write("<div class=" + browserType + ">");if (browserVer) {document.write("<div class=" + browserVer + ">"); }}// --></SCRIPT>
+<!--  Generated by Natural Docs, version 1.4 --><!--  http://www.naturaldocs.org  --><!-- saved from url=(0026)http://www.naturaldocs.org -->
+<DIV id=Content>
+<DIV class=CSection>
+<DIV class=CTopic id=MainTopic>
+<H1 class=CTitle><A name=CmnDlg></A>CmnDlg</H1>
+<DIV class=CBody>
+<P><B>Common Operating System dialogs</B></P><!--START_ND_SUMMARY-->
+<DIV class=Summary>
+<DIV class=STitle>Summary</DIV>
+<DIV class=SBorder>
+<TABLE class=STable cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR class=SMain>
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#CmnDlg">CmnDlg</A></TD>
+    <TD class=SDescription><B>Common Operating System dialogs</B></TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link1 onmouseover="ShowTip(event, 'tt1', 'link1')" 
+      onmouseout="HideTip('tt1')" 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Color">Color</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Find/Replace">Find 
+      / Replace</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link2 onmouseover="ShowTip(event, 'tt2', 'link2')" 
+      onmouseout="HideTip('tt2')" 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Font">Font</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link3 onmouseover="ShowTip(event, 'tt3', 'link3')" 
+      onmouseout="HideTip('tt3')" 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Icon">Icon</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Open/Save">Open 
+      / Save</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SGroup SIndent1">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#Examples">Examples</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SGroup SIndent1">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/CmnDlg/CmnDlg.html#About">About</A></TD>
+    <TD class=SDescription></TD></TR></TBODY></TABLE></DIV></DIV><!--END_ND_SUMMARY--></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Color></A>Color</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Color(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pColor,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE><IMG 
+height=331 src="CmnDlg_files/Color.png" width=453>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pColor</TD>
+    <TD class=CDLDescription>Initial color and output in RGB format,</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>Optional handle to parents 
+HWND</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>False if user canceled the dialog or if error occurred</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Find/Replace></A>Find / Replace</H3>
+<DIV class=CBody><IMG height=134 src="CmnDlg_files/find.png" width=473><IMG 
+height=166 src="CmnDlg_files/Replace.png" width=473>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>Handle to parents HWND</TD></TR>
+  <TR>
+    <TD class=CDLEntry>fun</TD>
+    <TD class=CDLDescription>Notification function used for communication with 
+      dialog.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>flags</TD>
+    <TD class=CDLDescription>Creation flags, see below.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>deff</TD>
+    <TD class=CDLDescription>Default text to be displayed at the start of the 
+      dialog box in find edit box</TD></TR>
+  <TR>
+    <TD class=CDLEntry>defr</TD>
+    <TD class=CDLDescription>Default text to be displayed at the start of the 
+      dialog box in replace edit box</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Flags</H4>
+<P>String containing list of creation flags.&nbsp; You can use “-” prefix to 
+hide that GUI field.</P>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>d</TD>
+    <TD class=CDLDescription>down radio button selected in Find dialog</TD></TR>
+  <TR>
+    <TD class=CDLEntry>w</TD>
+    <TD class=CDLDescription>whole word selected</TD></TR>
+  <TR>
+    <TD class=CDLEntry>c</TD>
+    <TD class=CDLDescription>match case selected</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Notifications</H4>
+<P>Dialog box is not modal, so it communicates with the script while it is 
+active.&nbsp; Both Find &amp; Replace use the same prototype of notification 
+function so even if you use Find only you will have to specify ReplaceWith 
+parameter.</P>
+<BLOCKQUOTE><PRE>OnFind(Event, Flags, FindWhat, ReplaceWith)</PRE></BLOCKQUOTE>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>Event</TD>
+    <TD class=CDLDescription>”close”, “find”, “replace”, “replace_all”</TD></TR>
+  <TR>
+    <TD class=CDLEntry>Flags</TD>
+    <TD class=CDLDescription>string contaning flags about user selection; each 
+      letter means user has selected that particular GUI element.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>FindWhat</TD>
+    <TD class=CDLDescription>user find text</TD></TR>
+  <TR>
+    <TD class=CDLEntry>ReplaceWith</TD>
+    <TD class=CDLDescription>user replace text</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Handle of the dialog or 0 if dialog can’t be created.&nbsp; Can also return 
+“Invalid Label” if lbl is not valid.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Font></A>Font</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Font(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pFace,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pStyle,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pColor,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>pEffects</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">true,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">0</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE><IMG 
+height=287 src="CmnDlg_files/Font.png" width=378>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pFace</TD>
+    <TD class=CDLDescription>Initial font, output</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pStyle</TD>
+    <TD class=CDLDescription>Initial style, output</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pColor</TD>
+    <TD class=CDLDescription>Initial text color, output</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pEffects</TD>
+    <TD class=CDLDescription>Set to false to disable effects (strikeout, 
+      underline, color)</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>Parent’s handle, affects 
+position</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>False if user canceled the dialog or if error occurred</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Icon></A>Icon</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Icon(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>sIcon,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>idx,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE><IMG 
+height=357 src="CmnDlg_files/Icon.png" width=296>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>sIcon</TD>
+    <TD class=CDLDescription>Default icon resource, output</TD></TR>
+  <TR>
+    <TD class=CDLEntry>idx</TD>
+    <TD class=CDLDescription>Default index within resource, output</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>Optional handle of the parent 
+GUI.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>False if user canceled the dialog or if error occurred</P>
+<H4 class=CHeading>Remarks</H4>
+<P>This is simple and non-fleixibile dialog.&nbsp; If you need more flexibility, 
+use &lt;IconEx&gt; instead.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Open/Save></A>Open / Save</H3>
+<DIV class=CBody><IMG height=455 src="CmnDlg_files/Open.png" width=563>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>Parent’s handle, positive number by default 0 
+      (influences dialog position)</TD></TR>
+  <TR>
+    <TD class=CDLEntry>Title</TD>
+    <TD class=CDLDescription>Dialog title</TD></TR>
+  <TR>
+    <TD class=CDLEntry>Filter</TD>
+    <TD class=CDLDescription>Specify filter as with FileSelectFile.&nbsp; 
+      Seperate multiple filters with “|”.&nbsp; For instance “All Files 
+      (<B>.</B>)|Audio (*.wav; *.mp2; *.mp3)|Documents (*.txt)”</TD></TR>
+  <TR>
+    <TD class=CDLEntry>DefultFilter</TD>
+    <TD class=CDLDescription>Index of default filter, by default 1</TD></TR>
+  <TR>
+    <TD class=CDLEntry>Root</TD>
+    <TD class=CDLDescription>Specifies startup directory and initial content 
+      of “File Name” edit.&nbsp; Directory must have trailing “\”.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>DefaulltExt</TD>
+    <TD class=CDLDescription>Extension to append when none given</TD></TR>
+  <TR>
+    <TD class=CDLEntry>Flags</TD>
+    <TD class=CDLDescription>White space separated list of flags, by default 
+      “FILEMUSTEXIST HIDEREADONLY”</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Flags</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>allowmultiselect</TD>
+    <TD class=CDLDescription>Specifies that the File Name list box allows 
+      multiple selections</TD></TR>
+  <TR>
+    <TD class=CDLEntry>createprompt</TD>
+    <TD class=CDLDescription>If the user specifies a file that does not exist, 
+      this flag causes the dialog box to prompt the user for permission to 
+      create the file</TD></TR>
+  <TR>
+    <TD class=CDLEntry>dontaddtorecent</TD>
+    <TD class=CDLDescription>Prevents the system from adding a link to the 
+      selected file in the file system directory that contains the user’s most 
+      recently used documents.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>extensiondifferent</TD>
+    <TD class=CDLDescription>Specifies that the user typed a file name 
+      extension that differs from the extension specified by defaulltExt</TD></TR>
+  <TR>
+    <TD class=CDLEntry>filemustexist</TD>
+    <TD class=CDLDescription>Specifies that the user can type only names of 
+      existing files in the File Name entry field</TD></TR>
+  <TR>
+    <TD class=CDLEntry>forceshowhidden</TD>
+    <TD class=CDLDescription>Forces the showing of system and hidden files, 
+      thus overriding the user setting to show or not show hidden files.&nbsp; 
+      However, a file that is marked both system and hidden is not shown.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hidereadonly</TD>
+    <TD class=CDLDescription>Hides the Read Only check box.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>nochangedir</TD>
+    <TD class=CDLDescription>Restores the current directory to its original 
+      value if the user changed the directory while searching for files.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>nodereferencelinks</TD>
+    <TD class=CDLDescription>Directs the dialog box to return the path and 
+      file name of the selected shortcut (.LNK) file.&nbsp; If this value is not 
+      specified, the dialog box returns the path and file name of the file 
+      referenced by the shortcut.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>novalidate</TD>
+    <TD class=CDLDescription>Specifies that the common dialog boxes allow 
+      invalid characters in the returned file name</TD></TR>
+  <TR>
+    <TD class=CDLEntry>overwriteprompt</TD>
+    <TD class=CDLDescription>Causes the Save As dialog box to generate a 
+      message box if the selected file already exists.&nbsp; The user must 
+      confirm whether to overwrite the file.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pathmustexist</TD>
+    <TD class=CDLDescription>Specifies that the user can type only valid paths 
+      and file names.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>readonly</TD>
+    <TD class=CDLDescription>Causes the Read Only check box to be selected 
+      initially when the dialog box is created</TD></TR>
+  <TR>
+    <TD class=CDLEntry>showhelp</TD>
+    <TD class=CDLDescription>Causes the dialog box to display the Help 
+      button.&nbsp; The hGui receives the HELPMSGSTRING registered messages that 
+      the dialog box sends when the user clicks the Help button.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>noreadonlyreturn</TD>
+    <TD class=CDLDescription>Specifies that the returned file does not have 
+      the Read Only check box selected and is not in a write-protected 
+    directory.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>notestfilecreate</TD>
+    <TD class=CDLDescription>Specifies that the file is not created before the 
+      dialog box is closed.&nbsp; This flag should be specified if the 
+      application saves the file on a create-nonmodify network 
+  share.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Selected FileName or Emtpy when cancelled.&nbsp; If more then one file is 
+selected they are separated by new line character.</P></DIV></DIV></DIV>
+<DIV class=CGroup>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Examples></A>Examples</H3>
+<DIV class=CBody>
+<H4 class=CHeading>Example1</H4>
+<BLOCKQUOTE><PRE>  ;basic usage
+
+  if CmnDlg_Icon(icon, idx := 4)
+       msgbox Icon:   %icon%`nIndex:  %idx%
+
+   if CmnDlg_Color( color := 0xFF00AA )
+      msgbox Color:  %color%
+
+   if CmnDlg_Font( font := "Courier New", style := "s16 bold underline italic", color:=0x80)
+        msgbox Font:  %font%`nStyle:  %style%`nColor:  %color%
+
+   res := CmnDlg_Open("", "Select several files", "", "", "c:\Windows\", "", "ALLOWMULTISELECT FILEMUSTEXIST HIDEREADONLY")
+   IfNotEqual, res, , MsgBox, %res%
+return</PRE></BLOCKQUOTE>
+<H4 class=CHeading>Example2</H4>
+<BLOCKQUOTE><PRE>   ;create gui and set text color
+
+   CmnDlg_Font( font := "Courier New", style := "s16 bold italic", color:=0xFF)
+
+   Gui Font, %Style% c%Color%, %Font%
+   Gui, Add, Text, ,Hello world.....  :roll:
+   Gui, Show, Autosize
+return</PRE></BLOCKQUOTE></DIV></DIV></DIV>
+<DIV class=CGroup>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=About></A>About</H3>
+<DIV class=CBody>
+<UL>
+  <LI>Ver 4.1 by majkinetor.&nbsp; See <A class=LURL 
+  href="http://www.autohotkey.com/forum/topic17230.html" 
+  target=_top>http://www.autohotkey.com/forum/topic17230.html</A>
+  <LI>Licenced under Creative Commons Attribution-Noncommercial <A class=LURL 
+  href="http://creativecommons.org/licenses/by-nc/3.0/" 
+  target=_top>http://creativecommons.org/licenses/by-nc/3.0/</A>.</LI></UL></DIV></DIV></DIV></DIV><!--Content-->
+<DIV id=Footer><A href="http://www.naturaldocs.org/">Generated by Natural 
+Docs</A></DIV><!--Footer--><!--START_ND_TOOLTIPS-->
+<DIV class=CToolTip id=tt1>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Color(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pColor,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE></DIV></DIV>
+<DIV class=CToolTip id=tt2>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Font(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pFace,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pStyle,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pColor,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>pEffects</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">true,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">0</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE></DIV></DIV>
+<DIV class=CToolTip id=tt3>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>CmnDlg_Icon(</TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>sIcon,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>idx,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hGui</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE></DIV></DIV><!--END_ND_TOOLTIPS-->
+<DIV id=MSearchResultsWindow><IFRAME id=MSearchResults name=MSearchResults 
+src="about:blank" frameBorder=0></IFRAME><A id=MSearchResultsWindowClose 
+href="javascript:searchPanel.CloseResultsWindow()">Close</A></DIV>
+<SCRIPT language=JavaScript><!--
+if (browserType) {if (browserVer) {document.write("</div>"); }document.write("</div>");}// --></SCRIPT>
+</BODY></HTML>

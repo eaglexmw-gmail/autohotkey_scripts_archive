@@ -1,0 +1,34 @@
+; Athlon slotA
+; AMD-K7 700 M T R 5 2 B  A
+
+[architecture]
+AMD-K7   Athlon slot A (model 1 and model 2)
+
+[speed]
+100=1000
+
+[package]
+M   Card module
+
+[voltage]
+N   1.8V 
+P   1.7V 
+T   1.6V 
+
+[temperature]
+R   70°C
+
+[L2 cache]
+5   512 KB
+
+[cache divisor]
+1   2:1 
+2   2.5:1 
+3   3:1 
+
+[bus]
+B   200 MHz
+
+[modification]
+A    Model 2 
+C   Model 1 

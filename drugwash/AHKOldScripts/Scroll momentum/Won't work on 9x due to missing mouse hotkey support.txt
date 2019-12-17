@@ -1,0 +1,1 @@
+It's using ~LButton:: hotkeys which won't work in 9x. Needs a global hook.

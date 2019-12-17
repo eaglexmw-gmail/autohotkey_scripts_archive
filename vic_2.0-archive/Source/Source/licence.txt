@@ -1,0 +1,21 @@
+Vic est un logiciel libre distribué sous licence Creative Commons 
+Attribution-Non commerciale-Partage à l'identique. Sa vente ou son 
+usage commercial sont interdits.
+
+En gros, vous pouvez éxécuter, copier, modifier et redistribuer Vic, 
+pourvu que les redistributions indiquent que je suis l'auteur du code 
+source initial, et qu'elles transmettent les mêmes libertés.
+
+Je n'offre aucune garantie d'aucune sorte et je me dégage de toute 
+responsabilité directe ou indirecte qui pourrait être liée à l'usage 
+de Vic.
+
+Pour plus de détails, consultez les explications sommaires sur la 
+licence. Pour tous les détails, lisez le texte intégral de la licence 
+sur le site de Creative Commons.
+
+L'éditeur HiEdit et le module Dlg utilisés par Vic sont soumis à leurs 
+licences d'utilisation propres. Pour accéder à la licence 
+d'utilisation originale de HiEdit, éditez le fichier HiEdit.inc situé 
+dans le dossier hie. Pour accéder à la licence d'utilisation originale 
+du module Dlg, éditez le fichier Dlg.ahk situé dans le dossier inc.

@@ -1,0 +1,870 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0052)http://www.autohotkey.net/~majkinetor/Dock/Dock.html -->
+<HTML><HEAD><TITLE>Dock</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE>BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+BODY.UnframedPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+A:link {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #900000; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+P {
+	MARGIN: 0px; TEXT-INDENT: 5ex
+}
+.HB {
+	FONT-SIZE: 1px; VISIBILITY: hidden
+}
+BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.IE BLOCKQUOTE {
+	WIDTH: 400px
+}
+.Gecko BLOCKQUOTE {
+	PADDING-BOTTOM: 0.5em
+}
+
+@media Print    
+{
+BLOCKQUOTE {
+	OVERFLOW: visible
+}
+.IE BLOCKQUOTE {
+	WIDTH: auto
+}
+    }
+BODY.FramedMenuPage {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9pt; PADDING-BOTTOM: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #e8e8e8
+}
+.MenuSection {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9pt; PADDING-BOTTOM: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #e8e8e8
+}
+.MenuSection {
+	WIDTH: 27ex
+}
+.MTitle {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 1px dotted; TEXT-ALIGN: center; FONT-VARIANT: small-caps
+}
+.MSubTitle {
+	MARGIN-TOP: 1ex; FONT-WEIGHT: normal; FONT-SIZE: 9pt; MARGIN-BOTTOM: 5px; FONT-VARIANT: normal
+}
+.MEntry A:link {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:hover {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:visited {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 0px
+}
+.MGroup {
+	FONT-WEIGHT: bold; MARGIN: 1em 0px 1em 10px; FONT-VARIANT: small-caps
+}
+.KHTML .MGroup {
+	MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 1em
+}
+.MGroupContent {
+	FONT-WEIGHT: normal; FONT-VARIANT: normal
+}
+.MGroup A:link {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:hover {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:visited {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 10px
+}
+.MFile {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MLink {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MIndex {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.MLink {
+	FONT-STYLE: italic
+}
+#MSelected {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; BORDER-LEFT: #000000 0px solid; COLOR: #000000; MARGIN-RIGHT: 5px; PADDING-TOP: 0px; BORDER-BOTTOM: #000000 2px solid; BACKGROUND-COLOR: #ffffff
+}
+.MGroup #MSelected {
+	PADDING-LEFT: 9px; BORDER-LEFT-WIDTH: 1px
+}
+.Gecko #MSelected {
+	moz-border-radius-topright: 10px; moz-border-radius-bottomright: 10px
+}
+.Gecko .MGroup #MSelected {
+	moz-border-radius-topleft: 10px; moz-border-radius-bottomleft: 10px
+}
+BODY.FramedContentPage {
+	PADDING-BOTTOM: 15px; BACKGROUND-COLOR: #ffffff
+}
+.ContentSection {
+	PADDING-BOTTOM: 15px; BACKGROUND-COLOR: #ffffff
+}
+.ContentSection {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.CTopic {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 3em
+}
+.CTitle {
+	BORDER-RIGHT: #a0a0a0 0px solid; BORDER-TOP: #a0a0a0 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0px 15px 0.5em; BORDER-LEFT: #a0a0a0 0px solid; BORDER-BOTTOM: #a0a0a0 1px solid
+}
+.CGroup .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; MARGIN-LEFT: 0px; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; BORDER-RIGHT-WIDTH: 0px; FONT-VARIANT: small-caps; BORDER-RIGHT-COLOR: #000000
+}
+.CClass .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CInterface .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabase .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabaseTable .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CSection .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+#MainTopic .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 20pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 3px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #7070c0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CBody {
+	MARGIN-LEFT: 15px; MARGIN-RIGHT: 15px
+}
+.CToolTip {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 5px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 8pt; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 5px; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 2px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #ffffe0; max-width: 50%
+}
+.Opera6 .CTooltip {
+	max-width: 100%
+}
+.Opera5 .CTooltip {
+	max-width: 100%
+}
+.CToolTip BLOCKQUOTE {
+	OVERFLOW: hidden
+}
+.CHeading {
+	MARGIN-TOP: 1.5em; FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.5em
+}
+.CCode {
+	FONT: 10pt "Courier New", Courier, monospace
+}
+.CBulletList {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; MARGIN: 0.5em 5ex
+}
+.CDescriptionList {
+	MARGIN: 0.5em 5ex 0px
+}
+.IE4 .CDescriptionList {
+	WIDTH: 85%
+}
+.KHTML .CDescriptionList {
+	WIDTH: 85%
+}
+.CDLEntry {
+	PADDING-BOTTOM: 0.25em; FONT: 10pt "Courier New", Courier, monospace; COLOR: #808080; WHITE-SPACE: nowrap
+}
+.CDLDescription {
+	PADDING-LEFT: 5ex; FONT-SIZE: 10pt; PADDING-BOTTOM: 0.5em
+}
+.Prototype {
+	BORDER-RIGHT: 1px solid; PADDING-RIGHT: 3ex; BORDER-TOP: 1px solid; PADDING-LEFT: 3ex; PADDING-BOTTOM: 5px; MARGIN: 0px 5ex 1.5em; FONT: 10pt "Courier New", Courier, monospace; BORDER-LEFT: 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: 1px solid
+}
+.Prototype TD {
+	FONT-SIZE: 10pt
+}
+.PDefaultValue {
+	COLOR: #8f8f8f
+}
+.PDefaultValuePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	TEXT-ALIGN: right
+}
+.PAfterParameters {
+	VERTICAL-ALIGN: bottom
+}
+.IE .Prototype TABLE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.CFunction .Prototype {
+	BORDER-LEFT-COLOR: #d0d0d0; BORDER-BOTTOM-COLOR: #d0d0d0; BORDER-TOP-COLOR: #d0d0d0; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-COLOR: #d0d0d0
+}
+.CProperty .Prototype {
+	BORDER-LEFT-COLOR: #c0c0e8; BORDER-BOTTOM-COLOR: #c0c0e8; BORDER-TOP-COLOR: #c0c0e8; BACKGROUND-COLOR: #f4f4ff; BORDER-RIGHT-COLOR: #c0c0e8
+}
+.CVariable .Prototype {
+	BORDER-LEFT-COLOR: #e0e0a0; BORDER-BOTTOM-COLOR: #e0e0a0; BORDER-TOP-COLOR: #e0e0a0; BACKGROUND-COLOR: #fffff0; BORDER-RIGHT-COLOR: #e0e0a0
+}
+.CDatabaseIndex .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CConstant .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CType .Prototype {
+	BORDER-LEFT-COLOR: #e8c8c8; BORDER-BOTTOM-COLOR: #e8c8c8; BORDER-TOP-COLOR: #e8c8c8; BACKGROUND-COLOR: #fff8f8; BORDER-RIGHT-COLOR: #e8c8c8
+}
+.CDatabaseTrigger .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CEvent .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CDelegate .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CToolTip .Prototype {
+	MARGIN: 0px 0px 0.5em; WHITE-SPACE: nowrap
+}
+.Summary {
+	MARGIN: 1.5em 5ex 0px
+}
+.STitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0.5em
+}
+.SBorder {
+	BORDER-RIGHT: #c0c060 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #c0c060 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; BORDER-LEFT: #c0c060 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #c0c060 1px solid; BACKGROUND-COLOR: #fffff0
+}
+.IE4 .SBorder {
+	WIDTH: 85%
+}
+.IE5 .SBorder {
+	WIDTH: 100%
+}
+BODY.FramedContentPage .IE6 .SBorder {
+	WIDTH: 100%
+}
+.Gecko .SBorder {
+	moz-border-radius: 20px
+}
+.STable {
+	FONT-SIZE: 9pt; WIDTH: 100%
+}
+.SEntrySize {
+	WIDTH: 30%
+}
+.SDescriptionSize {
+	WIDTH: 70%
+}
+.SMarked {
+	BACKGROUND-COLOR: #f8f8d8
+}
+.SEntry .SIndent1 {
+	MARGIN-LEFT: 1.5ex
+}
+.SEntry .SIndent2 {
+	MARGIN-LEFT: 3ex
+}
+.SEntry .SIndent3 {
+	MARGIN-LEFT: 4.5ex
+}
+.SEntry .SIndent4 {
+	MARGIN-LEFT: 6ex
+}
+.SEntry .SIndent5 {
+	MARGIN-LEFT: 7.5ex
+}
+.SDescription {
+	PADDING-LEFT: 3ex
+}
+.SDescription A {
+	COLOR: #800000
+}
+.SDescription A:active {
+	COLOR: #a00000
+}
+.SGroup {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0.25em
+}
+.SGroup .SEntry {
+	FONT-WEIGHT: bold; FONT-VARIANT: small-caps
+}
+.SGroup .SEntry A {
+	COLOR: #800000
+}
+.SGroup .SEntry A:active {
+	COLOR: #f00000
+}
+.SMain .SEntry {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.25em
+}
+.SClass .SEntry {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.25em
+}
+.SDatabase .SEntry {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.25em
+}
+.SDatabaseTable .SEntry {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.25em
+}
+.SSection .SEntry {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 0.25em
+}
+.SClass {
+	MARGIN-TOP: 1em
+}
+.SDatabase {
+	MARGIN-TOP: 1em
+}
+.SDatabaseTable {
+	MARGIN-TOP: 1em
+}
+.SSection {
+	MARGIN-TOP: 1em
+}
+.SMain .SEntry A {
+	COLOR: #000000
+}
+.SClass .SEntry A {
+	COLOR: #000000
+}
+.SDatabase .SEntry A {
+	COLOR: #000000
+}
+.SDatabaseTable .SEntry A {
+	COLOR: #000000
+}
+.SSection .SEntry A {
+	COLOR: #000000
+}
+.SMain .SEntry A:active {
+	COLOR: #a00000
+}
+.SClass .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabase .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabaseTable .SEntry A:active {
+	COLOR: #a00000
+}
+.SSection .SEntry A:active {
+	COLOR: #a00000
+}
+.ClassHierarchy {
+	MARGIN: 0px 15px 1em
+}
+.CHEntry {
+	BORDER-RIGHT: #a0a0a0 2px solid; PADDING-RIGHT: 2ex; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 2ex; FONT-SIZE: 10pt; MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; COLOR: #606060; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 2px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.Gecko .CHEntry {
+	moz-border-radius: 4px
+}
+.CHCurrent .CHEntry {
+	FONT-WEIGHT: bold; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000
+}
+.CHChildNote .CHEntry {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.CHIndent {
+	MARGIN-LEFT: 3ex
+}
+.CHEntry A:link {
+	COLOR: #606060
+}
+.CHEntry A:visited {
+	COLOR: #606060
+}
+.CHEntry A:hover {
+	COLOR: #606060
+}
+.CHEntry A:active {
+	COLOR: #800000
+}
+BODY.FramedIndexPage {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 10pt; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; BACKGROUND-COLOR: #ffffff
+}
+.IndexSection {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 10pt; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; BACKGROUND-COLOR: #ffffff
+}
+.IndexSection {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.IPageTitle {
+	BORDER-RIGHT: #000000 0px solid; PADDING-RIGHT: 15px; BORDER-TOP: #000000 0px solid; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: 20pt; PADDING-BOTTOM: 10px; MARGIN: -15px -15px 0px; BORDER-LEFT: #000000 0px solid; COLOR: #ffffff; PADDING-TOP: 10px; BORDER-BOTTOM: #000000 3px solid; BACKGROUND-COLOR: #7070c0
+}
+.INavigationBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px -15px 15px; PADDING-TOP: 5px; BORDER-BOTTOM: black 1px solid; BACKGROUND-COLOR: #fffff0; TEXT-ALIGN: center
+}
+.INavigationBar A {
+	FONT-WEIGHT: bold
+}
+.IHeading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; PADDING-BOTTOM: 0.5em; WIDTH: 3.5ex; PADDING-TOP: 2.5em; TEXT-ALIGN: center
+}
+#IFirstHeading {
+	PADDING-TOP: 0px
+}
+.IEntry {
+	PADDING-LEFT: 1ex
+}
+.ISubIndex {
+	PADDING-LEFT: 3ex; PADDING-BOTTOM: 0.5em
+}
+.ISymbol {
+	FONT-WEIGHT: bold; COLOR: #900000
+}
+.ISymbolPrefix {
+	BORDER-RIGHT: #e0e0e0 3px solid; PADDING-RIGHT: 1px; PADDING-LEFT: 2px; PADDING-BOTTOM: 0px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #c47c7c; PADDING-TOP: 0px; BACKGROUND-COLOR: #f8f8f8; TEXT-ALIGN: right
+}
+#IFirstSymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid
+}
+#ILastSymbolPrefix {
+	BORDER-BOTTOM: #e0e0e0 1px solid
+}
+#IOnlySymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid; BORDER-BOTTOM: #e0e0e0 1px solid
+}
+A.IParent {
+	DISPLAY: block
+}
+A.IFile {
+	DISPLAY: block
+}
+.Footer {
+	FONT-SIZE: 8pt; COLOR: #909090
+}
+BODY.UnframedPage .Footer {
+	MARGIN: 2px; TEXT-ALIGN: right
+}
+BODY.FramedMenuPage .Footer {
+	MARGIN: 5em 10px 0px; TEXT-ALIGN: center
+}
+.Footer A:link {
+	COLOR: #909090
+}
+.Footer A:hover {
+	COLOR: #909090
+}
+.Footer A:visited {
+	COLOR: #909090
+}
+.Footer A:active {
+	COLOR: #a00000
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<META content="MSHTML 6.00.2800.1607" name=GENERATOR></HEAD>
+<BODY class=UnframedPage onload=NDOnLoad()>
+<SCRIPT language=JavaScript><!--
+if (browserType) {document.write("<div class=" + browserType + ">");if (browserVer) {document.write("<div class=" + browserVer + ">"); }}// --></SCRIPT>
+<!--  Generated by Natural Docs, version 1.35 --><!--  http://www.naturaldocs.org  --><!-- saved from url=(0026)http://www.naturaldocs.org -->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=ContentSection vAlign=top>
+      <DIV class=CSection id=MainTopic>
+      <DIV class=CTopic>
+      <H1 class=CTitle><A name=Dock></A>Dock</H1>
+      <DIV class=CBody>
+      <P class=CParagraph><B>Dock desired top level windows (dock clients) to 
+      any top level window (dock host)</B></P>
+      <P class=CParagraph>?</P>
+      <P class=CParagraph>Using dock module you can glue your or third-party 
+      windows to any top level window.&nbsp; Docked windows in module 
+      terminology are called Clients and the window that keeps their position 
+      relative to itself is called Host.&nbsp; Once Clients are connected to the 
+      Host, this group of windows will behave like single window - moving, 
+      sizing, focusing, hiding and other OS events will be handled by the module 
+      so that the “composite window” behaves like the single window.</P>
+      <P class=CParagraph>Module uses system hook to monitor windows changes, so 
+      it’s idle when it is not aranging windows.</P><!--START_ND_SUMMARY-->
+      <DIV class=Summary>
+      <DIV class=STitle>Summary</DIV>
+      <DIV class=SBorder>
+      <TABLE class=STable cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=SEntrySize>
+            <DIV class=SMain>
+            <DIV class=SEntry><A 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#Dock">Dock</A></DIV></DIV></TD>
+          <TD class=SDescriptionSize>
+            <DIV class=SMain>
+            <DIV class=SDescription><B>Dock desired top level windows (dock 
+            clients) to any top level window (dock host)</B></DIV></DIV></TD></TR>
+        <TR class=SMarked>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SEntry>
+            <DIV class=SIndent1><A id=link1 
+            onmouseover="ShowTip(event, 'tt1', 'link1')" 
+            onmouseout="HideTip('tt1')" 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#Dock">Dock</A></DIV></DIV></DIV></TD>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SDescription>
+            <DIV class=SIndent1>Instantiate dock of given client upon host. 
+            </DIV></DIV></DIV></TD></TR>
+        <TR>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SEntry>
+            <DIV class=SIndent1><A id=link2 
+            onmouseover="ShowTip(event, 'tt2', 'link2')" 
+            onmouseout="HideTip('tt2')" 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#Dock_Shutdown">Dock_Shutdown</A></DIV></DIV></DIV></TD>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SDescription>
+            <DIV class=SIndent1>Uninitialize dock module. 
+        </DIV></DIV></DIV></TD></TR>
+        <TR class=SMarked>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SEntry>
+            <DIV class=SIndent1><A id=link3 
+            onmouseover="ShowTip(event, 'tt3', 'link3')" 
+            onmouseout="HideTip('tt3')" 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#Dock_Toggle">Dock_Toggle</A></DIV></DIV></DIV></TD>
+          <TD>
+            <DIV class=SFunction>
+            <DIV class=SDescription>
+            <DIV class=SIndent1>Toggles the dock module ON or 
+            OFF.</DIV></DIV></DIV></TD></TR>
+        <TR>
+          <TD>
+            <DIV class=SGroup>
+            <DIV class=SEntry>
+            <DIV class=SIndent1><A 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#Presets">Presets</A></DIV></DIV></DIV></TD>
+          <TD>
+            <DIV class=SGroup>
+            <DIV class=SDescription>
+            <DIV class=SIndent1>This section contains some common docking 
+            setups. </DIV></DIV></DIV></TD></TR>
+        <TR>
+          <TD>
+            <DIV class=SGroup>
+            <DIV class=SEntry>
+            <DIV class=SIndent1><A 
+            href="http://www.autohotkey.net/~majkinetor/Dock/Dock.html#About">About</A></DIV></DIV></DIV></TD>
+          <TD>
+            <DIV class=SGroup>
+            <DIV class=SDescription>
+            <DIV 
+      class=SIndent1></DIV></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!--END_ND_SUMMARY--></DIV></DIV></DIV>
+      <DIV class=CFunction>
+      <DIV class=CTopic>
+      <H3 class=CTitle><A name=Dock></A>Dock</H3>
+      <DIV class=CBody>
+      <BLOCKQUOTE>
+        <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD>
+              <TABLE cellSpacing=0 cellPadding=0 border=0>
+                <TBODY>
+                <TR>
+                  <TD class=PBeforeParameters noWrap>Dock(</TD>
+                  <TD class=PParameter noWrap>pClientID,</TD>
+                  <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+                  <TD class=PDefaultValue width="100%"></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD class=PParameter noWrap>pDockDef</TD>
+                  <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+                  <TD class=PDefaultValue width="100%">"",</TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD class=PParameter noWrap>reset</TD>
+                  <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+                  <TD class=PDefaultValue width="100%">0</TD>
+                  <TD class=PAfterParameters 
+          noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+      <P class=CParagraph>Instantiate dock of given client upon host.&nbsp; 
+      Multiple clients per one host are supported.</P>
+      <H4 class=CHeading>Parameters</H4>
+      <TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=CDLEntry>pClientId</TD>
+          <TD class=CDLDescription>HWND of the Client GUI.&nbsp; Dock is 
+            created or updated (if already exists) for that hwnd.&nbsp; If “+” 
+            is the first char of pClientId, Dock will first show the window if 
+            it is hidden (for smoother initialisation)</TD></TR>
+        <TR>
+          <TD class=CDLEntry>pDockDef</TD>
+          <TD class=CDLDescription>Dock definition, see bellow.&nbsp; To 
+            remove dock client pass “-”.&nbsp; If you pass empty string, client 
+            will be docked to the host according to its current position 
+            relative to the host.</TD></TR>
+        <TR>
+          <TD class=CDLEntry>reset</TD>
+          <TD class=CDLDescription>internal parameter, do not 
+        use.</TD></TR></TBODY></TABLE>
+      <H4 class=CHeading>Globals</H4>
+      <TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=CDLEntry>Dock_HostID</TD>
+          <TD class=CDLDescription>Sets docking host</TD></TR>
+        <TR>
+          <TD class=CDLEntry>Dock_OnHostDeath</TD>
+          <TD class=CDLDescription>Sets label that will be called when host 
+            dies.&nbsp; Afterwards, module will disable itself using 
+            Dock_Toggle(false).</TD></TR></TBODY></TABLE>
+      <H4 class=CHeading>Dock definition</H4>
+      <P class=CParagraph>Dock definition is string containing 10 numbers that 
+      describe Client positon relative to the Host.&nbsp; The big number of 
+      parameters allows fine tuning of Client’s postion and basicly every setup 
+      is possible.&nbsp; Parameters are grouped in 4 classes - first 3 influence 
+      X coordinate of the client, next 3 Y coordinate, next 2 Client’s width and 
+      final 2 Client’s height:</P>
+      <BLOCKQUOTE><PRE class=CCode>?                 xhw,xw,xd,  yhh,yh,yd [, whw,wd,  hhh,hd]<BR>?                     X           Y           W       H</PRE></BLOCKQUOTE>
+      <UL class=CBulletList>
+        <LI>The <B>X</B> coordinate of the top, left corner of the client window 
+        is computed as <B>HostX + xhw*HostWidth + xw*ClientWidth + xd</B>, with 
+        the parameters xhw, xw and xd
+        <LI>The <B>Y</B> coordinate of the top, left corner of the client window 
+        is computed as <B>HostY + yhh*HostHeight + yh*ClientHeight + yd</B>, 
+        with the parameters yhh, yh and yd
+        <LI>The width <B>W</B> of the client window is computed as 
+        <B>whw*HostWidth + wd</B>, with the parameters whw and wd.&nbsp; Skip to 
+        let the client have its own width (or set to 0,0)
+        <LI>The height <B>H</B> of the client window is computed as 
+        <B>hhh*HostHeight + hd</B>, with the parameters hhh and hd.&nbsp; Skip 
+        to let the client have its own height (or set to 0,0)</LI></UL>
+      <H4 class=CHeading>Returns</H4>
+      <P class=CParagraph>”OK” or “Err” with text describing last succesiful or 
+      failed action.</P>
+      <H4 class=CHeading>Remarks</H4>
+      <P class=CParagraph>You must set DetectHiddenWindows if Host is practicing 
+      hiding.&nbsp; Otherwise, Dock will treat Host hiding as death.&nbsp; All 
+      clients will be hidden once host is terminated or it becomes hidden 
+      itself.</P>
+      <P class=CParagraph>Use SetBatchLines, -1 with dock module for fluid 
+      client movement.&nbsp; You will experience delay in clients moving 
+      otherwise.&nbsp; However, if CPU usage is very high, you might experience 
+      a delay in client movement anyway.</P>
+      <P class=CParagraph>If you are using <B>Gui, Show</B> command imediately 
+      before registering client, make sure you specify <B>NoActivate</B> 
+      flag.</P>
+      <P class=CParagraph>Currently its not supported to set Client window on 
+      top Host window.&nbsp; AlwaysOnTop (or TopMost) flag will not influence 
+      behavior of the module so avoid setups in which client is entirely covered 
+      by the Host.</P>
+      <H4 class=CHeading>Example</H4>
+      <BLOCKQUOTE><PRE class=CCode>Dock(Client1ID, "0,-1,-10, 0,0,0, 0,63, 1,0")      ;top left, host height<BR>Dock(Client2ID, "0,0,0, 0,-1,-5, 1,0,0,30")        ;top above, host width</PRE></BLOCKQUOTE></DIV></DIV></DIV>
+      <DIV class=CFunction>
+      <DIV class=CTopic>
+      <H3 class=CTitle><A name=Dock_Shutdown></A>Dock_Shutdown</H3>
+      <DIV class=CBody>
+      <BLOCKQUOTE>
+        <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD>Dock_Shutdown()</TD></TR></TBODY></TABLE></BLOCKQUOTE>
+      <P class=CParagraph>Uninitialize dock module.&nbsp; This will clear all 
+      clients and internal data and unregister hooks.&nbsp; Dock_OnHostDeath, 
+      Dock_HostId are kept on user values.</P></DIV></DIV></DIV>
+      <DIV class=CFunction>
+      <DIV class=CTopic>
+      <H3 class=CTitle><A name=Dock_Toggle></A>Dock_Toggle</H3>
+      <DIV class=CBody>
+      <BLOCKQUOTE>
+        <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD>
+              <TABLE cellSpacing=0 cellPadding=0 border=0>
+                <TBODY>
+                <TR>
+                  <TD class=PBeforeParameters noWrap>Dock_Toggle(</TD>
+                  <TD class=PParameter noWrap>enable</TD>
+                  <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+                  <TD class=PDefaultValue width="100%">""</TD>
+                  <TD class=PAfterParameters 
+          noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+      <P class=CParagraph>Toggles the dock module ON or OFF.</P>
+      <H4 class=CHeading>Parameters</H4>
+      <TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=CDLEntry>enable</TD>
+          <TD class=CDLDescription>Set to true to set the dock ON, set to 
+            FALSE to turn it OFF.&nbsp; Skip to toggle.</TD></TR></TBODY></TABLE>
+      <H4 class=CHeading>Remarks</H4>
+      <P class=CParagraph>Use Dock_Toggle(false) to suspend the dock module (to 
+      unregister hook), leaving its internal data in place.&nbsp; This is 
+      different from Dock_Shutdown as latest removes module completely from 
+      memory and unregisters its clients.</P>
+      <P class=CParagraph>You can also use this function to temporary disable 
+      module when you don’t want dock update routine to interrupt your time 
+      critical sections.</P></DIV></DIV></DIV>
+      <DIV class=CGroup>
+      <DIV class=CTopic>
+      <H3 class=CTitle><A name=Presets></A>Presets</H3>
+      <DIV class=CBody>
+      <P class=CParagraph>This section contains some common docking 
+      setups.&nbsp; You can just copy/paste dock definition strings in your 
+      script.</P>
+      <TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=CDLEntry>0,-1,0, 0,0,0</TD>
+          <TD class=CDLDescription>top left, own size</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,10, 0,0,0</TD>
+          <TD class=CDLDescription>top left, own size, 10px padding</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,0, 0,0,0, 0,0, 1,0</TD>
+          <TD class=CDLDescription>top left, use host’s height, keep own 
+          width</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,20, 0,0,0, 0,50, 1,0</TD>
+          <TD class=CDLDescription>top left, use host’s height, set width to 
+            50 and padding to 20px</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,0, .5,-.5,0</TD>
+          <TD class=CDLDescription>middle left, keep own size</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,0, 1,-1,0, 0,20, 0,20</TD>
+          <TD class=CDLDescription>bottom left, fixed width &amp; height to 
+            20px</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,-1,0, 1,-1,0, 0,0, .5,0</TD>
+          <TD class=CDLDescription>bottom left, keep height half of the Host’s 
+            height, keep own width</TD></TR>
+        <TR>
+          <TD class=CDLEntry>1,-1,0, 1,0,0, .25,0 .25,0</TD>
+          <TD class=CDLDescription>bottom right, width and height 1/5 of the 
+            Host</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,0,0, 1,0,0, 1,0, 0,100</TD>
+          <TD class=CDLDescription>below the host, use host’s width, height = 
+            100</TD></TR>
+        <TR>
+          <TD class=CDLEntry>0,0,0, 0,-1,-5, 1,0</TD>
+          <TD class=CDLDescription>above the host, use host’s width, keep own 
+            height, 5px padding</TD></TR>
+        <TR>
+          <TD class=CDLEntry>.5,-.5,0, 0,-1,0, 0,200, 0,30</TD>
+          <TD class=CDLDescription>center above the host, width=200, 
+          height=30</TD></TR>
+        <TR>
+          <TD class=CDLEntry>.5,-.5,0, 1,0,0, 0.3,0, 0,30</TD>
+          <TD class=CDLDescription>center bellow the host, use 1/3 Host’s 
+            width, height=30</TD></TR>
+        <TR>
+          <TD class=CDLEntry>1,0,0, 0,0,0</TD>
+          <TD class=CDLDescription>top right, own size</TD></TR>
+        <TR>
+          <TD class=CDLEntry>1,0,0, 0,0,0, 0,40, 1,0</TD>
+          <TD class=CDLDescription>top right, use host’s height, width = 
+        40</TD></TR>
+        <TR>
+          <TD class=CDLEntry>1,0,0, .5,-.5,0</TD>
+          <TD class=CDLDescription>middle right, keep own 
+      size</TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=CGroup>
+      <DIV class=CTopic>
+      <H3 class=CTitle><A name=About></A>About</H3>
+      <DIV class=CBody>
+      <UL class=CBulletList>
+        <LI>Ver 1.0 by majkinetor.&nbsp; See <A class=LURL 
+        href="http://www.autohotkey.com/forum/topic19400.html">http://www.autohotkey.com/forum/topic19400.html</A>
+        <LI>Thank You’s: Laszlo, JGR, Joy2World, bmcclure
+        <LI>Licenced under Creative Commons Attribution-Noncommercial <A 
+        class=LURL 
+        href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</A>.</LI></UL></DIV></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class=Footer><!--START_ND_FOOTER-->Generated by <A 
+href="http://www.naturaldocs.org/">Natural Docs</A><!--END_ND_FOOTER--></DIV><!--START_ND_TOOLTIPS-->
+<DIV class=CToolTip id=tt1>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Dock(</TD>
+            <TD class=PParameter noWrap>pClientID,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pDockDef</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>reset</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">0</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Instantiate 
+dock of given client upon host. </DIV></DIV>
+<DIV class=CToolTip id=tt2>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>Dock_Shutdown()</TD></TR></TBODY></TABLE></BLOCKQUOTE>Uninitialize dock 
+module. </DIV></DIV>
+<DIV class=CToolTip id=tt3>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Dock_Toggle(</TD>
+            <TD class=PParameter noWrap>enable</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Toggles 
+the dock module ON or OFF.</DIV></DIV><!--END_ND_TOOLTIPS-->
+<SCRIPT language=JavaScript><!--
+if (browserType) {if (browserVer) {document.write("</div>"); }document.write("</div>");}// --></SCRIPT>
+</BODY></HTML>

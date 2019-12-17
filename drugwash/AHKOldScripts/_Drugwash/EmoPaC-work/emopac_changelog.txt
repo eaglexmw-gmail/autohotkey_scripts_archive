@@ -1,0 +1,65 @@
+0.0.3.0
+---------
+-various fixes and improvements
+-added copyright notice inside script
+
+0.0.3.2
+---------
+-created an 'About' box with copyright details
+-moved dependencies to the 'data' folder
+
+0.0.3.3 (internal)
+---------
+-fixed keyboard navigation in left-hand list
+-added tooltips for better overview on options
+-the 'Save' option now asks for a destination path/folder
+
+0.0.3.4 (internal)
+---------
+-fixed darn treeview issue!!! Now protocols can be selected by keyboard/checkbox/highlight
+-fixed real protocol count in statusbar
+-removed label list flickering on selecting same protocol
+-changed logo icon loading from exe - external icon no longer needed
+-added support for background picture (in Win2000+)
+-partly fixed preview for non-GIF images
+-fixed .emo files creation
+-fixed statusbar tooltip errors
+
+0.0.3.5 (internal)
+---------
+-improved the 'About' dialog (scrolling)
+-added color calculation routine (not yet functional)
+-fixed folder path missing
+-codes font is now bold, for better visualization
+-selected protocol is now shown in bold
+-added common label display in the 'Codes' group
+-added automatic disabling of zoom buttons for non-GIF images
+
+0.0.3.6
+---------
+-fixed emopac.ini launch command line
+-reverted BackgroundTrans properties to normal (looked ugly in XP)
+-fixed too fast 'About' scrolling and text width
+
+0.0.4.0
+----------
+-fixed typo in changelog (thanks Tara!)
+-added the 'Load' function (currently incomplete)
+-fixed useless folder creation for protocols that have no images assigned
+-improved session clearing (there were leftover variables)
+-added zoom for pictures other than GIF
+-readded small icon view (per Tara's request; if loading is slow...)
+-added more controls interdependency in view of adding resize option (that is gonna be ugly!)
+-added CTRL + I hotkey to toggle the tray icon (per Tara's request)
+-removed custom fonts from title
+-program now remembers the last save path (for the current session only)
+-program now remembers the last folder load path (for the current session only)
+
+0.0.4.1
+---------
+-fixed a few glitches in protocol selection, label list display, label count, Clear routine, etc.
+-finished first stage in loading existing packs (simple packs still can't load)
+-emo files creation is now optional, in Expert mode
+-added 'About' mode toggle option, with default font and colors for static mode (on Tara's suggestion)
+-replaced Expert and Debug splash with discrete labels
+-added window resize (still has some graphical glitches)

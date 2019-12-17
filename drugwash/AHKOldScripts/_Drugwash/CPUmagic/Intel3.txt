@@ -1,0 +1,20 @@
+; Pentium Pro boxed
+; BP 80521 200  256K
+
+[package]
+BP   Modified staggered ceramic PGA
+
+[family-core]
+80521   Pentium Pro
+
+[speed]
+133   133 MHz 
+150   150 MHz 
+166   166 MHz 
+180   180 MHz 
+200   200 MHz 
+
+[L2 cache]
+256K    256 KB 
+512K   512 KB 
+1M   1 MB 

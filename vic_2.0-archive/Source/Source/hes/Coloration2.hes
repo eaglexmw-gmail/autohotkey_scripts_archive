@@ -1,0 +1,152 @@
+; (English will follow)
+; ---------------------
+; Mode d'emploi :
+; 
+; [,ext1,ext2]
+;   - Mettre les extensions entre crochets et les séparer avec une virgule.
+;   - Une virgule initiale applique la section à tout nouveau fichier.
+;
+; 0x01BBVVRR=( ) < > /
+;   - Associe une couleur aux séparateurs. S'étend à toutes les sections du
+;     même type de fichier. Doit commencer par 0x01.
+;
+; 0x00BBVVRR=Mot1 Mot2
+;   - Associe une couleur à une liste de mots, séparés par une espace.
+;
+; Signes spéciaux :
+;   & : Annonce que le signe précédent délimite une chaîne de caractères.
+;       Par exemple : "& et '& colore ce qui est entre guillemets "" ou ''.
+;   + : Annonce que le ou les signes précédents ouvrent un commentaire.
+;       Par exemple : /*+ et <!--+. Le commentaire doit être sur une ligne.
+;   ! : Fait du signe précédent un marqueur de début de mot à colorer.
+;       Par exemple : $! ou &! colore toute $VariablePHP ou &EntitéHTML;.
+;   - : Colore le reste de la ligne (mais arrête s'il y a un commentaire).
+;       Par exemple : [- pour colorer les sections d'un fichier INI.
+;   ~ : Au début d'un mot, force la casse spécifiée (affichage seulement).
+;       Par exemple : ~DOCTYPE.
+;   ^ : Au début d'un mot, annonce que le mot est sensible à la casse.
+;       Par exemple : ^
+;   ; : Marque le début d'un commentaire dans un fichier HES.
+;
+; -------------------------------------------------------------------------
+;
+; Instructions:
+; 
+; [,ext1,ext2]
+;   - Develop extensions in brackets and separate them with commas.
+;   - An initial comma applies section to all new file.
+;
+; 0x01BBVVRR=( ) < > /
+;   - Associates a color to separators. Extends to all sections of the same
+;     type of file. Must start with 0x01.
+;
+; 0x00BBVVRR=Word1 Word2
+;   - Associates a color to a list of words separated by a space.
+;
+; Special signs:
+;   & : Means that the previous sign delimits a string.
+;       Example: "& and '& color that is between quotation marks "" or ''.
+;   + : Means that the previous sign or signs open a comment.
+;       Example: /*+ and <!--+. The comment must be on one line.
+;   ! : Made the previous sign a marker of early word to color.
+;       Example: $! or &! color any $PHPVariable or &HTMLEntity;.
+;   - : Color the rest of the line (but stop if there is a comment).
+;       Example: [- to color the sections of an INI file.
+;   ~ : At the beginning of a word, force uppercase or lowercase.
+;       Example: ~DOCTYPE.
+;   ^ : At the beginning of a word, say that the word is case sensitive.
+;       Example: ^MyVar
+;   ; : Marks the beginning of a comment in a HES file.
+
+
+[,htm,html,php,php3,pl,cgi,jsp]
+ ; Délimiteurs
+0x010066ff=< > " { } &
+ ; CSS et CDATA
+0x00808000={& }& <![CDATA[ ]]>
+ ; Valeurs
+0x00009900="&
+ ; Commentaires
+0x00a0a0a0=<!--+ /*+ <!--[if+
+ ; Balises
+0x000066ff=!DOCTYPE /> /a /abbr /acronym /address /area /b /base /bdo /big /blockquote /body /br /button /caption /cite /code /col /colgroup /dd /del /dfn /div /dl /dt /em /fieldset /form /frame /frameset /h1 /h2 /h3 /h4 /h5 /h6 /head /hr /html /i /iframe /img /input /ins /kbd /label /legend /li /link /map /meta /noframes /noscript /object /ol /optgroup /option /p /param /pre /q /samp /script /select /small /span /strong /style /sub /sup /table /tbody /td /textarea /tfoot /th /thead /title /tr /tt /ul /var <a <abbr <acronym <address <area <b <base <bdo <big <blockquote <body <br <button <caption <cite <code <col <colgroup <dd <del <dfn <div <dl <dt <em <fieldset <form <frame <frameset <h1 <h2 <h3 <h4 <h5 <h6 <head <hr <html <i <iframe <img <input <ins <kbd <label <legend <li <link <map <meta <noframes <noscript <object <ol <optgroup <option <p <param <pre <q <samp <script <select <small <span <strong <style <sub <sup <table <tbody <td <textarea <tfoot <th <thead <title <tr <tt <ul <var
+ ; Balises dépréciées
+0x00ff00ff=</applet> </basefont> </center> </dir> </font> </isindex> </menu> </s> </strike> </u> <applet> <basefont> <center> <dir> <font> <isindex> <menu> <s> <strike> <u>
+ ; Attributs
+0x00008080=abbr= accesskey= alt= axis= border= cellpadding= cellspacing= char= charoff= cite= class= cols= colspan= coords= datetime= dir= for= frame= frameborder= headers= href= hreflang= id= ismap= label= lang= longdesc= marginheight= marginwidth= name= noresize= onblur= onchange= onclick= ondblclick= onfocus= onkeydown= onkeypress= onkeyup= onload= onload= onmousedown= onmousemove= onmouseout= onmouseover= onmouseup= onreset= onselect= onsubmit= onunload= rows= rowspan= rules= scope= scrolling= shape= span= style= summary= tabindex= target= title= type= usemap= vspace=
+ ; Attributs dépréciés
+0x00ff00ff=align= alink= background= bgcolor= clear= color= compact= face= hspace= link= noshade= nowrap= size= start= text= valign= value= vlink=
+ ; Entités général
+0x00808080=&!
+ ; Entités
+0x00800080=&Aacute; &aacute; &Acirc; &acirc; &acute; &AElig; &aelig; &agrave; &Agrave; &amp; &aring; &Aring; &Atilde; &atilde; &auml; &Auml; &bdquo; &brvbar; &ccedil; &Ccedil; &cedil; &cent; &circ; &copy; &curren; &dagger; &Dagger; &deg; &divide; &eacute; &Eacute; &Ecirc; &ecirc; &Egrave; &egrave; &emsp; &ensp; &ETH; &eth; &euml; &Euml; &euro; &frac12; &frac14; &frac34; &gt; &Iacute; &iacute; &Icirc; &icirc; &iexcl; &igrave; &Igrave; &iquest; &iuml; &Iuml; &laquo; &ldquo; &lrm; &lsaquo; &lsquo; &lt; &macr; &mdash; &micro; &middot; &nbsp; &ndash; &not; &ntilde; &Ntilde; &oacute; &Oacute; &Ocirc; &ocirc; &oelig; &OElig; &Ograve; &ograve; &ordf; &ordm; &oslash; &Oslash; &Otilde; &otilde; &ouml; &Ouml; &para; &permil; &plusmn; &pound; &quot; &raquo; &rdquo; &reg; &rlm; &rsaquo; &rsquo; &sbquo; &scaron; &Scaron; &sect; &shy; &sup1; &sup2; &sup3; &szlig; &thinsp; &THORN; &thorn; &tilde; &times; &uacute; &Uacute; &Ucirc; &ucirc; &Ugrave; &ugrave; &uml; &Uuml; &uuml; &Yacute; &yacute; &yen; &yuml; &Yuml; &zwj; &zwnj;
+
+[php,php3,pl,cgi,jsp]
+ ; Commentaire
+0x00008800=//+ #+
+ ; Variable
+0x00408080=$!
+
+[css]
+ ; Séparateurs de sélecteurs
+0x01ff0000=# . > + * ( ) / [ ]
+ ; Séparateurs
+0x010000ff=; { } = , :
+ ; Sélecteurs d'attribut
+0x000066ff=a abbr acronym address area b base bdo big blockquote body br button caption cite code col colgroup dd del dfn div dl dt em fieldset form frame frameset h1 h2 h3 h4 h5 h6 head hr html i iframe img input ins kbd label legend li link map meta noframes noscript object ol optgroup option p param pre q samp script select small span strong style sub sup table tbody td textarea tfoot th thead title tr tt ul var
+ ; Propriétés
+0x00009900=azimuth background background-attachment background-color background-image background-position background-repeat border border-bottom border-bottom-color border-bottom-style border-bottom-width border-collapse border-color border-left border-left-color border-left-style border-left-width border-right border-right-color border-right-style border-right-width border-spacing border-style border-top border-top-color border-top-style border-top-width border-width bottom: caption-side clear clip color content counter-increment counter-reset cue cue-after cue-before cursor direction display elevation empty-cells float font font-family font-size font-style font-variant font-weight height left: letter-spacing line-height list-style list-style-image list-style-position list-style-type margin margin-bottom margin-left margin-right margin-top max-height max-width min-height min-width orphans outline outline-color outline-style outline-width overflow padding padding-bottom padding-left padding-right padding-top page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position quotes richness right: speak speak-header speak-numeral speak-punctuation speech-rate stress table-layout text-align text-decoration text-indent text-transform top: unicode-bidi vertical-align visibility voice-family volume white-space widows width word-spacing z-index
+ ; Sélecteurs et pseudo-classes
+0x00ff9900=#! .! (! :/! /! :active :after :before :first :first-child :first-letter :first-line :focus :hover :lang :left :link :right :visited @charset @font-face @import @media @page all aural braille embossed handheld print projection screen tty tv [!
+ ; Commentaires
+0x00a0a0a0=/*+ */+
+ ; Point décimal
+0x00ffffff=0.! 1.! 2.! 3.! 4.! 5.! 6.! 7.! 8.! 9.!
+ ; Chaînes de caractères
+0x00000000="& '&
+
+[hes,ini]
+ ; Séparateurs
+0x010000ff=; = [ ]
+ ; Section
+0x000066ff=[-
+ ; Commentaire
+0x00008000=;+
+
+[ahk]
+ ; Délimiteurs
+0x0133FFFF=( ) < > { } , % " = : + - * / ^ ! # ~ . ;
+ ; Commandes
+0x00FF00FF=AutoTrim BlockInput Break ClipWait Continue Control ControlClick ControlFocus ControlGet ControlGetFocus ControlGetPos ControlGetText ControlMove ControlSend ControlSendRaw ControlSetText CoordMode Critical DetectHiddenText DetectHiddenWindows Drive DriveGet DriveSpaceFree Edit Else EndRepeat EnvAdd EnvDiv EnvGet EnvMult EnvSet EnvSub EnvUpdate Exit ExitApp FileAppend FileCopy FileCopyDir FileCreateDir FileCreateShortcut FileDelete FileGetAttrib FileGetShortcut FileGetSize FileGetTime FileGetVersion FileInstall FileMove FileMoveDir FileRead FileReadLine FileRecycle FileRecycleEmpty FileRemoveDir FileSelectFile FileSelectFolder FileSetAttrib FileSetTime FormatTime GetKeyState Gosub Goto GroupActivate GroupAdd GroupClose GroupDeactivate Gui GuiControl GuiControlGet HideAutoItWin Hotkey If IfEqual IfExist IfGreater IfGreaterOrEqual IfInString IfLess IfLessOrEqual IfMsgBox IfNotEqual IfNotExist IfNotInString IfWinActive IfWinExist IfWinNotActive IfWinNotExist ImageSearch IniDelete IniRead IniWrite Input InputBox KeyHistory KeyWait ListHotkeys ListLines ListVars Loop Menu MouseClick MouseClickDrag MouseGetPos MouseMove MsgBox OnExit OutputDebug Pause PixelGetColor Pixelsearch PostMessage Process Progress Random RegDelete RegExMatch RegExReplace RegRead RegWrite Reload Repeat Return Run RunAs RunWait Send SendMessage SendMode SendRaw SendInput SetBatchLines SetCapsLockState SetControlDelay SetDefaultMouseSpeed SetEnv SetFormat SetKeyDelay SetMouseDelay SetNumLockState SetScrollLockState SetStoreCapslockMode SetTimer SetTitleMatchMode SetWinDelay SetWorkingDir Shutdown Sleep Sort SoundBeep SoundGet SoundGetWaveVolume SoundPlay SoundSet SoundSetWaveVolume SplashImage SplashTextOff SplashTextOn SplitPath StatusBarGetText StatusBarWait StringCaseSense StringGetPos StringLeft StringLen StringLower StringMid StringReplace StringRight StringSplit StringTrimLeft StringTrimRight StringUpper Suspend SysGet Thread ToolTip Transform TrayTip TV_Add TV_Modify TV_Delete TV_GetSelection TV_GetCount TV_GetParent TV_GetChild TV_GetPrev TV_GetNext TV_GetText TV_Get URLDownloadToFile WinActivate WinActivateBottom WinClose WinGet WinGetActiveStats WinGetActiveTitle WinGetClass WinGetPos WinGetText WinGetTitle WinHide WinKill WinMaximize WinMenuSelectItem WinMinimize WinMinimizeAll WinMinimizeAllUndo WinMove WinRestore WinSet WinSetTitle WinShow WinWait WinWaitActive WinWaitClose WinWaitNotActive
+ ; Variables
+0x000000FF=A_AhkVersion A_AutoTrim A_BatchLines A_CaretX A_CaretY A_ComputerName A_ControlDelay A_Cursor A_DD A_DDD A_DDDD A_DefaultMouseSpeed A_Desktop A_DesktopCommon A_DetectHiddenText A_DetectHiddenWindows A_EndChar A_EventInfo A_ExitReason A_FormatFloat A_FormatInteger A_Gui A_GuiControl A_GuiControlEvent A_GuiEvent A_GuiHeight A_GuiWidth A_GuiX A_GuiY A_Hour A_IconFile A_IconHidden A_IconNumber A_IconTip A_Index A_IPAddress1 A_IPAddress2 A_IPAddress3 A_IPAddress4 A_ISAdmin A_IsCompiled A_IsSuspended A_KeyDelay A_Language A_LineFile A_LineNumber A_LoopField A_LoopFileAttrib A_LoopFileDir A_LoopFileExt A_LoopFileFullPath A_LoopFileLongPath A_LoopFileName A_LoopFileShortName A_LoopFileShortPath A_LoopFileSize A_LoopFileSizeKB A_LoopFileSizeMB A_LoopFileTimeAccessed A_LoopFileTimeCreated A_LoopFileTimeModified A_LoopReadLine A_LoopRegKey A_LoopRegName A_LoopRegSubkey A_LoopRegTimeModified A_LoopRegType A_MDAY A_Min A_MM A_MMM A_MMMM A_Mon A_MouseDelay A_MSec A_MyDocuments A_Now A_NowUTC A_NumBatchLines A_OSType A_OSVersion A_PriorHotkey A_ProgramFiles A_Programs A_ProgramsCommon A_ScreenHeight A_ScreenWidth A_ScriptDir A_ScriptFullPath A_ScriptName A_Sec A_Space A_StartMenu A_StartMenuCommon A_Startup A_StartupCommon A_StringCaseSense A_Tab A_ThisHotkey A_ThisMenu A_ThisMenuItem A_ThisMenuItemPos A_TickCount A_TimeIdle A_TimeIdlePhysical A_TimeSincePriorHotkey A_TimeSinceThisHotkey A_TitleMatchMode A_TitleMatchModeSpeed A_UserName A_WDay A_WinDelay A_WinDir A_WorkingDir A_YDay A_YEAR A_YWeek A_YYYY Clipboard ClipboardAll ErrorLevel False REG_BINARY REG_DWORD REG_EXPAND_SZ REG_MULTI_SZ REG_SZ True
+ ; Touches
+0x000000FF=! # $ + ^ Alt AltDown AltUp AppsKey BackSpace Browser_Back Browser_Favorites Browser_Forward Browser_Home Browser_Refresh Browser_Search Browser_Stop BS CapsLock Control Ctrl CtrlBreak CtrlDown CtrlUp Del Delete Down End Enter Esc Escape F1 F1 F10 F10 F11 F11 F12 F12 F13 F14 F15 F16 F17 F18 F19 F2 F2 F20 F21 F22 F23 F24 F3 F3 F4 F4 F5 F5 F6 F6 F7 F7 F8 F8 F9 F9 Home Ins Insert Joy1 Joy10 Joy11 Joy12 Joy13 Joy14 Joy15 Joy16 Joy17 Joy18 Joy19 Joy2 Joy20 Joy21 Joy22 Joy23 Joy24 Joy25 Joy26 Joy27 Joy28 Joy29 Joy3 Joy30 Joy31 Joy32 Joy4 Joy5 Joy6 Joy7 Joy8 Joy9 JoyAxes JoyButtons JoyInfo JoyName JoyPOV JoyR JoyU JoyV JoyX JoyY JoyZ LAlt Launch_App1 Launch_App2 Launch_Mail Launch_Media LButton LControl LCtrl Left LShift LWin LWinDown MButton Media_Next Media_Play_Pause Media_Prev Media_Stop NumLock Numpad0 Numpad1 Numpad2 Numpad3 Numpad4 Numpad5 Numpad6 Numpad7 Numpad8 Numpad9 NumpadAdd NumpadClear NumpadDel NumpadDiv NumpadDot NumpadDown NumpadEnd NumpadEnter NumpadHome NumpadIns NumpadLeft NumpadMult NumpadPgdn NumpadPgup NumpadRight NumpadSub NumpadUp Pause PGDN PGUP PrintScreen RAlt RButton RControl RCtrl Right RShift RWin RWinDown ScrollLock Shift ShiftDown ShiftUp Space Tab Up Volume_Down Volume_Mute Volume_Up WheelDown WheelUp XButton1 XButton2 {AltDown} {AltUp} {Alt} {AppsKey} {BackSpace} {Browser_Back} {Browser_Favorites} {Browser_Forward} {Browser_Home} {Browser_Refresh} {Browser_Search} {Browser_Stop} {BS} {CapsLock} {Control} {CtrlBreak} {CtrlDown} {CtrlUp} {Ctrl} {Delete} {Del} {Down} {End} {Enter} {Escape} {Esc} {F10} {F11} {F12} {F13} {F14} {F15} {F16} {F17} {F18} {F19} {F1} {F20} {F21} {F22} {F23} {F24} {F2} {F3} {F4} {F5} {F6} {F7} {F8} {F9} {Home} {Insert} {Ins} {Joy10} {Joy11} {Joy12} {Joy13} {Joy14} {Joy15} {Joy16} {Joy17} {Joy18} {Joy19} {Joy1} {Joy20} {Joy21} {Joy22} {Joy23} {Joy24} {Joy25} {Joy26} {Joy27} {Joy28} {Joy29} {Joy2} {Joy30} {Joy31} {Joy32} {Joy3} {Joy4} {Joy5} {Joy6} {Joy7} {Joy8} {Joy9} {JoyAxes} {JoyButtons} {JoyInfo} {JoyName} {JoyPOV} {JoyR} {JoyU} {JoyV} {JoyX} {JoyY} {JoyZ} {LAlt} {Launch_App1} {Launch_App2} {Launch_Mail} {Launch_Media} {LButton} {LControl} {LCtrl} {Left} {LShift} {LWinDown} {LWin} {MButton} {Media_Next} {Media_Play_Pause} {Media_Prev} {Media_Stop} {NumLock} {Numpad0} {Numpad1} {Numpad2} {Numpad3} {Numpad4} {Numpad5} {Numpad6} {Numpad7} {Numpad8} {Numpad9} {NumpadAdd} {NumpadClear} {NumpadDel} {NumpadDiv} {NumpadDot} {NumpadDown} {NumpadEnd} {NumpadEnter} {NumpadHome} {NumpadIns} {NumpadLeft} {NumpadMult} {NumpadPgdn} {NumpadPgup} {NumpadRight} {NumpadSub} {NumpadUp} {Pause} {PGDN} {PGUP} {PrintScreen} {RAlt} {RButton} {RControl} {RCtrl} {Right} {RShift} {RWinDown} {RWin} {ScrollLock} {ShiftDown} {ShiftUp} {Shift} {Space} {Tab} {Up} {Volume_Down} {Volume_Mute} {Volume_Up} {WheelDown} {WheelUp} {XButton1} {XButton2} ~
+ ; Directives
+0x005555FF=#AllowSameLineComments #ClipboardTimeout #CommentFlag #ErrorStdOut #EscapeChar #HotkeyInterval #HotkeyModifierTimeout #Hotstring #IfWinActive #IfWinExist #Include #InstallKeybdHook #InstallMouseHook #KeyHistory #MaxHotkeysPerInterval #MaxMem #MaxThreads #MaxThreadsBuffer #MaxThreadsPerHotkey #NoEnv #NoTrayIcon #Persistent #SingleInstance #UseHook #WinActivateForce
+ ; Mots clés
+0x000000FF=A_DetectHiddenText A_DetectHiddenWindows A_EndChar A_EventInfo A_ExitReason A_FormatFloat A_FormatInteger A_Gui A_GuiControl A_GuiControlEvent A_GuiEvent A_GuiHeight A_GuiWidth A_GuiX A_GuiY A_Hour A_IconFile A_IconHidden A_IconNumber A_IconTip A_Index A_IPAddress1 A_IPAddress2 A_IPAddress3 A_IPAddress4 A_ISAdmin A_IsCompiled A_IsSuspended A_KeyDelay A_Language A_LineFile A_LineNumber A_LoopField A_LoopFileAttrib A_LoopFileDir A_LoopFileExt A_LoopFileFullPath A_LoopFileLongPath A_LoopFileName A_LoopFileShortName A_LoopFileShortPath A_LoopFileSize A_LoopFileSizeKB A_LoopFileSizeMB A_LoopFileTimeAccessed A_LoopFileTimeCreated A_LoopFileTimeModified A_LoopReadLine A_LoopRegKey A_LoopRegName A_LoopRegSubkey A_LoopRegTimeModified A_LoopRegType A_MDAY A_Min A_MM A_MMM A_MMMM A_Mon A_MouseDelay A_MSec A_MyDocuments A_Now A_NowUTC A_NumBatchLines A_OSType A_OSVersion A_PriorHotkey A_ProgramFiles A_Programs A_ProgramsCommon A_ScreenHeight A_ScreenWidth A_ScriptDir A_ScriptFullPath A_ScriptName A_Sec A_Space A_StartMenu A_StartMenuCommon A_Startup A_StartupCommon A_StringCaseSense A_Tab A_ThisHotkey A_ThisMenu A_ThisMenuItem A_ThisMenuItemPos A_TickCount A_TimeIdle A_TimeIdlePhysical A_TimeSincePriorHotkey A_TimeSinceThisHotkey A_TitleMatchMode A_TitleMatchModeSpeed A_UserName A_WDay A_WinDelay A_WinDir A_WorkingDir A_YDay A_YEAR A_YWeek A_YYYY Abort Abs ACos Add ahk_class ahk_group ahk_id ahk_pid Alnum Alpha AltSubmit AltTab AltTabAndMenu AltTabMenu AltTabMenuDismiss AlwaysOnTop Asc ASin ATan Background Between BitAnd BitNot BitOr BitShiftLeft BitShiftRight BitXOr Border Bottom Bottom Button Buttons ByRef Cancel Cancel Capacity Caption Ceil Center Center Check Check3 Checkbox Checked CheckedGray Choose ChooseString Chr Click Clipboard ClipboardAll Close Color ComboBox Contains ControlList Cos Count Date DateTime Days DDL Default Delete DeleteAll Delimiter Deref Destroy Digit Disable Disabled DropDownList Eject Enable Enabled Error ErrorLevel Exp ExStyle False FileSystem Flash Float Floor Focus Font global Group GroupBox Hidden Hide Hours HScroll Icon ID IDLast Ignore In Integer Interrupt Label Label LastFound Left Limit List ListBox ListView Ln local Lock Log Logoff Lower Lowercase MainWindow Maximize MaximizeBox Minimize MinimizeBox MinMax Minutes Mod MonthCal MOUSE Move Multi NA No NoActivate NoDefault NoHide NoIcon NoMainWindow NoStandard NoTab NoTimers Number Number Ok Owner Parse Password Password Pic Picture PIXEL Pos Pow Priority ProcessName Radio Read ReadOnly Redraw Region RELATIVE Rename Resize Restore Retry RGB Right Round SCREEN Seconds Section Section Serial SetLabel ShiftAltTab Show Sin Single Slider Sqrt Standard static Status StatusCD Style Submit SysMenu Tab TabStop Tan Text Text Theme Time Tip ToggleCheck ToggleEnable ToolWindow Top Top Topmost TransColor Transparent Tray True Type UnCheck Unicode Unlock UpDown Upper Uppercase UseErrorLevel Visible VScroll WaitClose WantCtrlA WantReturn WantTab Wrap Xdigit Yes {ALTDOWN} {ALTUP} {BLIND} {CTRLDOWN} {CTRLUP} {LWINDOWN} {RWINDOWN} {SHIFTDOWN} {SHIFTUP}
+ ; Commentaires
+0x00AAAAAA=//+ /*+ ;+
+ ; Chaînes de caractères
+0x000080FF="&
+ ; Opérateurs
+0x000000FF=:= += -= *= /= //= .= |= &= ^= >>= <<= ` = == != <> NOT AND && OR || ?: < <= > >=     ** & // << >> & |
+ ; Variable
+0x0015AAAA=%&
+
+[lang]
+ ; Séparateurs
+0x010066FF==
+ ; Commentaires
+0x00008000=;+
+
+[xreg]
+ ; Caractères spéciaux
+0x010066FF=; [ ] ( ) + - * / | \ ^ ! ? $ . , { } # :   < =
+ ; Quantificateurs
+0x00FF6600=. * ? + ! < = : { }
+ ; Commentaire
+0x00008000=# +
+ ; Séparateur
+0x0000FFFF=|

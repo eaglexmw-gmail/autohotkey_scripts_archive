@@ -1,0 +1,91 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <plugin>
+    <type>plugin</type>
+    <name>Website</name>
+    <enabled>Yes</enabled>
+    <description>Executes web searches and urls</description>
+    <author>joebodo</author>
+    <initialize>website_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Scan Manager</name>
+    <enabled>Yes</enabled>
+    <description>Scans the file system and invokes custom scanners</description>
+    <author>joebodo</author>
+    <initialize>scan_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Firefox</name>
+    <enabled>Yes</enabled>
+    <description>Imports Firefox bookmarks</description>
+    <author>joebodo</author>
+    <initialize>firefox_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Category</name>
+    <enabled>Yes</enabled>
+    <description>Creates the categories</description>
+    <author>joebodo</author>
+    <initialize>category_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Start Menu</name>
+    <enabled>Yes</enabled>
+    <description>Imports Start menu items and folders</description>
+    <author>joebodo</author>
+    <initialize>startmenu_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>RSS</name>
+    <enabled>No</enabled>
+    <description>Import RSS feeds</description>
+    <author>joebodo</author>
+    <initialize>rss_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Skins</name>
+    <description>Imports Skins</description>
+    <author>joebodo</author>
+    <initialize>skin_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Skype</name>
+    <enabled>Yes</enabled>
+    <description>Imports Skype contacts</description>
+    <author>joebodo</author>
+    <initialize>skype_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>System</name>
+    <enabled>Yes</enabled>
+    <description>System list handler</description>
+    <author>joebodo</author>
+    <initialize>system_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>IE Bookmarks</name>
+    <description>Imports Internet Explorer Favorites</description>
+    <initialize>IE_Initialize</initialize>
+    <enabled>Yes</enabled>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Control Panel Indexer</name>
+    <description>Indexes Control Panel Applets</description>
+    <initialize>controlPanel_Initialize</initialize>
+    <enabled>Yes</enabled>
+  </plugin>
+</Redstone>

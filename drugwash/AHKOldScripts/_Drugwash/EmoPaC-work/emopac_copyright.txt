@@ -1,0 +1,42 @@
+EmoPaC - Miranda IM Emoticon Pack Creator
+------------------------------------------------------
+by Drugwash, April 2008
+--------------------------------
+
+EmoPaC is a small program written in AutoHotkey language.
+It is designed to create emoticon packs for use in Miranda IM
+with Ricardo Pescuma Domenecci's Emoticons plug-in.
+
+The code written by myself is in the public domain.
+However, the program contains some code and a library
+created by other people, so their work will fall under their own licensing terms.
+
+
+Here you are the original copyright notice found in Control_AniGIF.ahk:
+
+-------------------------- AniGIF - animated GIF library ----------------------------
+AniGif by akyprian: http://www.winasm.net/forum/index.php?showtopic=279
+
+;|AniGIF is a copyright of Antonis Kyprianou.                             |
+;|                                                                        |
+;|You can use AniGIF for NON commercial purposes provided you             |
+;|have the following information on your application's about box:         |
+;|AniGIF control is copyright of Antonis Kyprianou (http://www.winasm.net)|
+;|                                                                        |
+;|You need my WRITTEN permission to use AniGIF in commercial applications |
+
+
+------ Control_AniGIF.ahk - AutoHotkey encapsulated control for AniGIF -----
+
+// by Philippe Lhoste <PhiLho(a)GMX.net> http://Phi.Lho.free.fr
+// File/Project history:
+ 1.03.000 -- 2007/05/17 (PL) -- Total encapsulation.
+ 1.02.000 -- 2007/05/16 (PL) -- Changed functions names (thanks majkinetor), added more wrappers, freed correctly DLL.
+ 1.01.000 -- 2007/05/16 (PL) -- Update to 1.0.4.0 with WAGM_SETBKCOLOR.
+ 1.00.000 -- 2007/05/16 (PL) -- Creation.
+*/
+/* Copyright notice: For details, see the following file:
+http://Phi.Lho.free.fr/softwares/PhiLhoSoft/PhiLhoSoftLicence.txt
+This program is distributed under the zlib/libpng license.
+Copyright (c) 2007 Philippe Lhoste / PhiLhoSoft
+*/

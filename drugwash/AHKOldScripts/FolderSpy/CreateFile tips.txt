@@ -1,0 +1,6 @@
+ If   you   are   attempting   to   create   a   file   on   a   floppy   drive   that   does   not   have   a   floppy   disk   or   a   CD-ROM   drive   that   does   not   have   a   CD,   the   system   displays   a   message   box   asking   the   user   to   insert   a   disk   or   a   CD,   respectively.   To   prevent   the   system   from   displaying   this   message   box,   call   the   SetErrorMode   function   with   SEM_FAILCRITICALERRORS
+
+An   application   cannot   create   a   directory   with   CreateFile;   it   must   call   CreateDirectory   or   CreateDirectoryEx   to   create   a   directory.   Opening   a   directory   with   CreateFile   requires   the   FILE_FLAG_BACKUP_SEMANTICS   flag.   
+    
+  When   using   CreateFile   to   open   a   directory   during   defragmentation   of   a   FAT   or   FAT32   volume,   do   not   specify   the   MAXIMUM_ALLOWED   access   right.   Access   to   the   directory   will   be   denied   if   this   is   done.   Specify   the   GENERIC_READ   access   right   instead.
+

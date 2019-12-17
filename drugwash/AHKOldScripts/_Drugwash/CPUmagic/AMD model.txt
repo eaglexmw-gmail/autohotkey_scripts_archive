@@ -1,0 +1,19 @@
+; model
+
+[architecture]
+
+[speed]
+
+[package]
+
+[voltage]
+
+[temperature]
+
+[L2 cache]
+
+[cache divisor]
+
+[bus]
+
+[modification]

@@ -1,0 +1,26 @@
+; Pentium II SECC
+; B 80523 333 512 E
+
+[package]
+B   Boxed version
+
+[family-core]
+80522   Klamath core (0.35 micron) 
+80523   Deschutes core (0.25 micron) 
+
+[speed]
+200   200 MHz 
+233   233 MHz 
+266   266 MHz 
+300   300 MHz 
+350   350 MHz 
+400   400 MHz 
+450   450 MHz 
+
+[L2 cache]
+256   256 KB 
+512   512 KB 
+
+[features]
+Blank    No ECC support 
+E   ECC is supported 

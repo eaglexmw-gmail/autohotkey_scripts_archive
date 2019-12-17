@@ -1,0 +1,18 @@
+This project includes files and folders that are only needed if you want to make
+program changes.  If you just want to run the QuickAHK program, the following
+files and folders can be deleted:
+
+    Name                    Description
+    ----                    -----------
+    _Functions              Folder.  Contains source for included functions.
+
+    _Icons                  Folder.  Contains compile-time icon(s).
+
+    _Resource               Folder.  Contains icons used by
+                            BuildQuickAHKDLL.ahk.
+
+    BuildQuickAHKDLL.ahk    Script to build QuickAHK.dll which contains toolbar
+                            icons.
+
+    QuickAHK.ahk            Main script.
+

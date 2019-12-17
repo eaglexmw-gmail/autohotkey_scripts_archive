@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Toolbar>
+    <type>toolbar</type>
+    <name>CTRLToolbar1</name>
+    <filter>Active Tasks</filter>
+  </Toolbar>
+  <Toolbar>
+    <type>toolbar</type>
+    <name>CTRLToolbar2</name>
+    <filter>History</filter>
+  </Toolbar>
+</Redstone>

@@ -1,0 +1,13 @@
+; model
+
+[package]
+
+[family-core]
+
+[bus]
+
+[speed]
+
+[L2 cache]
+
+[features]

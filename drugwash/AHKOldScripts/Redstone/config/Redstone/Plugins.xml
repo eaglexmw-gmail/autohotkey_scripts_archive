@@ -1,0 +1,416 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <plugin>
+    <type>plugin</type>
+    <name>Animation</name>
+    <enabled>Yes</enabled>
+    <description>Animated wait bitmap</description>
+    <author>joebodo</author>
+    <initialize>animation_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Entry Info</name>
+    <enabled>Yes</enabled>
+    <description>Shows information about selected entry</description>
+    <author>joebodo</author>
+    <initialize>info_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>TestXML</name>
+    <enabled>Yes</enabled>
+    <description>Test XML Functions</description>
+    <author>joebodo</author>
+    <initialize>testXML_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Button</name>
+    <enabled>Yes</enabled>
+    <description>Common button routines</description>
+    <author>joebodo</author>
+    <initialize>button_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Buttons</name>
+    <enabled>Yes</enabled>
+    <description>Bottom buttons</description>
+    <author>joebodo</author>
+    <initialize>buttons_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>ContextMenu</name>
+    <enabled>Yes</enabled>
+    <description>Context Menu</description>
+    <author>joebodo</author>
+    <initialize>contextMenu_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Editor</name>
+    <enabled>No</enabled>
+    <description>Command editor</description>
+    <author>joebodo</author>
+    <initialize>editor_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Editor2</name>
+    <enabled>Yes</enabled>
+    <description>Command editor</description>
+    <author>joebodo</author>
+    <initialize>editor2_Initialize</initialize>
+    <system>No</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>HelloWorld</name>
+    <description>Simple plugin example</description>
+    <author>joebodo</author>
+    <source>Autohotkey.exe plugins/HelloWorld/CR_HelloWorld.ahk</source>
+    <initialize>helloWorld_Initialize</initialize>
+    <enabled>No</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Hot Corners</name>
+    <description>Triggers an event when mouse is in a corner</description>
+    <author>joebodo</author>
+    <initialize>hotCorners_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Event Handler</name>
+    <description>Configurable Actions on Events</description>
+    <author>joebodo</author>
+    <initialize>eventHandler_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Help</name>
+    <description>Shows a help button</description>
+    <initialize>help_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Voice Recognition</name>
+    <description>Activate commands by speaking</description>
+    <initialize>speech_Initialize</initialize>
+    <enabled>No</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Google Desktop</name>
+    <description>Google Desktop search</description>
+    <author>joebodo</author>
+    <initialize>googledesktop_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Slash</name>
+    <enabled>Yes</enabled>
+    <description>Quick Search handler</description>
+    <author>joebodo</author>
+    <initialize>slash_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Start Menu</name>
+    <enabled>Yes</enabled>
+    <description>Start menu list handler</description>
+    <author>joebodo</author>
+    <initialize>startmenu_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Status Bar</name>
+    <enabled>Yes</enabled>
+    <description>Status bar</description>
+    <author>joebodo</author>
+    <initialize>statusbar_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Scan List</name>
+    <enabled>Yes</enabled>
+    <description>Manages the scan list</description>
+    <author>joebodo</author>
+    <initialize>scanlist_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Search List Handler</name>
+    <enabled>Yes</enabled>
+    <description>List handler for searches</description>
+    <author>joebodo</author>
+    <initialize>search_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Skins</name>
+    <enabled>Yes</enabled>
+    <description>Built in skins</description>
+    <author>joebodo</author>
+    <initialize>skin_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Process Listing</name>
+    <enabled>Yes</enabled>
+    <description>Displays running processes and CPU usage</description>
+    <author>joebodo</author>
+    <initialize>process_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Rainmeter</name>
+    <enabled>Yes</enabled>
+    <description>Keeps rainmeter in the same location on the screen</description>
+    <author>joebodo</author>
+    <xsource>Autohotkey.exe CR_Rainmeter.ahk</xsource>
+    <initialize>rainmeter_Initialize</initialize>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Website</name>
+    <enabled>Yes</enabled>
+    <description>Executes web searches and urls</description>
+    <author>joebodo</author>
+    <initialize>website_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>File Handler</name>
+    <enabled>Yes</enabled>
+    <description>Executes web searches and urls</description>
+    <author>joebodo</author>
+    <initialize>file_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Window List Handler</name>
+    <enabled>Yes</enabled>
+    <description>Window list handler</description>
+    <author>joebodo</author>
+    <initialize>tasklist_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Windows</name>
+    <enabled>Yes</enabled>
+    <description>Window functions</description>
+    <author>joebodo</author>
+    <initialize>windows_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Clipboard</name>
+    <enabled>No</enabled>
+    <description>Create an entry from clipboard</description>
+    <author>joebodo</author>
+    <initialize>clipboard_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Volume</name>
+    <enabled>Yes</enabled>
+    <description>Volume slider</description>
+    <author>joebodo</author>
+    <initialize>volume_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Plugin Type Handler</name>
+    <enabled>Yes</enabled>
+    <description>Plugin Type Handler</description>
+    <author>joebodo</author>
+    <initialize>pluginType_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>X10</name>
+    <description>Support for X10 remote</description>
+    <initialize>x10_initialize</initialize>
+    <enabled>No</enabled>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Toolbar32</name>
+    <enabled>No</enabled>
+    <description>Toolbar control</description>
+    <initialize>toolbar32_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Toolbars</name>
+    <enabled>No</enabled>
+    <description>Top toolbars</description>
+    <author>joebodo</author>
+    <initialize>toolbar_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Tooltips</name>
+    <enabled>Yes</enabled>
+    <description>Tooltips</description>
+    <author>joebodo</author>
+    <initialize>tooltip_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>UI</name>
+    <enabled>Yes</enabled>
+    <description>UI handler</description>
+    <author>joebodo</author>
+    <initialize>ui_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>File List Handler</name>
+    <enabled>Yes</enabled>
+    <description>Browse the file system</description>
+    <author>joebodo</author>
+    <initialize>filelist_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Filter</name>
+    <enabled>Yes</enabled>
+    <description>Filter handler</description>
+    <author>joebodo</author>
+    <initialize>filter_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>FilterHistory</name>
+    <enabled>Yes</enabled>
+    <description>Filter History List Manager</description>
+    <author>joebodo</author>
+    <initialize>filterHistory_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Header</name>
+    <enabled>Yes</enabled>
+    <description>Header text</description>
+    <author>joebodo</author>
+    <initialize>header_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>History List Handler</name>
+    <enabled>Yes</enabled>
+    <description>History list handler</description>
+    <author>joebodo</author>
+    <initialize>history_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Hotkeys</name>
+    <enabled>Yes</enabled>
+    <description>Hotkey handler</description>
+    <author>joebodo</author>
+    <initialize>hotkeys_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Lister</name>
+    <enabled>Yes</enabled>
+    <description>Filter and list functions</description>
+    <author>joebodo</author>
+    <initialize>lister_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>ListView</name>
+    <enabled>Yes</enabled>
+    <description>Main listview handler</description>
+    <author>joebodo</author>
+    <initialize>listView_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Menu</name>
+    <enabled>Yes</enabled>
+    <description>Context menus</description>
+    <author>joebodo</author>
+    <initialize>menu_Initialize</initialize>
+    <system>Yes</system>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Indexer</name>
+    <description>Automatic Background Indexing</description>
+    <author>joebodo</author>
+    <source>Autohotkey.exe RS_Scanner.ahk</source>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>Alt-Tab</name>
+    <description>Alt-Tab Functionality</description>
+    <author>joebodo</author>
+    <initialize>alttab_Initialize</initialize>
+    <enabled>Yes</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+  <plugin>
+    <type>plugin</type>
+    <name>File Utilities</name>
+    <description>NON-WORKING : Displays the explorer context menu for files and folders</description>
+    <author>joebodo</author>
+    <initialize>fileutil_Initialize</initialize>
+    <enabled>No</enabled>
+    <listName>Plugins</listName>
+  </plugin>
+</Redstone>

@@ -1,0 +1,19 @@
+<Redstone>
+  <Field>
+    <name>type</name>
+    <value>command</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>name</name>
+    <prompt>Name</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+    <name>command</name>
+    <prompt>Command</prompt>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+</Redstone>

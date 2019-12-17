@@ -1,0 +1,52 @@
+; Mobile Sempron
+; SM S 2800 B O X 3 LA
+
+[architecture]
+SM="Mobile Sempron"
+
+[power]
+S   25 Watt 
+D   35 Watt 
+N   62 Watt 
+
+[speed]
+2600   2600 MHz (rated) 1600 MHz (actual, 128 KB L2 cache, socket 754) 
+2800   2800 MHz (rated) 1600 MHz (actual, 256 KB L2 cache, socket 754) 
+3000   3000 MHz (rated) 1800 MHz (actual, 128 KB L2 cache, socket 754) 
+3100   3100 MHz (rated) 1800 MHz (actual, 256 KB L2 cache, socket 754) 
+3200   3200 MHz (rated) 1600 MHz (actual, 512 KB L2 cache, socket S1) 
+3300   3300 MHz (rated) 2000 MHz (actual, 128 KB L2 cache, socket 754) 
+3400   3400 MHz (rated) 2000 MHz (actual, 256 KB L2 cache, socket 754) 1800 MHz (actual, 256 KB L2 cache, socket S1) 
+3500   3500 MHz (rated) 1800 MHz (actual, 512 KB L2 cache, socket S1) 
+3600   3600 MHz (rated) 2200 MHz (actual, 128 KB L2 cache, socket 754) 2000 MHz (actual, 256 KB L2 cache, socket S1) 
+3800   3800 MHz (rated) 2200 MHz (actual, 256 KB L2 cache, socket S1) 
+4000   4000 MHz (rated) 2200 MHz (actual, 512 KB L2 cache, socket S1) 
+
+[package]
+B   754-pin lidless OmPGA (socket 754) 
+H   638-pin lidless micro-PGA (Socket S1) 
+
+[voltage]
+A   Variable 
+I   1.4V 
+K   1.35V? 
+O   1.25V 
+Q   1.2V 
+
+[temperature]
+X   95°C
+
+[L2 cache]
+2   128 KB 
+3   256 KB 
+4   512 KB 
+
+[revision]
+AY    Standard power, revision CG 
+BA   Stepping D0, 0.09 micron, socket 754 
+BX   Stepping E6, 0.09 micron, socket 754 
+CM   Stepping F2, 0.09 micron, socket S1 
+DN   Stepping G2, 0.065 micron, socket S1 
+LA   Low-power mobile, revision CG 
+LB   Low-power mobile, revision D0 
+LF   Low-power mobile 

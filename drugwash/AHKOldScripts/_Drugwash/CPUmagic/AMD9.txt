@@ -1,0 +1,29 @@
+; Mobile Duron
+; DHM 0800 A L S 1 B
+
+[architecture]
+DM   Duron mobile processor 
+DHG   Low-power Duron processor 
+DHM   High performance processor for mobile systems 
+
+[speed]
+
+[package]
+A   453-pin ceramic PGA (socket A/socket 462)
+
+[voltage]
+H   1.55V 
+K   1.65V 
+L   1.5V 
+Q   1.45V 
+V   1.4V 
+
+[temperature]
+Q   100°C 
+S   95°C 
+
+[L2 cache]
+1   64 KB
+
+[bus]
+B    200 MHz (effective), 100 MHz (actual)

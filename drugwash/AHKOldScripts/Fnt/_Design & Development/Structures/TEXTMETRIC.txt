@@ -1,0 +1,30 @@
+TEXTMETRIC structure (Windows)
+
+Syntax
+C++
+                                            Type            Size    OffSet  Comment
+                                            ----            ----    -----   -------
+typedef struct tagTEXTMETRIC {
+  LONG  tmHeight;                           Long (Int)      4       0
+  LONG  tmAscent;                           Long (Int)      4       4
+  LONG  tmDescent;                          Long (Int)      4       8
+  LONG  tmInternalLeading;                  Long (Int)      4       12
+  LONG  tmExternalLeading;                  Long (Int)      4       16
+  LONG  tmAveCharWidth;                     Long (Int)      4       20
+  LONG  tmMaxCharWidth;                     Long (Int)      4       24
+  LONG  tmWeight;                           Long (Int)      4       28
+  LONG  tmOverhang;                         Long (Int)      4       32
+  LONG  tmDigitizedAspectX;                 Long (Int)      4       36
+  LONG  tmDigitizedAspectY;                 Long (Int)      4       40
+  TCHAR tmFirstChar;                        UChar or UShort 1|2     44
+  TCHAR tmLastChar;                         UChar or UShort 1|2     45|46
+  TCHAR tmDefaultChar;                      UChar or UShort 1|2     46|48
+  TCHAR tmBreakChar;                        UChar or UShort 1|2     47|50
+  BYTE  tmItalic;                           UChar           1       48|52
+  BYTE  tmUnderlined;                       UChar           1       49|53
+  BYTE  tmStruckOut;                        UChar           1       50|54
+  BYTE  tmPitchAndFamily;                   UChar           1       51|55
+  BYTE  tmCharSet;                          UChar           1       52|56
+} TEXTMETRIC, *PTEXTMETRIC;
+                                                            ----
+                                                            53|57

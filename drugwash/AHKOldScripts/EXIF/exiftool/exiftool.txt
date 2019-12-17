@@ -1,0 +1,101 @@
+ExifTool Version Number         : 8.19
+File Name                       : Agfa ePhoto 1280.jpg
+Directory                       : E:/AHK/EXIF v2.00/Sample-Photos
+File Size                       : 114 kB
+File Modification Date/Time     : 2010:06:07 17:07:08+05:30
+File Permissions                : rw-rw-rw-
+File Type                       : JPEG
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.02
+Exif Byte Order                 : Little-endian (Intel, II)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : Adobe Photoshop CS3 Windows
+Modify Date                     : 2010:06:07 17:07:04
+Y Cb Cr Positioning             : Centered
+Exif Version                    : 0220
+Sub Sec Time                    : 562
+Color Space                     : sRGB
+Exif Image Width                : 640
+Exif Image Height               : 480
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 412
+Thumbnail Length                : 7932
+Current IPTC Digest             : e8f15cf32fc118a1a27b67adc564d5ba
+Application Record Version      : 0
+IPTC Digest                     : e8f15cf32fc118a1a27b67adc564d5ba
+Displayed Units X               : inches
+Displayed Units Y               : inches
+Global Angle                    : 30
+Global Altitude                 : 30
+Copyright Flag                  : False
+Photoshop Thumbnail             : (Binary data 7932 bytes, use -b option to extract)
+Photoshop Quality               : 7
+Photoshop Format                : Standard
+Progressive Scans               : 3 Scans
+XMP Toolkit                     : Adobe XMP Core 4.1-c036 46.276720, Mon Feb 19 2007 22:40:08
+Native Digest                   : 256,257,258,259,262,274,277,284,530,531,282,283,296,301,318,319,529,532,306,270,271,272,305,315,33432;928229DBC92299945487F8005BCA1216
+Creator Tool                    : Adobe Photoshop CS3 Windows
+Create Date                     : 2010:06:06 09:37:43+05:30
+Metadata Date                   : 2010:06:07 17:07:04+05:30
+Format                          : image/jpeg
+Color Mode                      : 3
+ICC Profile Name                : sRGB IEC61966-2.1
+History                         : 
+Instance ID                     : uuid:A99028FA2872DF119B09E7A26543B9B3
+Profile CMM Type                : Lino
+Profile Version                 : 2.1.0
+Profile Class                   : Display Device Profile
+Color Space Data                : RGB
+Profile Connection Space        : XYZ
+Profile Date Time               : 1998:02:09 06:49:00
+Profile File Signature          : acsp
+Primary Platform                : Microsoft Corporation
+CMM Flags                       : Not Embedded, Independent
+Device Manufacturer             : IEC
+Device Model                    : sRGB
+Device Attributes               : Reflective, Glossy, Positive, Color
+Rendering Intent                : Perceptual
+Connection Space Illuminant     : 0.9642 1 0.82491
+Profile Creator                 : HP
+Profile ID                      : 0
+Profile Copyright               : Copyright (c) 1998 Hewlett-Packard Company
+Profile Description             : sRGB IEC61966-2.1
+Media White Point               : 0.95045 1 1.08905
+Media Black Point               : 0 0 0
+Red Matrix Column               : 0.43607 0.22249 0.01392
+Green Matrix Column             : 0.38515 0.71687 0.09708
+Blue Matrix Column              : 0.14307 0.06061 0.7141
+Device Mfg Desc                 : IEC http://www.iec.ch
+Device Model Desc               : IEC 61966-2.1 Default RGB colour space - sRGB
+Viewing Cond Desc               : Reference Viewing Condition in IEC61966-2.1
+Viewing Cond Illuminant         : 19.6445 20.3718 16.8089
+Viewing Cond Surround           : 3.92889 4.07439 3.36179
+Viewing Cond Illuminant Type    : D50
+Luminance                       : 76.03647 80 87.12462
+Measurement Observer            : CIE 1931
+Measurement Backing             : 0 0 0
+Measurement Geometry            : Unknown (0)
+Measurement Flare               : 0.999%
+Measurement Illuminant          : D65
+Technology                      : Cathode Ray Tube Display
+Red Tone Reproduction Curve     : (Binary data 2060 bytes, use -b option to extract)
+Green Tone Reproduction Curve   : (Binary data 2060 bytes, use -b option to extract)
+Blue Tone Reproduction Curve    : (Binary data 2060 bytes, use -b option to extract)
+DCT Encode Version              : 100
+APP14 Flags 0                   : (none)
+APP14 Flags 1                   : (none)
+Color Transform                 : YCbCr
+Image Width                     : 640
+Image Height                    : 480
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:4:4 (1 1)
+Image Size                      : 640x480
+Modify Date                     : 2010:06:07 17:07:04.562
+Thumbnail Image                 : (Binary data 7932 bytes, use -b option to extract)

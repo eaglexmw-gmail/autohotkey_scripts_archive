@@ -1,0 +1,37 @@
+; Modern Intel boxed
+; BX 80532 C 2000 B
+
+[package]
+BX="Boxed processor"
+
+[family-core]
+80532P   Desktop Pentium (Northwood core, 0.13 micron) 
+80532R   Celeron (Northwood core, 0.13 micron) 
+80546P   Desktop Pentium 4 (Prescott core, 0.09 micron, micro FC-PGA package, socket 478) 
+80546R   Celeron D (Prescott core, 0.09 micron, micro FC-PGA package, socket 478) 
+80547P   Desktop Pentium 4 (Prescott core, 0.09 micron, FC-LGA package, socket 775) 
+80547R   Celeron D (Prescott core, 0.09 micron, FC-LGA package, socket 775) 
+80551P   Pentium D (Smithfield core, 0.09 micron) 
+
+[bus]
+C   400 MHz (effective), 100 MHz (actual) 
+E   533 MHz (effective), 133 MHz (actual) 
+G   800 MHz (effective), 200 MHz (actual) 
+H   1066 MHz (effective), 266 MHz (actual) 
+
+[speed]
+
+[features]
+128    128 KB L2 cache 
+B   0.13 micron, 128 KB L2 cache 
+C   0.09 micron, 256 KB L2 cache 
+CN   0.09 micron, 256 KB L2 cache, EM64T technology 
+D   0.13 micron, 512 KB L2 cache 
+E   0.09 micron, 1 MB L2 cache 
+EJ   0.09 micron, 1 MB L2 cache, Execute disable bit feature 
+EK   0.09 micron, 1 MB L2 cache, EM64T technology, includes ATX thermal module 
+EKT   0.09 micron, 1 MB L2 cache, EM64T technology, includes BTX thermal module 
+F   0.09 micron: 2 MB L2 cache, EM64T technology, includes ATX thermal module. 0.13 micron: 512 KB L2 cache, 2 MB level 3 cache 
+FN   0.09 micron: 2 MB L2 cache, EM64T technology, includes ATX thermal module 
+FS   0.13 micron, 2 MB L2 cache, LGA775 package 
+FT   0.09 micron, 2 MB L2 cache, EM64T technology, includes BTX thermal module 

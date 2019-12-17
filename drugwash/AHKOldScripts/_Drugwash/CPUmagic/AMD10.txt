@@ -1,0 +1,35 @@
+; Sempron K7
+; SD A 2500 D U T 3 D
+
+[architecture]
+A   Sempron model 8 (Thoroughbred) or model 10 (Barton) 
+C   Sempron model 10 (Thorton) 
+
+[speed]
+2200   2200 MHz (rated), 1500 MHz (actual) 
+2300   2300 MHz (rated), 1583 MHz (actual) 
+2400   2400 MHz (rated), 1667 MHz (actual) 
+2500   2500 MHz (rated), 1750 MHz (actual) 
+2600   2600 MHz (rated), 1833 MHz (actual) 
+2800   2800 MHz (rated), 2000 MHz (actual) 
+3000   3000 MHz (rated), 2000 MHz (actual, 512 KB L2 cache) 
+3300   3300 MHz (rated), 2200 MHz (actual, 512 KB L2 cache) 
+
+[package]
+D   453-pin organic PGA (socket A/socket 462)
+
+[voltage]
+K   1.65V 
+U   1.6V 
+
+[temperature]
+T   90°C 
+V   85°C 
+
+[L2 cache]
+3   256 KB 
+4   512 KB 
+
+[bus]
+D    333 MHz (effective), 166 MHz (actual) 
+E   400 MHz (effective), 200 MHz (actual) 

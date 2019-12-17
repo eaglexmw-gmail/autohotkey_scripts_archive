@@ -1,0 +1,61 @@
+; Sempron K8
+; SD A 3000 D I O 2 BP
+
+[power]
+A   Desktop processor 
+C   Low power (9 Watt) 
+D   Low power (35 Watt) 
+H   Low power (45 Watt) 
+
+[speed]
+1100   Model number LE-1100, 1900 MHz 
+1150   Model number LE-1150, 2000 MHz 
+1200   Model number LE-1200, 2100 MHz 
+1250   Model number LE-1250, 2200 MHz 
+1300   Model number LE-1300, 2300 MHz 
+2100   2100 MHz (rated) 1000 MHz (actual, 256 KB L2 cache, socket S1) 
+2500   2500 MHz (rated) 1400 MHz (actual, 256 KB L2 cache, socket 754) 
+2600   2600 MHz (rated) 1600 MHz (actual, 128 KB L2 cache, socket 754) 
+2800   2800 MHz (rated) 1600 MHz (actual, 256 KB L2 cache, socket 754) 1600 MHz (actual, 128 KB L2 cache, socket AM2) 
+3000   3000 MHz (rated) 1800 MHz (actual, 128 KB L2 cache, socket 754) 1800 MHz (actual, 128 KB L2 cache, socket 939) 1600MHz (actual, 256 KB L2 cache, socket AM2) 
+3100   3100 MHz (rated) 1800 MHz (actual, 256 KB L2 cache, socket 754) 
+3200   3200 MHz (rated) 1800 MHz (actual, 256 KB L2 cache, socket 939) 1800 MHz (actual, 128 KB L2 cache, socket AM2) 
+3300   3300 MHz (rated) 2000 MHz (actual, 128 KB L2 cache) 
+3400   3400 MHz (rated) 2000 MHz (actual, 256 KB L2 cache, socket 754) 2000 MHz (actual, 128 KB L2 cache, socket 939) 1800 MHz (actual, 256 KB L2 cache, socket AM2) 
+3500   3500 MHz (rated) 2000 MHz (actual, 256 KB L2 cache, socket 939) 2000 MHz (actual, 128 KB L2 cache, socket AM2) 
+3600   3600 MHz (rated) 2000 MHz (actual, 256 KB L2 cache, socket AM2) 
+3800   3800 MHz (rated) 2200 MHz (actual, 256 KB L2 cache, socket AM2) 
+
+[package]
+A   754-pin lidded OmPGA (socket 754) 
+D   939-pin lidded OmPGA (socket 939) 
+I   940-pin organic microPGA (socket AM2) 
+
+[voltage]
+A   Variable 
+I   1.4V 
+
+[temperature]
+A   Variable 
+O   69°C 
+P   70°C 
+
+[L2 cache]
+2   128 KB 
+3   256 KB 
+4   512 KB 
+
+[revision]
+AX    CPUID C (CG), single processor, 0.13 micron 
+BA   Stepping D0, 0.09 micron, socket 754 
+BI   Stepping D0, socket 939 
+BO   Stepping E3, 0.09 micron, socket 754 
+BP   Stepping E3, 0.09 micron, socket 939 
+BW   Stepping E6, 0.09 micron, socket 939 
+BX   Stepping E6, 0.09 micron, socket 754 
+CM   Stepping F2, 0.09 micron, socket S1 
+CN   Stepping F2, 0.09 micron, socket AM2 
+CV   Stepping D0, 0.09 micron, socket 754 
+CW   Stepping F2, 0.09 micron, socket AM2 
+DE   Stepping G1, 0.065 micron, socket AM2 
+DP   Stepping G2, 0.065 micron, socket AM2 

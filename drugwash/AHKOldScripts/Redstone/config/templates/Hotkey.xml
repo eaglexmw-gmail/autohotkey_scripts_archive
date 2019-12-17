@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Field>
+    <name>type</name>
+    <value>hotkey</value>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>name</name>
+	<required>Yes</required>
+	<type>String</type>
+  </Field>
+  <Field>
+    <name>hotkey</name>
+	<required>Yes</required>
+	<type>HotKey</type>
+  </Field>
+  <Field>
+    <name>command</name>
+	<type>PassedNode</type>
+	<display>No</display>
+  </Field>
+  <Field>
+    <name>onlyWhenActive</name>
+	<type>DropDown</type>
+	<DropDownList>
+		<Entry>Active</Entry>
+		<Entry>Inactive</Entry>
+		<Entry>Both</Entry>
+	</DropDownList>
+  </Field>
+</Redstone>

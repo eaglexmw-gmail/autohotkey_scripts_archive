@@ -1,0 +1,339 @@
+;###########################
+;# MENUS ###################
+;###########################
+	; File (18) acdefklmnopqrsvwxz
+FA=&File
+FB=&New tab`tCtrl+N
+FC=&Open a file...`tCtrl+O
+FD=Op&en a saved session...`tAlt+Ctrl+O
+FE=&Close`tCtrl+F4
+FF=C&lose all tabs`tCtrl+Shift+F4
+FG=&Save`tCtrl+S
+FH=Sa&ve as...`tCtrl+F12
+FI=Save &all tabs`tCtrl+Shift+S
+FJ=Save the cu&rrent session...`tAlt+Ctrl+S
+FM=&Print`tCtrl+P
+FN=&Quit`tAlt+F4
+FO=Convert into &Mac's line format (CR)`tCapsLock+M
+FP=Convert into Uni&x's line format (LF)`tCapsLock+X
+FQ=Convert into &Windows' line format (CR+LF)`tCapsLock+W
+FR=Reload the current &file`tAlt+Ctrl+W
+FS=Show the list of opened files`tAlt+Ctrl+&Z
+	; Edit (15) abcdefglnoprtuv
+EA=&Edit
+EB=&Undo`tCtrl+Z
+EC=&Redo`tCtrl+Y
+ED=&Cut`tCtrl+X
+EE=C&opy`tCtrl+C
+EF=&Paste`tCtrl+V
+EG=&Delete`tDel
+EH=&Go to...`tCtrl+G
+EI=&Find...`tCtrl+F
+EJ=Rep&lace...`tCtrl+H
+EK=Find pre&vious`tF2
+EL=Find &next`tF3
+EM=Subs&titute`tF4
+EN=Select &all`tCtrl+A
+EO=Add to clip&board`tCtrl+Ins
+EP=Cl&ear the clipboard`tCtrl+Shift+Ins
+EQ=Find the other member of the pair`tCtrl+J
+	; View (18) 2abdcefgilmnoprsty
+AA=&View
+AB=&Colors...`tCtrl+E
+AC=Lan&guage...`tCtrl+L
+AD=Selection &margin...`tCtrl+M
+AE=F&ont...`tCtrl+D
+AF=&Tabulation...`tCtrl+T
+AG=&2nd colors set
+AH=Path and &filename
+AI=&Syntax highlighting
+AJ=&Auto indentation
+AK=Multi-ta&bs
+AL=Numbering &lines
+AM=&Increase font size`tCtrl++
+AN=&Decrease font size`tCtrl+-
+AO=Back to &normal font size`tCtrl+0
+AP=Status ba&r
+AQ=Lin&e length...`tCtrl+W
+AR=Decrease trans&parency`tAlt+Win+Down
+AS=Increase transparenc&y`tAlt+Win+Up
+AT=Maximize/restore`tWin+Up
+AU=Minimize/restore`tWin+Down
+AV=Maximize to the left side`tWin+Left
+AW=Maximize to the right side`tWin+Right
+	; Insert (22) 123456acdefghilnopstux
+JA=&Insert
+JB=HTML &class attribute`tIns+C
+JC=HTML &id attribute`tIns+I
+JD=HTML &lang attribute`tIns+L
+JE=HTML &name attribute`tIns+N
+JF=HTML &style attribute`tIns+S
+JG=HTML &title attribute`tIns+T
+JH=S&pecial character...`tIns+P
+JI=Conditional comment`tIns+&E
+JJ=CSS comment`tIns+&F
+JK=HTML comment`tIns+&G
+JL=Doctype HTML 4.01 Strict`tIns+&1
+JM=Doctype HTML 4.01 Transitional`tIns+&2
+JN=Doctype HTML 4.01 Frameset`tIns+&3
+JO=Doctype XHTML 1.0 Strict`tIns+&4
+JP=Doctype XHTML 1.0 Transitional`tIns+&5
+JQ=Doctype XHTML 1.0 Frameset`tIns+&6
+JR=&Unix newline`tIns+Enter
+JS=Predefined HTML 4.01 templ&ate`tIns+F4
+JT=Predefined &XHTML 1.0 template`tIns+F1
+JU=&Date`tIns+D
+JV=&Hour`tIns+H
+JW=C&omment/uncomment the block`tIns+;
+	; Tools (22) 48abcdfhiklmnoprstuwxz
+TA=&Tools
+TB=&Increase indent`tTab
+TC=&Decrease indent`tShift+Tab
+TD=Transform into &lowercase`tCtrl+Shift+B
+TE=Transform into &uppercase`tCtrl+Shift+H
+TF=Capitali&ze each word`tCtrl+Shift+I
+TG=Move block do&wn`tCtrl+Shift+Down
+TH=Move block u&p`tCtrl+Shift+Up
+TI=Duplicate the selectio&n`tCtrl+Shift+L
+TJ=Auto&matic replacements...`tCtrl+Shift+R
+TK=Replace leading &spaces with tabs`tCtrl+Shift+A
+TL=Replace leading &tabs with spaces`tCtrl+Shift+E
+TM=Delete tr&ailing whites spaces`tCtrl+Shift+F
+TN=Delete blanks lines`tCtrl+Shi&ft+K
+TO=Delete &HTML tags`tCtrl+Shift+M
+TT=Return entity and false UTF-&8 to ANSI`tAlt+Ctrl+U
+TU=S&ort...`tCtrl+Shift+T
+TV=Ta&ke a color...`tCtrl+Shift+P
+TW=Format/Rewrite the &CSS code...`tAlt+Ctrl+Y
+TX=Show the calenda&r`tCtrl+Shift+C
+TY=Compact the HTML/&XHTML code`tAlt+Ctrl+C
+TZ=Convert XHTML 1.0 to HTML &4.01`tAlt+Ctrl+X
+  ; HTML (26) 123456abcdefghiklnopqrstuw
+HA=&HTML
+HB=h&1`tCapsLock+1
+HC=h&2`tCapsLock+2
+HD=h&3`tCapsLock+3
+HE=h&4`tCapsLock+4
+HF=h&5`tCapsLock+5
+HG=h&6`tCapsLock+6
+HH=&p`tCapsLock+P
+HI=b&r`tCapsLock+Enter
+HJ=&hr`tCapsLock+Space
+HK=&ol`tCapsLock+O
+HL=&ul`tCapsLock+U
+HM=bloc&kquote`tCapsLock+K
+HN=&cite`tCapsLock+C
+HO=&q`tCapsLock+Q
+HP=&b`tCapsLock+B
+HQ=&i`tCapsLock+I
+HR=&strong`tCapsLock+S
+HS=&em`tCapsLock+E
+HT=&del`tCapsLock+Del
+HU=i&ns`tCapsLock+Ins
+HV=sup`tCaps&Lock+Up
+HW=sub`tCapsLock+Do&wn
+HX=&table...`tCapsLock+T
+HY=&a`tCapsLock+A
+HZ=im&g`tCapsLock+G
+H0=&form...`tCapslock+F
+  ; Markers (5) acmnp
+KA=&Markers
+KB=Place a &marker`tAlt+Ctrl+M
+KC=Jump to the &next marker`tAlt+Ctrl+J
+KD=Jump to the &previous marker`tAlt+Ctrl+Maj+J
+KE=Delete the &current marker`tAlt+Maj+M
+KF=Delete &all markers...`tAlt+Ctrl+Maj+M
+  ; Extensions
+PA=&Plugins
+	; ? (5) acdrs
+VA=&?
+VB=&Documentation file`tF1
+VC=&RegEx Guide`tF11
+VD=A&SCII/ANSI Character Map`tF12
+VE=&Check if there is an update
+VF=&About...
+;###########################
+;# STATUS BAR ##############
+;###########################
+SA=Line`: 
+SB=/
+SC=       Column`: 
+SD=Selection`: 
+SE=ANSI character number: 
+SF=Number of opened files: 
+;###########################
+;# WINDOWS #################
+;###########################
+	; Open...
+WA=Open
+WB=All files (*.*)
+WC=Open a session
+	; Save...
+WD=Save
+WE=Save as...
+WF=Save the session
+; Go to...
+WH=Go to
+WI=&Line`:
+WJ=&Column`:
+	; Find... acnpsx
+WK=Search
+WL=&Search`:
+WM=&Case sensitive
+WN=Regular e&xpression
+WO=In all &tabs
+WP=&Previous
+WQ=&Next
+	; Replace... abr
+WR=Replace
+WS=Replace &by:
+WT=&Replace
+WU=Replace &all
+	; Colors...
+WV=Colors
+WW=1st colors set
+WX=2nd colors set
+WY=Normal text:
+WZ=Normal text's background:
+YA=Selected text:
+YB=Active selection's background:
+YC=Inactive selection's background:
+YD=Line numbers:
+YE=Selection bar's background:
+YF=ASCII 1-31 character's background:
+YG=* Numbers:
+YH=* This color becomes effective only when syntax highlight comes in use.
+	; Language...
+YI=&English
+YJ=&Français
+YK=Language
+	; Selection margin
+YL=Selection margin
+YM=Margin's width:
+	; Tabulation
+YN=Tabulation
+YO=Tabulation's width:
+	; Convert to HTML table...
+YP=Size
+YQ=Number of &columns:
+YR=Number of &lines:
+YS=&Accessibility
+YT=Colu&mn's headers:
+YU=Li&ne's headers:
+YV=Unique &identifier:
+YW=Convert to HTML table
+	; Sort
+YX=Sort
+YY=Type
+YZ=&Alphabetical
+ZA=&Numerical
+ZB=Order
+ZC=As&cending
+ZD=&Desceding
+ZE=&Use as delimiter:
+ZF=Remove duplicate&s
+ZG=About...
+	; Line length...
+ZH=How many characters:
+ZI=Line length
+	; Format CSS...
+ZJ=Format CSS code
+ZK=Do you allow that the code be rewritten to be shorter?`n(For example, margin: 0 auto rather than margin: 0px auto 0px auto.)
+ZL=Do you want that the code be arranged in a compact manner?`n(For example, by removing all unnecessary spaces and newlines.)
+	; Automatic replacements...
+ZM=Show the options column
+ZN=Options|Abbreviation|Replacement text
+ZO=&Add
+ZP=&Modifiy
+ZQ=&Delete
+ZR=&Cancel
+ZS=Automatic replacements
+ZT=&Abbreviation`:
+ZU=&Replacement text`:
+ZV=Options
+ZW=Trigger the hotstring &instantly
+ZX=Allow a &letter or a digit before the abbreviation
+ZY=&Add replacement text without deleting the abbreviation
+ZZ=Respect &case sensitivity
+Z0=&Never change the case of the replacement text
+Z1=Delete the &ending character used as trigger
+Z2=Send the replacement text as is, &without any translating
+Z3=Limit automatic replacements to &Vic window
+Z4=Add a replacement
+Z5=Modify a replacement
+Z6=Standard|Options
+	; ASCII/ANSI Characters Map
+Z7=Windows-1252 Characters Map
+	; Compact HTML
+Z8=Compact HTML/XHTML
+Z9=Do you want to compact HTML/XHTML in all tabs?
+	; Convert into HTML
+B0=Convert in HTML 4.01
+B1=Do you want to convert XHTML 1.0 in HTML 4.01 in all tabs?
+  ; Form (14) bcdefkhlnprstx
+G0=----------------------------------------
+G1=Form control
+GA=&Form
+GB=Fieldset a&nd Legend
+GC=&Label
+GD=&Text
+GE=&Radio button
+GF=Chec&kbox
+GG=&Drop down list
+GH=Te&xtarea
+GI=&Button
+GJ=R&eset button
+GK=&Submit button
+GL=&Password
+GM=&Hidden
+GN=&Choose a file
+;###########################
+;# MESSAGES ################
+;###########################
+KN=Delete all markers.
+KO=Would you extend the deletion to all tabs?
+KP=Impossible task
+KQ=Save your file before.
+KR=Update
+KS=Vic
+KT=is now available.`nDo you want to download it now?
+KU=You have the latest version of Vic.
+MA=Error
+MB=This file is read-only and can not be changed.`nDo you want to save it under another name?
+MC=This character has no counterpart with which form a pair.
+MD=Sélect a file
+ME=Web Images (*.bmp; *.gif; *.ico; *.jpeg; *.jpg; *.png)
+MF=The connection to the server could not be established.`nTry again later.
+MG=Unable to open the file asked for.
+MH=Quit
+MI=The file's content has been changed. Save modifications?
+MJ=Some contents may have changed. Save modifications?
+MK=Results:
+ML=replacement(s).
+MM=The change will take effect at next Vic's launch.
+MN=Please, select some text before.
+MO=Sorry, unable to create
+MP=Your session has been saved.
+MQ=Langue
+MR=Le changement prendra effet au prochain démarrage de Vic.
+MS=Specify a number of columns and a number of lines.
+MT=Convert into ANSI
+MU=Extend false UTF-8 to ANSI transformation in all tabs?
+MV=Convert line format
+MW=Extend line format convertion to all tabs?
+MX=A field is empty. Any add has been made.
+MY=The selected line(s) will be deleted. Is that what you want?
+MZ=The changes will take effect at next Vic's launch.`nDo you want to reload Vic now?
+M0=`n`n`nOne moment, please`n`n`n`n
+M1=Processing...
+M2=Vic 1.5.1`n© 2011, Normand Lamoureux`nLicense Creative Commons BY-NC-SA`n`nHiEdit 4.0.0.4`n© 2005-2009, Antonis Kaprianou`nLicense (*) <http://www.winasm.net>`n`nAttach v. 1.0 and Wrapper 4.0.0.4-3`n© 2009, Majkinetor`nLicense BSD <http://creativecommons.org/licenses/BSD/>`n`nDlg Module v. 5.02`n© 2009, Majkinetor`nLicense GNU GPL v. 2 <http://creativecommons.org/licenses/GPL/2.0/>   `n`n------------`n(*) Sale or commercial use without written permission prohibited.
+;###########################
+;# OTHERS ##################
+;###########################
+CA=-MaximizeBox -MinimizeBox
+
+;;;;;;;;;;;;;;;
+; FK= FL=
+; KK= KL= KM=
+; TP= TQ= TR= TS=
+; WG=

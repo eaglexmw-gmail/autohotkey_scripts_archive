@@ -1,0 +1,30 @@
+; Pentium / MMX
+; FV 80502 - 133  SY022
+
+[package]
+A   Ceramic Staggered Pin Grid Array 
+BP   Boxed version of the processor, can be ceramic or plastic PGA 
+FV   Plastic Staggered Pin Grid Array 
+TT   TCP package 
+
+[family-core]
+80501   Pentium 
+80502   Pentium 
+80503   Pentium MMX 
+
+[speed]
+60   60 MHz 
+66   66 MHz 
+75   75 MHz 
+90   90 MHz 
+100   100 MHz 
+120   120 MHz 
+133   133 MHz 
+150   150 MHz 
+166   166 MHz 
+200   200 MHz 
+233   233 MHz 
+
+[specification]
+Qxxxx   Pre-production version or engineering sample 
+Sxxxx   Production version 

@@ -1,0 +1,22 @@
+; Celeron boxed
+; BX 80523 R 333 128
+
+[package]
+BX   Boxed processor
+
+[family-core]
+80523   Covington core (0.25 micron) 
+80524   Mendocino core (0.25 micron) 
+80526   Coppermine core (0.18 micron) 
+
+[features]
+F   FC_PGA or FC_PGA2 
+P   Plastic PGA package 
+R   SEPP package 
+
+[speed]
+
+[L2 cache]
+000    The processor doesn't have L2 cache 
+128   128 KB 
+

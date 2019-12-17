@@ -1,0 +1,13 @@
+This project includes files and folders that were added to support the example
+scripts.  They include the following:
+
+
+    Name                Description
+    ----                -----------
+    _Example Files      Folder.  Contains text files that are used by some of 
+                        the example scripts.
+
+    _Functions          Folder.  This folder contains contains functions that
+                        are used by the example scripts.   ##### Note:  This
+                        folder is not used at this time but may be included in
+                        the future.

@@ -1,0 +1,37 @@
+; Mobile Athlon 4
+; A 0900 A V S 3 B
+
+[architecture]
+AHM   Mobile Athlon 4 (Model 6/Palomino) 
+
+[speed]
+0850   850 MHz 
+0900   900 MHz 
+0950   950 MHz 
+1000   1000 MHz 
+1100   1100 MHz 
+1200   1200 MHz 
+1500   1500 MHz (rated), 1300 MHz (actual) 
+1600   1600 MHz (rated), 1400 MHz (actual) 
+
+[package]
+A   453-pin ceramic PGA (socket A/socket 462) 
+
+[voltage]
+H   1.55V 
+J   1.35V 
+L   1.5V 
+Q   1.45V 
+V   1.4V 
+U   1.6V 
+
+[temperature]
+Q   100°C 
+S   95°C 
+T   90°C 
+
+[L2 cache]
+3   256 KB 
+
+[bus]
+B    200 MHz (effective), 100 MHz (actual) 

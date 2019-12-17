@@ -1,0 +1,77 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Redstone>
+  <Command>
+    <type>command</type>
+    <name>Fullscreen</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>FullScreen</option>
+    </Args>
+    <icon>plugins\miro\res\wmploc.dll_1210.ico</icon>
+    <User>Yes</User>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Play</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Play</option>
+    </Args>
+    <icon>plugins\miro\res\play.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Pause</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Pause</option>
+    </Args>
+    <icon>plugins\miro\res\pause.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Rewind</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Rewind</option>
+    </Args>
+    <icon>plugins\miro\res\playprevious.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Skip Back</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Back</option>
+    </Args>
+    <icon>plugins\miro\res\fastrew.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Skip Forward</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Forward</option>
+    </Args>
+    <icon>plugins\miro\res\fastforward.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Stop</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Stop</option>
+    </Args>
+    <icon>plugins\miro\res\stop.ico</icon>
+  </Command>
+  <Command>
+    <type>command</type>
+    <name>Next Video</name>
+    <command>Miro Command</command>
+    <Args>
+    	<option>Next</option>
+    </Args>
+    <icon>plugins\miro\res\next.ico</icon>
+  </Command>
+</Redstone>

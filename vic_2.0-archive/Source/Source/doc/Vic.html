@@ -1,0 +1,1212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Documentation - Vic</title>
+<meta http-equiv="content-style-type" content="text/css">
+<style type="text/css" media="screen">@import url(css/normal.css);</style>
+<body lang=fr>
+<div id=page>
+<p id=langue><a href="Vic_En.html">English</a>
+
+<h1><img id=logo src="img/Vic.ico" width=32 height=32 alt="Logo."> Vic</h1>
+<p id=copy>© Normand Lamoureux, 2010-2011.
+<dl>
+	<dt>Système :
+	<dd>Windows 2000/XP/Vista/7
+	<dt>Langue :
+	<dd>Français, <i lang=en>English</i>
+	<dt>Licence :
+	<dd><i lang=en>Creative Commons</i> <abbr title="Paternité">BY</abbr>-<abbr title="Usage non commercial">NC</abbr>-<abbr title="Partage à l'identique">SA</abbr>
+	<dt>Version :
+	<dd>1.5.1
+	<dt>Poids :
+	<dd>206 ko (.ZIP)
+	<dt>À jour le :
+	<dd>16 juillet 2011
+</dl>
+<p><a id="telecharger" href="http://normandlamoureux.com/vic/Vic_Installer.exe">Télécharger    <small>(657 ko)</small></a>
+
+<div id=sommaire>
+<p>Sommaire :
+<ol>
+	<li><a href="#apercu">Aperçu</a>.
+	<li><a href="#licence">Licence</a>.
+	<li><a href="#fonctionnalites">Fonctionnalités</a>.
+	<li><a href="#touches-intelligentes">Les touches intelligentes de Vic</a>.
+	<li><a href="#annexe-1">Annexe 1 : table ANSI</a>.
+	<li><a href="#annexe-2">Annexe 2 : raccourcis clavier</a>.
+	<li><a href="#annexe-3">Annexe 3 : remplacements automatiques</a>.
+	<li><a href="#annexe-4">Annexe 4 : limitations connues</a>.
+</ol>
+</div>
+
+<h2 id=apercu>Aperçu</h2>
+<p><dfn>Vic</dfn> est un éditeur de texte léger, personnalisable, multi-onglets et ultra rapide, qui consomme très peu de mémoire. Il peut gérer la coloration syntaxique de n'importe quel langage, il est capable d'éditer de très gros fichiers et peut afficher les caractères non imprimables en un format lisible.
+<p>Les fonctions Rechercher et Remplacer supportent les requêtes multi-lignes et celles qui sont basées sur une expression rationnelle de type PCRE (<i lang=en>Pearl Compatible Regular Expression</i>). Chaque requête peut se faire dans le sens avant ou arrière, se limiter à la sélection ou à l'onglet courant, ou s'étendre à tous les onglets.
+<p>Avec Vic, il suffit de taper un mot et d'appuyer sur <kbd>Tab</kbd> pour générer une paire de balises, et d'un clic pour obtenir le squelette complet d'un fichier HTML ou transformer une sélection en une liste, en une suite de paragraphes ou en un tableau HTML parfaitement balisé et indenté.
+<p>Trier des données est un jeu d'enfant : on sélectionne les données à traiter, on fait les choix voulus et le tour est joué. On peut classer aussi bien du texte que des nombres, le faire selon l'ordre croissant ou décroissant, utiliser le séparateur que l'on veut, et même demander l'élimination des doublons.
+<p>Vic peut reconnaître et baliser automatiquement une adresse électronique, indenter vos lignes de texte et générer vos puces ou la numérotation de vos paragraphes lorsque vous prenez des notes, etc. Parcourez la suite du présent fichier pour plus de détails.
+
+<h2 id=licence>Licence</h2>
+<p>Vic est un logiciel libre distribué sous licence <i lang=en>Creative Commons</i> Attribution-Non commerciale-Partage à l'identique. Sa vente ou son usage commercial sont interdits.
+<p>En gros, vous pouvez éxécuter, copier, modifier et redistribuer Vic, pourvu que les redistributions indiquent que je suis l'auteur du code source initial, et qu'elles transmettent les mêmes libertés.
+<p>Je n'offre aucune garantie d'aucune sorte et je me dégage de toute responsabilité directe ou indirecte qui pourrait être liée à l'usage de Vic.
+<p>Pour plus de détails, consultez les <a style="color:blue;background:transparent" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr">explications sommaires sur la licence</a>. Pour tous les détails, lisez le <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/ca/legalcode.fr">texte intégral de la licence</a> sur le site de <i lang=en>Creative Commons</i>.
+<p>L'éditeur HiEdit et le module Dlg utilisés par Vic sont soumis à leurs licences d'utilisation propres. Pour accéder à la licence d'utilisation originale de HiEdit, éditez le fichier <tt>HiEdit.inc</tt> situé dans le dossier <tt>hie</tt>. Pour accéder à la licence d'utilisation originale du module Dlg, éditez le fichier <tt>Dlg.ahk</tt> situé dans le dossier <tt>inc</tt>.
+
+<h2 id=fonctionnalites>Fonctionnalités</h2>
+<p>Cette section est la plus longue. Elle fait le tour des menus suivants et offre une explication pour chacun des items : <a href="#fichier">Fichier</a>, <a href="#edition">Edition</a>, <a href="#affichage">Affichage</a>, <a href="#insertion">Insertion</a>, <a href="#outils">Outils</a>, <a href="#html">HTML</a>, <a href="#marqueurs">Signets</a>, <a href="#extensions">Extensions</a>, <a href="#aide">Aide</a>.
+
+<h3 id=fichier>Fichier</h3>
+<p class=menu>
+<a href="#f1">Nouvel onglet</a> | 
+<a href="#f2">Ouvrir un fichier…</a> | 
+<a href="#f3">Ouvrir une session…</a> | 
+<a href="#f4">Fermer l'onglet</a> | 
+<a href="#f5">Fermer tous les onglets</a> | 
+<a href="#f6">Enregistrer</a> | 
+<a href="#f7">Enregistrer sous…</a> | 
+<a href="#f8">Enregistrer tous les onglets</a> | 
+<a href="#f9">Enregistrer la session en cours…</a> | 
+<a href="#fa">Imprimer</a> | 
+<a href="#fd">Convertir les fins de lignes au format Mac (CR)</a> | 
+<a href="#fe">Convertir les fins de lignes au format Unix (LF)</a> | 
+<a href="#ff">Convertir les fins de lignes au format Windows (CR+LF)</a> | 
+<a href="#fg">Recharger le fichier courant</a> | 
+<a href="#fh">Afficher la liste des fichiers ouverts</a> | 
+<a href="#fi">Quitter</a>
+
+<h4 id=f1>Nouvel onglet (<kbd>Ctrl</kbd>+<kbd>N</kbd>)</h4>
+<p>Ouvre un nouvel onglet et le met au premier plan. Le nouvel onglet est vide et porte un nom temporaire précédé d'un astérisque (<tt>*</tt>).
+
+<h4 id=f2>Ouvrir un fichier… (<kbd>Ctrl</kbd>+<kbd>O</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Ouvrir</i>, depuis laquelle il est possible de naviguer dans l'arborescence de l'ordinateur, puis de sélectionner et d'ouvrir un fichier.
+<p>Lorsque plusieurs fichiers sont sélectionnés, la commande a pour effet de les ouvrir dans des onglets distincts. Si on tente d'ouvrir un fichier déjà ouvert, la commande se limite à mettre le focus sur le bon onglet.
+<p>Les autres actions habituellement possibles depuis la boîte de dialogue <i>Ouvrir</i> sont autorisées. Par exemple, créer un nouveau dossier, renommer ou supprimer un fichier ou un dossier, etc.
+<p>L'historique des 6 derniers fichiers ouverts est automatiquement mis à jour. Cet historique apparaît au bas du menu Fichier.
+
+<h4 id=f3>Ouvrir une session… (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>O</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Ouvrir une session</i>. Si le fichier choisi contient une liste de fichiers, chacun d'eux sera ouvert dans un onglet distinct. Dans le cas contraire, la commande aura simplement pour effet d'ouvrir le fichier dans un nouvel onglet.
+<p>Si la liste de fichiers à ouvrir contient plusieurs occurrences du même fichier, ce dernier ne sera ouvert qu'une seule fois.
+<p>L'historique des derniers fichiers ouverts n'est pas mis à jour lorsqu'on ouvre une session.
+
+<h4 id=f4>Fermer l'onglet (<kbd>Ctrl</kbd>+<kbd>F4</kbd>)</h4>
+<p>Ferme l'onglet courant et met le focus sur le suivant, s'il existe. Une confirmation de fermeture sera demandée si le contenu de l'onglet a changé depuis sa dernière sauvegarde.
+
+<h4 id=f5>Fermer tous les onglets (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>F4</kbd>)</h4>
+<p>Ferme les fichiers un à un. Si le contenu d'un fichier a changé depuis sa dernière sauvegarde, un avertissement est lancé.
+
+<h4 id=f6>Enregistrer (<kbd>Ctrl</kbd>+<kbd>S</kbd>)</h4>
+<p>Enregistre le fichier courant. Si le fichier existe, le nouveau contenu remplace l'ancien. Sinon, la boîte de dialogue <i>Enregistrer sous</i> s'affiche.
+
+<h4 id=f7>Enregistrer sous… (<kbd>Ctrl</kbd>+<kbd>F12</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Enregistrer sous</i>, depuis laquelle il est possible de créer un nouveau fichier avec le contenu du fichier courant.
+<p>Si le fichier qu'on tente de créer existe déjà, une confirmation sera demandée avant de l'écraser.
+
+<h4 id=f8>Enregistrer tous les onglets (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>S</kbd>)</h4>
+<p>Enregistre chacun des fichiers ouverts. La boîte de dialogue <i>Enregistrer sous</i> apparaît lorsqu'un fichier n'a pas de nom.
+
+<h4 id=f9>Enregistrer la session en cours… (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>S</kbd>)</h4>
+<p>Permet de créer un fichier contenant la liste des fichiers ouverts. Ce fichier pourra ensuite servir à ouvrir tous les mêmes fichiers d'un coup, via la commande <a href="#f3">Ouvrir une session</a>.
+<p>Un message de confirmation est retourné lorsque l'enregistrement de la session est réussi.
+<p>Vic n'impose pas d'extension spécifique permettant de reconnaître un fichier de session.
+
+<h4 id=fa>Imprimer (<kbd>Ctrl</kbd>+<kbd>P</kbd>)</h4>
+<p>???
+
+<h4 id=fd>Convertir les fins de lignes au format Mac (<kbd>Verr.Maj</kbd>+<kbd>M</kbd>)</h4>
+<p>Remplace les fins de lignes de type Unix (<tt>LF</tt>) et les fins de lignes de type Windows (<tt>CR</tt>+<tt>LF</tt>) par des fins de lignes de type Mac (<tt>CR</tt>).
+<p>La commande s'étend à tout l'onglet. Lorsqu'il y a plusieurs onglets d'ouverts, une boîte de dialogue offre d'étendre le changement à tous.
+
+<h4 id=fe>Convertir les fins de lignes au format Unix (<kbd>Verr.Maj</kbd>+<kbd>X</kbd>)</h4>
+<p>Remplace les fins de lignes de type Mac (<tt>CR</tt>) et les fins de lignes de type Windows (<tt>CR</tt>+<tt>LF</tt>) par des fins de lignes de type Unix (<tt>LF</tt>).
+<p>La commande s'étend à tout l'onglet. Lorsqu'il y a plusieurs onglets d'ouverts, une boîte de dialogue offre d'étendre le changement à tous.
+<p>Pour insérer une nouvelle ligne de type Unix, positionnez le curseur à l'endroit voulu et faites <kbd>Ins</kbd>+<kbd>Entrée</kbd>.
+
+<h4 id=ff>Convertir les fins de lignes au format Windows (<kbd>Verr.Maj</kbd>+<kbd>W</kbd>)</h4>
+<p>Remplace les fins de lignes de type Mac (<tt>CR</tt>) et les fins de lignes de type Unix (<tt>LF</tt>) par des fins de lignes de type Windows (<tt>CR</tt>+<tt>LF</tt>).
+<p>La commande s'étend à tout l'onglet. Lorsqu'il y a plusieurs onglets d'ouverts, une boîte de dialogue offre d'étendre le changement à tous.
+
+<h4 id=fg>Recharger le fichier courant (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>W</kbd>)</h4>
+<p>Recharge en mémoire le fichier courant.
+
+<h4 id=fh>Afficher la liste des fichiers ouverts (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Z</kbd>)</h4>
+<p>Affiche la liste des fichiers ouverts dans le coin supérieur gauche de l'écran. Ce qui peut faciliter le repérage du fichier recherché lorsqu'on a plusieurs onglets ouverts.
+
+<h4 id=fi>Quitter (<kbd>Alt</kbd>+<kbd>F4</kbd>)</h4>
+<p>Ferme la fenêtre de Vic et tous les onglets qu'elle contient.
+<p>Le processus de fermeture est interrompu et un message d'avertissement est envoyé lorsque le contenu de l'onglet courant a changé ou s'il y a plus d'un onglet ouvert.
+
+<h3 id=edition>Edition</h3>
+<p class=menu>
+<a href="#e1">Annuler</a> | 
+<a href="#e2">Rétablir</a> | 
+<a href="#ee">Ajouter au presse-papiers</a> | 
+<a href="#ef">Vider le presse-papiers</a> | 
+<a href="#e3">Couper</a> | 
+<a href="#e4">Copier</a> | 
+<a href="#e5">Coller</a> | 
+<a href="#e6">Supprimer</a> | 
+<a href="#eg">Trouver l'autre membre de la paire</a> | 
+<a href="#e7">Atteindre…</a> | 
+<a href="#e8">Rechercher…</a> | 
+<a href="#e9">Remplacer…</a> | 
+<a href="#ea">Rechercher l'occurrence précédente</a> | 
+<a href="#eb">Rechercher l'occurrence suivante</a> | 
+<a href="#ec">Substituer par le texte de remplacement</a> | 
+<a href="#ed">Sélectionner tout</a>
+
+<h4 id=e1>Annuler (<kbd>Ctrl</kbd>+<kbd>Z</kbd>)</h4>
+<p>Remet le contenu dans l'état dans lequel il se trouvait avant la dernière action. Cette commande peut être répétée indéfiniement, mais reste sans effet lorsqu'il n'y a rien à annuler.
+
+<h4 id=e2>Rétablir (<kbd>Ctrl</kbd>+<kbd>Y</kbd>)</h4>
+<p>Remet le contenu dans l'état dans lequel il se trouvait avant la dernière annulation. Cette commande peut être répétée indéfiniement, mais reste sans effet lorsqu'il n'y a rien à rétablir.
+
+<h4 id=ee>Ajouter au presse-papiers (<kbd>Ctrl</kbd>+<kbd>Ins</kbd>)</h4>
+<p>Met une copie de la sélection à la suite de ce qui se trouvait déjà dans le presse-papiers. La commande reste sans effet lorsque rien n'est sélectionné.
+
+<h4 id=ef>Vider le presse-papiers (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Ins</kbd>)</h4>
+<p>Supprime le contenu du presse-papiers. La commande reste sans effet si le presse-papiers est déja vide.
+
+<h4 id=e3>Couper (<kbd>Ctrl</kbd>+<kbd>X</kbd>)</h4>
+<p>Vide le presse-papiers, met une copie de la sélection dans le presse-papiers, puis supprime la sélection. La commande reste sans effet lorsque rien n'est sélectionné.
+
+<h4 id=e4>Copier (<kbd>Ctrl</kbd>+<kbd>C</kbd>)</h4>
+<p>Vide le presse-papiers, puis met une copie de la sélection dans le presse-papiers. Lorsque rien n'est sélectionné, la commande met le chemin du fichier courant dans le presse-papiers.
+
+<h4 id=e5>Coller (<kbd>Ctrl</kbd>+<kbd>V</kbd>)</h4>
+<p>Prend une copie de ce qu'il y a dans le presse-papiers, et l'insère depuis la position du curseur. La commande reste sans effet lorsque le presse-papiers est vide.
+
+<h4 id=e6>Supprimer (<kbd>Suppr</kbd>)</h4>
+<p>Supprime le texte sélectionné. En passant par le menu, la commande reste sans effet lorsque rien n'est sélectionné. Au clavier, la commande supprime la sélection ou le caractère courant.
+
+<h4 id=eg>Trouver l'autre membre de la paire (<kbd>Ctrl</kbd>+<kbd>J</kbd>)</h4>
+<p>Lorsque le curseur est à gauche d'un caractère susceptible de former une paire, la commande a pour effet de sélectionner le caractère opposé correspondant, s'il existe.
+<p>Par exemple, si au départ le curseur est à gauche de l'avant-dernière parenthèse de l'expression <tt>(((2+3)*(8-4)<tt class="c">)</tt>/5)</tt>, la commande aura pour effet de sélectionner la deuxième parenthèse <tt>(<tt class="c">(</tt>(2+3)*(8-4))/5)</tt>, et vice versa.
+<p>Si un caractère correspondant n'existe pas, une boîte de dialogue en averti. Ce qui est le cas par exemple avec <tt><tt class="c">{</tt>{{[Foo]}}</tt>, où la première accolade n'a pas de correspondant avec lequel former une paire.
+<p>La commande reste sans effet lorsque le curseur est à gauche d'un caractère autre que l'un des suivants : <tt>(){}[]</tt>.
+
+<h4 id=e7>Atteindre… (<kbd>Ctrl</kbd>+<kbd>G</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Atteindre</i>, depuis laquelle on peut positionner le curseur à un endroit précis dans le texte. Au moment de s'afficher, la boîte de dialogue indique les numéros de ligne et de colonne courantes sur le nombre de lignes et de colonnes au total.
+<p>Dès qu'on inscrit un numéro de ligne, le nombre total de colonnes s'ajuste en conséquence.
+<p>Une frappe sur <kbd>Échappement</kbd> congédie la boîte de dialogue sans autre effet. Une frappe sur <kbd>Entrée</kbd> active le bouton Atteindre.
+<p>À l'ouverture d'un nouvel onglet, le curseur est à la ligne 1, colonne 1. La commande reste sans effet lorsqu'on spécifie un numéro de ligne ou de colonne égal à zéro (<tt>0</tt>), ou un numéro de ligne inexistant.
+<p>Si on spécifie un numéro de colonne supérieur au nombre de colonnes de la ligne ciblée, le compte se poursuit sur la ligne suivante. Notez que deux colonnes sont consommées pour franchir un changement de ligne standard, puisque ce dernier se compose d'un caractère de retour de chariot (<tt>CR</tt>) suivi d'un caractère de nouvelle ligne (<tt>LF</tt>).
+
+<h4 id=e8>Rechercher… (<kbd>Ctrl</kbd>+<kbd>F</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Rechercher</i>, depuis laquelle on peut faire une recherche standard, une recherche multi-lignes ou une recherche basée sur une expression rationnelle.
+<p>Une frappe sur la touche <kbd>Tab</kbd> déplace le curseur au prochain contrôle. Pour insérer un caractère de tabulation dans le champ d'édition, faites <kbd>Ctrl</kbd>+<kbd>Tab</kbd>. Une frappe sur la touche <kbd>Entrée</kbd> active le bouton <i>Suivant</i>. Pour faire un changement de ligne dans le champ d'édition, faites <kbd>Ctrl</kbd>+<kbd>Entrée</kbd>. Pour sélectionner tout le contenu dans champ d'édition, faites <kbd>Ctrl</kbd>+<kbd>A</kbd>.
+<p>Vic supporte les expressions rationnelles de type PCRE, qui vaut pour « <i lang=en>Pearl Compatible Regular Expression</i> ». On peut trouver un bon tutoriel sur le sujet à l'adresse suivante : <a href="http://www.regular-expressions.info/tutorial.html">www.regular-expressions.info/tutorial.html</a>.
+<p>On ne peut pas cocher <i>Respecter la casse</i> et <i>Expression rationnelle</i> en même temps. Si l'une des deux options est cochée, il faut la décocher avant de pouvoir cocher l'autre.
+<p>Par défaut, les recherches standards et multi-lignes sont insensibles à la casse. Pour spécifier le contraire, cochez <i>Respecter la casse</i>. Par défaut, une recherche basée sur une expression rationnelle est sensible à la casse. Pour spécifier le contraire, mettez l'option <code>i)</code> au début de votre expression rationnelle.
+<p>L'option <i>Dans tous les onglets</i> permet d'étendre la recherche à tous les fichiers ouverts. On peut l'utiliser pour n'importe quel type de recherche.
+<p>Lorsque la recherche se fait dans le sens de la lecture et qu'aucune occurrence n'est trouvée dans l'onglet courant, la recherche se poursuit à l'onglet suivant, qui est alors parcouru depuis le début. On ne peut plus rechercher d'occurrence suivante lorsque la fin du dernier onglet est atteinte.
+<p>Lorsque la recherche se fait dans le sens contraire de la lecture et qu'aucune occurrence n'est trouvée dans l'onglet courant, la recherche se poursuit à l'onglet précédent, qui est alors parcouru depuis la fin. On ne peut plus rechercher d'occurrence précédente lorsque le début du premier onglet est atteint.
+<p>La boîte de dialogue reste à l'avant-plan une fois la recherche faite. Il s'agit d'un comportement standard qui vise à faciliter la répétition d'une même recherche, mais qui a l'inconvénient d'obstruer la vue lorsque l'occurrence trouvée se trouve juste en dessous de la boîte de dialogue. Pour éviter ce désagrément, on peut refermer la boîte de dialogue avec <kbd>Échappement</kbd> et utiliser les touches <kbd>F2</kbd> et <kbd>F3</kbd> en lieu et place des boutons <i>Précédent</i> et <i>Suivant</i>.
+<p>Lorsqu'on appelle la boîte de dialogue à nouveau, on la retrouve dans le même état que celui dans lequel on l'a laissée lors de sa dernière utilisation.
+<p>La recherche se fait toujours à partir de la position du curseur. Aucun message d'avertissement n'est envoyé lorsque la recherche est infructueuse. L'absence de déplacement du curseur devrait suffire à s'en rendre compte.
+
+<h4 id=e9>Remplacer… (<kbd>Ctrl</kbd>+<kbd>H</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Remplacer</i>. Les boutons <i>Précédent</i> et <i>Suivant</i> sélectionnent l'occurrence trouvée s'il y en a une, mais ne la remplacent pas. Pour faire le remplacement, utilisez le bouton <i>Remplacer</i>.
+<p>Une fois la boîte de dialogue <i>Remplacer</i> refermée, on peut utiliser les touches <kbd>F2</kbd> et <kbd>F3</kbd> pour rechercher les occurrences précédentes et suivantes, et la touche <kbd>F4</kbd> pour remplacer le texte sélectionné par le texte de remplacement.
+<p>Lorsqu'on utilise le bouton <i>Remplacer tout</i>, la boîte de dialogue se referme et un message annonce le nombre de remplacements effectués. Aucun message n'apparaît lorsqu'aucun remplacement n'a eu lieu.
+<p>Si du texte est sélectionné, les remplacements se font à l'intérieur des limites de la sélection seulement. Si rien n'est sélectionné, les remplacements s'étendent à la grandeur de l'onglet courant. Si l'option <i>Dans tous les onglets</i> est cochée, les remplacements se font dans tous les onglets en partant du premier.
+<p>Pour les autres détails, lire la documentation sur la boîte de dialogue <a href="#e8">Rechercher</a>.
+
+<h4 id=ea>Rechercher l'occurrence précédente (<kbd>F2</kbd>)</h4>
+<p>Recherche l'occurrence précédente et la sélectionne si trouvée. La commande reste sans effet lorsqu'aucune occurrence précédente n'est trouvée, ou lorsqu'il n'y a plus d'onglet précédent à parcourir lors d'une recherche multi-onglets.
+<p>Le texte recherché correspond à celui qui fut spécifié lors de la dernière utilisation de la boîte de dialogue <i>Rechercher</i> ou de la boîte de dialogue <i>Remplacer</i>. Comme toujours, la recherche se fait depuis la position du curseur.
+
+<h4 id=eb>Rechercher l'occurrence suivante (<kbd>F3</kbd>)</h4>
+<p>Recherche l'occurrence suivante et la sélectionne si trouvée. La commande reste sans effet lorsqu'aucune occurrence suivante n'est trouvée, ou lorsqu'il n'y a plus d'onglet suivant à parcourir lors d'une recherche multi-onglets.
+<p>Le texte recherché correspond à celui qui fut spécifié lors de la dernière utilisation de la boîte de dialogue <i>Rechercher</i> ou de la boîte de dialogue <i>Remplacer</i>. Comme toujours, la recherche se fait depuis la position du curseur.
+
+<h4 id=ec>Substituer par le texte de remplacement (<kbd>F4</kbd>)</h4>
+<p>Remplace la sélection par le texte de remplacement qui fut spécifié lors de la dernière utilisation de la boîte de dialogue <i>Remplacer</i>. La commande reste sans effet lorsque rien n'est sélectionné.
+
+<h4 id=ed>Sélectionner tout (<kbd>Ctrl</kbd>+<kbd>A</kbd>)</h4>
+<p>Sélectionne le contenu de l'onglet courant ou de la zone d'édition courante, selon le cas. La commande reste sans effet lorsqu'il n'y a rien à sélectionner.
+
+<h3 id=affichage>Affichage</h3>
+<p class=menu>
+<a href="#a1">Couleurs…</a> | 
+<a href="#a2">Langue…</a> | 
+<a href="#a3">Marge de sélection…</a> | 
+<a href="#a4">Police…</a> | 
+<a href="#a5">Tabulation…</a> | 
+<a href="#a6">2e jeu de couleurs</a> | 
+<a href="#a7">Barre d'état</a> | 
+<a href="#a8">Chemin de nom de fichier</a> | 
+<a href="#a9">Coloration syntaxique</a> | 
+<a href="#aa">Indexation automatique</a> | 
+<a href="#ab">Multi-onglets</a> | 
+<a href="#ac">Numérotation des lignes</a> | 
+<a href="#ad">Augmenter la taille de police</a> | 
+<a href="#ae">Diminuer la taille de police</a> | 
+<a href="#af">Taille de police normale</a> | 
+<a href="#ah">Agrandir/restaurer</a> | 
+<a href="#ai">Réduire/restaurer</a> | 
+<a href="#aj">Agrandir sur le côté gauche</a> | 
+<a href="#ak">Agrandir sur le côté droit</a> | 
+<a href="#al">Augmenter la transparence</a> | 
+<a href="#am">Diminuer la transparence</a> | 
+<a href="#ag">Longueur de ligne…</a>
+<p>Les réglages faits au menu <i>Affichage</i> sont enregistrés dans le fichier <tt>Vic.ini</tt>. Ils demeurent donc les mêmes jusqu'à ce qu'on les change à nouveau.
+
+<h4 id=a1>Couleurs… (<kbd>Ctrl</kbd>+<kbd>E</kbd>)</h4>
+<p>Appelle une boîte de dialogue qui permet de redéfinir <b>les couleurs de l'interface</b>. Au moment de s'afficher, la boîte de dialogue indique les couleurs courantes pour chacun des deux jeux de couleurs utilisables. Pour changer le jeu de couleurs en cours, allez au menu <i>Affichage</i> et cochez ou décochez <i>2
+<sup>e</sup> jeu de couleurs</i>, selon le cas.
+<p>Les jeux de couleurs n'ont <b>aucun effet sur la coloration syntaxique</b>. Pour définir ou modifier la coloration syntaxique d'un type de fichier, il faut éditer les fichiers <tt>ColorationX.hes</tt> et suivre les indications qui y figurent au début.
+<p>La boîte de dialogue contient un aide-mémoire qui illustre les 16 couleurs de base et en rappelle le code. On peut utiliser d'autres couleurs. Notez que le format à utiliser est <code>0xBBVVRR</code> et non <code>0xRRVVBB</code>. Ce qui signifie qu'on doit exprimer, à la suite, les valeurs hexadécimales de Bleu, de Vert et de Rouge, et que chacune de ces valeurs peut aller de <tt>00</tt> à <tt>FF</tt>.
+
+<h4 id=a2>Langue… (<kbd>Ctrl</kbd>+<kbd>L</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Langue</i>, depuis laquelle on peut passer du français vers l'anglais ou vice-versa. Dès l'activation du bouton <i>OK</i> un message d'avertissement annonce que le changement deviendra effectif au prochain démarrage de Vic.
+
+<h4 id=a3>Marge de sélection… (<kbd>Ctrl</kbd>+<kbd>M</kbd>)</h4>
+<p>Appelle une boîte de dialogue qui permet de redéfinir la largeur de la marge de sélection. Cette marge se trouve à droite des numéros de lignes. La largeur maximale permise est de 99 pixels. Pour éliminer cette marge, indiquez zéro (<tt>0</tt>).
+<p>Le changement s'étend à tous les onglet et devient effectif dès l'activation du bouton <i>OK</i>.
+
+<h4 id=a4>Police… (<kbd>Ctrl</kbd>+<kbd>D</kbd>)</h4>
+<p>Appelle une boîte de dialogue qui permet de redéfinir la police, ainsi que la taille de police et le style à utiliser. Les effets <i>Barré</i> et <i>Souligné</i> sont également supportés.
+<p>Le changement s'étend à tous les onglets et devient effectif dès l'activation du bouton <i>OK</i>.
+
+<h4 id=a5>Tabulation… (<kbd>Ctrl</kbd>+<kbd>T</kbd>)</h4>
+<p>Appelle une boîte de dialogue permettant de redéfinir la largeur de tabulation. Le nombre inscrit correspond au nombre de fois la largeur d'un caractère. La largeur maximale permise est de 99. Si on inscrit zéro (<tt>0</tt>), l'effet sera le même que si on avait mis un (<tt>1</tt>).
+<p>Le changement s'étend à tous les onglets et devient effectif dès l'activation du bouton <i>OK</i>.
+
+<h4 id=a6>2
+<sup>e</sup> jeu de couleurs</h4>
+<p>Permet de basculer entre deux jeux de couleurs. Chacun de ces jeux permet de régler la couleur des neuf (9) éléments suivants :
+<ul>
+	<li>le texte normal;
+	<li>l'arrière-plan du texte normal;
+	<li>le texte sélectionné;
+	<li>l'arrière-plan du texte sélectionné;
+	<li>l'arrière-plan d'une sélection inactive;
+	<li>les chiffres de la colonne de numérotation des lignes;
+	<li>l'arrière-plan de la colonne de numérotation des lignes;
+	<li>l'arrière-plan des caractères ASCII 0 à 31;
+	<li>les chiffres. Notez que la coloration des chiffres ne devient effective que lorsque la coloration syntaxique entre en jeu.
+</ul>
+<p>Pour redéfinir les couleurs de l'interface, passez par la boîte de dialogue <i>Couleurs</i>. Pour définir ou modifier la coloration syntaxique d'un type de fichier, éditez les fichiers <tt>ColorationX.hes</tt> et suivez les instructions qui figurent en tête de fichier.
+<p>Le 1<sup>er</sup> jeu de couleurs est lié au fichier de coloration syntaxique <tt>Coloration1.hes</tt>, et le 2<sup>e</sup> jeu de couleurs, au fichier <tt>Coloration2.hes</tt>. Cette indépendance permet d'avoir une coloration syntaxique lorsqu'on est, par exemple, en noir sur fond blanc, et une autre coloration syntaxique lorsqu'on bascule en blanc sur fond noir.
+
+<h4 id=a7>Barre d'état</h4>
+<p>Permet d'afficher ou de masquer la barre d'état. Cette barre comporte <b>4 parties</b> qui, respectivement, fournissent les renseignements suivants :
+<p><b>1)</b> le numéro de la ligne courante sur le nombre total de lignes, suivi du numéro de la colonne courante sur le nombre total de colonnes dans la ligne; <b>2)</b> le nombre de caractères sélectionnés sur le nombre total de caractères; <b>3)</b> le numéro du caractère courant dans la <a href="#annexe-1">table des caractères ANSI</a>; <b>4)</b> le nombre de fichiers ouverts.
+
+<h4 id=a8>Chemin et nom de fichier</h4>
+<p>Permet de basculer entre deux formats d'affichage du nom de fichier dans la barre de titre. Le <b>format court</b> n'affiche que le nom et l'extension du fichier courant. Le <b>format long</b> affiche, en plus, le chemin complet du dossier où se trouve le fichier. Le changement demandé s'étend à tous les onglets et prend immédiatement effet.
+
+<h4 id=a9>Coloration syntaxique</h4>
+<p>Permet d'activer ou de désactiver la coloration syntaxique. Le changement s'étend à tous les onglets et prend immédiatement effet.
+<p>L'activation ou la désactivation de la coloration syntaxique n'a <b>aucun effet</b> sur la couleur d'arrière-plan et les autres couleurs de l'interface. Pour modifier ces dernières, passez par la boîte de dialogue <a href="#a1">Couleurs</a>.
+
+<h4 id=aa>Indentation automatique</h4>
+<p>Permet d'activer ou de désactiver l'indentation automatique. Le changement s'étend à tous les onglets et prend immédiatement effet.
+<p>Notez que ce changement n'a aucune incidence sur le comportement de la touche intelligente <kbd>Entrée</kbd>, expliqué à la <a href="#touches-intelligentes">section 5</a>.
+
+<h4 id=ab>Multi-onglets</h4>
+<p>Permet d'activer ou de désactiver le mode multi-onglets. Un message d'avertissement est envoyé pour dire que le changement ne deviendra effectif qu'au prochain démarrage de Vic.
+
+<h4 id=ac>Numérotation des lignes</h4>
+<p>Permet d'afficher ou de masquer la colonne de numérotation des lignes. Le changement s'étend à tous les onglets et prend immédiatement effet. Il n'a toutefois aucune incidence sur la <a href="#a3">marge de sélection</a>.
+
+<h4 id=ad>Augmenter la taille de police (<kbd>Ctrl</kbd>+<kbd>+</kbd>)</h4>
+<p>Permet d'augmenter la taille d'affichage de la police. Le changement s'étend à tous les onglets et prend immédiatement effet. Il s'étend aux boîtes de dialogue jusqu'à une taille maximale de 14 pixels, mais il n'a aucune incidence sur la taille du texte des menus et des autres composantes de l'interface.
+<p>Au lieu de <kbd>Ctrl</kbd>+<kbd>+</kbd> on peut faire <kbd>Ctrl</kbd>+<kbd>Molette-Haut</kbd>. Sur un pavé tactile évolué, la gestuelle consistant à écarter deux doigts l'un de l'autre est également supportée.
+
+<h4 id=ae>Diminuer la taille de police (<kbd>Ctrl</kbd>+<kbd>-</kbd>)</h4>
+<p>Permet de diminuer la taille d'affichage de la police. Le changement s'étend à tous les onglets et prend immédiatement effet. Il n'a toutefois aucune incidence sur la taille du texte des menus et des autres composantes de l'interface.
+<p>Au lieu de <kbd>Ctrl</kbd>+<kbd>-</kbd> on peut faire <kbd>Ctrl</kbd>+<kbd>Molette-Bas</kbd>. Sur un pavé tactile évolué, la gestuelle consistant à rapprocher deux doigts l'un de l'autre est également supportée.
+
+<h4 id=af>Taille de police normale (<kbd>Ctrl</kbd>+<kbd>0</kbd>)</h4>
+<p>Permet de revenir à la taille de police normale, qui est de 11 pixels. Le changement s'étend à tous les onglets et prend immédiatement effet. Il n'a toutefois aucune incidence sur la taille du texte des menus et des autres composantes de l'interface.
+
+<h4 id=ah>Agrandir/restaurer (<kbd>Win</kbd>+<kbd>Haut</kbd>)</h4>
+<p>Agrandit la fenêtre de Vic lorsqu'elle est restaurée, et la restaure lorsqu'elle est réduite.
+
+<h4 id=ai>Réduire/restaurer (<kbd>Win</kbd>+<kbd>Bas</kbd>)</h4>
+<p>Réduit la fenêtre de Vic lorsqu'elle est restaurée, et la restaure lorsqu'elle est agrandie.
+
+<h4 id=aj>Agrandir sur le côté gauche (<kbd>Win</kbd>+<kbd>Gauche</kbd>)</h4>
+<p>Arrange la fenêtre de Vic pour qu'elle occupe toute la moitié gauche de l'écran.
+
+<h4 id=ak>Agrandir sur le côté droit (<kbd>Win</kbd>+<kbd>Droit</kbd>)</h4>
+<p>Arrange la fenêtre de Vic pour qu'elle occupe toute la moitié droite de l'écran.
+
+<h4 id=al>Augmenter la transparence (<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Haut</kbd>)</h4>
+<p>Augmente de 25 % le coefficient de transparence de la fenêtre de Vic. Au-delà de 100 %, le compte recommence à 25 %. Les valeurs sont donc de 25, 50, 75 et 100 %.
+
+<h4 id=am>Diminuer la transparence (<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Bas</kbd>)</h4>
+<p>Diminue de 25 % le coefficient de transparence de la fenêtre de Vic. En deça de 25 %, le compte recommence à 100 %. Les valeurs sont donc de 100, 75, 50 et 25 %.
+
+<h4 id=ag>Longueur de ligne… (<kbd>Ctrl</kbd>+<kbd>W</kbd>)</h4>
+<p>Appelle une boîte de dialogue qui permet d'ajuster le texte à la longueur de ligne voulue. Les coupures se font à la position indiquée ou à la position moindre la plus proche dès qu'il s'y trouve une espace ou l'un des caractères suivants : <samp>!$%),./:;>?]}…»</samp>.
+<p>Les coupures se font avec un saut de ligne simple (<tt>LF</tt>) au lieu d'un changement de ligne standard (<tt>CR</tt>+<tt>LF</tt>). Ce qui permet de les distinguer l'un de l'autre et de pouvoir revenir en arrière facilement par la suite.
+<p>Pour changer la longueur de ligne, refaites la commande en y inscrivant une nouvelle valeur. Pour revenir à la longueur de ligne initiale, refaites la commande et inscrivez zéro (<tt>0</tt>). À chaque usage, les sauts de ligne simples (<tt>LF</tt>) sont retranchés puis, le cas échéant, insérés à un autre endroit.
+<p>Le changement n'affecte que le texte de l'onglet courant.
+<p>Pour insérer manuellement un saut de ligne simple (<tt>LF</tt>), faites <kbd>Ins</kbd>+<kbd>Entrée</kbd>.
+
+<h3 id=insertion>Insertion</h3>
+<p class=menu>
+<a href="#i1">Commentaire conditionnel</a> | 
+<a href="#i2">Commentaire CSS</a> | 
+<a href="#i3">Commentaire HTML</a> | 
+<a href="#im">Commenter/décommenter le bloc</a> | 
+<a href="#i4">Doctype HTML 4.01 Strict</a> | 
+<a href="#i5">Doctype HTML 4.01 Transitional</a> | 
+<a href="#i6">Doctype HTML 4.01 Frameset</a> | 
+<a href="#i7">Doctype XHTML 1.0 Strict</a> | 
+<a href="#i8">Doctype XHTML 1.0 Transitional</a> | 
+<a href="#i9">Doctype XHTML 1.0 Frameset</a> | 
+<a href="#ia">Date</a> | 
+<a href="#ib">Heure</a> | 
+<a href="#ic">Attribut class</a> | 
+<a href="#id">Attribut id</a> | 
+<a href="#ie">Attribut lang</a> | 
+<a href="#if">Attribut name</a> | 
+<a href="#ig">Attribut style</a> | 
+<a href="#ih">Attribut title</a> | 
+<a href="#ii">Caractère spécial…</a> | 
+<a href="#ij">Saut de ligne de type Unix</a> | 
+<a href="#ik">Squelette HTML 4.01</a> | 
+<a href="#il">Squelette XHTML 1.0</a>
+
+<h4 id=i1>Commentaire conditionnel (<kbd>Ins</kbd>+<kbd>E</kbd>)</h4>
+<p>Insère exactement <code>&lt;!--[if IE 6]><tt class=c>|</tt>&lt;![endif]--></code>, et positionne le curseur à l'endroit indiqué par le signe <tt class=c>|</tt>. Le contenu de ce commentaire sera pris en considértion par Internet Explorer 6 et ignoré par tous les autres navigateurs.
+<p>Pour cibler une autre version, il suffit de changer le chiffre. On peut aussi recourir aux préfixes suivants pour cibler plusieurs versions d'Internet Explorer en même temps :
+<ul>
+	<li>GT (de l'anglais <i lang=en>Greater Than</i> : supérieur à);
+	<li>GTE (de l'anglais <i lang=en>Greater Than or Equal</i> : supérieur ou égal à);
+	<li>LT (de l'anglais <i lang=en>Less Than</i> : inférieur à);
+	<li>LTE (de l'anglais <i lang=en>Less Than or Equal</i> : inférieur ou égal à).
+</ul>
+<p>Si on utilise un préfixe, il faut le placer avant <tt>IE</tt>. Par exemple, <code>[if LTE IE 7]</code> permet de cibler toutes les versions d'Internet Explorer égales ou inférieures à la version 7.
+
+<h4 id=i2>Commentaire CSS (<kbd>Ins</kbd>+<kbd>F</kbd>)</h4>
+<p>Lorsque rien n'est sélectionné, la commande insère exactement <code>/* <tt class=c>|</tt> */</code>, et positionne le curseur à l'endroit indiqué par le signe <tt class=c>|</tt>.
+<p>Lorsqu'une portion de texte est sélectionnée au préalable, la commande a pour effet de l'inscrire à l'intérieur du commentaire. Après la commande, le curseur est alors placé à la fin du commentaire.
+
+<h4 id=i3>Commentaire HTML (<kbd>Ins</kbd>+<kbd>G</kbd>)</h4>
+<p>Lorsque rien n'est sélectionné, la commande insère exactement <code>&lt;!-- <tt class=c>|</tt> --></code>, et positionne le curseur à l'endroit indiqué par le signe <tt class=c>|</tt>.
+<p>Lorsqu'une portion de texte est sélectionnée au préalable, la commande a pour effet de l'inscrire à l'intérieur du commentaire. Après la commande, le curseur est alors placé à la fin du commentaire.
+
+<h4 id=im>Commenter/décommenter le bloc (<kbd>Ins</kbd>+<kbd>;</kbd>)</h4>
+<p>Vérifie si le premier caractère visible du bloc sélectionné est un point-virgule <tt>;</tt>.
+<p>Si oui, la commande a pour effet de retrancher le point-virgule initial de chacune des lignes du bloc de texte sélectionné, de même que les éventuels espaces ou caractères de tabulation qui entourent ce point-virgule.
+<p>Si non, la commande a pour effet d'ajouter exactement un point-virgule suivi d'un espace <tt>; </tt> au début de chaque ligne du bloc de texte sélectionné.
+<p>Lorsqu'il n'y a rien de sélectionné, la commande a pour effet de commenter ou de décommenter la ligne courante seulement.
+
+<h4 id=i4>Doctype HTML 4.01 Strict (<kbd>Ins</kbd>+<kbd>1</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du HTML 4.01 Strict. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"></code></pre>
+
+<h4 id=i5>Doctype HTML 4.01 Transitional (<kbd>Ins</kbd>+<kbd>2</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du HTML 4.01 Transitionnel. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
+
+<h4 id=i6>Doctype HTML 4.01 Frameset (<kbd>Ins</kbd>+<kbd>3</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du HTML 4.01 Frameset. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+  "http://www.w3.org/TR/html4/frameset.dtd"></code></pre>
+
+<h4 id=i7>Doctype XHTML 1.0 Strict (<kbd>Ins</kbd>+<kbd>4</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du XHTML 1.0 Strict. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"></code></pre>
+
+<h4 id=i8>Doctype XHTML 1.0 Transitional (<kbd>Ins</kbd>+<kbd>5</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du XHTML 1.0 Transitionnel. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></code></pre>
+
+<h4 id=i9>Doctype XHTML 1.0 Frameset (<kbd>Ins</kbd>+<kbd>6</kbd>)</h4>
+<p>Insère la ligne de Doctype officielle du XHTML 1.0 Frameset. À savoir :<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"></code></pre>
+
+<h4 id=ia>Date (<kbd>Ins</kbd>+<kbd>D</kbd>)</h4>
+<p>Insère la date du jour au format international <samp>1999-12-31</samp>.
+
+<h4 id=ib>Heure (<kbd>Ins</kbd>+<kbd>H</kbd>)</h4>
+<p>Insère l'heure courante au format <samp>24 h 00</samp>. Conformément aux règles de typographie françaises, des espaces insécables se trouvent de part et d'autre de la lettre h.
+
+<h4 id=ic>Attribut class (<kbd>Ins</kbd>+<kbd>C</kbd>)</h4>
+<p>Insère exactement <code>class="<tt class=c>|</tt>"</code> précédé d'une espace, et positionne le curseur entre les deux guillemets.
+
+<h4 id=id>Attribut id (<kbd>Ins</kbd>+<kbd>I</kbd>)</h4>
+<p>Insère exactement <code>id="<tt class=c>|</tt>"</code> précédé d'une espace, et positionne le curseur entre les deux guillemets.
+
+<h4 id=ie>Attribut lang (<kbd>Ins</kbd>+<kbd>L</kbd>)</h4>
+<p>Insère exactement <code>lang="<tt class=c>|</tt>" xml:lang=""</code> précédé d'une espace, et positionne le curseur entre les deux premiers guillemets. Ce dédoublement d'information est requis pour assurer la rétrocompatibilité du XHTML 1.0 vers le HTML. Si vous développez en HTML, retranchez <code>xml:lang=""</code>.
+
+<h4 id=if>Attribut name (<kbd>Ins</kbd>+<kbd>N</kbd>)</h4>
+<p>Insère exactement <code>name="<tt class=c>|</tt>"</code> précédé d'une espace, et positionne le curseur entre les deux guillemets.
+
+<h4 id=ig>Attribut style (<kbd>Ins</kbd>+<kbd>S</kbd>)</h4>
+<p>Insère exactement <code>style="<tt class=c>|</tt>"</code> précédé d'une espace, et positionne le curseur entre les deux guillemets.
+
+<h4 id=ih>Attribut title (<kbd>Ins</kbd>+<kbd>T</kbd>)</h4>
+<p>Insère exactement <code>title="<tt class=c>|</tt>"</code> précédé d'une espace, et positionne le curseur entre les deux guillemets.
+
+<h4 id=ii>Caractère spécial… (<kbd>Ins</kbd>+<kbd>P</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Table des caractères</i>, depuis laquelle on peut sélectionner un ou plusieurs caractètes à copier dans le presse-papiers. Les caractères seront ceux de la table ANSI (appelée Windows Occidental), et la police d'affichage est Courier New.
+
+<h4 id=ij>Saut de ligne de type Unix (<kbd>Ins</kbd>+<kbd>Entrée</kbd>)</h4>
+<p>Insère un caractère de saut de ligne (<tt>LF</tt>) à l'endroit où se trouve curseur. Ce qui peut être utile pour segmenter manuellement une ligne tout en pouvant la rétablir facilement par la suite via la commande <a href="#ag">Longueur de ligne</a>.
+
+<h4 id=ik>Squelette HTML 4.01 (<kbd>Ins</kbd>+<kbd>F4</kbd>)</h4>
+<p>Insère le squelette complet d'un fichier HTML 4.01 Strict et place le curseur entre les balises ouvrante et fermante de l'élément <code>title</code>. L'encodage déclaré dans la balise <code>meta</code> est <code>windows-1252</code>. Si vous en utilisez un autre, indiquez le bon.
+
+<h4 id=il>Squelette XHTML 1.0 (<kbd>Ins</kbd>+<kbd>F1</kbd>)</h4>
+<p>Insère le squelette complet d'un fichier XHTML 1.0 Strict et place le curseur entre les guillemets de l'attribut <code>xml:lang</code> de la balise <code>html</code>. L'encodage déclaré dans la balise <code>meta</code> est <code>windows-1252</code>. Si vous en utilisez un autre, indiquez le bon.
+
+<h3 id=outils>Outils</h3>
+<p class=menu>
+<a href="#o1">Augmenter le retrait</a> | 
+<a href="#o2">Diminuer le retrait</a> | 
+<a href="#o3">Déplacer vers le bas</a> | 
+<a href="#o4">Déplacer vers le haut</a> | 
+<a href="#o5">Dupliquer la sélection</a> | 
+<a href="#o6">Mettre en bas de casse</a> | 
+<a href="#o7">Mettre en haut de casse</a> | 
+<a href="#o8">Mettre les initiales en majuscules</a> | 
+<a href="#on">Afficher le calendrier</a> | 
+<a href="#o9">Prélever une couleur…</a> | 
+<a href="#oa">Remplacements automatiques…</a> | 
+<a href="#ob">Trier…</a> | 
+<a href="#oc">Remplacer les espaces initiales par des tabulations</a> | 
+<a href="#od">Remplacer les tabulations initiales par des espaces</a> | 
+<a href="#oe">Supprimer les blancs de fin de ligne</a> | 
+<a href="#of">Supprimer les lignes vides</a> | 
+<a href="#og">Supprimer le HTML</a> | 
+<a href="#oo">Compresser le code HTML/XHTML</a> | 
+<a href="#op">Convertir le XHTML 1.0 en HTML 4.01</a> | 
+<a href="#ol">Restituer les entités et le faux UTF-8 en ANSI</a> | 
+<a href="#om">Formater/Réécrire le code CSS…</a>
+
+<h4 id=o1>Augmenter le retrait (<kbd>Tab</kbd>)</h4>
+<p>Lorsqu'il n'y a aucun caractère visible à gauche du curseur, <kbd>Tab</kbd> insère une tabulation. Lorsqu'un bloc de texte est sélectionné, <kbd>Tab</kbd> joute une tabulation au début de chaque ligne contenue dans le bloc. Lorsqu'il y a un caractère visible à gauche du curseur, <kbd>Tab</kbd> a d'autres effets décrits dans la <a href="#touches-intelligentes">section 5</a>.
+
+<h4 id=o2>Diminuer le retrait (<kbd>Maj</kbd>+<kbd>Tab</kbd>)</h4>
+<p>Lorsqu'un bloc de texte est sélectionné, <kbd>Maj</kbd>+<kbd>Tab</kbd> retranche une espace ou une tabulation au début de chaque ligne contenue dans le bloc. Lorsqu'il n'y a rien de sélectionné, <kbd>Maj</kbd>+<kbd>Tab</kbd> retranche l'espace ou la tabulation située à gauche du curseur. Et lorsqu'il n'y a ni tabulation ni espace, la commande reste sans effet.
+
+<h4 id=o3>Déplacer vers le bas (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Bas</kbd>)</h4>
+<p>Déplace le bloc de texte sélectionné une ligne vers le bas, ou la ligne courante si rien n'est sélectionné. Le curseur suit en conservant la même position dans la ligne.
+<p>La commande reste sans effet lorsqu'on tente d'aller plus bas que la dernière ligne.
+
+<h4 id=o4>Déplacer vers le haut (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Haut</kbd>)</h4>
+<p>Déplace le bloc de texte sélectionné une ligne vers le haut, ou la ligne courante si rien n'est sélectionné. Le curseur suit en conservant la même position dans la ligne.
+<p>La commande reste sans effet lorsqu'on tente d'aller plus haut que la première ligne.
+
+<h4 id=o5>Dupliquer la sélection (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>L</kbd>)</h4>
+<p>Insère en dessous du bloc de texte sélectionné un bloc de texte qui lui est identique.
+<p>Lorsque rien n'est sélectionné, la commande a pour effet de dupliquer la ligne courante.
+
+<h4 id=o6>Mettre en bas de casse (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>B</kbd>)</h4>
+<p>Met le texte sélectionné en lettres minuscules. Lorsque rien n'est sélectionné ou que tout est déjà en lettres minuscules, la commande reste sans effet.
+
+<h4 id=o7>Mettre en haut de casse (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>H</kbd>)</h4>
+<p>Met le texte sélectionné en lettres majuscules. Lorsque rien n'est sélectionné ou que tout est déjà en lettres majuscules, la commande reste sans effet.
+
+<h4 id=o8>Mettre les initiales en majuscules (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>I</kbd>)</h4>
+<p>Met la première lettre de chaque mot du texte sélectionné en majuscule, et les lettres suivantes en minuscules. Lorsque rien n'est sélectionné ou que les initiales des mots sont déjà en majuscules, la commande reste sans effet.
+
+<h4 id=on>Afficher le calendrier (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>C</kbd>)</h4>
+<p>Ouvre la fenêtre d'un calendrier perpétuel qui affiche les 12 mois l'année en cours avec la date du jour en évidence. Pour refermer le calendrier, appuyez sur <kbd>Échappement</kbd> ou faites <kbd>Alt</kbd>+<kbd>F4</kbd>.
+
+<h4 id=o9>Prélever une couleur… (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>P</kbd>)</h4>
+<p>Affiche les coordonnées et la couleur du pixel survolé dans une info-bulle située à proximité du pointeur. Les données sont mises à jour au fur et à mesure que le pointeur se déplace. Les valeurs <var>X</var> et <var>Y</var> sont exprimées en pixels, tandis que la couleur est au format <code>#rrvvbb</code>.
+<p>Un coup sur la touche <kbd>Entrée</kbd> met la valeur de la couleur dans le presse-papiers et fait disparaître l'info-bulle. Un coup sur la touche <kbd>Échappement</kbd> fait seulement disparaître l'info-bulle.
+
+<h4 id=oa>Remplacements automatiques… (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>R</kbd>)</h4>
+<p>Appelle une boîte de dialogue depuis laquelle on peut ajouter, modifier ou supprimer une ligne à la liste des remplacements automatiques. Lorsqu'on a fini, on peut simplement refermer la boîte de dialogue; mais pour que les changements prennent effet, il faut activer le bouton <b>OK</b> et répondre qu'on veut redémarrer Vic.
+<p>La liste des remplacements automatiques prédéfinis figure en <a href="#annexe-3">Annexe 3</a>. Nous renvoyons également à cette annexe pour les autres détails.
+
+<h4 id=ob>Trier… (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>T</kbd>)</h4>
+<p>Appelle la boîte de dialogue <i>Trier</i>, depuis laquelle on peut ordonner les éléments contenus à l'intérieur d'une sélection. Par défaut, on ordonne des éléments disposés sur des lignes distinctes suivant un classement alphabétique en ordre croissant, et sans supprimer les doublons. Un message d'avertissement s'affiche lorsqu'il n'y a rien de sélectionné.
+<p>Spécifiez le séparateur à utiliser si les éléments sont séparés par autre chose qu'un changement de ligne. Par exemple, s'ils sont séparés les uns des autres par une virgule, une espace ou une tabulation.
+<p>Pour traiter du texte, laissez classement <i>Alphabétique</i> coché. Pour traiter des nombres, cochez classement <i>Numérique</i>. L'ordre croissant correspond à l'ordre normal (de 0 à 9 et de A à Z). L'ordre décroissant correspond à l'ordre normal inverse (de 9 à 0 et de Z à A). Si on traite en même temps des mots et des nombres, les nombres sont classés d'abord, les mots ensuite.
+<p>La suppression des doublons peut être demandée pour n'importe quel type de tri.
+
+<h4 id=oc>Remplacer les espaces initiales par des tabulations (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>A</kbd>)</h4>
+<p>Remplace les espaces de début de ligne par des tabulations à l'intérieur de la portion de texte sélectionnée. La commande reste sans effet si rien n'est sélectionné ou si la sélection ne contient pas d'espace.
+
+<h4 id=od>Remplacer les tabulations initiales par des espaces (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>E</kbd>)</h4>
+<p>Remplace les tabulations de début de ligne par des espaces à l'intérieur de la portion de texte sélectionnée. La commande reste sans effet si rien n'est sélectionné ou si la sélection ne contient pas de tabulation.
+
+<h4 id=oe>Supprimer les blancs de fin de ligne (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>F</kbd>)</h4>
+<p>Supprime les espaces et les tabulations qui se trouvent à la fin de chacune des lignes du bloc de texte sélectionné. La commande reste sans effet si rien n'est sélectionné ou si les fins de lignes du bloc sélectionné ne contiennent ni espace ni tabulation.
+
+<h4 id=of>Supprimer les lignes vides (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>K</kbd>)</h4>
+<p>Supprime les lignes vides situées à l'intérieur du bloc de texte sélectionné. La commande reste sans effet si rien n'est sélectionné ou si la sélection ne contient pas de ligne vide.
+
+<h4 id=og>Supprimer le HTML (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd>)</h4>
+<p>Supprime du bloc de texte sélectionné les balises et les commentaires HTML, ainsi que le contenu des sections <code>script</code>, <code>noscript</code> et <code>style</code>.
+<p>La commande reste sans effet si rien n'est sélectionné ou si la sélection ne contient aucun des éléments qu'on vient d'énumérer.
+
+<h4 id=oo>Compresser le code HTML/XHTML (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>C</kbd>)</h4>
+<p>Ôte les commentaires HTML, les lignes vides de début et de fin de fichier, ainsi que les retours de chariot, tabulations et espacements utilisés pour indenter le code, sauf à l'intérieur d'un élément <code>&lt;pre></code>.
+<p>Les guillemets facultatifs autour des valeurs d'attributs sont également retranchés lorsque le fichier est en HTML 4.01.
+
+<h4 id=op>Convertir le XHTML 1.0 en HTML 4.01 (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>X</kbd>)</h4>
+<p>Vérifie si le fichier a un Doctype XHTML 1.0, et si oui, met le Doctype du HTML 4.01 à la place.
+
+<h4 id=ol>Restituer les entités et le faux UTF-8 en ANSI (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>U</kbd>)</h4>
+<p>Transforme les entités de caractère HTML et le faux UTF-8 en caractères ANSI normaux, et change l'expression <code>charset=utf-8</code> pour <code>charset=windows-1252</code> si trouvée. Par exemple, <samp>&amp;eacute;</samp> sera remplacé par <samp>é</samp>.
+<p>Le faux UTF-8 se reconnaît à la présence de signes bizarres en lieu et place des lettres accentuées. Par exemple, <samp>Ã©</samp> à la place d'un <samp>é</samp>.
+<p>Au moment d'utiliser cette commande, une question est posée permettant de limiter la transformation à l'onglet courant ou de l'étendre à tous les onglets ouverts. Tous les caractères de la table ANSI sont supportés. La commande reste sans effet lorsqu'il n'y a pas d'entité de caractère HTML ou de faux UTF-8.
+
+<h4 id=om>Formater/Réécrire le code CSS… (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Y</kbd>)</h4>
+<p>Formate le code CSS sélectionné et offre des options de réécriture en cours de traitement. Un avertissement est lancé lorsque rien n'est sélectionné.
+<h5>1) Utiliser ou non la notation brève</h5>
+<p>Dès que la commande est lancée, on demande si on veut que les règles d'écriture compacte soient appliquées. Si on répond non, les retouches faites au code vont se limiter à sa disposition visuelle. Si on répond oui, le code sera traité et réécrit de façon à obtenir un code plus léger et plus bref selon ce que permet la <a href="http://www.w3.org/TR/2009/CR-CSS2-20090908/" hreflang=en>Recommandation CSS 2.1 du W3C</a>. Ce qui peut alors affecter les sélecteurs, les valeurs et les propriétés de la manière suivante :
+<p>Au niveau des <b>sélecteurs</b>, l'application des règles d'écriture compactes:
+<ul>
+	<li>fusionne les sélecteurs qui ont exactement les mêmes valeurs et propriétés dans leurs blocs de déclarations respectifs (p.ex., <code>a {color:#00f}</code> suivi de <code>a:link {color:#00f}</code> devient <samp>a, a:link {color:#00f}</samp>).
+</ul>
+<p>Au niveau des <b>valeurs</b>, l'application des règles d'écriture compactes :
+<ul>
+	<li>supprime tout guillemet entourant une URL (p.ex., <code>background:url("fond.png")</code> devient <samp>background:url(fond.png)</samp>);
+	<li>supprime tout commentaire adjacent à une déclaration (p.ex., <code>margin:0; /* 2009-02-18 */</code> devient <samp>margin:0;</samp>);
+	<li>supprime tout 0 non significatif (p.ex., <code>margin:010.0px</code> devient <samp>margin:10px</samp>);
+	<li>supprime toute unité de mesure qui suit un 0 isolé (p.ex., <code>margin:0px</code> devient <samp>margin:0</samp>);
+	<li>convertit les valeurs <code>#RRVVBB</code> en bas de casse (p.ex., <code>#DE00FC</code> devient <samp>#de00fc</samp>);
+	<li>réduit les valeurs <code>#rrvvbb</code> au format <code>#rvb</code>, si possible (p.ex., <code>#3388cc</code> devient <samp>#38c</samp>);
+	<li>réduit les suites de 4 valeurs à 3, 2 ou 1, si possible (p.ex., <code>margin:2px auto 2px auto</code> devient <samp>margin:2px auto</samp>).
+</ul>
+<p>Au niveau des <b>propriétés</b>, l'application des règles d'écriture compacte :
+<ul>
+	<li>insère tout point-virgule (<tt>;</tt>) manquant entre deux déclarations (p.ex., <code>{color:#333 margin:0;}</code> devient <samp>{color:#333; margin:0;}</samp>;
+	<li>supprime la première occurrence de tout doublon (p.ex., <code>margin:1px</code> suivi de <code>margin:2px</code> devient <samp>margin:2px</samp>);
+	<li>classe les déclarations en ordre alphabétique (p.ex., <code>color:#000</code> suivi de <code>background:#fff</code> devient <samp>background:#fff</samp> suivi de <samp>color:#000</samp>);
+	<li>fusionne les propriétés de même famille, si possible (p.ex., <code>font-size:1em</code> et <code>font-weight:bold</code> et <code>font-family:arial</code> deviennent <samp>font:bold 1em arial</samp>).
+</ul>
+
+<h6>Exemple Nº 1</h6>
+<p><b>Avant</b> l'application des règles d'écriture compacte :<pre><code class=css>ul#nav {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type: disc;
+    list-style-image: url("../img/puce.png");
+    list-style-position: outside;
+}</code></pre>
+
+<p><b>Après</b> l'application des règles d'écriture compacte :<pre><code class=css>ul#nav {
+    list-style: url(../img/puce.png) outside disc;
+    margin: 0 20px;
+}</code></pre>
+
+<h6>Exemple Nº 2</h6>
+<p><b>Avant</b> l'application des règles d'écriture compacte :<pre><code class=css>body {
+    font-size: 0.95em;
+    font-weight: bold;
+    font-family: arial,helvetica,sans-serif;
+    line-height: 1.5;
+}</code></pre>
+<p><b>Après</b> l'application des règles d'écriture compacte :<pre><code class=css>body {
+    font: bold .95em/1.5 arial,helvetica,sans-serif;
+}</code></pre>
+<p><strong>Remarques :</strong>
+<ol>
+	<li>Conformément à la spécification CSS 2.1, les propriétés <code>font</code> ne seront fusionnées qu'en présence de <code>font-size</code> et <code>font-family</code> ; et si on a une valeur pour <code>line-height</code>, elle sera comprise dans le résultat final.
+	<li>Les propriétés qui se prêtent à une écriture sténographique sont : <code>background</code>, <code>border</code>, <code>border-bottom</code>, <code>border-left</code>, <code>border-right</code>, <code>border-top</code>, <code>cue</code>, <code>font</code>, <code>list-style</code>, <code>margin</code>, <code>padding</code>, <code>pause</code> et <code>outline</code>.
+</ol>
+
+<h5>2) Disposition compacte ou aérée</h5>
+
+<p>Que le code CSS ait été compacté ou non, l'utilisateur doit choisir entre deux formes de disposition finale : la forme aérée et la forme compacte.
+<p>1) La forme <b>compacte :</b>
+<ul>
+	<li>supprime les commentaires;
+	<li>dispose le code à raison d'une règle par ligne;
+	<li>supprime tout point-virgule (<tt>;</tt>) suivi d'une accolade fermante (<tt>}</tt>);
+	<li>supprime tout espace blanc inutile avant et après une virgule (<tt>,</tt>), un point-virgule (<tt>;</tt>), un deux-points (<tt>:</tt>), une accolade ouvrante (<tt>{</tt>) ou une accolade fermante (<tt>}</tt>).
+</ul>
+<p>2) La forme <b>aérée :</b>
+<ul>
+	<li>préserve les commentaires;
+	<li>indente et dispose le code à raison d'une déclaration par ligne;
+	<li>insère une espace après une virgule (<tt>,</tt>) ou un deux-points (<tt>:</tt>) [sauf dans une URL et devant une pseudo-classe ou un pseudo-élément];
+	<li>insère une nouvelle ligne après une accolade ouvrante (<tt>{</tt>);
+	<li>insère une nouvelle ligne avant une accolade fermante (<tt>}</tt>), et deux après.
+</ul>
+
+<h5>Exemple</h5>
+<p>Voici un exemple permettant d'illustrer les divers résultats auxquels on peut aboutir depuis le code initial suivant :<pre><code class=css>/* Structure */
+   body { margin:0px auto 0px auto;
+   font-size:0.9em;
+   font-family:arial,sans-serif;
+   color:#112233;
+   background:#FFFFFF; }</code></pre>
+<p><b>1. Après</b> Notation brève = Non ; Disposition compacte = Non<pre><code class=css>/* Structure */
+body {
+    margin: 0px auto 0px auto;
+    font-size: 0.9em;
+    font-family: arial, sans-serif;
+    color: #112233;
+    background: #FFFFFF;
+}</code></pre>
+<p><b>2. Après</b> Notation brève = Oui ; Disposition compacte = Non<pre><code class=css>/* Structure */
+body {
+    background: #fff;
+    color: #123;
+    font: .9em arial, sans-serif;
+    margin: 0 auto;
+}</code></pre>
+<p><b>3. Après</b> Notation brève = Oui ; Disposition compacte = Oui<pre><code class=css>body {background:#fff;color:#333;font:.9em arial,sans-serif;margin:0 auto}</code></pre>
+<p>Notez qu'il n'y aurait pas beaucoup d'intérêt à refuser l'application des règles de notation brève, et à demander ensuite que le code soit disposé de manière compacte. C'est d'ailleurs pourquoi nous n'avons pas cru bon illustrer cette possibilité.
+
+<h3 id=html>HTML</h3>
+
+<p class=menu>
+<a href=#ha>Principes généraux</a> | <a href=#hb>Remarques particulières</a>
+
+<h4 id=ha>Principes généraux</h4>
+<p>Des commandes sont prévues pour les balises HTML les plus utilisées. Elles sont toutes basées sur la touche <kbd>Verr.Maj</kbd>.
+<p>Vous avez le choix entre deux méthodes pour baliser un texte.
+<p><b>Méthode 1 :</b> sélectionnez le texte et balisez-le ensuite. Par exemple, sélectionnez les lignes devant constituer une liste à puces, puis faites <kbd>Verr.Maj</kbd>+<kbd>U</kbd> pour générer le balisage approprié.
+<p><b>Méthode 2 :</b> générez les balises d'abord et ajoutez votre texte ensuite. Par exemple, faites <kbd>Verr.Maj</kbd>+<kbd>K</kbd> pour générer les balises d'un bloc de citation, puis tapez votre texte ou collez-le s'il se trouve dans le presse-papiers.
+<p>Pour générer le jeu de balises voulu vous pouvez utiliser une commande spécifique ou taper le nom des balises suivi d'une frappe sur la touche <kbd>Tab</kbd>. Par exemple, pour obtenir les balises d'un lien hypertexte vous pouvez faire <kbd>Verr.Maj</kbd>+<kbd>A</kbd> ou taper la lettre <tt>A</tt> et appuyer sur <kbd>Tab</kbd>. Dans les deux cas vous obtiendrez ceci : <code>&lt;a href="<span class=c>|</span>">&lt;/a></code>.
+
+<h4 id=hb>Remarques particulières</h4>
+<p>Le balisage d'une <a href="#image">image</a>, d'un <a href="#lien">lien</a>, d'un <a href="#formulaire">contrôle de formulaire</a> ou d'un <a href="#tableau">tableau</a> obéissent à leurs logiques internes respectives.
+
+<h5 id="image">Image (<kbd>Verr.Maj</kbd>+<kbd>G</kbd>)</h5>
+<p>L'insertion d'une image inscrit automatiquement le chemin qui sépare l'image du fichier courant, ainsi que les dimensions de l'image en largeur et en hauteur. Par exemple, <tt>&lt;img src="img/Vic.ico" width="128" height="128" alt="<span class=c>|</span>"></tt>. Au terme, il ne vous restera plus qu'à inscrire un texte de remplacement adéquat.
+<p>Notez qu'une frappe sur la touche <kbd>Tab</kbd> après avoir tapé <tt>img</tt> n'inscrit rien d'autre que : <code>&lt;img src="<span class=c>|</span>" width="" height="" alt="" /></code>.
+
+<h5 id="lien">Lien (<kbd>Verr.Maj</kbd>+<kbd>A</kbd>)</h5>
+<p>Lors de la génération d'un lien, Vic détecte automatiquement si le texte sélectionné est une adresse courriel, une adresse Web ou un libellé. Par exemple, la commande <kbd>Verr.Maj</kbd>+<kbd>A</kbd> transformera les textes suivants de manières différentes :
+
+<h6>Exemple 1</h6>
+<p><b>Avant :</b><br><tt>normandlamoureux.com</tt><br><b>Après :</b><pre><code>&lt;a href="http://normandlamoureux.com"><span class=c>|</span>&lt;/a></code></pre>
+
+<h6>Exemple 2</h6>
+<p><b>Avant :</b><br><tt>normand.lamoureux@gmail.com</tt><br><b>Après :</b><pre><code>&lt;a href="mailto:normand.lamoureux@gmail.com"><span class=c>|</span>&lt;/a></code></pre>
+
+<h6>Exemple 3</h6>
+<p><b>Avant :</b><br><tt>Téléchargez la dernière version de Vic</tt><br><b>Après :</b><pre><code>&lt;a href="<span class=c>|</span>">Téléchargez la dernière version de Vic&lt;/a></code></pre>
+<p>Notez que les préfixes <code>http://</code> et <code>mailto:</code> sont ajoutés uniquement lorsqu'ils sont absents du texte de départ. Notez aussi que les signes <code>&amp;</code> qui pourraient se trouver dans l'<abbr title="Uniform Ressource Locator" lang="en">URL</abbr> de départ seraient automatiquement transformés en <code>&amp;amp;</code> pour garantir la validité du code.
+
+<h5 id="formulaire">Formulaire... (<kbd>Verr.Maj</kbd>+<kbd>F</kbd>)</h5>
+<p>La commande appelle une boîte de dialogue depuis laquelle il sera possible d'insérer le code HTML des contrôles de formulaire voulus.
+<p>La fenêtre de Vic est automatiquement activée dès qu'on y insère du code. Au clavier, la commande <kbd>Maj</kbd>+<kbd>Échappement</kbd> permet de revenir à la boîte de dialogue <tt>Formulaire</tt>. Lorsqu'on a fini, une frappe sur <kbd>Échappement</kbd> permet ensuite de fermer ce dialogue.
+
+<h5 id="tableau">Tableau... (<kbd>Verr.Maj</kbd>+<kbd>T</kbd>)</h5>
+<p>La commande appelle une boîte de dialogue qui comporte deux parties et qui permet soit de transformer le texte sélectionné en tableau, soit de créer un tableau si rien n'est sélectionné.
+<p>La première partie de la boîte de dialogue sert à déterminer la taille du tableau. Les renseignements qu'on y demande sont nécessaires. Si un contenu était sélectionné au moment de faire la commande, Vic calcule et indique automatiquement le nombre de lignes et de colonnes que le tableau doit comporter au total. Si rien n'était sélectionné, il vous faudra inscrire les nombres de lignes et de colonnes voulues.
+<p>La deuxième partie de la boîte de dialogue concerne l'accessibilité du tableau. Cette partie est facultative et n'a à être renseignée que si votre tableau comporte plusieurs niveaux d'en-têtes de colonnes ou plusieurs niveaux d'en-têtes de lignes. Les valeurs que vous inscrirez dans cette partie permettront à Vic d'associer explicitement les cellules de donnée aux cellules d'en-têtes qui y correspondent. Cette association se fera au moyen des attributs <code>id</code> et <code>headers</code>. Si vous n'inscrivez rien, le tableau sera généré sans ces attributs.
+<p>Les valeurs des attributs <code>id</code> et <code>headers</code> se présenteront sous la forme <tt>t0l0c0</tt>, où <tt>t</tt> vaut pour tableau, <tt>l</tt> pour ligne, <tt>c</tt> pour colonne, et <tt>0</tt> pour un nombre compris entre 0 et 99. Le numéro accolé à la lettre <tt>t</tt> correspondra à celui que vous aurez inscrit dans le champ intitulé Identifiant unique. Vous pouvez laisser ce champ vide si vous n'avez qu'un seul tableau dans votre page. En revanche, assurez-vous que chaque tableau a un numéro d'identification unique si vous en avez plusieurs.
+<p>Le texte sélectionné doit être organisé de la manière suivante pour être correctement interprété : les données doivent être séparées les unes des autres par un caractère de tabulation, et les rangées par un saut de ligne simple (<tt>LF</tt>) ou standard (<tt>CR</tt>+<tt>LF</tt>). La plupart du temps, le copié-collé d'un tableau depuis une feuille de calcul ou un traitement de texte devrait automatiquement correspondre à ces exigences.
+<p>On peut laisser des cellules vides. Pas besoin d'ôter les lignes vides et les espaces inutiles ou de marquer l'emplacement des cellules vides avant de procéder ; Vic détecte tout cela et s'en occupe. Il vous sera cependant nécessaire de retoucher le code si votre tableau comporte des cellules fusionnées.
+
+<h3 id=marqueurs>Signets</h3>
+
+<p class=menu>
+<a href="#m1">Placer un signet</a> | 
+<a href="#m2">Aller au siignet suivant</a> | 
+<a href="#m3">Aller au signet précédent</a> | 
+<a href="#m4">Supprimer le signet courant</a> | 
+<a href="#m5">Supprimer tous les signets</a>
+<h4 id=m1>Placer un signet (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>M</kbd>)</h4>
+
+<p>Calcule et enregsitre la position du curseur afin de pouvoir y revenir rapidement ensuite. La commande reste sans effet lorsqu'un signet a déjà été placé à la même position.<p>La position mémorisée correspond au nombre de caractères qu'il y a entre le début du fichier courant et l'endroit où se trouve le curseur au moment d'effectuer la commande. Un signet ne conduira donc pas au même endroit d'un texte si on ajoute ou si on supprime du contenu situé devant lui après sa mise en place.<p>On peut placer autant de signets qu'on veut dans un même onglet. Lorsque plusieurs onglets sont ouverts, Vic se souvient des signets propres à chacun.<p>Les signets de chaque onglet sont triés en ordre croissant et enregistrés dans des fichiers distincts portant l'extension <tt>.mrk</tt>. Les fichiers <tt>.mrk</tt> sont cachés.
+<h4 id=m2>Aller au signet suivant (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>J</kbd>)</h4>
+
+<p>Place le curseur au signet suivant du même onglet.<p>La commande reste sans effet lorsqu'il n'y a pas de signet du tout dans l'onglet courant, ou lorsqu'il y a un seul signet et que le curseur se trouve déjà dessus.<p>Lorsque l'onglet courant a plus d'un signets et que la position du curseur est égale ou supérieure à celle du dernier, on avance au premier. La navigation est donc circulaire.
+<h4 id=m3>Aller au signet précédent (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd>)</h4>
+
+<p>Place le curseur au signet précédant du même onglet.<p>La commande reste sans effet lorsqu'il n'y a pas de signet du tout dans l'onglet courant, ou lorsqu'il y a un seul signet et que le curseur se trouve déjà dessus.<p>Lorsque l'onglet courant a plus d'un signets et que la position du curseur est égale ou inférieure à celle du premier, on recule au dernier. La navigation est donc circulaire.
+<h4 id=m4>Supprimer le signet courant (<kbd>Alt</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd>)</h4>
+
+<p>Retire le signet courant de la liste des signets propres à l'onglet courant, et supprime le fichier où cette liste est enregistrée lorsque le retrait la rend vide.<p>La commande reste sans effet lorsqu'aucun signet ne coïncide avec la position du curseur.
+<h4 id=m5>Supprimer tous les signets... (<kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd>)</h4>
+
+<p>Déclenche l'ouverture d'une boîte de dialogue qui demande si on veut étendre la suppression des signets à tous les onglets.<p>Si on répond « Oui », toutes les listes de signets associées aux onglets ouverts sont supprimées d'un coup. Si on répond « Non », seule la liste des signets associée à l'onglet courant sera supprimée.<p>La commande reste sans effet si on répond « Annuler » ou si on ferme le dialogue sans avoir répondu.
+<h3 id="extensions">Extensions</h3>
+<p>Pour fonctionner, l'extension doit être un script <tt>.ahk</tt> exécutable placé dans le dossier <tt>plugins</tt>. Le menu des extensions est automatiquement créé à partir du nom des fichiers qui figurent dans le dossier <tt>plugins</tt>.
+<p>Assurez-vous également d'avoir les 2 lignes de code suivantes à l'intérieur de chaque fichier :<pre><code><tt style="color:blue">SetTitleMatchMode</tt><tt class=c>,</tt> 2
+<tt style="color:blue">WinActivate</tt><tt class=c>,</tt> - Vic</code></pre>
+
+<h3 id=aide>Aide</h3>
+<p class=menu>
+<a href="#h1">Documentation</a> | 
+<a href="#h2">Guide - Expression rationnelle</a> | 
+<a href="#h3">Table des caractères ASCII/ANSI</a> | 
+<a href="#h5">Vérifier l'existence d'une mise à jour</a> | 
+<a href="#h4">À propos…</a>
+<h4 id=h1>Documentation (<kbd>F1</kbd>)</h4>
+
+<p>Ouvre le fichier <tt>Vic.html</tt> dans le navigateur Web par défaut. Il s'agit du fichier de documentation que vous êtes en train de lire.
+<h4 id=h2>Guide - Expression rationnelle (<kbd>F11</kbd>)</h4>
+
+<p>Ouvre le fichier <tt>XR.doc</tt> dans le navigateur Web par défaut. Il s'agit d'une documentation complète sur la version d'expressions rationnelles utilisables avec Vic, à savoir PCRE, de l'anglais <i lang=en>Perl Compatible Regular Expression</i>.
+<h4 id=h3>Table des caractères ASCII/ANSI (<kbd>F12</kbd>)</h4>
+
+<p>Ouvre une boîte de dialogue qui affiche les caractères 32 à 127 de la table des caractères ANSI la plus communément répandue, soit Windows-1252. Les caractères peuvent être sélectionnés.<p>On referme cette boîte de dialogue avec <kbd>Échappement</kbd> ou <kbd>Alt</kbd>+<kbd>F4</kbd>, au choix.
+<h4 id=h5>Vérifier l'existence d'une mise à jour</h4>
+<p>Retourne une boîte de dialogue qui confirme que vous utilisez la version la plus récente de Vic, ou qui vous offre de télécharger la dernière version dans le cas contaire.
+<h4 id=h4>À propos…</h4>
+
+<p>Renseigne sur la licence et les droits d'auteur liés à Vic et aux composantes qui y sont intégrées.<p>Pour accéder à la licence d'utilisation originale de l'éditeur HiEdit intégré à Vic, éditez le fichier <tt>HiEdit.inc</tt> situé dans le dossier <tt>hie</tt>. Pour accéder à la licence d'utilisation originale du module Dlg intégré à Vic, éditez le fichier <tt>Dlg.ahk</tt> situé dans le dossier <tt>inc</tt>.
+<h2 id=touches-intelligentes>Les touches intelligentes de Vic</h2>
+
+<p>Les touches <a href="#origine">Origine</a>, <a href="#entree">Entrée</a>, <a href="#tab">Tab</a> et <a href="#retour-arriere">Retour arrière</a> ont des comportements spéciaux, dépendamment de la manière ou du contexte dans lequel on les utilise. Cette section vise à en expliquer l'usage.
+<h3 id=origine>Origine</h3>
+
+<p>Une frappe sur sur la touche <kbd>Origine</kbd> place le curseur au début de la ligne courante. Une deuxième frappe le place après les caractères blancs situés en début de ligne.<p>Voici un exemple, où le signe <tt class=c>|</tt> représente le curseur. Supposons qu'au départ le curseur se trouve en fin de ligne.<p>Après un <b>premier</b> coup sur la touche <kbd>Origine</kbd> on aura :<pre><code><tt class=c>|</tt>    &lt;table cellspacing="1"></code></pre>
+
+<p>Après un <b>deuxième</b> coup sur la touche <kbd>Origine</kbd> on aura :<pre>    <code><tt class=c>|</tt>&lt;table cellspacing="1"></code></pre>
+
+<p>Notez qu'un troisième coup sur la même touche ramènerait le curseur en début de ligne, un quatrième au début du texte, et ainsi de suite.
+<h3 id=entree>Entrée</h3>
+<h4>— Nouvelle ligne</h4>
+
+<p>Utilisée seule, la touche <kbd>Entrée</kbd> insère un changement de ligne standard. Il faut savoir qu'en environnement Windows, un changement de ligne se compose d'un retour de chariot (<tt>CR</tt>) suivi d'un saut de ligne (<tt>LF</tt>).<p>La commande <kbd>Ins</kbd>+<kbd>Entrée</kbd> permet d'insérer un simple saut ligne (<tt>LF</tt>). Ce qui peut servir à morceler manuellement une ligne qu'on pourra morceler différemment ensuite, via la fonction <a href="#ag">Longueur de ligne</a>.
+<h4>— Indentation horizontale</h4>
+
+<p>Lorsque la ligne courante est indentée, une frappe sur la touche <kbd>Entrée</kbd> aura pour effet de générer une nouvelle ligne indentée de la même manière. Pour empêcher ce comportement, allez au menu <i>Affichage</i> et décochez <i>Indentation automatique</i>.
+<h4>— Indentation verticale</h4>
+
+<p>Lorsque le curseur est entre deux balises, une frappe sur la touche <kbd>Entrée</kbd> aura pour effet de disposer les balises sur des lignes distinctes et d'y intercaler une ligne indentée d'un niveau de plus. Par exemple :<p><b>Avant :</b>
+
+<pre><code>  &lt;div><tt class=c>|</tt>&lt;/div></code></pre>
+
+<p><b>Après :</b>
+
+<pre>  <code>&lt;div>
+    <tt class=c>|</tt>
+  &lt;/div></code></pre>
+<p>Ce comportement ne se produit pas lorsque le curseur se trouve entre deux balises ouvrantes. Par exemple, si le curseur est entre <code>&lt;li></code> et <code>&lt;span></code>, une frappe sur <kbd>Entrée</kbd> renverrait simplement <code>&lt;span></code> à la ligne suivante.
+<h4>— Générateur de puce</h4>
+<p>Lorsque le premier caractère non blanc de la ligne courante joue le rôle de puce, la commande <kbd>Maj</kbd>+<kbd>Entrée</kbd> aura pour effet de générer une nouvelle ligne débutant par une puce identique. Par exemple :
+<p><b>Avant :</b>
+<pre><code>    - Framboise<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>    - Framboise
+    - <tt class=c>|</tt></code></pre>
+<p>Si la ligne de départ est indentée, la nouvelle ligne le sera aussi. Un signe <tt>-</tt>, <tt>+</tt>, <tt>*</tt> ou <tt>•</tt> suivi d'une espace ou d'une tabulation est automatiquement considéré comme jouant le rôle de puce. Les tirets quadratin <tt>—</tt> et demi quadratin <tt>–</tt> également. Ces signes peuvent être employés seuls ou combinés entre eux. Par exemple, les chaînes <tt>-+</tt>, <tt>++</tt> ou <tt>***</tt> suivies d'une espace ou d'une tabulation sont considérées comme des puces.
+
+<h4>— Numérotation automatique</h4>
+<p>Lorsque le premier caractère non blanc de la ligne courante est un chiffre suivi d'une espace, d'une tabulation, d'un point "<tt>.</tt>", d'un trait d'union "<tt>-</tt>", d'une parenthèse fermante "<tt>)</tt>" ou d'une combinaison de ces signes, la commande <kbd>Maj</kbd>+<kbd>Entrée</kbd> générera une nouvelle ligne numérotée de la même manière mais incrémentée de un (1). Par exemple :
+<p><b>Avant :</b>
+<pre><code>    7) Beurre de noisettes<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>    7) Beurre de noisettes
+    8) <tt class=c>|</tt></code></pre>
+<p>Si la ligne de départ est indentée, la nouvelle ligne le sera aussi. Lorsque deux ou plusieurs groupes de chiffres sont séparés par des points (<tt>.</tt>), c'est le dernier groupe de chiffres qui sera incrémenté. Par exemple :
+<p><b>Avant :</b>
+<pre><code>5.6  Date de la prochaine assemblée<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>5.6  Date de la prochaine assemblée
+5.7  <tt class=c>|</tt></code></pre>
+<p>Pour empêcher la génération d'une numérotation en début de ligne, faites votre changement de ligne avec <kbd>Entrée</kbd>.
+
+<h3 id=tab>Tab</h3>
+
+<h4>— Pendant une sélection</h4>
+<p>Lorsqu'un bloc de texte est sélectionné, <kbd>Tab</kbd> augmente le retrait de chacune des lignes du bloc, alors que <kbd>Maj</kbd>+<kbd>Tab</kbd> diminue le retrait.
+<p>Voici un exemple d'augmentation du retrait :
+<p><b>Avant :</b>
+<pre><code style="background:#fff">&lt;ul> 
+  &lt;li>Fraise&lt;/li> 
+  &lt;li>Banane&lt;/li> 
+&lt;/ul><tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code style="background:#fff">  &lt;ul> 
+    &lt;li>Fraise&lt;/li> 
+    &lt;li>Banane&lt;/li> 
+  &lt;/ul><tt class=c>|</tt></code></pre>
+<p>L'augmentation du retrait se fait par l'ajout d'un caractère de tabulation au début de chaque ligne. La diminution du retrait se fait par le retranchement d'un caractère de tabulation ou, lorsqu'il n'y en a pas, d'une espace.
+
+<h4>— Générateur de balises</h4>
+<p>Lorsque le curseur se trouve à droite d'un mot, <kbd>Tab</kbd> crée une paire de balises avec ce mot comme nom d'élément. Voici un exemple, où <tt class=c>|</tt> indique la position du curseur :
+<p><b>Avant :</b>
+<pre><code>strong<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;strong><tt class=c>|</tt>&lt;/strong></code></pre>
+<p>Des formes appropriées sont prévues pour toutes les balises officielles du HTML 4.01 et du XHTML 1.0. Par exemple, la lettre <tt>a</tt> suivi de <kbd>Tab</kbd> produira <samp>&lt;a href="<tt class=c>|</tt>">&lt;/a></samp> et non <code>&lt;a><tt class=c>|</tt>&lt;/a></code>.
+<p>Pour empêcher la génération automatique d'une balise et ajouter un caractère de tabulation lorsque le curseur se trouve juste à droite d'un texte, faites <kbd>AltDroit</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Générateur de lien</h4>
+<p>Lorsque le curseur se trouve à droite d'une adresse électronique, <kbd>Tab</kbd> aura pour effet de créer un lien hypertexte avec l'adresse inscrite dans l'attribut <code>href</code>. Le type d'adresse est automatiquement détecté. Voici un exemple avec une adresse courriel :
+<p><b>Avant :</b>
+<pre><code>quidam@eldorado.com<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;a href="mailto:quidam@eldorado.com"><tt class=c>|</tt>&lt;/a></code></pre>
+<p>Les adresses courriel sont automatiquement précédées du préfixe <code>mailto:</code>. Les adresses Web, quant à elles, sont automatiquement précédées du préfixe <code>http://</code>. Par exemple :
+<p><b>Avant :</b>
+<pre><code>www.eldorado.com<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;a href="http://www.eldorado.com"><tt class=c>|</tt>&lt;/a></code></pre>
+<p>Notez que le préfixe <code>http://</code> n'est pas ajouté lorsqu'il figure dans l'adresse de départ. De plus, si des éperluettes (<tt>&amp;</tt>) sont présentes dans l'URL, elles prendront automatiquement la forme valide <code>&amp;amp;</code>.
+<p>Pour empêcher la génération automatique d'un lien et ajouter un caractère de tabulation lorsque le curseur se trouve à droite d'une adresse électronique, faites <kbd>AltDroit</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Positionnement intelligent</h4>
+<p>Lorsque le curseur se trouve devant les signes <tt>"</tt> ou <tt>&lt;</tt>, <kbd>Tab</kbd> déplace le curseur au sein de la prochaine paire de guillemets, au milieu de la prochaine paire de balises ou après le prochain signe <tt>></tt>. Voyons un exemple :
+<p><b>Au départ :</b>
+<pre><code>&lt;a href="<tt class=c>|</tt>">&lt;/a></code></pre>
+<p><b>Après la 1<sup>e</sup> utilisation de <kbd>Tab</kbd> :</b>
+<pre><code>&lt;a href=""><tt class=c>|</tt>&lt;/a></code></pre>
+<p><b>Après la 2<sup>e</sup> utilisation de <kbd>Tab</kbd> :</b>
+<pre><code>&lt;a href="">&lt;/a><tt class=c>|</tt></code></pre>
+<p>Le raccourci <kbd>Tab</kbd> déplace donc le curseur au prochain arrêt significatif en HTML. Ce qui permet de travailler de manière plus efficace et de gagner du temps.
+<p>Pour empêcher le positionnement intelligent et ajouter un caractère de tabulation lorsque le curseur se trouve à droite des signes <tt>"</tt> ou <tt>&lt;</tt>, faites <kbd>AltDroit</kbd>+<kbd>Tab</kbd>.
+
+<h4>— Générateur de balises personnalisées</h4>
+<p>Une syntaxe simple permet de générer des balises qui réponde à des exigences particulières. On a prévu les 3 types de possibilités suivants :
+<ol>
+	<li>ajouter un attribut dans la balise ouvrante de l'élément;
+	<li>déterminer d'avance le nombre d'items de liste à générer;
+	<li>insérer un attribut dans la balise ouvrante de chaque item de liste.
+
+</ol>
+<p>Les exemples suivants illustrent ce qu'on a avant et après une frappe sur la touche <kbd>Tab</kbd>.
+
+<h5>1<sup>er</sup> type de possibilités</h5>
+<p>La syntaxe <var>Élément</var>+<var>Attribut</var> permet de créer une paire de balises avec l'attribut souhaité au sein de la balise ouvrante. Par exemple :
+<p><b>Avant :</b>
+<pre><code>p+class<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;p class="<tt class=c>|</tt>">&lt;/p></code></pre>
+<p>Lorsqu'un élément est déjà naturellement pourvu d'un ou plusieurs attributs HTML, l'attribut demandé sera mis avant les autres. Par exemple :
+<p><b>Avant :</b>
+<pre><code>img+id<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;img id="<tt class=c>|</tt>" src="" width="" height="" alt="" /></code></pre>
+<p>Notez que, par défaut, c'est la syntaxe XHTML qui sera utilisée. Si vous développez en HTML, pensez à retrancher la barre oblique (<tt>/</tt>) et l'espace qui la précède.
+
+<h5>2<sup>e</sup> type de possibilités</h5>
+<p>La syntaxe <var>Élément</var>+<var>Attribut</var>+<var>Nombre</var> permet de générer une structure de liste HTML avec le nombre d'items de liste voulu. Par exemple :
+<p><b>Avant :</b>
+<pre><code>ul+id+3<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;ul id="<tt class=c>|</tt>">
+  &lt;li>&lt;/li>
+  &lt;li>&lt;/li>
+  &lt;li>&lt;/li>
+&lt;/ul></code></pre>
+<p>Cette syntaxe peut être utilisée pour tous les types de liste HTML. Dans le cas d'une liste de définition, le nombre produira des couples d'éléments <code>dt</code> et <code>dd</code>. De plus, on peut signifier qu'on n'a pas besoin d'attribut en laissant un vide. Par exemple :
+<p><b>Avant :</b>
+<pre><code>dl++2<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;dl>
+  &lt;dt><tt class=c>|</tt>&lt;/dt>
+  &lt;dd>&lt;/dd>
+  &lt;dt>&lt;/dt>
+  &lt;dd>&lt;/dd>
+&lt;/ul></code></pre>
+<p>Les listes à puces et les listes numérotées sont automatiquement générées avec au moins un item de liste. Il est donc inutile, par exemple, d'écrire <code>ol++1</code> puisque <code>ol</code> suffit.
+
+<h5>3<sup>e</sup> type de possibilités</h5>
+<p>La syntaxe <var>Élément</var>+<var>Attribut</var>+<var>Nombre</var>+<var>Attribut</var> peut être utilisée pour générer une liste avec un attribut dans la balise du conteneur, et un attribut dans chacun des items de liste subséquents. Par exemple :
+<p><b>Avant :</b>
+<pre><code>ol+id+3+class<tt class=c>|</tt></code></pre>
+<p><b>Après :</b>
+<pre><code>&lt;ol id="<tt class=c>|</tt>">
+  &lt;li class="">&lt;/li>
+  &lt;li class="">&lt;/li>
+  &lt;li class="">&lt;/li>
+&lt;/ol></code></pre>
+<p>Comme précédemment, on peut écrire <code>ol++3+class</code> si on n'a pas besoin d'attribut dans l'élément ouvrant du bloc conteneur. Il faut cependant écrire <code>ol++1+class</code> si on veut un seul item de liste avec attribut, car la syntaxe <code>ol+++class</code> ne marchera pas.
+
+<h3 id=retour-arriere>Retour arrière</h3>
+<p>Lorsqu'on vient de transformer une sélection en une liste, en un groupe de paragraphes ou en un tableau HTML, la commande <kbd>Alt</kbd>+<kbd>Retour Arrière</kbd> permet de ramener le curseur au début du bloc de code, à l'endroit précis où il faut se trouver pour y insérer une classe, un titre ou un identifiant unique.
+<p>Voici un exemple complet développé en quatre (4) temps.
+<p><b>1.</b> Au départ, on a deux mots sélectionnés :
+<pre><code class=b>Fraise 
+Banane<tt class=c>|</tt></code></pre>
+<p><b>2.</b> On fait <kbd>Verr.Maj</kbd>+<kbd>U</kbd>, et on obtient une liste à puces :
+<pre><code>&lt;ul>
+  &lt;li>Fraise
+  &lt;li>Banane
+&lt;/ul><tt class=c>|</tt></code></pre>
+<p><b>3.</b> Puis, <kbd>Alt</kbd>+<kbd>Retour arrière</kbd> positionne le curseur et ôte la sélection :
+<pre><code>&lt;ul<tt class=c>|</tt>>
+  &lt;li>Fraise
+  &lt;li>Banane
+&lt;/ul></code></pre>
+<p><b>4.</b> Enfin, il ne reste plus qu'à faire <kbd>Ins</kbd>+<kbd>C</kbd> pour ajouter l'attribut souhaité :
+<pre><code>&lt;ul class="<tt class=c>|</tt>">
+  &lt;li>Fraise
+  &lt;li>Banane
+&lt;/ul></code></pre>
+<p>Notez que tout de suite après l'étape nº 2 on aurait pu indenter le code avec une ou plusieurs frappes sur <kbd>Tab</kbd> et utiliser ensuite la commande <kbd>Alt</kbd>+<kbd>Retour arrière</kbd> avec le même résultat.
+<h2 id=annexe-1>Annexe 1 : table ANSI</h2>
+<p>Voici la table des caractères « <abbr title="American National Standards Institute">ANSI</abbr> », qu'il serait sans doute plus précis d'appeler Windows occidental, Windows-1252 ou CP-1252.
+<p>On a inscrit des lettres à la place des caractères qui, autrement, passeraient inaperçus. Il s'agit de tabulation (<tt>TAB</tt>), saut de ligne (<tt>LF</tt>), espace (<tt>SP</tt>) et espace insécable (<tt>NBS</tt>).
+<table class=mono cellspacing="1">
+<tr><th><th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr><th>000<td>NUL<td>SOH<td>STX<td>ETX<td>EOT<td>ENQ<td>ACK<td>BEL<td>BS<td>TAB
+<tr class=p><th>010<td>LF<td>VT<td>FF<td>CR<td>SO<td>SI<td>DLE<td>DC1<td>DC2<td>DC3
+<tr><th>020<td>DC4<td>NAK<td>SYN<td>ETB<td>CAN<td>EM<td>SUB<td>ESC<td>FS<td>GS
+<tr class=p><th>030<td>RS<td>US<td>SP<td>!<td>"<td>#<td>$<td>%<td>&amp;<td>'
+<tr><th>040<td>(<td>)<td>*<td>+<td>,<td>-<td>.<td>/<td>0<td>1
+<tr class=p><th>050<td>2<td>3<td>4<td>5<td>6<td>7<td>8<td>9<td>:<td>;
+<tr><th>060<td>&lt;<td>=<td>><td>?<td>@<td>A<td>B<td>C<td>D<td>E
+<tr class=p><th>070<td>F<td>G<td>H<td>I<td>J<td>K<td>L<td>M<td>N<td>O
+<tr><th>080<td>P<td>Q<td>R<td>S<td>T<td>U<td>V<td>W<td>X<td>Y
+<tr class=p><th>090<td>Z<td>[<td>\<td>]<td>^<td>_<td>`<td>a<td>b<td>c
+<tr><th>100<td>d<td>e<td>f<td>g<td>h<td>i<td>j<td>k<td>l<td>m
+<tr class=p><th>110<td>n<td>o<td>p<td>q<td>r<td>s<td>t<td>u<td>v<td>w
+<tr><th>120<td>x<td>y<td>z<td>{<td>|<td>}<td>~<td><tt class=e>[]</tt><td>€<td><tt class=e>[]</tt>
+<tr class=p><th>130<td>‚<td>ƒ<td>„<td>…<td>†<td>‡<td>ˆ<td>‰<td>Š<td>‹
+<tr><th>140<td>Œ<td><tt class=e>[]</tt><td>Ž<td><tt class=e>[]</tt><td><tt class=e>[]</tt><td>‘<td>’<td>“<td>”<td>•
+<tr class=p><th>150<td>–<td>—<td>˜<td>™<td>š<td>›<td>œ<td><tt class=e>[]</tt><td>ž<td>Ÿ
+<tr><th>160<td>NBS<td>¡<td>¢<td>£<td>¤<td>¥<td>¦<td>§<td>¨<td>©
+<tr class=p><th>170<td>ª<td>«<td>¬<td>­<td>®<td>¯<td>°<td>±<td>²<td>³
+<tr><th>180<td>´<td>µ<td>¶<td>·<td>¸<td>¹<td>º<td>»<td>¼<td>½
+<tr class=p><th>190<td>¾<td>¿<td>À<td>Á<td>Â<td>Ã<td>Ä<td>Å<td>Æ<td>Ç
+<tr><th>200<td>È<td>É<td>Ê<td>Ë<td>Ì<td>Í<td>Î<td>Ï<td>Ð<td>Ñ
+<tr class=p><th>210<td>Ò<td>Ó<td>Ô<td>Õ<td>Ö<td>×<td>Ø<td>Ù<td>Ú<td>Û
+<tr><th>220<td>Ü<td>Ý<td>Þ<td>ß<td>à<td>á<td>â<td>ã<td>ä<td>å
+<tr class=p><th>230<td>æ<td>ç<td>è<td>é<td>ê<td>ë<td>ì<td>í<td>î<td>ï
+<tr><th>240<td>ð<td>ñ<td>ò<td>ó<td>ô<td>õ<td>ö<td>÷<td>ø<td>ù
+<tr class=p><th>250<td>ú<td>û<td>ü<td>ý<td>þ<td>ÿ<td> <td> <td> <td> 
+</table>
+<p>Les signes <tt class=e>[]</tt> marquent l'emplacement des caractères qui n'ont aucune forme particulière et qui s'afficheront au moyen d'un point d'interrogation ou d'un carré, dépendamment de la police d'affichage utilisée.
+<p>Hormi tabulation (<tt>9</tt>) et saut de ligne (<tt>10</tt>), Vic affiche les caractères 0 à 31 avec les mêmes lettres que celles qu'on a indiquées.
+<h2 id=annexe-2>Annexe 2 : raccourcis clavier</h2>
+<p>Voici la liste alphabétique des raccourcis clavier utilisables avec Vic. Les commandes usuelles de déplacement et de sélection sont supportées, mais on les a omises pour ne pas surcharger la liste.
+<p>Le comportement des touches marquées d'un astérisque (<tt class=c>*</tt>) est décrit à la <a href="#touches-intelligentes">section 5</a>. Les commandes marquées d'une obèle (<tt class=c>†</tt>) ne figurent pas dans les menus.
+<table cellspacing="1">
+<tr><th>Raccourci<th>Action
+<tr><td><kbd>Alt</kbd>+<kbd>Bas</kbd><tt class=c>†</tt><td>Défiler d'une ligne vers le bas (curseur immobile)
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>C</kbd><td>Compresser le code HTML/XHTML
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>J</kbd><td>Aller au marqueur de position suivant
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>M</kbd><td>Placer un marqueur de position
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd><td>Aller au marqueur de position précédent
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd><td>Supprimer tous les marqueurs de position
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>O</kbd><td>Ouvrir une session préalablement enregistrée
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>S</kbd><td>Enregistrer la session courante
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>U</kbd><td>Restituer le faux UTF-8 en ANSI
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>W</kbd><td>Recharger en mémoire le fichier courant
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>X</kbd><td>Convertir le XHTML 1.0 en HTML 4.01
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Y</kbd><td>Formater/Réécrire le code CSS sélectionné
+<tr><td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>Z</kbd><td>Afficher la liste des fichiers ouverts
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Droite</kbd><tt class=c>†</tt><td>Défiler d'un caractère vers la droite (curseur immobile)
+<tr><td><kbd>Alt</kbd>+<kbd>F4</kbd><td>Fermer la fenêtre de Vic ainsi que tous les onglets
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Gauche</kbd><tt class=c>†</tt><td>Défiler d'un caractère vers la gauche (curseur immobile)
+<tr><td><kbd>Alt</kbd>+<kbd>Haut</kbd><tt class=c>†</tt><td>Défiler d'une ligne vers le haut (curseur immobile)
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd><td>Supprimer le marqueur de position courant
+<tr><td><kbd>Alt</kbd>+<kbd>Retour Arrière</kbd><span class=c>*</span><span class=c>†</span><td>Remonter au début de la sélection après formatage HTML
+<tr class=p><td><kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Bas</kbd><td>Diminuer de 25 % l'opacité de la fenêtre de Vic
+<tr><td><kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>Haut</kbd><td>Augmenter de 25 % l'opacité de la fenêtre de Vic
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>+</kbd><td>Augmenter la taille de la police
+<tr><td><kbd>Ctrl</kbd>+<kbd>-</kbd><td>Diminuer la taille de la police
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>0</kbd><td>Revenir à la taille de police normale
+<tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd><td>Sélectionner tout
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>C</kbd><td>Copier la sélection dans le presse-papiers
+<tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd><td>Changer la police d'affichage
+<tr class=p><td><kbd>Crtl</kbd>+<kbd>E</kbd><td>Changer les couleurs de l'interface
+<tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd><td>Rechercher une chaîne de caractères
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>F12</kbd><td>Enregistrer le fichier courant sous un autre nom
+<tr><td><kbd>Ctrl</kbd>+<kbd>F4</kbd><td>Fermer l'onglet courant
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>G</kbd><td>Atteindre une ligne ou une colonne donnée
+<tr><td><kbd>Ctrl</kbd>+<kbd>H</kbd><td>Remplacer une chaîne de caractères par une autre
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>J</kbd><td>Trouver l'autre membre de la paire
+<tr><td><kbd>Ctrl</kbd>+<kbd>L</kbd><td>Changer la langue d'affichage
+<tr class=p><td><kbd>Crtl</kbd>+<kbd>M</kbd><td>Régler la largeur de la marge de sélection
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>A</kbd><td>Remplacer les espaces initiales par des tabulations
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>B</kbd><td>Mettre la sélection en bas de casse
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Bas</kbd><td>Déplacer la sélection d'une ligne vers le bas
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>E</kbd><td>Remplacer les tabulations initiales par des espaces
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>F</kbd><td>Supprimer les blancs de fin de ligne
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>F4</kbd><td>Fermer tous les onglets
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>H</kbd><td>Mettre la sélection en haut de casse
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Haut</kbd><td>Déplacer la sélection d'une ligne vers le haut
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>I</kbd><td>Mettre l'initiale de chaque mot en lettre majuscule
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>K</kbd><td>Supprimer les lignes vides
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>L</kbd><td>Dupliquer le bloc sélectionné ou la ligne courante
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>M</kbd><td>Supprimer les balises et le contenu HTML
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>P</kbd><td>Prélever la couleur d'un pixel
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>R</kbd><td>Ouvre le gestionnaire de remplacements automatiques
+<tr><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>S</kbd><td>Enregistrer tous les onglets
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>T</kbd><td>Effectuer un tri
+<tr><td><kbd>Ctrl</kbd>+<kbd>Molette-Bas</kbd><tt class=c>†</tt><td>Diminuer la taille de la police
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Molette-Haut</kbd><tt class=c>†</tt><td>Augmenter la taille de la police
+<tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd><td>Ouvrir un nouvel onglet
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>O</kbd><td>Ouvrir un fichier enregistré
+<tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd><td>Imprimer le contenu de l'onglet courant
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>S</kbd><td>Enregistrer l'onglet courant
+<tr><td><kbd>Crtl</kbd>+<kbd>T</kbd><td>Régler la largeur de tabulation
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>V</kbd><td>Coller le contenu du presse-papiers
+<tr><td><kbd>Ctrl</kbd>+<kbd>W</kbd><td>Régler la longueur de ligne
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>X</kbd><td>Couper la sélection
+<tr><td><kbd>Ctrl</kbd>+<kbd>Y</kbd><td>Rétablir la dernière action annulée
+<tr class=p><td><kbd>Ctrl</kbd>+<kbd>Z</kbd><td>Annuler la dernière action valide
+<tr><td><kbd>F1</kbd><td>Éditer la documentation sur Vic dans un navigateur
+<tr class=p><td><kbd>F2</kbd><td>Rechercher l'occurrence précédente
+<tr><td><kbd>F3</kbd><td>Rechercher l'occurrence suivante
+<tr class=p><td><kbd>F4</kbd><td>Substituer la sélection par le texte de remplacement
+<tr><td><kbd>Ins</kbd>+<kbd>1</kbd><td>Insérer le Doctype HTML 4.01 Strict
+<tr class=p><td><kbd>Ins</kbd>+<kbd>2</kbd><td>Insérer le Doctype HTML 4.01 Transitional
+<tr><td><kbd>Ins</kbd>+<kbd>3</kbd><td>Insérer le Doctype HTML 4.01 Frameset
+<tr class=p><td><kbd>Ins</kbd>+<kbd>4</kbd><td>Insérer le Doctype XHTML 1.0 Strict
+<tr><td><kbd>Ins</kbd>+<kbd>5</kbd><td>Insérer le Doctype XHTML 1.0 Transitional
+<tr class=p><td><kbd>Ins</kbd>+<kbd>6</kbd><td>Insérer le Doctype XHTML 1.0 Frameset
+<tr><td><kbd>Ins</kbd>+<kbd>;</kbd><td>Commenter/décommenter le bloc
+<tr class=p><td><kbd>Ins</kbd>+<kbd>C</kbd><td>Insérer un attribut HTML class
+<tr><td><kbd>Ins</kbd>+<kbd>D</kbd><td>Insérer la date
+<tr class=p><td><kbd>Ins</kbd>+<kbd>E</kbd><td>Insérer un commentaire conditionnel
+<tr><td><kbd>Ins</kbd>+<kbd>Entrée</kbd><td>Insérer un saut de ligne de type Unix (<tt>LF</tt>)
+<tr class=p><td><kbd>Ins</kbd>+<kbd>F</kbd><td>Insérer un commentaire CSS
+<tr><td><kbd>Ins</kbd>+<kbd>F1</kbd><td>Insérer le squelette XHTML 1.0 prédéfini
+<tr class=p><td><kbd>Ins</kbd>+<kbd>F4</kbd><td>Insérer le squelette HTML 4.01 prédéfini
+<tr><td><kbd>Ins</kbd>+<kbd>G</kbd><td>Insérer un commentaire HTML
+<tr class=p><td><kbd>Ins</kbd>+<kbd>H</kbd><td>Insérer l'heure
+<tr><td><kbd>Ins</kbd>+<kbd>I</kbd><td>Insérer un attribut HTML id
+<tr class=p><td><kbd>Ins</kbd>+<kbd>L</kbd><td>Insérer un attribut HTML lang
+<tr><td><kbd>Ins</kbd>+<kbd>N</kbd><td>Insérer un attribut HTML name
+<tr class=p><td><kbd>Ins</kbd>+<kbd>P</kbd><td>Insérer un caractère spécial
+<tr><td><kbd>Ins</kbd>+<kbd>S</kbd><td>Insérer un attribut HTML style
+<tr class=p><td><kbd>Ins</kbd>+<kbd>T</kbd><td>Insérer un attribut HTML title
+<tr><td><kbd>Maj</kbd>+<kbd>Échappement</kbd><span class=c>†</span><td>Revenir au dialogue Formulaire
+<tr class=p><td><kbd>Maj</kbd>+<kbd>F10</kbd><tt class=c>†</tt><td>Ouvrir le menu contextuel
+<tr><td><kbd>Maj</kbd>+<kbd>Tab</kbd><td>Diminuer le retrait
+<tr class=p><td><kbd>Menu</kbd><span class=c>†</span><td>Ouvrir le menu contextuel
+<tr><td><kbd>Suppr</kbd><td>Supprimer la sélection
+<tr class=p><td><kbd>Tab</kbd><span class=c>*</span><td>Augmenter le retrait
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>1</kbd><td>Balisage HTML de titre de niveau 1
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>2</kbd><td>Balisage HTML de titre de niveau 2
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>3</kbd><td>Balisage HTML de titre de niveau 3
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>4</kbd><td>Balisage HTML de titre de niveau 4
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>5</kbd><td>Balisage HTML de titre de niveau 5
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>6</kbd><td>Balisage HTML de titre de niveau 6
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>A</kbd><td>Balisage HTML de lien hypertexte
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>B</kbd><td>Balisage HTML de mise en gras
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>Bas</kbd><td>Balisage HTML de mise en indice
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>C</kbd><td>Balisage HTML de source citée
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>Del</kbd><td>Balisage HTML de texte raturé
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>E</kbd><td>Balisage HTML de mise en emphase
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>Entrée</kbd><td>Balisage HTML de changement de ligne
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>Espace</kbd><td>Balisage HTML de séparateur horizontal
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>F</kbd><td>Boîte de dialogue des contrôles de formulaire HTML
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>G</kbd><td>Balisage HTML d'image
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>Haut</kbd><td>Balisage HTML de mise en exposant
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>I</kbd><td>Balisage HTML de mise en italique
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>Ins</kbd><td>Balisage HTML de texte ajouté
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>K</kbd><td>Balisage HTML de citation longue
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>M</kbd><td>Convertir les fins de lignes au format Mac (<tt>CR</tt>)
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>O</kbd><td>Balisage HTML de liste numérotée
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>P</kbd><td>Balisage HTML de paragraphe
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>Q</kbd><td>Balisage HTML de citation courte
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>S</kbd><td>Balisage HTML de mise en emphase forte
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>T</kbd><td>Boîte de dialogue du balisage HTML d'un tableau
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>U</kbd><td>Balisage HTML de liste à puces
+<tr class=p><td><kbd>Verr.Maj</kbd>+<kbd>W</kbd><td>Convertir les fins de lignes au format Windows (<tt>CR</tt>+<tt>LF</tt>)
+<tr><td><kbd>Verr.Maj</kbd>+<kbd>X</kbd><td>Convertir les fins de lignes au format Unix (<tt>LF</tt>)
+<tr class=p><td><kbd>Win</kbd>+<kbd>Bas</kbd><td>Restaurer ou minimiser la fenêtre de Vic
+<tr><td><kbd>Win</kbd>+<kbd>Droite</kbd><td>Ajuster la fenêtre de Vic à la moitié droite de l'écran
+<tr class=p><td><kbd>Win</kbd>+<kbd>Gauche</kbd><td>Ajuster la fenêtre de Vic à la moitié gauche de l'écran
+<tr><td><kbd>Win</kbd>+<kbd>Haut</kbd><td>Restaurer ou agrandir la fenêtre de Vic
+</table>
+
+<h2 id=annexe-3>Annexe 3 : remplacements automatiques</h2>
+<p class=menu>
+<a href="#ra1">Remplacements prédéfinis</a> | 
+<a href="#ra2">Ajouter, modifier ou supprimer un remplacement</a> | 
+<a href="#ra3">Comportement par défaut</a> | 
+<a href="#ra4">Explication des options</a>
+
+<h3 id=ra1>Remplacements prédéfinis</h3>
+<p>Voici la liste des remplacements automatiques prédéfinis. Le signe <tt class=c>|</tt> indique l'emplacement du curseur lorsque c'est pertinent. Le signe <tt>[]</tt> représente une espace.
+<table class=mono cellspacing="1">
+<tr><th>Tapez<th>Obtenez
+<tr><td>""<td>"<tt class=c>|</tt>"
+<tr class=p><td>((<td>(<tt class=c>|</tt>)
+<tr><td>{{<td>{<tt class=c>|</tt>}
+<tr class=p><td>[[<td>[<tt class=c>|</tt>]
+<tr><td>%%<td>%<tt class=c>|</tt>%
+<tr class=p><td>&lt;&lt;<td>« <tt class=c>|</tt> »
+<tr><td>+-<td>±
+<tr class=p><td>-[]-<td>–
+<tr><td>_[]_<td>—
+<tr class=p><td>\[]<td>  (Espace insécable)
+<tr><td>\.[]<td>·
+<tr class=p><td>\%<td>‰
+<tr><td>\|<td>¦
+<tr class=p><td>\?<td>¿
+<tr><td>\*<td>•
+<tr class=p><td>\#<td>‡
+<tr><td>\+<td>†
+<tr class=p><td>\-<td>¬
+<tr><td>\:-<td>÷
+<tr class=p><td>\...<td>…
+<tr><td>\ae<td>æ
+<tr class=p><td>\AE<td>Æ
+<tr><td>\B<td>ß
+<tr class=p><td>\c<td>¢
+<tr><td>\C<td>©
+<tr class=p><td>\D<td>Ð
+<tr><td>\E<td>€
+<tr class=p><td>\f<td>ƒ
+<tr><td>\L<td>£
+<tr class=p><td>\n<td>ñ
+<tr><td>\N<td>Ñ
+<tr class=p><td>\oe<td>œ
+<tr><td>\OE<td>Œ
+<tr class=p><td>\0<td>°
+<tr><td>\o/<td>ø
+<tr class=p><td>\O/<td>Ø
+<tr><td>\P<td>¶
+<tr class=p><td>\R<td>®
+<tr><td>\s<td>~
+<tr class=p><td>\S<td>§
+<tr><td>\u<td>µ
+<tr class=p><td>\x<td>×
+<tr><td>\Y<td>¥
+<tr class=p><td>\z<td>ž
+<tr><td>\Z<td>Ž
+<tr class=p><td>lorem<td>Lorem ipsum dolor sit amet, (…)
+</table>
+
+<h3 id=ra2>Ajouter, modifier ou supprimer</h3>
+<p>Pour ajouter, modifier ou supprimer un ou plusieurs remplacements automatiques, appuyez sur <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>R</kbd>.
+<p>Une case à cocher <b>empêche</b> ou, au contraire, <b>permet</b> que les remplacements automatiques se déclenchent dans une fenêtre autre que la fenêtre de Vic.
+<p>Pour ajouter un remplacement automatique, activez le bouton <b>Ajouter</b>, tapez l'abréviation et le texte de remplacement voulus, et faites <b>OK</b>. L'abréviation correspond au texte qui servira à déclencher l'action. Le texte de remplacement est celui qui viendra se substituer à l'abréviation.
+<p>Une <b>abréviation</b> peut avoir jusqu'à 40 caractères et contenir n'importe quel signe directement accessible au clavier sauf un saut de ligne. Faites <kbd>Ctrl</kbd>+<kbd>Tab</kbd> pour insérer une tabulation.
+<p>Un <b>texte de remplacement</b> peut avoir jusqu'à 5000 caractères et contenir n'importe quel signe directement accessible au clavier y compris le saut de ligne. Faites <kbd>Ctrl</kbd>+<kbd>Entrée</kbd> pour insérer un saut de ligne, et <kbd>Ctrl</kbd>+<kbd>Tab</kbd> pour insérer une tabulation.
+
+<h3 id=ra3>Comportement par défaut</h3>
+<p>Sauf avis contraire, un remplacement automatique ne se produit qu'au moment de taper <b>Espace</b>, <b>Tab</b>, <b>Entrée</b> ou l'un des signes suivants : <tt>-()[]{}':;"/\,.?!</tt> L'abréviation est alors effacée et le texte de remplacement inséré, suivi du caractère ayant servi à déclencher l'action.
+<p>Par défaut, le texte de remplacement <b>adopte la casse</b> de l'abréviation. Ce qui veut dire que si on tape l'abréviation en majuscules, le texte de remplacement appraîtra aussi en majuscules. Si seule la première lettre de l'abréviation est en majuscule, alors la première lettre du texte de remplacement sera tournée en majuscule. Dans tous les autres cas de figure, le texte de remplacement apparaîtra comme il a initialement été défini.
+
+<h3 id=ra4>Explication des options</h3>
+<p>Les options suivantes permettent de <b>changer le comportement par défaut</b> d'un remplacement automatique. Il y a 7 options et il est possible d'en choisir plusieurs en même temps.
+
+<h4>— Déclencher l'action aussitôt l'abréviation tapée</h4>
+<p>Force le remplacement à se produire dès que le dernier signe faisant partie de l'abréviation est tapé, et non pas après un caractère d'espacement ou une ponctuation comme c'est normalement le cas.
+<p>Par exemple, transformer <tt>càd</tt> en <samp>c'est-à-dire</samp> dès qu'on appuie sur <tt>d</tt>.
+
+<h4>— Permettre que l'abréviation soit précédée d'une lettre ou un chiffre</h4>
+<p>En temps normal, le remplacement se fait lorsque l'abréviation est accolée à un espacement ou une ponctuation, mais pas une lettre ou un chiffre. Cette option permet que abréviation suive n'importe quel caractère.
+<p>Par exemple, transformer <tt>\0</tt> en <samp>°</samp> devant n'importe quel chiffre.
+
+<h4>— Ajouter le texte de remplacement sans effacer l'abréviation</h4>
+<p>Génère un comportement semblable à celui qui se produit dans le cas d'une saisie semi automatique. Le texte de remplacement ne se substitue pas à l'abréviation, il s'y ajoute.
+<p>Par exemple, ajouter son nom dès qu'on tape <tt>Cordialement,</tt> suivi d'une espace.
+
+<h4>— Respecter la casse partout</h4>
+<p>Ne déclenche le remplacement que lorsque la casse de l'abréviation tapée est identique à l'abréviation définie. Par voie de conséquence, la casse du texte de remplacement ne pourra jamais adopter celle de l'abréviation comme c'est normalement le cas.
+<p>Par exemple, remplacer <tt>\CC</tt> par <samp>Céline Casgrain</samp>, mais <tt>\cc</tt> par <samp>copie conforme</samp>.
+
+<h4>— Ne jamais changer la casse du texte de remplacement</h4>
+<p>Tolère aussi bien une abréviation en majuscules qu'en minuscules, mais ne permet pas que le texte de remplacement adopte la casse de l'abréviation comme c'est normalement le cas.
+<p>Par exemple, toujours remplacer <tt>]BD</tt> ou <tt>]bd</tt> par <samp>Bernard Savoie-Durand</samp>.
+
+<h4>— Effacer le caractère de fin utilisé comme déclencheur</h4>
+<p>Empêche que le caractère de fin qu'on a tapé pour déclencher l'action soit ajouté à la suite du texte de remplacement comme c'est normalement le cas.
+<p>Par exemple, remplacer <tt>)phil</tt> par <samp>philosophe</samp> et pouvoir tout de suite ajouter un <tt>s</tt> au besoin.
+
+<h4>— Insérer le texte de remplacement tel quel</h4>
+<p>Force les bouts de code qui pourraient faire partie du texte de remplacement à s'inscrire tel qu'ils ont été écrits. Autrement, ils seront interprétés au fur et à mesure du déroulement de l'action.
+<p>Par exemple, écrire littéralement <samp>{Enter}</samp> lorsque ce texte est rencontré plutôt que d'insérer un saut de ligne.
+<h2 id=annexe-4>Annexe 4 : limitations connues</h2>
+<p>Cette section dresse l'inventaire des problèmes connus et des moyens auxquels recourir pour y remédier.
+
+<h3>Caractères invisibles</h3>
+<p>Lorsque la coloration syntaxique entre en jeu, les caractères suivants s'affichent en noir, peu importe la couleur du texte : <tt>`~€‚„†‡ˆ‰‹‘’“”•–—˜™›¡¢£¤¥¦§¨©«¬­®¯°±´¶·¸»¼½¾¿×÷</tt>. Ce qui aura pour effet de les rendre invisibles sur fond noir.
+<p>Une exception se produit toutefois lorsque ces mêmes caractères font partie intégrante d'un commentaire.
+<p>Pour contourner ce problème, sélectionnez la portion de texte à rendre visible, désactivez la coloration syntaxique ou choisissez une couleur d'arrière-plan qui contraste avec le noir.
+<address>© <a href="http://normandlamoureux.com/">Normand Lamoureux</a>, 2010-2011.<br>À jour le 16 juillet 2011.<br><a href="mailto:normand.lamoureux@gmail.com">Courriel</a>.</address>
+</div>

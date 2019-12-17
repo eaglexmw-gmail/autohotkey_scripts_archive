@@ -1,0 +1,71 @@
+<Redstone>
+  <scan>
+    <type>scan</type>
+    <name>Control Panel</name>
+    <command>ControlPanel Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Start Menu</name>
+    <command>StartMenu Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Desktop</name>
+    <directory>%A_Desktop%</directory>
+    <includeTypes>lnk&#44;exe</includeTypes>
+    <recurse>Yes</recurse>
+    <includeDirs>No</includeDirs>
+    <command>Scan Directory</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>System Folders</name>
+    <command>System Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Categories</name>
+    <command>Category Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Skins</name>
+    <command>Skin Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Skype</name>
+    <command>Skype ImportContacts</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Firefox</name>
+    <command>Firefox Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <name>Internet Explorer</name>
+    <command>IE Scan</command>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <command>Scan Directory</command>
+    <name>quickcommands</name>
+    <directory>C:\cygwin\home\joe\quickcommands</directory>
+    <includeTypes>sh</includeTypes>
+    <recurse>Yes</recurse>
+    <includeDirs>No</includeDirs>
+    <listName>Scan</listName>
+  </scan>
+  <scan>
+    <type>scan</type>
+    <command>Scan Directory</command>
+    <name>shortcuts</name>
+    <directory>shortcuts</directory>
+    <includeTypes>exe&#44;lnk</includeTypes>
+    <recurse>No</recurse>
+    <includeDirs>No</includeDirs>
+    <listName>Scan</listName>
+  </scan>
+</Redstone>

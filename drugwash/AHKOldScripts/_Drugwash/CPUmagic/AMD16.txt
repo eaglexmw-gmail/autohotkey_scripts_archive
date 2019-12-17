@@ -1,0 +1,75 @@
+; Athlon 64 / 64 X2 / X2 boxed
+; AD A 4000 AS BOX
+
+[power]
+A   Standard 
+D   35 Watt 
+H   45 Watt 
+I   76 Watt 
+O   65 Watt 
+V   89 Watt 
+X   125 Watt 
+
+[speed]
+1600   Model number LE-1600, 2200 MHz 
+1620   Model number LE-1620, 2400 MHz 
+1640   Model number LE-1640, 2600 MHz 
+2300   Model number BE-2300, 1900 MHz 
+2350   Model number BE-2350, 2100 MHz 
+2400   Model number BE-2400, 2300 MHz 
+2800   2800 MHz (rated) 1800 MHz (actual) 
+3000   3000 MHz (rated) 2000 MHz (actual, socket 754) 1800 MHz (actual, socket 939) 
+3200   3200 MHz (rated) 2200 MHz (actual, socket 754 with 512 KB L2 cache) 2000 MHz (actual, socket 754 with 1 MB L2 cache) 2000 MHz (actual, socket 939 with 512 KB L2 cache) 
+3400   3400 MHz (rated) 2400 MHz (actual, single-core socket 754 processors with 512 KB L2 cache) 2200 MHz (actual, single-core socket 754 processors with 1 MB L2 cache) 2200 MHz (actual, single-core socket 939 processors with 512 KB L2 cache) 1800 MHz (dual-core socket AM2 processors with 1 MB L2 cache) 
+3500   3500 MHz (rated) 2200 MHz (actual) 
+3600   3600 MHz (rated) 1900 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 2000 MHz (actual, dual-core processors with 2 x 256 KB L2 cache) 
+3700   3700 MHz (rated) 2400 MHz (actual, socket 754 with 1 MB L2 cache) 2200 MHz (actual, socket 939 with 1 MB L2 cache) 
+3800   3800 MHz (rated) 2400 MHz (actual, single-core processors with 512 KB L2 cache) 2000 MHz (actual, dual-core processors) 
+4000   4000 MHz (rated) 2400 MHz (actual, single core processors with 1 MB L2 cache) 2000 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 2100 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+4200   4200 MHz (rated) 2200 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+4400   4400 MHz (rated) 2200 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 2300 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+4600   4600 MHz (rated) 2400 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+4800   4800 MHz (rated) 2400 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 2500 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+5000   5000 MHz (rated) 2600 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+5200   5200 MHz (rated) 2600 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 
+5400   5400 MHz (rated) 2800 MHz (actual, dual-core processors with 2 x 512 KB L2 cache) 
+5600   5600 MHz (rated) 2800 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 
+6000   6000 MHz (rated) 3000 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 
+6400   6400 MHz (rated) 3200 MHz (actual, dual-core processors with 2 x 1 MB L2 cache) 
+
+[definition]
+AK   CPUID 5 (C0), single core, 0.13 micron, socket 940 
+AP   CPUID 4 (C0), single core, 0.13 micron, socket 754 
+AR   CPUID 4 (CG), single core, 0.13 micron, socket 754 
+AS   CPUID 7 (CG), single core, 0.13 micron, socket 939 
+AT   CPUID 5 (CG), single core, 0.13 micron, socket 940 
+AW   CPUID F (CG), single core, 0.13 micron, socket 939 
+AX   CPUID C (CG), single core, 0.13 micron, socket 754 
+AZ   Stepping CG, single core, 0.13? micron 
+BI   CPUID 1F (D0), single core, 0.09 micron, socket 939 
+BN   CPUID 27 (E4), single core, 0.09 micron, socket 939 
+BO   Stepping E3, single core, 0.09 micron, socket 754 
+BP   CPUID 2F (E3), single core, 0.09 micron, socket 939 
+BV   Stepping E4, dual core, 0.09 micron, socket 939 
+BW   Stepping E6, single core, 0.09 micron, socket 939 
+BX   Stepping E6, single core, 0.09 micron, socket 754 
+BY   Stepping E6, single core, 0.09 micron, socket 939 
+BZ   Stepping E3, single core, 0.09 micron, socket 939 
+CD   Stepping E6, dual core, 0.09 micron, socket 939 
+CF   Stepping E6, single core, 0.09 micron, socket 939 
+CG   Stepping E4, single core, 0.09 micron, socket 939 
+CN   Stepping F2, single core, 0.09 micron, socket AM2 
+CS   Stepping F2, dual core, 0.09 micron, socket AM2 
+CU   Stepping F2, dual core, 0.09 micron, socket AM2 
+CW   Stepping F2, single core, 0.09 micron, socket AM2 
+CZ   Stepping F3, dual core, 0.09 micron, socket AM2 
+DD   Stepping G1, dual core, 0.065 micron, socket AM2 
+DE   Stepping G1, single core, 0.065 micron, socket AM2 
+DH   Stepping F3, single core, 0.065 micron, socket AM2 
+DL   Stepping G1, dual core, 0.065 micron, socket AM2 
+DO   Stepping G2, dual core, 0.065 micron, socket AM2 
+DS   Stepping G2, dual core, 0.065 micron, socket AM2 
+
+[package]
+BOX    Processor in a box with fan/heatsink included 
+WOF   Processor in a box without fan/heatsink 

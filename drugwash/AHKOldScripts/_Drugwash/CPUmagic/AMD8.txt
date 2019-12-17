@@ -1,0 +1,32 @@
+; Duron
+; DHD 1000 A M T 1 B
+
+[architecture]
+D   Model 3 (Spitfire) 
+DHD   High performance desktop processor (models 7 and 8) 
+DHL   Low-power Duron processor 
+
+[speed]
+
+[package]
+A   453-pin ceramic PGA (socket A/socket 462) 
+D   453-pin organic PGA (socket A/socket 462) 
+
+[voltage]
+H   1.55V 
+K   1.65V 
+L   1.5V 
+M   1.75V 
+U   1.6V 
+S   1.5V 
+
+[temperature]
+T   90°C 
+V   85°C 
+
+[L2 cache]
+1   64 KB
+
+[bus]
+B    200 MHz (effective), 100 MHz (actual) 
+C   266 MHz (effective), 133 MHz (actual) 

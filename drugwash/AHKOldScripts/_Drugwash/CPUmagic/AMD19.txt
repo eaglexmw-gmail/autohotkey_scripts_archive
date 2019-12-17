@@ -1,0 +1,201 @@
+; Opteron OEM
+; OS A 140 C E P 5 AT
+
+[power]
+A   Standard 
+B   30W 
+K   55W 
+P   68W? 
+T   68W? 
+X   125W 
+Y   119W 
+
+[model-socket-speed-cores-L2cache-L3cache-scalability-powerW]
+140 socket 940 1.4 1 1 0 1   
+140 EE socket 940 1.4 1 1 0 1 30 
+142 socket 940 1.6 1 1 0 1   
+144 socket 940 1.8 1 1 0 1   
+146 socket 940 2.0 1 1 0 1   
+146 HE socket 940 2.0 1 1 0 1 55 
+148 socket 940 2.2 1 1 0 1   
+150 socket 940 2.4 1 1 0 1   
+152 socket 940 2.6 1 1 0 1   
+154 socket 940 2.8 1 1 0 1   
+156 socket 940 3.0 1 1 0 1   
+165 socket 939 1.8 2 2 0 1   
+170 socket 939 2.0 2 2 0 1   
+175 socket 939 2.2 2 2 0 1   
+180 socket 939 2.4 2 2 0 1   
+185 socket 939 2.6 2 2 0 1   
+240 socket 940 1.4 1 1 0 2   
+240 EE socket 940 1.4 1 1 0 2 30 
+242 socket 940 1.6 1 1 0 2   
+244 socket 940 1.8 1 1 0 2   
+246 socket 940 2.0 1 1 0 2   
+246 HE socket 940 2.0 1 1 0 2 55 
+248 socket 940 2.2 1 1 0 2   
+248 HE socket 940 2.2 1 1 0 2 55 
+250 socket 940 2.4 1 1 0 2   
+250 HE socket 940 2.4 1 1 0 2 55 
+252 socket 940 2.6 1 1 0 2   
+254 socket 940 2.8 1 1 0 2   
+256 socket 940 3.0 1 1 0 2   
+260 socket 940 1.6 2 2 0 2   
+260 HE socket 940 1.6 2 2 0 2 55 
+265 socket 940 1.8 2 2 0 2   
+265 HE socket 940 1.8 2 2 0 2 55 
+270 socket 940 2.0 2 2 0 2   
+270 HE socket 940 2.0 2 2 0 2 55 
+275 socket 940 2.2 2 2 0 2   
+275 HE socket 940 2.2 2 2 0 2 55 
+280 socket 940 2.4 2 2 0 2   
+285 socket 940 2.6 2 2 0 2   
+290 socket 940 2.8 2 2 0 2   
+840 socket 940 1.4 1 1 0 8   
+840 EE socket 940 1.4 1 1 0 8 30 
+842 socket 940 1.6 1 1 0 8   
+844 socket 940 1.8 1 1 0 8   
+846 socket 940 2.0 1 1 0 8   
+846 HE socket 940 2.0 1 1 0 8 55 
+848 socket 940 2.2 1 1 0 8   
+848 HE socket 940 2.2 1 1 0 8 55 
+850 socket 940 2.4 1 1 0 8   
+850 HE socket 940 2.4 1 1 0 8 55 
+852 socket 940 2.6 1 1 0 8   
+854 socket 940 2.8 1 1 0 8   
+856 socket 940 3.0 1 1 0 8   
+860 socket 940 1.6 2 2 0 8   
+860 HE socket 940 1.6 2 2 0 8 55 
+865 socket 940 1.8 2 2 0 8   
+865 HE socket 940 1.8 2 2 0 8 55 
+870 socket 940 2.0 2 2 0 8   
+870 HE socket 940 2.0 2 2 0 8 55 
+875 socket 940 2.2 2 2 0 8   
+875 HE socket 940 2.2 2 2 0 8 55 
+880 socket 940 2.4 2 2 0 8   
+885 socket 940 2.6 2 2 0 8   
+890 socket 940 2.8 2 2 0 8   
+1210 socket AM2 1.8 2 2 0 1   
+1210 HE socket AM2 1.8 2 2 0 1 65 
+1212 socket AM2 2.0 2 2 0 1   
+1212 HE socket AM2 2.0 2 2 0 1 65 
+1214 socket AM2 2.2 2 2 0 1   
+1214 HE socket AM2 2.2 2 2 0 1 65 
+1216 socket AM2 2.4 2 2 0 1   
+1216 HE socket AM2 2.4 2 2 0 1 65 
+1218 socket AM2 2.6 2 2 0 1   
+1218 HE socket AM2 2.6 2 2 0 1 65 
+1220 socket AM2 2.8 2 2 0 1   
+1220 SE socket AM2 2.8 2 2 0 1 125 
+1222 socket AM2 3.0 2 2 0 1   
+1222 SE socket AM2 3.0 2 2 0 1 125 
+1224 SE socket AM2 3.2 2 2 0 1 125 
+1352 socket AM2+ 2.1 4 2 2 1   
+1354 socket AM2+ 2.2 4 2 2 1   
+1356 socket AM2+ 2.3 4 2 2 1   
+2210 socket F 1.8 2 2 0 2   
+2210 HE socket F 1.8 2 2 0 2 68 
+2212 socket F 2.0 2 2 0 2   
+2212 HE socket F 2.0 2 2 0 2 68 
+2214 socket F 2.2 2 2 0 2   
+2214 HE socket F 2.2 2 2 0 2 68 
+2216 socket F 2.4 2 2 0 2   
+2216 HE socket F 2.4 2 2 0 2 68 
+2218 socket F 2.6 2 2 0 2   
+2220 socket F 2.8 2 2 0 2   
+2220 SE socket F 2.8 2 2 0 2 119 
+2222 socket F 3.0 2 2 0 2   
+2222 SE socket F 3.0 2 2 0 2 119 
+2224 SE socket F 3.2 2 2 0 2 119 
+2344 HE socket F 1.7 4 2 2 2 79 
+2346 HE socket F 1.8 4 2 2 2 79 
+2347 socket F 1.9 4 2 2 2   
+2347 HE socket F 1.9 4 2 2 2 79 
+2350 socket F 2.0 4 2 2 2   
+2352 socket F 2.1 4 2 2 2   
+2354 socket F 2.2 4 2 2 2   
+2356 socket F 2.3 4 2 2 2   
+2358 SE socket F 2.4 4 2 2 2   
+2360 SE socket F 2.5 4 2 2 2   
+8212 socket F 2.0 2 2 0 8   
+8212 HE socket F 2.0 2 2 0 8 68 
+8214 socket F 2.2 2 2 0 8   
+8214 HE socket F 2.2 2 2 0 8 68 
+8216 socket F 2.4 2 2 0 8   
+8216 HE socket F 2.4 2 2 0 8 68 
+8218 socket F 2.6 2 2 0 8   
+8220 socket F 2.8 2 2 0 8   
+8220 SE socket F 2.8 2 2 0 8 119 
+8222 socket F 3.0 2 2 0 8   
+8222 SE socket F 3.0 2 2 0 8 119 
+8224 SE socket F 3.2 2 2 0 8 119 
+8346 HE socket F 1.8 4 2 2 8 79 
+8347 socket F 1.9 4 2 2 8   
+8347 HE socket F 1.9 4 2 2 8 79 
+8350 socket F 2.0 4 2 2 8   
+8354 socket F 2.2 4 2 2 8   
+8356 socket F 2.3 4 2 2 8   
+8358 SE socket F 2.4 4 2 2 8   
+8360 SE socket F 2.5 4 2 2 8   
+
+[package]
+C   940-pin lidded ceramic micro-PGA, socket 940 
+D   939-pin lidded organic micro-PGA, socket 939 
+F   940-pin lidded organic micro-PGA, socket 940 
+G   1207-land LGA, socket F 
+I   940-pin lidded organic micro-PGA, socket AM2 
+
+[voltage]
+A   Variable 
+C   1.55V 
+E   1.5V 
+I   1.4V 
+K   1.35V 
+M   1.3V 
+O   1.25V 
+Q   1.2V 
+S   1.15V 
+
+[temperature]
+A   Variable 
+K   65°C 
+M   67°C 
+O   69°C 
+P   70°C 
+Q   71°C 
+T   78°C 
+U   83°C 
+
+[L2 cache]
+5   1 MB 
+6   2 MB 
+
+[definition]
+AD    single-core, single processor, 0.13 micron, socket 940 
+AG   Stepping B3, single-core, single processor, 0.13 micron, socket 940 
+AH   Stepping B3, single-core, dual processor, 0.13 micron, socket 940 
+AI   Stepping B3, single-core, 8-processor, 0.13 micron, socket 940 
+AK   Stepping C0, single-core, single processor, 0.13 micron, socket 940 
+AL   Stepping C0, single-core, dual processor, 0.13 micron, socket 940 
+AM   Stepping C0, single-core, 8-processor, 0.13 micron, socket 940 
+AT   Stepping CG, single-core, single processor, 0.13 micron, socket 940 
+AU   Stepping CG, single-core, dual processor, 0.13 micron, socket 940 
+AV   Stepping CG, single-core, 8-processor, 0.13 micron, socket 940 
+BB   Stepping D0, single-core, single processor, 0.09 micron 
+BC   Stepping D0, single-core, dual processor, 0.09 micron 
+BD   Stepping D0, single-core, 8-processor, 0.09 micron 
+BK   Stepping E4, single-core, single processor, 0.09 micron, socket 940 
+BL   Stepping E4, single-core, 2-processor, 0.09 micron, socket 940 
+BM   Stepping E4, single-core, 8-processor, 0.09 micron, socket 940 
+BN   Stepping E4, single-core, single processor, 0.09 micron, socket 939 
+BS   Stepping E1, dual-core, 8-processor, 0.09 micron, socket 940 
+CA   Stepping E6, dual-core, single processor, 0.09 micron, socket 940 
+CB   Stepping E6, dual-core, dual processor, 0.09 micron, socket 940 
+CC   Stepping E6, dual-core, 8-processor, 0.09 micron, socket 940 
+CD   Stepping E6, dual-core, single processor, 0.09 micron, socket 939 
+CQ   Stepping F2, dual-core, dual-processor, 0.09 micron, socket F 
+CR   Stepping F2, dual-core, 8-processor, 0.09 micron, socket F 
+CS   Stepping F2, dual-core, single-processor, 0.09 micron, socket AM2 
+CX   Stepping F3, dual-core, dual-processor, 0.09 micron, socket F 
+CY   Stepping F3, dual-core, 8-processor, 0.09 micron, socket F 
+CZ   Stepping F3, dual-core, single-processor, 0.09 micron, socket AM2 

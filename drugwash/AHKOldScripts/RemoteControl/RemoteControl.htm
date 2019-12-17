@@ -1,0 +1,192 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    
+<title>Remote Control</title>
+
+<style type="text/css">
+
+h1, h2
+{
+    font-family:Arial;
+}
+
+h2
+{
+    font-style:italic;
+}
+
+em
+{
+    font-style:normal;
+    font-weight:bold;
+}
+
+code 
+{ 
+    color:Green;
+}
+
+pre
+{
+    padding:0.5em;
+    margin-left:50px;
+    margin-right:50px;
+    border:solid 1px;
+    border-color:#CCCCCC;
+}
+
+</style>
+
+</head>
+<body>
+
+<p>This script lets one control applications by BeholdTV TV-tuner's remote control. BeholdTV is a brand of company InfoNetwork on russian market. If you don't happen to have BeholdTV tuner you might still find the script useful as a script template to control applications using RC API.</p>
+
+<h1>Features</h1>
+
+<ul>
+<li>For each application RC button is assigned which starts/activates it. (Actually for some applications you may not assign such buttons but still be able to control the applications, more about it below.)</li>
+<li>RC buttons can be assigned to run files. (But if you use RemoteExplorer there's little sense in this.)</li>
+<li>Several special buttons can be assigned: to close any program or shutdown the computer (with OSD confirmation), time display (OSD), etc.</li>
+<li>All the other buttons can be used to control applications (the same buttons can do different things in different apps).</li>
+<li>There's no OSM for switching between applications yet (I haven't really needed it yet).</li>
+</ul>
+
+<h1>Files</h1>
+
+<ul>
+<li><b>RemoteControl.ahk</b> - main file of the script in which all the other files are included.</li>
+<li><b>Configuration.ahk</b> - file containing all the configuration options: button assignments, paths, RC parameters, etc.</li>
+<li><b>Core.ahk</b> - core part of the script.</li>
+</ul>
+
+<p>In addition to these three files there're also files where RC buttons actions to control applications are specified (each application has its own file). These files are in AppControl folder. They need to be included in the end of RemoteControl.ahk.</p>
+
+<h1>Usage</h1>
+
+<p>As of 2006-05-24 the script contains settings for 6 applications: BeholdTV, Winamp, ICE Book Reader, RemoteExplorer, Media Player Classic, FastStone Image Viewer.</p>
+
+<h2>Adding configuration for a new application</h2>
+
+<p>To add configuration for a new application you need to do the following.</p>
+
+<p>First, add new group in the section Applications configuration in Configuration.ahk. For Media Player Classic:</p>
+
+<pre><code>; Media Player Classic
+App%I%              = MediaPlayerClassic
+RCKApp%I%           =
+PathApp%I%          = C:\Program Files\K-Lite Codec Pack\Media Player Classic\mplayerc.exe
+WinTitleApp%I%      = Media Player Classic ahk_class MediaPlayerClassicW</code></pre>
+
+<p>Here</p>
+
+<ul>
+<li>App - application identifier and the name of corresponding subroutine in the end of the script.</li>
+<li>RCKApp - RC key to start/activate application. For MPC it is unassigned, which means that it is saved for applications control.</li>
+<li>PathApp - executable path.</li>
+<li>WinTitleApp - window title and/or class. You can find out both using Window Spy included in AutoHotkey.</li>
+</ul>
+
+<p>Another item which can be present here is HKCloseApp, a hotkey to close the application. It is needed only if AutoHotkey can't close the application (with WM_CLOSE).</p>
+
+<p>Second, file for this application must be created in AppControl folder. File must contain subroutine where actions to control the application are mapped to RC buttons. Here's contents of MediaPlayerClassic.ahk:</p>
+
+<pre><code>/* -----------------------------------------------------------------------------
+    Media Player Classic control.
+*/
+
+MediaPlayerClassic:
+
+    ; Play/pause
+    if RCKey = RCK_Ok
+    {
+        Send, {Space}
+        return
+    }
+    
+    ; Stop
+    if RCKey = RCK_Mode
+    {
+        Send, .
+        return
+    }
+
+    ; Jump forward (medium)
+    if RCKey = RCK_Right
+    {
+        Send, ^{Right}
+        return
+    }
+    
+    ; Jump back (medium)
+    if RCKey = RCK_Left
+    {
+        Send, ^{Left}
+        return
+    }
+    
+    ; Volume up
+    if RCKey = RCK_Up
+    {
+        Send, {Up}
+        return
+    }
+    
+    ; Volume down
+    if RCKey = RCK_Down
+    {
+        Send, {Down}
+        return
+    }
+
+    ; Full screen
+    if RCKey = RCK_Function
+    {
+        Send, !{Enter}
+        return
+    }
+
+    ; Next subtitle
+    if RCKey = RCK_Info
+    {
+        Send, s
+        return
+    }
+
+    return</code></pre>
+
+<p>Third, the application file must be included in the end of RemoteControl.ahk:</p>
+
+<pre><code>#Include MediaPlayerClassic.ahk</code></pre>
+
+<h2>Applications with several windows</h2>
+
+<p>If an application has several windows, window group is used. The group identifier is specified in WinTitleApp after ahk_group. For example, for FastStone Image Viewer:</p>
+
+<pre><code>; FastStone Image Viewer
+App%I%              = FSViewer
+RCKApp%I%           =
+PathApp%I%          = C:\Program Files\FastStone Image Viewer\FSViewer.exe
+WinTitleApp%I%      = ahk_group WG_FSViewer
+HKCloseApp%I%       = {Esc}</code></pre>
+
+<p>Then the window group is created in the section Window groups configuration in Configuration.ahk:</p>
+
+<pre><code>; FastStone Image Viewer
+GroupAdd, WG_FSViewer, FastStone Image Viewer ahk_class FastStoneImageViewerMainForm
+GroupAdd, WG_FSViewer, ahk_class TFullScreenWindow</code></pre>
+
+<h1>Using together with Remote Explorer</h1>
+
+<p>When using the script together with Remote Explorer buttons to start/activate application may be not assigned for some applications.</p>
+
+<p>Take Media Player Classic as an example. You run some video file in Remote Explorer. If the file type is associated with MPC the latter opens and activates. You watch the file, control MPC. Then you close MPC, run the next file in RE and so on.</p>
+
+<h1>Remarks</h1>
+
+<ul>
+<li>All the codes RCK_* can be found in RC_Button_Codes.txt.</li>
+</ul>
+
+</body>
+</html>

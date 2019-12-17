@@ -1,0 +1,155 @@
+general dll header:
+000 -> 4D5A (MZ, magic number for PE)
+03C -> 0000-0110 (PE header address)
+04A -> 014C (machine i386+)
+-------------------
+110 -> 0000-4550 (PE header)
+114 -> 014C (machine type i386+)
+116 -> 0005 (sections)
+118 -> 48C8-5F51 (date)
+11C -> 0000-0000 (symbols pointer)
+120 -> 0000-0000 (nr of symbols)
+124 -> 00E0 (size of optional header)
+126 -> 210E (flags)
+
+optional header:
+128 -> 010B (Magic PE32bit)
+12A -> 0006 (linker version)
+12C -> 0001-2A00 (size of code)
+130 -> 0000-6800 (size of initialized data)
+134 -> 0000-0000 (size of uninitialized data)
+138 -> 0001-3927 (address of entry point RVA)
+*13C -> 0000-1000 (base of code)
+140 -> 0001-4000 (base of data)
+*144 -> 1000-0000 (image base)
+148 -> 0000-1000 (section alignment)
+*14C -> 0000-0200 (file alignment)
+150 -> 0000-0004 (required OS version)
+154 -> 03F3-0001 (image version)
+158 -> 0000-0004 (subsystem version)
+15C -> 0000-0000 (reserved1)
+160 -> 0001-C000 (size of image)
+164 -> 0000-0400 (size of headers)
+168 -> 0000-0000 (checksum)
+16C -> 0002 (subsystem)
+16E -> 0000 (DLL characteristics)
+170 -> 0010-0000 (size of stack reserve)
+174 -> 0000-1000 (size of stack commit)
+178 -> 0010-0000 (size of heap reserve)
+17C -> 0000-1000 (size of heap commit)
+180 -> 0000-0000 (loader flags)
+184 -> 0000-0010 (number of data directory)
+
+data directory:
+188 -> 0001-5D70(export directory)
+18C -> 0000-00B2 size
+190 -> 0001-4E50 (import directory)
+194 -> 0000-00C8 size
+198 -> 0001-8000 (resource directory)
+19C -> 0000-16E8 size
+(exception table)
+(security table)
+(base relocation table)
+(debug directory)
+(architecture specific data)
+(global pointer)
+(TLS directory)
+(load config table)
+(bound import table)
+(import address table)
+(delay import descriptor)
+(COM descriptor)
+(unused)
+
+mtextcontrolA.dll
+20744 01020000 version 2.1.0.0
+20776 5128 web
+20800 5140 copy
+20828 515C mail
+20848 5170 author
+20868 5184 details
+20916 51B4 name
+
+B8-0051A225 MirandaPluginInfo
+A3-5453A225- Load
+A1-5853A225-8B0D54 Unload
+
+25A2 (A225) is the imagebase.
+Code at (start) 25A2-2630: B8, 00, 51, A2, 25, C3, 90...
+
+5100 -> dir 2800(0000) size (dec 40)
+5104 -> ref B451(A225) name
+5108 -> dir 0102(0000) (version 2.1.0.0)
+510C -> ref 8451(A225) details
+5110 -> ref 7051(A225) author
+5114 -> ref 5C51(A225) mail
+5118 -> ref 4051(A225) copy
+511C -> ref 2851(A225) web
+5120 -> dir 0000(0000) trans
+5124 -> dir 0000(0000) builtin
+----------------------------------------
+scriver.dll
+Code at (start) 3C11-1001: 8B, EC, 56, 57, 6A, 14, FF, 15, 64, 22, 03
+
+2A160 -> dir 0000-0038 size (dec 56)
+2A164 -> ref 1002-87D8 name
+2A168 -> dir 0208-000A (version 2.8.0.10)
+2A16C -> ref 1002-A218 details
+2A170 -> ref 1002-A1FC author
+2A174 -> ref 1002-A1E0 mail
+2A178 -> ref 1002-A1B4 copy
+2A17C -> ref 1002-A198 web
+2A180 -> dir 0000-0000 trans
+2A184 -> dir 0000-0005 builtin
+2A188 -> dir MUUID (16 bytes)
+----------------------------------------
+smileyadd.dll
+Entry points:
+0000-ACB6 Load
+0000-AC98 MirandaPluginInfo
+0000-ACAA MirandaPluginInfoEx
+0000-ACB0 MirandaPluginInterfaces
+0000-B0E1 Unload
+
+0000-1000 Base of code
+1000-0000 Image base
+0000-0200 File alignment
+
+PluginInfoEx located at 1000-ACAA real
+
+13358 -> dir 0000-0038 size (dec 56)
+1355C -> ref 1001-62C4 
+13560 -> dir 0200-0305 (version 2.0.3.5)
+13564 -> ref 1001-6778 
+13568 -> ref 1001-6758 
+1356C -> ref 1001-6740 
+13570 -> ref 1001-66F4 
+13574 -> ref 1001-66B8 
+13578 -> dir 0000-0000 trans
+1357C -> dir 0000-0000 builtin
+13580 -> dir MUUID (16 bytes)
+
+154B8 web
+154F4 copy
+15540 mail
+15558 author
+15578 details
+-------------------------------
+msn.dll
+Entry points:
+0000-6409 Load
+0000-65B1 MirandaPluginInfoEx
+0000-65DB MirandaPluginInterfaces
+0000-659A Unload
+
+0000-1000 Base of code
+1900-0000 Image base
+0000-0200 File alignment
+
+PluginInfoEx located at 1900-65B1 real
+24970 web
+24988 copy
+249C4 mail
+249DC author
+24A0C details
+24A54 name

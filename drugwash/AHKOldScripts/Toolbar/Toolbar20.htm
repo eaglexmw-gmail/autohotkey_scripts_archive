@@ -1,0 +1,2154 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0059)http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html -->
+<HTML><HEAD><TITLE>Toolbar</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE>BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 10pt Verdana, Arial, sans-serif; COLOR: #000000; PADDING-TOP: 0px
+}
+.ContentPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.IndexPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.FramedMenuPage {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.FramedContentPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.FramedIndexPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.FramedSearchResultsPage {
+	BACKGROUND-COLOR: #ffffff
+}
+.PopupSearchResultsPage {
+	BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #900000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #900000; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+P {
+	MARGIN: 0px; TEXT-INDENT: 5ex
+}
+.Opera WBR:unknown {
+	content: "​"
+}
+BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.Firefox1 BLOCKQUOTE {
+	PADDING-BOTTOM: 0.5em
+}
+
+@media Print    
+{
+BLOCKQUOTE {
+	OVERFLOW: visible
+}
+.IE BLOCKQUOTE {
+	WIDTH: auto
+}
+    }
+#Menu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9pt; PADDING-BOTTOM: 0px; PADDING-TOP: 10px
+}
+.ContentPage #Menu {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 31ex; POSITION: absolute; TOP: 0px
+}
+.IndexPage #Menu {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 31ex; POSITION: absolute; TOP: 0px
+}
+.ContentPage .Firefox #Menu {
+	WIDTH: 27ex
+}
+.IndexPage .Firefox #Menu {
+	WIDTH: 27ex
+}
+.MTitle {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 1px dotted; TEXT-ALIGN: center; FONT-VARIANT: small-caps
+}
+.MSubTitle {
+	MARGIN-TOP: 1ex; FONT-WEIGHT: normal; FONT-SIZE: 9pt; MARGIN-BOTTOM: 5px; FONT-VARIANT: normal
+}
+.MEntry A:link {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:hover {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:visited {
+	COLOR: #606060; MARGIN-RIGHT: 0px
+}
+.MEntry A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 0px
+}
+.MGroup {
+	FONT-WEIGHT: bold; MARGIN: 1em 0px 1em 10px; FONT-VARIANT: small-caps
+}
+.MGroupContent {
+	FONT-WEIGHT: normal; FONT-VARIANT: normal
+}
+.MGroup A:link {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:hover {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:visited {
+	COLOR: #545454; MARGIN-RIGHT: 10px
+}
+.MGroup A:active {
+	COLOR: #a00000; MARGIN-RIGHT: 10px
+}
+.MFile {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MLink {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MIndex {
+	PADDING-RIGHT: 17px; PADDING-LEFT: 10px; PADDING-BOTTOM: 2px; MARGIN: 0.25em 0px; PADDING-TOP: 1px
+}
+.MText {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.MLink {
+	FONT-STYLE: italic
+}
+#MSelected {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; BORDER-LEFT: #000000 0px solid; COLOR: #000000; MARGIN-RIGHT: 5px; PADDING-TOP: 0px; BORDER-BOTTOM: #000000 2px solid; BACKGROUND-COLOR: #ffffff
+}
+.MGroup #MSelected {
+	PADDING-LEFT: 9px; BORDER-LEFT-WIDTH: 1px
+}
+.Firefox #MSelected {
+	moz-border-radius-topright: 10px; moz-border-radius-bottomright: 10px
+}
+.Firefox .MGroup #MSelected {
+	moz-border-radius-topleft: 10px; moz-border-radius-bottomleft: 10px
+}
+#MSearchPanel {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px; PADDING-TOP: 0px
+}
+#MSearchField {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 2px; FONT: italic 9pt Verdana, sans-serif; WIDTH: 100%; COLOR: #606060; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: #e8e8e8; BORDER-BOTTOM-STYLE: none
+}
+.Firefox #MSearchField {
+	WIDTH: 94%
+}
+.IE #MSearchField {
+	WIDTH: 94%
+}
+.Safari #MSearchField {
+	WIDTH: 94%
+}
+.Opera9 #MSearchField {
+	WIDTH: 97%
+}
+.Konqueror #MSearchField {
+	WIDTH: 97%
+}
+.FramedMenuPage .Firefox #MSearchField {
+	WIDTH: 98%
+}
+.FramedMenuPage .Safari #MSearchField {
+	WIDTH: 98%
+}
+.FramedMenuPage .Konqueror #MSearchField {
+	WIDTH: 98%
+}
+.MSearchPanelInactive#MSearchPanel:hover #MSearchField {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 1px; BORDER-LEFT: #c0c0c0 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #c0c0c0 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.MSearchPanelActive #MSearchField {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 1px; BORDER-LEFT: #c0c0c0 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-STYLE: normal; BACKGROUND-COLOR: #ffffff
+}
+#MSearchType {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 0px; FONT: 8pt Verdana, sans-serif; BORDER-LEFT: #c0c0c0 1px solid; WIDTH: 98%; PADDING-TOP: 0px; BORDER-BOTTOM: #c0c0c0 1px solid
+}
+.MSearchPanelActive #MSearchType {
+	VISIBILITY: visible; COLOR: #606060
+}
+.MSearchPanelInactive#MSearchPanel:hover #MSearchType {
+	VISIBILITY: visible; COLOR: #606060
+}
+#MSearchType:unknown {
+	VISIBILITY: visible; COLOR: #606060
+}
+#MSearchType OPTION#MSearchEverything {
+	FONT-WEIGHT: bold
+}
+.Opera8 .MSearchPanelInactive:hover {
+	MARGIN-LEFT: -1px
+}
+.Opera8 .MSearchPanelActive {
+	MARGIN-LEFT: -1px
+}
+IFRAME#MSearchResults {
+	WIDTH: 60ex; HEIGHT: 15em
+}
+#MSearchResultsWindow {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; DISPLAY: none; LEFT: 0px; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #e8e8e8
+}
+#MSearchResultsWindowClose {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+#MSearchResultsWindowClose:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:active {
+	COLOR: #800000; BACKGROUND-COLOR: #f4f4f4; TEXT-DECORATION: none
+}
+#MSearchResultsWindowClose:hover {
+	COLOR: #800000; BACKGROUND-COLOR: #f4f4f4; TEXT-DECORATION: none
+}
+#Content {
+	PADDING-BOTTOM: 15px
+}
+.ContentPage #Content {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; FONT-SIZE: 9pt; MARGIN-LEFT: 31ex; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.ContentPage .Firefox #Content {
+	MARGIN-LEFT: 27ex
+}
+.CTopic {
+	FONT-SIZE: 10pt; MARGIN-BOTTOM: 3em
+}
+.CTitle {
+	BORDER-RIGHT: #a0a0a0 0px solid; BORDER-TOP: #a0a0a0 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0px 15px 0.5em; BORDER-LEFT: #a0a0a0 0px solid; BORDER-BOTTOM: #a0a0a0 1px solid
+}
+.CGroup .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; MARGIN-LEFT: 0px; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; BORDER-RIGHT-WIDTH: 0px; FONT-VARIANT: small-caps; BORDER-RIGHT-COLOR: #000000
+}
+.CClass .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CInterface .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabase .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CDatabaseTable .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CSection .CTitle {
+	BORDER-TOP-WIDTH: 2px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 18pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #a0a0a0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+#MainTopic .CTitle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 20pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-WIDTH: 3px; BORDER-BOTTOM-COLOR: #000000; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; COLOR: #ffffff; BORDER-TOP-COLOR: #000000; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BACKGROUND-COLOR: #7070c0; BORDER-RIGHT-WIDTH: 0px; BORDER-RIGHT-COLOR: #000000
+}
+.CBody {
+	MARGIN-LEFT: 15px; MARGIN-RIGHT: 15px
+}
+.CToolTip {
+	BORDER-RIGHT: #000000 2px solid; PADDING-RIGHT: 5px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 8pt; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 5px; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 2px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #ffffe0
+}
+.Opera .CToolTip {
+	max-width: 98%
+}
+.CToolTip BLOCKQUOTE {
+	OVERFLOW: hidden
+}
+.IE6 .CToolTip BLOCKQUOTE {
+	OVERFLOW: visible
+}
+.CHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN: 1.5em 0px 0.5em
+}
+.CBody PRE {
+	MARGIN: 1em 0px; FONT: 10pt "Courier New", Courier, monospace
+}
+.CBody UL {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; MARGIN: 0.5em 5ex
+}
+.CDescriptionList {
+	MARGIN: 0.5em 5ex 0px
+}
+.CDLEntry {
+	PADDING-BOTTOM: 0.25em; FONT: 10pt "Courier New", Courier, monospace; COLOR: #808080; WHITE-SPACE: nowrap
+}
+.CDLDescription {
+	PADDING-LEFT: 5ex; FONT-SIZE: 10pt; PADDING-BOTTOM: 0.5em
+}
+.CTopic IMG {
+	DISPLAY: block; MARGIN: 1em auto; TEXT-ALIGN: center
+}
+.CImageCaption {
+	FONT-SIZE: 8pt; COLOR: #808080; POSITION: relative; TOP: 1em; TEXT-ALIGN: center; FONT-VARIANT: small-caps
+}
+.CImageLink {
+	COLOR: #808080; FONT-STYLE: italic
+}
+A.CImageLink:link {
+	COLOR: #808080
+}
+A.CImageLink:visited {
+	COLOR: #808080
+}
+A.CImageLink:hover {
+	COLOR: #808080
+}
+.Prototype {
+	BORDER-RIGHT: 1px solid; PADDING-RIGHT: 3ex; BORDER-TOP: 1px solid; PADDING-LEFT: 3ex; PADDING-BOTTOM: 5px; MARGIN: 0px 5ex 1.5em; FONT: 10pt "Courier New", Courier, monospace; BORDER-LEFT: 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: 1px solid
+}
+.Prototype TD {
+	FONT-SIZE: 10pt
+}
+.PDefaultValue {
+	COLOR: #8f8f8f
+}
+.PDefaultValuePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	COLOR: #8f8f8f
+}
+.PTypePrefix {
+	TEXT-ALIGN: right
+}
+.PAfterParameters {
+	VERTICAL-ALIGN: bottom
+}
+.IE .Prototype TABLE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.CFunction .Prototype {
+	BORDER-LEFT-COLOR: #d0d0d0; BORDER-BOTTOM-COLOR: #d0d0d0; BORDER-TOP-COLOR: #d0d0d0; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-COLOR: #d0d0d0
+}
+.CProperty .Prototype {
+	BORDER-LEFT-COLOR: #c0c0e8; BORDER-BOTTOM-COLOR: #c0c0e8; BORDER-TOP-COLOR: #c0c0e8; BACKGROUND-COLOR: #f4f4ff; BORDER-RIGHT-COLOR: #c0c0e8
+}
+.CVariable .Prototype {
+	BORDER-LEFT-COLOR: #e0e0a0; BORDER-BOTTOM-COLOR: #e0e0a0; BORDER-TOP-COLOR: #e0e0a0; BACKGROUND-COLOR: #fffff0; BORDER-RIGHT-COLOR: #e0e0a0
+}
+.CClass .Prototype {
+	BORDER-RIGHT: #a0a0a0 2px solid; BORDER-TOP: #a0a0a0 1px solid; BORDER-LEFT: #a0a0a0 1px solid; BORDER-BOTTOM: #a0a0a0 2px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.CInterface .Prototype {
+	BORDER-RIGHT: #a0a0d0 2px solid; BORDER-TOP: #a0a0d0 1px solid; BORDER-LEFT: #a0a0d0 1px solid; BORDER-BOTTOM: #a0a0d0 2px solid; BACKGROUND-COLOR: #f4f4ff
+}
+.CDatabaseIndex .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CConstant .Prototype {
+	BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #d0d0d0; BORDER-RIGHT-COLOR: #000000
+}
+.CType .Prototype {
+	BORDER-LEFT-COLOR: #e0b0b0; BORDER-BOTTOM-COLOR: #e0b0b0; BORDER-TOP-COLOR: #e0b0b0; BACKGROUND-COLOR: #faf0f0; BORDER-RIGHT-COLOR: #e0b0b0
+}
+.CEnumeration .Prototype {
+	BORDER-LEFT-COLOR: #e0b0b0; BORDER-BOTTOM-COLOR: #e0b0b0; BORDER-TOP-COLOR: #e0b0b0; BACKGROUND-COLOR: #faf0f0; BORDER-RIGHT-COLOR: #e0b0b0
+}
+.CDatabaseTrigger .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CEvent .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CDelegate .Prototype {
+	BORDER-LEFT-COLOR: #b8e4b8; BORDER-BOTTOM-COLOR: #b8e4b8; BORDER-TOP-COLOR: #b8e4b8; BACKGROUND-COLOR: #f0fcf0; BORDER-RIGHT-COLOR: #b8e4b8
+}
+.CToolTip .Prototype {
+	MARGIN: 0px 0px 0.5em; WHITE-SPACE: nowrap
+}
+.Summary {
+	MARGIN: 1.5em 5ex 0px
+}
+.STitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0.5em
+}
+.SBorder {
+	BORDER-RIGHT: #c0c060 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #c0c060 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; BORDER-LEFT: #c0c060 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #c0c060 1px solid; BACKGROUND-COLOR: #fffff0
+}
+.FramedContentPage .IE .SBorder {
+	WIDTH: 100%
+}
+.Firefox .SBorder {
+	moz-border-radius: 20px
+}
+.STable {
+	FONT-SIZE: 9pt; WIDTH: 100%
+}
+.SEntry {
+	WIDTH: 30%
+}
+.SDescription {
+	WIDTH: 70%
+}
+.SMarked {
+	BACKGROUND-COLOR: #f8f8d8
+}
+.SDescription {
+	PADDING-LEFT: 2ex
+}
+.SIndent1 .SEntry {
+	PADDING-LEFT: 1.5ex
+}
+.SIndent1 .SDescription {
+	PADDING-LEFT: 3.5ex
+}
+.SIndent2 .SEntry {
+	PADDING-LEFT: 3ex
+}
+.SIndent2 .SDescription {
+	PADDING-LEFT: 5ex
+}
+.SIndent3 .SEntry {
+	PADDING-LEFT: 4.5ex
+}
+.SIndent3 .SDescription {
+	PADDING-LEFT: 6.5ex
+}
+.SIndent4 .SEntry {
+	PADDING-LEFT: 6ex
+}
+.SIndent4 .SDescription {
+	PADDING-LEFT: 8ex
+}
+.SIndent5 .SEntry {
+	PADDING-LEFT: 7.5ex
+}
+.SIndent5 .SDescription {
+	PADDING-LEFT: 9.5ex
+}
+.SDescription A {
+	COLOR: #800000
+}
+.SDescription A:active {
+	COLOR: #a00000
+}
+.SGroup TD {
+	PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.5em
+}
+.SGroup .SEntry {
+	FONT-WEIGHT: bold; FONT-VARIANT: small-caps
+}
+.SGroup .SEntry A {
+	COLOR: #800000
+}
+.SGroup .SEntry A:active {
+	COLOR: #f00000
+}
+.SMain TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SClass TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SDatabase TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SDatabaseTable TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SSection TD {
+	FONT-SIZE: 10pt; PADDING-BOTTOM: 0.25em
+}
+.SClass TD {
+	PADDING-TOP: 1em
+}
+.SDatabase TD {
+	PADDING-TOP: 1em
+}
+.SDatabaseTable TD {
+	PADDING-TOP: 1em
+}
+.SSection TD {
+	PADDING-TOP: 1em
+}
+.SMain .SEntry {
+	FONT-WEIGHT: bold
+}
+.SClass .SEntry {
+	FONT-WEIGHT: bold
+}
+.SDatabase .SEntry {
+	FONT-WEIGHT: bold
+}
+.SDatabaseTable .SEntry {
+	FONT-WEIGHT: bold
+}
+.SSection .SEntry {
+	FONT-WEIGHT: bold
+}
+.SMain .SEntry A {
+	COLOR: #000000
+}
+.SClass .SEntry A {
+	COLOR: #000000
+}
+.SDatabase .SEntry A {
+	COLOR: #000000
+}
+.SDatabaseTable .SEntry A {
+	COLOR: #000000
+}
+.SSection .SEntry A {
+	COLOR: #000000
+}
+.SMain .SEntry A:active {
+	COLOR: #a00000
+}
+.SClass .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabase .SEntry A:active {
+	COLOR: #a00000
+}
+.SDatabaseTable .SEntry A:active {
+	COLOR: #a00000
+}
+.SSection .SEntry A:active {
+	COLOR: #a00000
+}
+.ClassHierarchy {
+	MARGIN: 0px 15px 1em
+}
+.CHEntry {
+	BORDER-RIGHT: #a0a0a0 2px solid; PADDING-RIGHT: 2ex; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 2ex; FONT-SIZE: 10pt; MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; COLOR: #606060; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 2px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.Firefox .CHEntry {
+	moz-border-radius: 4px
+}
+.CHCurrent .CHEntry {
+	FONT-WEIGHT: bold; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000
+}
+.CHChildNote .CHEntry {
+	FONT-SIZE: 8pt; FONT-STYLE: italic
+}
+.CHIndent {
+	MARGIN-LEFT: 3ex
+}
+.CHEntry A:link {
+	COLOR: #606060
+}
+.CHEntry A:visited {
+	COLOR: #606060
+}
+.CHEntry A:hover {
+	COLOR: #606060
+}
+.CHEntry A:active {
+	COLOR: #800000
+}
+#Index {
+	BACKGROUND-COLOR: #ffffff
+}
+.IndexPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.FramedIndexPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.FramedSearchResultsPage #Index {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.IndexPage #Index {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; FONT-SIZE: 9pt; MARGIN-LEFT: 27ex; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.IPageTitle {
+	BORDER-RIGHT: #000000 0px solid; PADDING-RIGHT: 15px; BORDER-TOP: #000000 0px solid; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: 20pt; PADDING-BOTTOM: 10px; MARGIN: -15px -15px 0px; BORDER-LEFT: #000000 0px solid; COLOR: #ffffff; PADDING-TOP: 10px; BORDER-BOTTOM: #000000 3px solid; BACKGROUND-COLOR: #7070c0
+}
+.FramedSearchResultsPage .IPageTitle {
+	MARGIN-BOTTOM: 15px
+}
+.INavigationBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; MARGIN: 0px -15px 15px; PADDING-TOP: 5px; BORDER-BOTTOM: black 1px solid; BACKGROUND-COLOR: #fffff0; TEXT-ALIGN: center
+}
+.INavigationBar A {
+	FONT-WEIGHT: bold
+}
+.IHeading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 16pt; PADDING-BOTTOM: 0.5em; WIDTH: 3.5ex; PADDING-TOP: 2.5em; TEXT-ALIGN: center
+}
+#IFirstHeading {
+	PADDING-TOP: 0px
+}
+.IEntry {
+	PADDING-LEFT: 1ex; FONT-SIZE: 10pt
+}
+.PopupSearchResultsPage .IEntry {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 8pt; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.PopupSearchResultsPage .Opera9 .IEntry {
+	TEXT-ALIGN: left
+}
+.FramedSearchResultsPage .Opera9 .IEntry {
+	TEXT-ALIGN: left
+}
+.FramedSearchResultsPage .IEntry {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.ISubIndex {
+	PADDING-LEFT: 3ex; PADDING-BOTTOM: 0.5em
+}
+.PopupSearchResultsPage .ISubIndex {
+	DISPLAY: none
+}
+.ISymbol {
+	FONT-WEIGHT: bold; COLOR: #900000
+}
+.IndexPage .ISymbolPrefix {
+	BORDER-RIGHT: #e0e0e0 3px solid; PADDING-RIGHT: 1px; PADDING-LEFT: 2px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #c47c7c; PADDING-TOP: 0px; BACKGROUND-COLOR: #f8f8f8; TEXT-ALIGN: right
+}
+.FramedIndexPage .ISymbolPrefix {
+	BORDER-RIGHT: #e0e0e0 3px solid; PADDING-RIGHT: 1px; PADDING-LEFT: 2px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #c47c7c; PADDING-TOP: 0px; BACKGROUND-COLOR: #f8f8f8; TEXT-ALIGN: right
+}
+.PopupSearchResultsPage .ISymbolPrefix {
+	COLOR: #900000
+}
+.FramedSearchResultsPage .ISymbolPrefix {
+	COLOR: #900000
+}
+.PopupSearchResultsPage .ISymbolPrefix {
+	FONT-SIZE: 8pt
+}
+.IndexPage #IFirstSymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid
+}
+.FramedIndexPage #IFirstSymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid
+}
+.IndexPage #ILastSymbolPrefix {
+	BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.FramedIndexPage #ILastSymbolPrefix {
+	BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.IndexPage #IOnlySymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid; BORDER-BOTTOM: #e0e0e0 1px solid
+}
+.FramedIndexPage #IOnlySymbolPrefix {
+	BORDER-TOP: #e0e0e0 1px solid; BORDER-BOTTOM: #e0e0e0 1px solid
+}
+A.IParent {
+	DISPLAY: block
+}
+A.IFile {
+	DISPLAY: block
+}
+.PopupSearchResultsPage .SRStatus {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; FONT-STYLE: italic
+}
+.FramedSearchResultsPage .SRStatus {
+	FONT-SIZE: 10pt; FONT-STYLE: italic
+}
+.SRResult {
+	DISPLAY: none
+}
+#Footer {
+	FONT-SIZE: 8pt; COLOR: #989898; TEXT-ALIGN: right
+}
+#Footer P {
+	MARGIN-BOTTOM: 0.5em; TEXT-INDENT: 0px
+}
+.ContentPage #Footer {
+	MARGIN: 2px; TEXT-ALIGN: right
+}
+.IndexPage #Footer {
+	MARGIN: 2px; TEXT-ALIGN: right
+}
+.FramedMenuPage #Footer {
+	BORDER-TOP: #c8c8c8 1px solid; MARGIN: 5em 10px 10px; PADDING-TOP: 1em; TEXT-ALIGN: center
+}
+#Footer A:link {
+	COLOR: #989898
+}
+#Footer A:hover {
+	COLOR: #989898
+}
+#Footer A:visited {
+	COLOR: #989898
+}
+#Footer A:active {
+	COLOR: #a00000
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<META content="MSHTML 6.00.2800.1607" name=GENERATOR></HEAD>
+<BODY class=ContentPage onload=NDOnLoad()>
+<SCRIPT language=JavaScript><!--
+if (browserType) {document.write("<div class=" + browserType + ">");if (browserVer) {document.write("<div class=" + browserVer + ">"); }}// --></SCRIPT>
+<!--  Generated by Natural Docs, version 1.4 --><!--  http://www.naturaldocs.org  --><!-- saved from url=(0026)http://www.naturaldocs.org -->
+<DIV id=Content>
+<DIV class=CSection>
+<DIV class=CTopic id=MainTopic>
+<H1 class=CTitle><A name=Toolbar></A>Toolbar</H1>
+<DIV class=CBody>
+<P><B>Encapsulation of the system Toolbar API.</B></P><IMG height=60 
+src="Toolbar_files/toolbar.png" width=426>
+<P>The module is designed with following goals in mind :</P>
+<UL>
+  <LI>To allow programmers to quickly create toolbars in intuitive way
+  <LI>To allow advanced (non-typical) use, such as dynamic toolbar creation in 
+  such way that it doesn’t complicate typical toolbar usage.
+  <LI>To allow users to customize toolbar and programmer to save changed toolbar 
+  state.
+  <LI>Not to have any side effects to your script.</LI></UL><!--START_ND_SUMMARY-->
+<DIV class=Summary>
+<DIV class=STitle>Summary</DIV>
+<DIV class=SBorder>
+<TABLE class=STable cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR class=SMain>
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Toolbar">Toolbar</A></TD>
+    <TD class=SDescription><B>Encapsulation of the system Toolbar 
+  API.</B></TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link1 onmouseover="ShowTip(event, 'tt1', 'link1')" 
+      onmouseout="HideTip('tt1')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Add">Add</A></TD>
+    <TD class=SDescription>Add a Toolbar to the GUI</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link2 onmouseover="ShowTip(event, 'tt2', 'link2')" 
+      onmouseout="HideTip('tt2')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#AddButtons">AddButtons</A></TD>
+    <TD class=SDescription>Add button(s) to the Toolbar.</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link3 onmouseover="ShowTip(event, 'tt3', 'link3')" 
+      onmouseout="HideTip('tt3')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#AutoSize">AutoSize</A></TD>
+    <TD class=SDescription>Causes a toolbar to be resized.</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link4 onmouseover="ShowTip(event, 'tt4', 'link4')" 
+      onmouseout="HideTip('tt4')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Clear">Clear</A></TD>
+    <TD class=SDescription>Removes all buttons from the toolbar, both current 
+      and available</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link5 onmouseover="ShowTip(event, 'tt5', 'link5')" 
+      onmouseout="HideTip('tt5')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Customize">Customize</A></TD>
+    <TD class=SDescription>Launches customization dialog</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link6 onmouseover="ShowTip(event, 'tt6', 'link6')" 
+      onmouseout="HideTip('tt6')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Define">Define</A></TD>
+    <TD class=SDescription>Get current toolbar definition</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link7 onmouseover="ShowTip(event, 'tt7', 'link7')" 
+      onmouseout="HideTip('tt7')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#DeleteButton">DeleteButton</A></TD>
+    <TD class=SDescription>Delete button from the toolbar</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link8 onmouseover="ShowTip(event, 'tt8', 'link8')" 
+      onmouseout="HideTip('tt8')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#GetButton">GetButton</A></TD>
+    <TD class=SDescription>Get button information</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link9 onmouseover="ShowTip(event, 'tt9', 'link9')" 
+      onmouseout="HideTip('tt9')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Count">Count</A></TD>
+    <TD class=SDescription>Get count of buttons on the toolbar</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link10 
+      onmouseover="ShowTip(event, 'tt10', 'link10')" 
+      onmouseout="HideTip('tt10')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#GetRect">GetRect</A></TD>
+    <TD class=SDescription>Get button rectangle</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link11 
+      onmouseover="ShowTip(event, 'tt11', 'link11')" 
+      onmouseout="HideTip('tt11')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#GetMaxSize">GetMaxSize</A></TD>
+    <TD class=SDescription>Retrieves the total size of all of the visible 
+      buttons and separators in the toolbar.</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link12 
+      onmouseover="ShowTip(event, 'tt12', 'link12')" 
+      onmouseout="HideTip('tt12')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#MoveButton">MoveButton</A></TD>
+    <TD class=SDescription>Moves a button from one position to another.</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetButtonInfo">SetButtonInfo</A></TD>
+    <TD class=SDescription>Set button information</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link13 
+      onmouseover="ShowTip(event, 'tt13', 'link13')" 
+      onmouseout="HideTip('tt13')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetButtonWidth">SetButtonWidth</A></TD>
+    <TD class=SDescription>Sets the size of the each button</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link14 
+      onmouseover="ShowTip(event, 'tt14', 'link14')" 
+      onmouseout="HideTip('tt14')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetButtonSize">SetButtonSize</A></TD>
+    <TD class=SDescription>Sets the size of the each button. </TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link15 
+      onmouseover="ShowTip(event, 'tt15', 'link15')" 
+      onmouseout="HideTip('tt15')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetImageList">SetImageList</A></TD>
+    <TD class=SDescription>Set toolbar image list</TD></TR>
+  <TR class="SFunction SIndent1 SMarked">
+    <TD class=SEntry><A id=link16 
+      onmouseover="ShowTip(event, 'tt16', 'link16')" 
+      onmouseout="HideTip('tt16')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetMaxTextRows">SetMaxTextRows</A></TD>
+    <TD class=SDescription>Sets the maximum number of text rows displayed on a 
+      toolbar button.</TD></TR>
+  <TR class="SFunction SIndent1">
+    <TD class=SEntry><A id=link17 
+      onmouseover="ShowTip(event, 'tt17', 'link17')" 
+      onmouseout="HideTip('tt17')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#ToggleStyle">ToggleStyle</A></TD>
+    <TD class=SDescription>Toggle specific toolbar creation style</TD></TR>
+  <TR class="SGroup SIndent1">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Example">Example</A></TD>
+    <TD class=SDescription></TD></TR>
+  <TR class="SGroup SIndent1">
+    <TD class=SEntry><A 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#About">About</A></TD>
+    <TD class=SDescription></TD></TR></TBODY></TABLE></DIV></DIV><!--END_ND_SUMMARY--></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Add></A>Add</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Add(</TD>
+            <TD class=PParameter noWrap>hGui,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pFun,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pStyle</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"WRAPABLE",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pImageList</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"1L",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Add a Toolbar to the GUI</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hGui</TD>
+    <TD class=CDLDescription>HWND of the GUI.&nbsp; GUI must have defined 
+    size.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pFun</TD>
+    <TD class=CDLDescription>User function that handles Toolbar events.&nbsp; 
+      See below.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pStyle</TD>
+    <TD class=CDLDescription>Styles to apply to the toolbar control, see list 
+      of styles bellow.&nbsp; Integer styles are allowed.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pImageList</TD>
+    <TD class=CDLDescription>Handle of the image list that contains button 
+      images.&nbsp; Otherwse it specifies number and icon size of the one of the 
+      3 system catalogs <A class=CImageLink 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#Image1">(see 
+      catalogs)</A>.&nbsp; Each catalog contains number of common icons in large 
+      and small size -- S or L (default).&nbsp; Defaults to “1L” (first catalog, 
+      large icons)</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pPos</TD>
+    <TD class=CDLDescription>Postion of the toolbar - any space separated 
+      combination of the x y w h keywords followed by the 
+size.</TD></TR></TBODY></TABLE>
+<BLOCKQUOTE>
+  <DIV class=CImage><A name=Image1></A>
+  <DIV class=CImageCaption>catalogs</DIV><IMG height=245 
+  src="Toolbar_files/catalogs.png" width=474></DIV></BLOCKQUOTE>
+<H4 class=CHeading>Event Handling</H4>
+<P>You handle events by specifying user function as pFun parameter.&nbsp; 
+Function accepts 4 parameters:</P>
+<BLOCKQUOTE><PRE>?         OnToolbar(hToolbar, pEvent, pPos, pTxt, pId)</PRE></BLOCKQUOTE>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hToolbar</TD>
+    <TD class=CDLDescription>Handle of the Toolbar.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pEvent</TD>
+    <TD class=CDLDescription>Can be “click”, “menu”, “hot”, “change”, 
+    “adjust”.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pPos</TD>
+    <TD class=CDLDescription>Position of the button that rised event</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pTxt</TD>
+    <TD class=CDLDescription>Caption of the button that raised event</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pId</TD>
+    <TD class=CDLDescription>ID of the button that raised 
+event</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Events</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>click</TD>
+    <TD class=CDLDescription>User has clicked on the button.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>menu</TD>
+    <TD class=CDLDescription>User has clicked on the dropdown icon.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hot</TD>
+    <TD class=CDLDescription>User is hovering the button with the mouse</TD></TR>
+  <TR>
+    <TD class=CDLEntry>change</TD>
+    <TD class=CDLDescription>User has dragged the button using SHIFT + 
+  drag</TD></TR>
+  <TR>
+    <TD class=CDLEntry>adjust</TD>
+    <TD class=CDLDescription>User has finished customizing the 
+  toolbar.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Control Styles</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>adjustable</TD>
+    <TD class=CDLDescription>Allows users to change a toolbar button’s 
+      position by dragging it while holding down the SHIFT key and to open 
+      customization dialog by double clicking Toolbar empty area, or 
+  separator</TD></TR>
+  <TR>
+    <TD class=CDLEntry>border</TD>
+    <TD class=CDLDescription>Creates a Toolbar that has a thin-line 
+  border.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>bottom</TD>
+    <TD class=CDLDescription>Causes the control to position itself at the 
+      bottom of the parent window’s client area</TD></TR>
+  <TR>
+    <TD class=CDLEntry>flat</TD>
+    <TD class=CDLDescription>Creates a flat toolbar.&nbsp; In a flat toolbar, 
+      both the toolbar and the buttons are transparent and hot-tracking is 
+      enabled.&nbsp; Button text appears under button bitmaps.&nbsp; To prevent 
+      repainting problems, this style should be set before the toolbar control 
+      becomes visible.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>list</TD>
+    <TD class=CDLDescription>Creates a flat toolbar with button text to the 
+      right of the bitmap.&nbsp; Otherwise, this style is identical to FLAT 
+      style.&nbsp; To prevent repainting problems, this style should be set 
+      before the toolbar control becomes visible.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>tooltips</TD>
+    <TD class=CDLDescription>Creates a ToolTip control that an application can 
+      use to display descriptive text for the buttons in the toolbar.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>nodivder</TD>
+    <TD class=CDLDescription>Prevents a two-pixel highlight from being drawn 
+      at the top of the control.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>tabstop</TD>
+    <TD class=CDLDescription>Specifies that a control can receive the keyboard 
+      focus when the user presses the TAB key.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>wrapable</TD>
+    <TD class=CDLDescription>Creates a toolbar that can have multiple lines of 
+      buttons.&nbsp; Toolbar buttons can “wrap” to the next line when the 
+      toolbar becomes too narrow to include all buttons on the same line.&nbsp; 
+      When the toolbar is wrapped, the break will occur on either the rightmost 
+      separator or the rightmost button if there are no separators on the 
+      bar.&nbsp; This style must be set to display a vertical toolbar control 
+      when the toolbar is part of a vertical rebar control.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>vertical</TD>
+    <TD class=CDLDescription>Creates vertical toolbar</TD></TR>
+  <TR>
+    <TD class=CDLEntry>menu</TD>
+    <TD class=CDLDescription>Creates toolbar that is visualy similar to 
+      application main menu.&nbsp; All buttons have “dropdown showtext” styles 
+      and have no icons by default.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Handle of the newly created toolbar</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=AddButtons></A>AddButtons</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_AddButtons(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pBtns,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Add button(s) to the Toolbar.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pBtns</TD>
+    <TD class=CDLDescription>The button definition list.&nbsp; Each button to 
+      be added is specified on separate line using button definition 
+      string.&nbsp; Empty lines will be skipped.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pPos</TD>
+    <TD class=CDLDescription>Optional 1-based index of a button, to insert the 
+      new buttons to the left of this button.&nbsp; This doesn’t apply to the 
+      list of available buttons.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Button Definition</H4>
+<P>Button is defined by set of its characteristics separated by comma:</P>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>caption</TD>
+    <TD class=CDLDescription>Button caption.&nbsp; All printable letters are 
+      valid except comma.&nbsp; “-” can be used to add separator.&nbsp; Add more 
+      “-” to set the separator width.&nbsp; Each “-” adds 10px to the 
+    separator.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>iconNumber</TD>
+    <TD class=CDLDescription>Number of icon in the image list, 1 based.&nbsp; 
+      0 means that there is no icon associated with button.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>states</TD>
+    <TD class=CDLDescription>Space separated list of button states.&nbsp; See 
+      bellow list of possible states.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>styles</TD>
+    <TD class=CDLDescription>Space separated list of button styles.&nbsp; See 
+      bellow list of possible styles.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>ID</TD>
+    <TD class=CDLDescription>Button ID, unique number you choose to identify 
+      button.&nbsp; On customizable toolbars position can’t be used to set 
+      button information.&nbsp; If you need to setup button information using 
+      &lt;SetButton&gt; function or obtain information using <A class=LFunction 
+      id=link18 onmouseover="ShowTip(event, 'tt8', 'link18')" 
+      onmouseout="HideTip('tt8')" 
+      href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#GetButton">GetButton</A>, 
+      you need to use button ID as user can change button position any 
+      time.&nbsp; ID <B>must be</B> number between 1 and 10,000.&nbsp; Numbers 
+      &gt; 10,000 are reserved for auto ID that module does on its own.&nbsp; In 
+      most typical scenarios you don’t need to use ID to identify the 
+  button.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Button Styles</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>autosize</TD>
+    <TD class=CDLDescription>Specifies that the toolbar control should not 
+      assign the standard width to the button.&nbsp; Instead, the button’s width 
+      will be calculated based on the width of the text plus the image of the 
+      button.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>check</TD>
+    <TD class=CDLDescription>Creates a dual-state push button that toggles 
+      between the pressed and nonpressed states each time the user clicks 
+  it.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>checkgroup</TD>
+    <TD class=CDLDescription>Creates a button that stays pressed until another 
+      button in the group is pressed, similar to option buttons (also known as 
+      radio buttons).</TD></TR>
+  <TR>
+    <TD class=CDLEntry>dropdown</TD>
+    <TD class=CDLDescription>Creates a drop-down style button that can display 
+      a list when the button is clicked.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>noprefix</TD>
+    <TD class=CDLDescription>Specifies that the button text will not have an 
+      accelerator prefix associated with it.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>showtext</TD>
+    <TD class=CDLDescription>Specifies that button text should be 
+      displayed.&nbsp; All buttons can have text, but only those buttons with 
+      the SHOWTEXT button style will display it.&nbsp; This button style must be 
+      used with the LIST style.&nbsp; If you set text for buttons that do not 
+      have the SHOWTEXT style, the toolbar control will automatically display it 
+      as a ToolTip when the cursor hovers over the button.&nbsp; For this to 
+      work you must create the toolbar with TOOLTIPS style.&nbsp; You can create 
+      multiline tooltips by using $ in the tooltip caption.&nbsp; Each $ will be 
+      replaced with new line.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Button States</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>checked</TD>
+    <TD class=CDLDescription>The button has the CHECK style and is being 
+      clicked.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>disabled</TD>
+    <TD class=CDLDescription>The button does not accept user input.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>hidden</TD>
+    <TD class=CDLDescription>The button is not visible and cannot receive user 
+      input.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>wrap</TD>
+    <TD class=CDLDescription>The button is followed by a line break.&nbsp; 
+      Toolbar must not have WRAPABLE style.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Remarks</H4>
+<P>Using this function you can add one or more buttons to the toolbar.&nbsp; 
+Furthermore, adding group of buttons to the end (omiting pPos) is the fastest 
+way of adding set of buttons to the toolbar and it also allows you to use some 
+automatic features that are not available when you add button by button.&nbsp; 
+If you omit some parameter in button definition it will receive default 
+value.&nbsp; Button that has no icon defined will get the icon with index that 
+is equal to the line number of its defintion list.&nbsp; Buttons without ID will 
+get ID automaticaly, starting from 10 000.&nbsp; You can use `r instead `n to 
+create multiline button captions.&nbsp; This make sense only for toolbars that 
+have LIST TOOLTIP toolbar style and no SHOWTEXT button style (i.e. their 
+captions are seen as tooltips and are not displayed.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=AutoSize></A>AutoSize</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_AutoSize(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>align</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"fit"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Causes a toolbar to be resized.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hToolbar</TD>
+    <TD class=CDLDescription>HWND of the toolbar</TD></TR>
+  <TR>
+    <TD class=CDLEntry>align</TD>
+    <TD class=CDLDescription>How toolbar is aligned to its parent. bottom left 
+      (bl), bottom right (br), top right (tr), top left (tl) or fit (doesn’t 
+      reposition control resizes it so it takes minimum possible space with all 
+      buttons visible)</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Remarks</H4>
+<P>An application calls the AutoSize function after causing the size of a 
+toolbar to change either by setting the button or bitmap size or by adding 
+strings for the first time.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Clear></A>Clear</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Clear(</TD>
+            <TD class=PParameter noWrap>hToolbar</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Removes all buttons from the toolbar, both current and 
+available</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Customize></A>Customize</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Customize(</TD>
+            <TD class=PParameter noWrap>hToolbar</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Launches customization dialog</P><IMG height=228 
+src="Toolbar_files/customize.png" width=542></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Define></A>Define</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Define(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Get current toolbar definition</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pQ</TD>
+    <TD class=CDLDescription>Query parameter.&nbsp; Specify “c” to get only 
+      current buttons, “a” to get only available buttons.&nbsp; Leave empty to 
+      get all buttons.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Button definition list</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=DeleteButton></A>DeleteButton</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_DeleteButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">1</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Delete button from the toolbar</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pPos</TD>
+    <TD class=CDLDescription>1-based position of the button, by default 1 To 
+      delete one of the available buttons, specify “*” before 
+  position</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>TRUE if successful, or FALSE otherwise.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=GetButton></A>GetButton</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pWhichBtn,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Get button information</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pWhichBtn</TD>
+    <TD class=CDLDescription>One of the ways to identify the button: 1-based 
+      button position or button ID.&nbsp; If pWhichBtn is negative, the 
+      information about <B>available</B> button on position -pWhichBtn will be 
+      returned.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pQ</TD>
+    <TD class=CDLDescription>Query parameter, can be C (Caption) I (Icon 
+      number), T (sTate), S (Style) or N (identification Number) If omitted, all 
+      information will be returned in the form of button 
+definition</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>If pQ is omitted, button definition, otherwise requested button 
+information.</P>
+<H4 class=CHeading>Examples</H4>
+<BLOCKQUOTE><PRE>s := GetButton(hToolbar, 3)          ;return string completely defining 3th current toolbar button
+c := GetButton(hToolbar, 3, "c")     ;return only caption of the 3th current button
+s := GetButton(hToolbar, .101, "t")  ;return the state of the current button with ID=101</PRE></BLOCKQUOTE></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Count></A>Count</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Count(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"c"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Get count of buttons on the toolbar</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pQ</TD>
+    <TD class=CDLDescription>Query parameter, set to “c” to get the number of 
+      current buttons (default) Set to “a” to get the number of available 
+      buttons.&nbsp; Set to empty string to return both.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>if pQ is empty function returns rational number in the form cntC.cntA 
+otherwise requested count</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=GetRect></A>GetRect</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetRect(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Get button rectangle</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pPos</TD>
+    <TD class=CDLDescription>Button position.&nbsp; Leave blank to get 
+      dimensions of the toolbar control itself.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pQ</TD>
+    <TD class=CDLDescription>Query parameter: set x,y,w,h to return 
+      appropriate value, or leave blank to return all in single 
+  line.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>String with 4 values separated by space or requested 
+information</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=GetMaxSize></A>GetMaxSize</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetMaxSize(</TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pWidth,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pHeight</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Retrieves the total size of all of the visible buttons and separators in the 
+toolbar.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pWidth, pHeight</TD>
+    <TD class=CDLDescription>Variables which will receive 
+size</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Returns nonzero if successful, or zero otherwise.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=MoveButton></A>MoveButton</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_MoveButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pOldPos,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pNewPos</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Moves a button from one position to another.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pOldPos</TD>
+    <TD class=CDLDescription>1-based postion of the button to be moved.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>pNewPos</TD>
+    <TD class=CDLDescription>1-based postion where the button will be 
+  moved.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Returns nonzero if successful, or zero otherwise.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=SetButtonInfo></A>SetButtonInfo</H3>
+<DIV class=CBody>
+<P>Set button information</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pWhichBtn</TD>
+    <TD class=CDLDescription>One of the 2 ways to identify the button: 1-based 
+      button position or button ID</TD></TR>
+  <TR>
+    <TD class=CDLEntry>state</TD>
+    <TD class=CDLDescription>List of button states to set, separated by white 
+      space.</TD></TR>
+  <TR>
+    <TD class=CDLEntry>width</TD>
+    <TD class=CDLDescription>Button width (can’t be used with LIST 
+  style)</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Nonzero if successful, or zero otherwise.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=SetButtonWidth></A>SetButtonWidth</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetButtonWidth(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pMin,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pMax</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Sets the size of the each button</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pMin, pMax</TD>
+    <TD class=CDLDescription>Minimum and maximum button width.&nbsp; If you 
+      omit pMax it defaults to pMin.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Nonzero if successful, or zero otherwise.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=SetButtonSize></A>SetButtonSize</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetButtonSize(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>w,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>h</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Sets the size of the each button.&nbsp; Doesn’t do anything with LIST 
+style.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>w, h</TD>
+    <TD class=CDLDescription>Width &amp; Height.&nbsp; If you omit height, it 
+      defaults to width.</TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=SetImageList></A>SetImageList</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetImageList(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>hIL</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"1S"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Set toolbar image list</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>hIL</TD>
+    <TD class=CDLDescription>Image list handle</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Returns</H4>
+<P>Handle of the previous image list</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=SetMaxTextRows></A>SetMaxTextRows</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetMaxTextRows(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>iMaxRows</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Sets the maximum number of text rows displayed on a toolbar button.</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>iMaxRows</TD>
+    <TD class=CDLDescription>Maximum number of rows of text that can be 
+      displayed.</TD></TR></TBODY></TABLE>
+<H4 class=CHeading>Remarks</H4>
+<P>Returns nonzero if successful, or zero otherwise.&nbsp; To cause text to 
+wrap, you must set the maximum button width by using <A class=LFunction 
+id=link19 onmouseover="ShowTip(event, 'tt13', 'link19')" 
+onmouseout="HideTip('tt13')" 
+href="http://www.autohotkey.net/~majkinetor/Toolbar2/Toolbar.html#SetButtonWidth">SetButtonWidth</A>.&nbsp; 
+The text wraps at a word break.&nbsp; Text in LIST styled toolbars is always 
+shown on a single line.</P></DIV></DIV></DIV>
+<DIV class=CFunction>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=ToggleStyle></A>ToggleStyle</H3>
+<DIV class=CBody>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_ToggleStyle(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pStyle</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"LIST"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P>Toggle specific toolbar creation style</P>
+<H4 class=CHeading>Parameters</H4>
+<TABLE class=CDescriptionList cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=CDLEntry>pStyle</TD>
+    <TD class=CDLDescription>Style to toggle, by default “LIST”.&nbsp; You can 
+      also specify numeric style value.</TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<DIV class=CGroup>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=Example></A>Example</H3>
+<DIV class=CBody>
+<BLOCKQUOTE><PRE>  Gui, +LastFound
+  hGui := WinExist()
+  Gui, Show , w400 h100 Hide                              ;set gui width &amp; height prior to adding toolbar (mandatory)
+
+  hToolbar := Toolbar_Add(hGui, "OnToolbar", "FLAT TOOLTIPS", "1L")    ;add the toolbar
+
+  btns =
+   (LTrim
+      new,  7,            ,dropdown showtext
+      open, 8
+      save, 9, disabled
+      -
+      undo, 4,            ,dropdown
+      redo, 5,            ,dropdown
+      -----
+      state, 11, checked  ,check
+   )
+
+   Toolbar_AddButtons(hToolbar, btns)
+   Toolbar_SetButtonWidth(hToolbar, 50)                   ;set button width &amp; height to 50 pixels
+
+   Gui, Show
+return
+
+;toolbar event handler
+OnToolbar(hToolbar, pEvent, pPos, pTxt, pId){
+  if pEvent = click
+      msgbox %pTxt% (%pPos%)
+}
+
+#include Toolbar.ahk</PRE></BLOCKQUOTE></DIV></DIV></DIV>
+<DIV class=CGroup>
+<DIV class=CTopic>
+<H3 class=CTitle><A name=About></A>About</H3>
+<DIV class=CBody>
+<UL>
+  <LI>Ver 2.0 b3 by majkinetor.&nbsp; See <A class=LURL 
+  href="http://www.autohotkey.com/forum/topic27382.html" 
+  target=_top>http://www.autohotkey.com/forum/topic27382.html</A>
+  <LI>Toolbar Reference at MSDN: <A class=LURL 
+  href="http://msdn2.microsoft.com/en-us/library/bb760435(VS.85).aspx" 
+  target=_top>http://msdn2.microsoft.com<WBR>/en-us<WBR>/library<WBR>/bb760435(VS.85).aspx</A>
+  <LI>Licenced under Creative Commons Attribution-Noncommercial <A class=LURL 
+  href="http://creativecommons.org/licenses/by-nc/3.0/" 
+  target=_top>http://creativecommons.org/licenses/by-nc/3.0/</A>.</LI></UL></DIV></DIV></DIV></DIV><!--Content-->
+<DIV id=Footer><A href="http://www.naturaldocs.org/">Generated by Natural 
+Docs</A></DIV><!--Footer--><!--START_ND_TOOLTIPS-->
+<DIV class=CToolTip id=tt1>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Add(</TD>
+            <TD class=PParameter noWrap>hGui,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pFun,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pStyle</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"WRAPABLE",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pImageList</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"1L",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Add a 
+Toolbar to the GUI</DIV></DIV>
+<DIV class=CToolTip id=tt2>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_AddButtons(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pBtns,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Add 
+button(s) to the Toolbar.</DIV></DIV>
+<DIV class=CToolTip id=tt3>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_AutoSize(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>align</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"fit"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Causes 
+a toolbar to be resized.</DIV></DIV>
+<DIV class=CToolTip id=tt4>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Clear(</TD>
+            <TD class=PParameter noWrap>hToolbar</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Removes 
+all buttons from the toolbar, both current and available</DIV></DIV>
+<DIV class=CToolTip id=tt5>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Customize(</TD>
+            <TD class=PParameter noWrap>hToolbar</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Launches 
+customization dialog</DIV></DIV>
+<DIV class=CToolTip id=tt6>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Define(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Get 
+current toolbar definition</DIV></DIV>
+<DIV class=CToolTip id=tt7>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_DeleteButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">1</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Delete 
+button from the toolbar</DIV></DIV>
+<DIV class=CToolTip id=tt8>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pWhichBtn,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Get 
+button information</DIV></DIV>
+<DIV class=CToolTip id=tt9>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_Count(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"c"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Get 
+count of buttons on the toolbar</DIV></DIV>
+<DIV class=CToolTip id=tt10>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetRect(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pPos</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"",</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pQ</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Get 
+button rectangle</DIV></DIV>
+<DIV class=CToolTip id=tt11>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_GetMaxSize(</TD>
+            <TD class=PType noWrap>&nbsp;</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pWidth,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PType noWrap>ByRef&nbsp;</TD>
+            <TD class=PParameter noWrap>pHeight</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Retrieves 
+the total size of all of the visible buttons and separators in the 
+toolbar.</DIV></DIV>
+<DIV class=CToolTip id=tt12>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_MoveButton(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pOldPos,</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pNewPos</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Moves a 
+button from one position to another.</DIV></DIV>
+<DIV class=CToolTip id=tt13>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetButtonWidth(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pMin,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pMax</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Sets 
+the size of the each button</DIV></DIV>
+<DIV class=CToolTip id=tt14>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetButtonSize(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>w,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>h</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">""</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Sets 
+the size of the each button. </DIV></DIV>
+<DIV class=CToolTip id=tt15>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetImageList(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>hIL</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"1S"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Set 
+toolbar image list</DIV></DIV>
+<DIV class=CToolTip id=tt16>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_SetMaxTextRows(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>iMaxRows</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Sets 
+the maximum number of text rows displayed on a toolbar button.</DIV></DIV>
+<DIV class=CToolTip id=tt17>
+<DIV class=CFunction>
+<BLOCKQUOTE>
+  <TABLE class=Prototype cellSpacing=0 cellPadding=0 border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+          <TBODY>
+          <TR>
+            <TD class=PBeforeParameters noWrap>Toolbar_ToggleStyle(</TD>
+            <TD class=PParameter noWrap>hToolbar,</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;&nbsp;</TD>
+            <TD class=PDefaultValue width="100%"></TD></TR>
+          <TR>
+            <TD></TD>
+            <TD class=PParameter noWrap>pStyle</TD>
+            <TD class=PDefaultValuePrefix>&nbsp;=&nbsp;</TD>
+            <TD class=PDefaultValue width="100%">"LIST"</TD>
+            <TD class=PAfterParameters 
+    noWrap>)</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BLOCKQUOTE>Toggle 
+specific toolbar creation style</DIV></DIV><!--END_ND_TOOLTIPS-->
+<DIV id=MSearchResultsWindow><IFRAME id=MSearchResults name=MSearchResults 
+src="about:blank" frameBorder=0></IFRAME><A id=MSearchResultsWindowClose 
+href="javascript:searchPanel.CloseResultsWindow()">Close</A></DIV>
+<SCRIPT language=JavaScript><!--
+if (browserType) {if (browserVer) {document.write("</div>"); }document.write("</div>");}// --></SCRIPT>
+</BODY></HTML>

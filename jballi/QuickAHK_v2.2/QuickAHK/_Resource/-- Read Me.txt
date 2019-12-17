@@ -1,0 +1,3 @@
+This folder contains the icons used by the BuildQuickAHKDLL.ahk script to build
+the QuickAHK.dll file.  If icons in this folder are added, deleted, or renamed,
+the QuickAHK.ahk script must be modified to account for the changes.

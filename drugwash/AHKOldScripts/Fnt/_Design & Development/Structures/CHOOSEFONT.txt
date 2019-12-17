@@ -1,0 +1,57 @@
+CHOOSEFONT structure - x32 only
+Syntax
+                                            Type            Size    OffSet  Comment
+                                            ----            ----    -----   -------
+typedef struct {
+  DWORD        lStructSize;                 DWORD (UInt)    4       0
+  HWND         hwndOwner;                   Handle          4       4     
+  HDC          hDC;                         Handle          4       8   
+  LPLOGFONT    lpLogFont;                   Pointer         4       12   
+  INT          iPointSize;                  Int             4       16   
+  DWORD        Flags;                       DWORD (UInt)    4       20   
+  COLORREF     rgbColors;                   DWORD (UInt)    4       24   
+  LPARAM       lCustData;                   Pointer         4       28   
+  LPCFHOOKPROC lpfnHook;                    Pointer         4       32   
+  LPCTSTR      lpTemplateName;              Pointer         4       36   
+  HINSTANCE    hInstance;                   Handle          4       40   
+  LPTSTR       lpszStyle;                   Pointer         4       44   
+  WORD         nFontType;                   WORD (UShort)   2       48   
+    Unused and/or missing from the documentation            2       50   
+  INT          nSizeMin;                    Int             4       52   
+  INT          nSizeMax;                    Int             4       56   
+} CHOOSEFONT, *LPCHOOSEFONT;
+                                                            ----
+                                                            60   
+
+
+CHOOSEFONT structure - x64 Only
+
+                                            Type            Size    OffSet  Comment
+                                            ----            ----    ------  -------
+typedef struct {
+  DWORD        lStructSize;                 DWORD (UInt)    4       0*
+    Structure alignment filler                              4       4
+  HWND         hwndOwner;                   Handle          8       8*     
+  HDC          hDC;                         Handle          8       16     Not used by the ChooseFont API
+  LPLOGFONT    lpLogFont;                   Pointer         8       24*
+  INT          iPointSize;                  Int             4       32*
+  DWORD        Flags;                       DWORD (UInt)    4       36*
+  COLORREF     rgbColors;                   DWORD (UInt)    4       40*
+    Structure alignment filler                              4       44
+  LPARAM       lCustData;                   Pointer         8       48
+  LPCFHOOKPROC lpfnHook;                    Pointer         8       56
+  LPCTSTR      lpTemplateName;              Pointer         8       64
+  HINSTANCE    hInstance;                   Handle          8       72
+  LPTSTR       lpszStyle;                   Pointer         8       80
+  WORD         nFontType;                   WORD (UShort)   2       88
+    Structure alignment filler                              2       90
+  INT          nSizeMin;                    Int             4       92**
+  INT          nSizeMax;                    Int             4       96**
+    Structure alignment filler                              4       100
+} CHOOSEFONT, *LPCHOOSEFONT;
+                                                            ----
+                                                            104
+Notes for x64 structure
+-----------------------
+* Identified by maestrith.  Tested and confirmed by okram.
+** Identified, tested, and confirmed by okram

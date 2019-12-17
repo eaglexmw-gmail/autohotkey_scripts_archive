@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<assemblyIdentity
+		type="win32"
+		name="Drugwash.HobbyProgramming.SmartGuiXPCreatorMod"
+		processorArchitecture="X86"
+		version="4.3.29.7"
+	/>
+	<description>GUI creation tool for AutoHotkey scripts</description>
+	<dependency>
+		<dependentAssembly>
+			<assemblyIdentity
+				type="win32"
+				name="Microsoft.Windows.Common-Controls"
+				language="*"
+				processorArchitecture="X86"
+				version="6.0.0.0"
+				publicKeyToken="6595b64144ccf1df"
+			/>
+		</dependentAssembly>
+	</dependency>
+</assembly>

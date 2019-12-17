@@ -1,0 +1,29 @@
+; Mobile Pentium III & Celeron
+; PM M 500 02 101 AB
+
+[family-core]
+L   Pentium III processor mobile module (MMC-2) 
+M   Pentium III processor mobile module (MMC-2) with SpeedStep technology 
+N   Celeron (0.18 micron ) mobile module (MMC-2) 
+
+[speed]
+450   450 MHz 
+500   500 MHz 
+550   550 MHz 
+600   600 MHz 
+650   650 MHz 
+700   700 MHz 
+750   750 MHz 
+800   800 MHZ 
+850   850 MHz 
+
+[L2 cache]
+01   128 KB 
+02   256 KB 
+
+[design-rev]
+
+[processor-rev]
+ES    Engineering sample 
+QS   Qualification sample 
+Other letters   Processor revision (starts from AA) 

@@ -1,0 +1,79 @@
+Before of all, SORRY MY ENGLISH!
+
+------------------------------------------------------------------------
+0.0.11 2008-03-03
+
+Fix issues with labels, goto and #include
+Thank to Piz, see http://www.autohotkey.com/forum/viewtopic.php?p=182218#182218
+
+
+------------------------------------------------------------------------
+0.0.10 2008-01-25
+
+New function: SendU_utf8_string( str )
+
+------------------------------------------------------------------------
+0.0.9 2008-01-22 public beta
+
+There is only one clipboard mode: "c".
+But you can set the SendU_Clipboard_Restore_Mode( 1 or 0 )
+Because restore mode belong to the user, not to the process.
+
+------------------------------------------------------------------------
+0.0.8 2008-01-21
+
+Restore clipboard with a short (3 sec) delay. Maybe faster.
+Global variables to localize the tooltip. You can change the 
+dynamic mode for a process (program) with Win+F12, if you
+use this command:
+	Hotkey, #F12, _SendU_Change_Dynamic_Mode
+Press this, and see the tooltip, and the result... :)
+
+------------------------------------------------------------------------
+0.0.7 2008-01-20
+
+Better dynamic mode, but requires CoHelper.ahk
+Configurable Tooltip with dynamic mode
+
+------------------------------------------------------------------------
+0.0.6 2008-01-15
+
+New, default mode is "dynamic": send with the best mode automatic.
+It is test version now.
+
+------------------------------------------------------------------------
+0.0.5 2007-12-22
+
+New function: SendCh, With them you can send 
+	* Control character, like "Information Separator Four" (0x1c)
+	* ASCII characters, it sends with the original Send function
+	* Unicode character, it sends in the current mode
+
+Modes:
+	i: "Input"     The original SendU mode (with SendInput DllCall)
+	c: "Clipboard" Send with "Paste". Clears the clipboard
+	r: "Restore"   Like "c", but restores the Clipboard
+	a: "ASC"       Send with {ASC %number%}
+
+------------------------------------------------------------------------
+0.0.4 2007-11-23
+
+Better naming conventions: _SendU_SetVar, not _SendUSetVar
+And I use tabs, not spaces
+
+------------------------------------------------------------------------
+0.0.3 2007-11-15
+
+_SendUSetVar, not _SendUSetGlobal, because I use not ``global''
+variables, I use ``static'' variables only for private use. 
+
+------------------------------------------------------------------------
+0.0.2 2007-11-14 public
+
+A few trivial (but necessary) simplifications :)
+See: http://www.autohotkey.com/forum/viewtopic.php?p=159301#159301
+
+------------------------------------------------------------------------
+0.0.1 2007-11-13 public
+
+First public version
